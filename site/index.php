@@ -28,9 +28,9 @@
         </div>
         <div id="Aidereste" class="Aide">
             <p id="aideZoom">utilisez les touches +/- pour zoomer/dézoomer</p>
-            <hr></hr>
+            <hr>
             <p id="aideAgrandirImage">Double-cliquez sur l'image pour l'agrandir et afficher ses informations</p>
-            <hr></hr>
+            <hr>
             <p id="aideRecherche">Pour recherche un/votre pseudo cliquez sur la loupe et ecrivez ensuite un/votre pseudo.</p>
         </div>
         <div class="languageSelect">

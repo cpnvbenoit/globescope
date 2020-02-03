@@ -1,0 +1,30 @@
+<!-- Konami Code! U,U,D,D,L,R,L,R,B,A --><div style="display: none;"><div id="konami" style="width:638px; height:480px;"></div></div>
+		<script type="text/javascript"><!--
+			try {
+				gloader.load(
+					["glow", "1", "glow.events", "glow.anim", "glow.widgets.Overlay"],
+					{
+						onload: function(glow) {
+							glow.events.addListener(
+								document,
+								"keydown",
+								(function() {
+									var keys = []; // closure
+									return function(e) {
+										keys.push(e.keyCode);
+										if (keys.length > 10) keys.shift();
+										if (("["+keys.join(",")+"]").indexOf("[38,38,40,40,37,39,37,39,66,65]") > -1) {
+											glow.dom.get("#konami").html('<' + 'img src="http://www.bbc.co.uk/cult/classic/bluepeter/drwho/gallery/images/640/who20.jpg" width="638" height="480" alt="Tina and K9 on Blue Peter" />');
+											new glow.widgets.Overlay("#konami", { modal: true, anim: "fade" }).show();
+
+											keys = [];
+										}
+									}
+								})()
+							);
+						}
+					}
+				);
+			}
+			catch(e) { /* ignore*/ }
+		--></script></div>
