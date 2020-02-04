@@ -9,7 +9,7 @@ function onImageClick(x)
 
 
     xmlhttp = new XMLHttpRequest();
-    //Declaré dans index.php
+    //Declaré dans index2.php
     showSideBar();
     onSearchDetails.innerHTML = "";
 
