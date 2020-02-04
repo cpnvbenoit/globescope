@@ -15,6 +15,9 @@
 </head>
 
 <body>
+<div class="test">
+
+</div>
 <span><img id="helpButton" class="GUI" src="images/questionMark.png"></span>
 <div id="Help" class="GUI">
     <div id="box">
@@ -116,6 +119,7 @@ void main() {
 </script>
 
 <script src="js/globescope.js"></script>
+<script src="js/Login.js"></script>
 
 </body>
 </html>
