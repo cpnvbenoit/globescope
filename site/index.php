@@ -20,10 +20,6 @@ switch ($action) {
     case 'GetData';
         GetData();
         break;
-
-    case '' :
-        home();
-        break;
     default:
         home();
         break;

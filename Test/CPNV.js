@@ -2,27 +2,16 @@
 
 // a key map of allowed keys
 var allowedKeys = {
-    99 : 'c',
-    112 : 'p',
-    110 : 'n',
-    118 : 'v'
+    84 : 'c',
+    69 : 'p',
+    83 : 'n',
+    84 : 'v'
 
 };
 
 // the 'official' Konami Code sequence
 var konamiCode = ['c', 'p', 'n', 'v'];
 
-var allowedKeysq = {// ok modif
-    76: 'l',
-    79: 'o',
-    71: 'g',
-    73: 'i',
-    78: 'n',
-
-
-};
-// the 'official' Konami Code sequence
-var konamiCodeq = ['l', 'o', 'g', 'i', 'n',];//ok modif
 // a variable to remember the 'position' the user has reached so far.
 var konamiCodePosition = 0;
 
@@ -51,3 +40,12 @@ document.addEventListener('keydown', function(e) {
 
 
 
+function cpnv() {
+    //chose a faire apres le code
+    location.replace ("https://www.cpnv.ch/")
+    j.classList.add('k')
+
+
+    ///---------------------------------------------------------------------
+
+}// a key map of allowed keys

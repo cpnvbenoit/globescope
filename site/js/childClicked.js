@@ -36,7 +36,7 @@ function onImageClick(x)
     }
 
     //exécuter la requete en mode POST avec les paramètres voulus (x) => ID
-    xmlhttp.open("POST", "GetData.php", true);
+    xmlhttp.open("POST", "index.php?action=GetData", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam +"&Mode=click");
 
