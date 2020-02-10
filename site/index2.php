@@ -18,7 +18,7 @@
 <div class="test">
 
 </div>
-<span><img id="helpButton" class="GUI" src="model/dataStorage/images/questionMark.png"></span>
+<span><img id="helpButton" class="GUI" src="images/questionMark.png"></span>
 <div id="Help" class="GUI">
     <div id="box">
         <div id="header">
@@ -26,7 +26,7 @@
         </div>
         <p id="closeHelp" class="closeButton" onclick="closeHelp()">X</p>
         <div id="direction">
-            <img src="model/dataStorage/images/arrowKeys.png" height="50" width="80" alt="touches directions"/>
+            <img src="images/arrowKeys.png" height="50" width="80" alt="touches directions"/>
             <p id="aideDeplacementSouris"> déplacez vous en maintenant le clic gauche de la souris.</p>
         </div>
         <div id="Aidereste" class="Aide">
@@ -45,7 +45,7 @@
             <h3 class="credit" a href="">Credit</h3>
         </div>
         <p id="closeCredit" class="closeButton" onclick="closeHelp()">X</p>
-        <img id="imageGroupe" src="model/dataStorage/images/photoGroupe.png" alt="Development Group">
+        <img id="imageGroupe" src="images/photoGroupe.png" alt="Development Group">
         <div id="Groupe">
             <p id="groupeMembresContenu"></p>
         </div>
@@ -73,7 +73,7 @@
     </div>
 </div>
 
-<span><img id="showSearch" class="GUI" src="model/dataStorage/images/searchIcon.png"></span>
+<span><img id="showSearch" class="GUI" src="images/searchIcon.png"></span>
 
 <div id="searchBar" class="GUI">
     <input type="text" id="searchText">
