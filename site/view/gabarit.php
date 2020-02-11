@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/searchResults.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/helpStyle.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/progressBar.css?d=<?php echo time(); ?>">
+    <script src="js/Loginstyle.js"></script>
+
 
 </head>
 
@@ -39,7 +41,7 @@
 
         <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="https://images.emojiterra.com/google/android-10/512px/1f625.png">password?</a></span>
+            <span class="psw">Forgot <a href="https://images.emojiterra.com/google/android-10/512px/1f625.png" target="_blank">password?</a></span>
         </div>
     </form>
 </div>
@@ -124,7 +126,6 @@
 <script src="js/searchChild.js"></script>
 <script src="js/childClicked.js"></script>
 <script src="js/Tween.js"></script>
-<script src="js/Loginstyle.js"></script>
 
 <script type="application/x-glsl" id="sky-vertex">
 varying vec2 vUV;
