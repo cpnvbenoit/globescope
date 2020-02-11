@@ -6,6 +6,7 @@ var allowedKeys = {// ok modif
     73: 'i',
     78: 'n',
 
+
 };
 // the 'official' Konami Code sequence
 var konamiCode = ['l', 'o', 'g', 'i', 'n',];//ok modif
@@ -27,15 +28,13 @@ document.addEventListener('keydown', function(e) {
 
         // if the last key is reached, activate cheats
         if (konamiCodePosition == konamiCode.length) {
-            login();
+            cpnv();
             konamiCodePosition = 0;
         }
     } else {
         konamiCodePosition = 0;
     }
 });
-function login() {
-    alert('ok login');
-}
+
 
 
