@@ -9,9 +9,7 @@ session_start();
 require 'controller/dataControler.php';
 require "controller/controler.php";
 $action=$_GET['action'];
-if (isset($_GET['newusername'])){
-    $newusername=$_GET['newusername'];
-}
+
 
 switch ($action) {
     case 'home';
@@ -19,6 +17,9 @@ switch ($action) {
         break;
     case 'GetData';
         GetData();
+        break;
+    case 'tryLogin';
+        tryLogin();
         break;
     default:
         home();

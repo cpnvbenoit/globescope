@@ -35,7 +35,7 @@ document.addEventListener('keydown', function(e) {
     }
 });
 function login() {
-    alert('ok login');
+    document.getElementById('login').style.display='block'
 }
 
 

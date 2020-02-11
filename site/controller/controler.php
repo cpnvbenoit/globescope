@@ -24,7 +24,7 @@ function disconnect()
 }
 function tryLogin()
 {
-    $news = getNews();
+
     $users=getUsers();
     $username=$_POST['username'];
     $password=$_POST['password'];
@@ -36,7 +36,7 @@ function tryLogin()
     }
     if (isset($_SESSION['username'])==false){
         $_SESSION['fail']=true;
-        require_once 'view/connect.php';
+        require_once 'view/succeslogin.php';
     }else{
         $_SESSION['fail']=false;
         require_once 'view/home.php';

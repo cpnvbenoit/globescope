@@ -5,16 +5,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/Loginstyle.css">
     <link rel="stylesheet" href="css/style.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/sideBarStyle.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/searchBar.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/searchResults.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/helpStyle.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/progressBar.css?d=<?php echo time(); ?>">
+    <script src="js/Loginstyle.js"></script>
+
 
 </head>
 
 <body>
+<div id="login" class="modal">
+
+    <form class="modal-content animate" action="index.php?action=tryLogin" method="post">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="images/avatar.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="https://images.emojiterra.com/google/android-10/512px/1f625.png" target="_blank">password?</a></span>
+        </div>
+    </form>
+</div>
 <div class="test">
 <?= $content?>
 </div>
