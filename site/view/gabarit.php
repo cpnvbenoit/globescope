@@ -114,6 +114,9 @@
     </div>
 </div>
 
+<div>
+    <?php if(isset($_SESSION['username'])){echo "";} ?>
+</div>
 
 <div id="loading">
     <p>Chargement...</p>
