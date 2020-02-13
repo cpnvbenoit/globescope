@@ -47,6 +47,8 @@
 </div>
 <div class="test">
 <?= $content?>
+
+
 </div>
 <span><img id="helpButton" class="GUI" src="images/questionMark.png"></span>
 <div id="Help" class="GUI">

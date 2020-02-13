@@ -13,10 +13,7 @@ function home()
 {
     require_once 'view/home.php';
 }
-function displaySnows()
-{
-    require_once 'view/displaySnows.php';
-}
+
 function disconnect()
 {
     unset($_SESSION);
@@ -43,6 +40,12 @@ function tryLogin()
     }
 
 
+}
+
+function editchild(){
+
+    $childs= getChilds();
+    require_once 'view/editchild.php';
 }
 
 ?>

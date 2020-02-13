@@ -9,4 +9,10 @@ function getUsers()
 {
     return json_decode(file_get_contents("model/dataStorage/users.json"),true);
 }
+
+function getChilds()
+{
+    return json_decode(file_get_contents("model/dataStorage/exemple.json"),true);
+}
+
 ?>
