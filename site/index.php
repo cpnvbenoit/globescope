@@ -15,8 +15,8 @@ switch ($action) {
     case 'home';
         home();
         break;
-    case 'editchild';
-        editchild();
+    case 'showchilds';
+        showchilds();
         break;
     case 'GetData';
         GetData();
@@ -28,5 +28,5 @@ switch ($action) {
         home();
         break;
 }
-//Pour PUSHHHHHH
+
 ?>

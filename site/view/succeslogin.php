@@ -7,7 +7,7 @@
  */
 ob_start();
 ?>
-    <script>window.open("index.php?action=editchild")</script>
+    <script>window.open("index.php?action=showchilds")</script>
 <?php
 $content = ob_get_clean();
 require "gabarit.php";

@@ -42,10 +42,10 @@ function tryLogin()
 
 }
 
-function editchild(){
+function showchilds(){
 
     $childs= getChilds();
-    require_once 'view/editchild.php';
+    require_once 'view/showchilds.php';
 }
 
 ?>
