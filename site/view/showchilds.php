@@ -8,13 +8,13 @@
 
 ob_start();
 ?>
-<h1 align="center">Modifier les infos</h1>
+<h1 align="center">Afficher les enfants</h1>
 <form action="">
-    <label for="test">id image</label>
+    <label for="test">Latitude</label>
     <input type="radio" id="test" name="Recherche">
-    <label for="test">id image</label>
+    <label for="test">Longitude</label>
     <input type="radio" id="test" name="Recherche">
-    <label for="test">id image</label>
+    <label for="test">Meridien</label>
     <input type="radio" id="test" name="Recherche">
     <label for="test">id image</label>
     <input type="radio" id="test" name="Recherche">

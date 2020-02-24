@@ -48,7 +48,7 @@ function showchilds(){
     require_once 'view/showchilds.php';
 }
 function editchild(){
-
+    $idchild = $IDimage;
     $childs= getChilds();
     require_once 'view/editchild.php';
 }

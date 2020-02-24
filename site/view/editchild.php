@@ -50,8 +50,9 @@ ob_start();
     <tbody  align="center">
 
         <?php
+        var_dump($idchild);
          foreach ($childs as $child) {
-             if ($child['IDImage'] == $IDimage) {
+             if ($child['IDImage'] == $idchild) {
 
                  ?>
                  <tr>
