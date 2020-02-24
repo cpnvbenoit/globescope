@@ -12,7 +12,7 @@ function getUsers()
 
 function getChilds()
 {
-    return json_decode(file_get_contents("model/dataStorage/exemple.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/images.json"),true);
 }
 
 ?>

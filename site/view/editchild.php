@@ -9,6 +9,17 @@
 ob_start();
 ?>
 <h1 align="center">Modifier les infos</h1>
+<form action="">
+    <label for="test">id image</label>
+    <input type="radio" id="test" name="Recherche">
+    <label for="test">id image</label>
+    <input type="radio" id="test" name="Recherche">
+    <label for="test">id image</label>
+    <input type="radio" id="test" name="Recherche">
+    <label for="test">id image</label>
+    <input type="radio" id="test" name="Recherche">
+</form>
+
 <table class="table" border="1"  align="center">
     <thead>
     <th>
@@ -35,8 +46,10 @@ ob_start();
     </thead  align="center">
     <tbody  align="center">
 
-        <?php echo "POMME POIRE ABRICOT";
-        foreach ($childs as $child) { ?>
+        <?php
+         foreach ($childs as $child) {
+
+        ?>
     <tr>
             <td>
                 <p><?= $child['lat'] ?> /  <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
@@ -73,5 +86,5 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-require "gabarit.php";
+require_once 'gabarit2.php';
 ?>
