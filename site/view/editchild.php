@@ -53,7 +53,6 @@ ob_start();
          foreach ($childs as $child) {
              if ($child['IDImage'] == $IDimage) {
 
-
                  ?>
                  <tr>
                      <td>

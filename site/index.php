@@ -10,10 +10,16 @@ require 'controller/dataControler.php';
 require "controller/controler.php";
 $action=$_GET['action'];
 
+if (isset($_POST['IDimage'])){
+    $IDimage=$_POST['IDimage'];
+}
 
 switch ($action) {
     case 'home';
         home();
+        break;
+    case 'editchild';
+        editchild($IDimage);
         break;
     case 'showchilds';
         showchilds();

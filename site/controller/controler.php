@@ -47,5 +47,10 @@ function showchilds(){
     $childs= getChilds();
     require_once 'view/showchilds.php';
 }
+function editchild(){
+
+    $childs= getChilds();
+    require_once 'view/editchild.php';
+}
 
 ?>
