@@ -51,39 +51,42 @@ ob_start();
 
         <?php
          foreach ($childs as $child) {
+             if ($child['IDImage'] == $IDimage) {
 
-        ?>
-    <tr>
-            <td>
-                <p><?= $child['lat'] ?> /  <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
-            </td>
-            <td>
-                <p><?= $child['IDPlace'] ?></p>
-            </td>
-            <td>
-                <p><?= $child['IDImage'] ?></p>
-            </td>
-            <td>
-                <p><?= $child['Pseudo'] ?></p>
-            </td>
-            <td>
-                <p><?= $child['Droit'] ?></p>
-            </td>
-            <td>
-                <p>
-                    <?= $child['Slogan'] ?>
-                </p>
-            </td>
-            <td>
-                <p><?= $child['Provenance'] ?></p>
-            </td>
-            <td>
-                <button>Modifier</button>
-            </td>
-    </tr>
 
-            <?php
-        }
+                 ?>
+                 <tr>
+                     <td>
+                         <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
+                     </td>
+                     <td>
+                         <p><?= $child['IDPlace'] ?></p>
+                     </td>
+                     <td>
+                         <p><?= $child['IDImage'] ?></p>
+                     </td>
+                     <td>
+                         <p><?= $child['Pseudo'] ?></p>
+                     </td>
+                     <td>
+                         <p><?= $child['Droit'] ?></p>
+                     </td>
+                     <td>
+                         <p>
+                             <?= $child['Slogan'] ?>
+                         </p>
+                     </td>
+                     <td>
+                         <p><?= $child['Provenance'] ?></p>
+                     </td>
+                     <td>
+                         <button>Modifier</button>
+                     </td>
+                 </tr>
+
+                 <?php
+             }
+         }
       ?>
 
     </tbody>
