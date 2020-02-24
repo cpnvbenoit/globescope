@@ -43,6 +43,9 @@ ob_start();
     <th>
         Origine
     </th>
+    <th>
+        Modifier
+    </th>
     </thead  align="center">
     <tbody  align="center">
 
@@ -73,6 +76,9 @@ ob_start();
             </td>
             <td>
                 <p><?= $child['Provenance'] ?></p>
+            </td>
+            <td>
+                <button>Modifier</button>
             </td>
     </tr>
 

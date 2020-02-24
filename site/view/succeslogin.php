@@ -7,7 +7,7 @@
  */
 ob_start();
 ?>
-<p class="alert alert-success">Connexion réussie.</p>
+    <script>window.open("index.php?action=editchild")</script>
 <?php
 $content = ob_get_clean();
 require "gabarit.php";
