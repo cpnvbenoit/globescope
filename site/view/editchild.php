@@ -32,7 +32,7 @@ ob_start();
         Slogan
     </th>
     <th>
-        Origine
+        Team
     </th>
     <th>
         Modifier
@@ -80,7 +80,32 @@ ob_start();
 
     </tbody>
 </table>
+<table>
+    <tr>
+        <td>
+            <input type="text" disabled id="meridien" >
+            <input type="text" disabled id="latitude">
+            <input type="text" disabled id="longitude">
+            <input type="text" disabled id="idplace">
+            <input type="text" disabled id="idimage">
+            <input type="text" id="Pseudo">
+            <input type="text" id="Droit">
+            <input type="text" id="Slogan">
+            <input type="text" id="team">
 
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+    </tr>
+
+</table>
 
 <?php
 $content = ob_get_clean();
