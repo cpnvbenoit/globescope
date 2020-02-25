@@ -9,18 +9,48 @@
 ob_start();
 ?>
 <h1 align="center">Afficher les enfants</h1>
-<form action="">
+<h4>Trier par</h4>
+<table>
+    <form action="">
+    <tr>
+        <td>
     <label for="test">Latitude</label>
     <input type="radio" id="test" name="Recherche">
+        </td>
+        <td>
     <label for="test">Longitude</label>
     <input type="radio" id="test" name="Recherche">
+        </td>
+        <td>
     <label for="test">Meridien</label>
     <input type="radio" id="test" name="Recherche">
+        </td>
+        <td>
     <label for="test">id image</label>
     <input type="radio" id="test" name="Recherche">
+        </td>
+    </tr>
+    <tr>
+        <td>
+    <label for="test">Pseudo</label>
+    <input type="radio" id="test" name="Recherche">
+        </td>
+        <td>
+    <label for="test">Droit</label>
+    <input type="radio" id="test" name="Recherche">
+        </td>
+        <td>
+    <label for="test">Slogan</label>
+    <input type="radio" id="test" name="Recherche">
+        </td>
+        <td>
+    <label for="test">Origine</label>
+    <input type="radio" id="test" name="Recherche">
+        </td>
+    </tr>
 </form>
-
-<table class="table" border="1"  align="center">
+</table>
+<table class="table" border="1"  align="center" style="border: #BCDC53">
     <thead>
     <th>
         Latitude / Longitude / Meridien
@@ -78,7 +108,7 @@ ob_start();
                 <p><?= $child['Provenance'] ?></p>
             </td>
             <td>
-                <button><a href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>">Modifier</a></button>
+                <button><a href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" style="text-decoration: none ; color: black">Modifier</a></button>
             </td>
     </tr>
 

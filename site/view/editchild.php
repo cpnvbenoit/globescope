@@ -9,16 +9,7 @@
 ob_start();
 ?>
 <h1 align="center">Modifier les infos</h1>
-<form action="">
-    <label for="test">id image</label>
-    <input type="radio" id="test" name="Recherche">
-    <label for="test">id image</label>
-    <input type="radio" id="test" name="Recherche">
-    <label for="test">id image</label>
-    <input type="radio" id="test" name="Recherche">
-    <label for="test">id image</label>
-    <input type="radio" id="test" name="Recherche">
-</form>
+
 
 <table class="table" border="1"  align="center">
     <thead>
