@@ -14,7 +14,7 @@ ob_start();
 <table class="table" border="1" align="center">
     <thead>
     <th>
-         Longitude / Latitude / Meridien
+        Longitude / Latitude / Meridien
     </th>
     <th>
         IDPlace
@@ -80,42 +80,61 @@ ob_start();
 
     </tbody>
 </table>
+<?php
+
+foreach ($childs as $child) {
+    if ($child['IDImage'] == $idchild) {
+
+
+        $valuelat = $child['lat'];
+        $valuemer = $child['mer'];
+        $valuelon = $child['lon'];
+        $valueidplace = $child['IDPlace'];
+        $valueidimage = $child['IDImage'];
+        $valuepseudo = $child['Pseudo'];
+        $valuedroit = $child['Droit'];
+        $valueslogan = $child['Slogan'];
+        $valueprovenance = $child['Provenance'];
+    }
+}
+?>
 <br>
 <table align="center">
     <tr>
         <td>
 
-            <input value="<?= $child['lat'] ?>" type="text" disabled class="edit-disabled" id="latitude">
+            <input value="<?= $valuelat ?>" type="text" disabled class="edit-disabled" id="latitude">
 
 
         </td>
         <td>
-            <input value="<?= $child['lat'] ?>" type="text" disabled class="edit-disabled" id="meridien">
+            <input value="<?= $valuelon ?>" type="text" disabled class="edit-disabled" id="longitude">
         </td>
         <td>
-            <input value="<?= $child['lat'] ?>" type="text" disabled class="edit-disabled" id="longitude">
+            <input value="<?= $valuemer ?>" type="text" disabled class="edit-disabled" id="meridien">
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <input value="<?= $valueidplace ?>" type="text" disabled class="edit-disabled" id="idplace">
+        </td>
+        <td>
+            <input value="<?= $valueidimage ?>" type="text" disabled class="edit-disabled" id="idimage">
+        </td>
+        <td>
+            <input value="<?= $valuepseudo ?>" type="text" id="team">
         </td>
     </tr>
     <tr>
         <td>
-            <input value="<?= $child['lat'] ?>" type="text" disabled class="edit-disabled" id="idplace">
+            <input value="<?= $valuedroit ?>" type="text" id="Droit">
         </td>
         <td>
-            <input value="<?= $child['lat'] ?>" type="text" disabled class="edit-disabled" id="idimage">
+            <input value="<?= $valueslogan ?>" type="text" id="Slogan">
         </td>
         <td>
-            <input value="<?= $child['lat'] ?>" type="text" id="team">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input value="<?= $child['lat'] ?>" type="text" id="Droit">
-        </td>
-        <td>
-            <input value="<?= $child['lat'] ?>" type="text" id="Slogan">
-        </td>
-        <td>
-            <input value="<?= $child['lat'] ?>" type="text" id="Pseudo">
+            <input value="<?= $valueprovenance ?>" type="text" id="Pseudo">
         </td>
 
     </tr>
