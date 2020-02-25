@@ -47,7 +47,7 @@ function showchilds(){
     $childs= getChilds();
     require_once 'view/showchilds.php';
 }
-function editchild(){
+function editchild($IDimage){
     $idchild = $IDimage;
     $childs= getChilds();
     require_once 'view/editchild.php';

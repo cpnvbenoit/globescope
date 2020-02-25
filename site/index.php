@@ -9,9 +9,8 @@ session_start();
 require 'controller/dataControler.php';
 require "controller/controler.php";
 $action=$_GET['action'];
-
-if (isset($_POST['IDimage'])){
-    $IDimage=$_POST['IDimage'];
+if (isset($_GET['IDimage'])){
+    $IDimage=$_GET['IDimage'];
 }
 
 switch ($action) {

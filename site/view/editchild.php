@@ -50,7 +50,6 @@ ob_start();
     <tbody  align="center">
 
         <?php
-        var_dump($idchild);
          foreach ($childs as $child) {
              if ($child['IDImage'] == $idchild) {
 
@@ -79,9 +78,7 @@ ob_start();
                      <td>
                          <p><?= $child['Provenance'] ?></p>
                      </td>
-                     <td>
-                         <button>Modifier</button>
-                     </td>
+
                  </tr>
 
                  <?php
