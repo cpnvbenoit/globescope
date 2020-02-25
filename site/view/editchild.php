@@ -71,6 +71,7 @@ ob_start();
                      </td>
 
                  </tr>
+                <!-- le temp de benoit va dans TEMPBENOIT.TXT-->
 
                  <?php
              }

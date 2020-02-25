@@ -1,0 +1,26 @@
+<tr><input type="text" value="">
+                     <td>
+                         <input type="text"><?= $child['lat'] ?> <?= $child['lon'] ?>  <?= $child['mer'] ?>
+                     </td>
+                     <td>
+                         <input type="text" value=""><?= $child['IDPlace'] ?>
+                     </td>
+                     <td>
+                         <input type="text" value=""><?= $child['IDImage'] ?>
+                     </td>
+                     <td>
+                         <input type="text" value=""><?= $child['Pseudo'] ?>
+                     </td>
+                     <td>
+                         <input type="text" value=""><?= $child['Droit'] ?>
+                     </td>
+                     <td>
+                         <input type="text" value="">
+                             <?= $child['Slogan'] ?>
+
+                     </td>
+                     <td>
+                         <input type="text" value=""><?= $child['Provenance'] ?>
+                     </td>
+
+                 </tr>
