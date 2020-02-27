@@ -11,7 +11,7 @@ ob_start();
 <h1 align="center">Modifier les infos</h1>
 
 
-<table class="table" border="1" align="center">
+<table  border="1" align="center" class="table" style="width: 80%">
     <thead>
     <th>
         Longitude / Latitude / Meridien
@@ -33,9 +33,6 @@ ob_start();
     </th>
     <th>
         Team
-    </th>
-    <th>
-        Modifier
     </th>
     </thead  align="center">
     <tbody align="center">
@@ -94,47 +91,56 @@ foreach ($childs as $child) {
         $valuepseudo = $child['Pseudo'];
         $valuedroit = $child['Droit'];
         $valueslogan = $child['Slogan'];
-        $valueprovenance = $child['Provenance'];
+        $valueteam = $child['Provenance'];
     }
 }
 ?>
 <br>
-<table align="center">
+<table align="center" class="table" style="width: 80%">
     <tr>
-        <td>
-
-            <input value="<?= $valuelat ?>" type="text" disabled class="edit-disabled" id="latitude">
+        <td align="center">
+            <label for="latitude">Latitude</label>
+            <input value="<?= $valuelat ?>" type="text" disabled class="edit-disabled" id="latitude" >
 
 
         </td>
-        <td>
+        <td align="center">
+            <label for="longitude">Longitude</label>
             <input value="<?= $valuelon ?>" type="text" disabled class="edit-disabled" id="longitude">
         </td>
-        <td>
+        <td align="center">
+            <label for="meridien">Meridien</label>
             <input value="<?= $valuemer ?>" type="text" disabled class="edit-disabled" id="meridien">
         </td>
 
     </tr>
     <tr>
-        <td>
+        <td align="center">
+            <label for="idplace">IDplace</label>
             <input value="<?= $valueidplace ?>" type="text" disabled class="edit-disabled" id="idplace">
         </td>
-        <td>
-            <input value="<?= $valueidimage ?>" type="text" disabled class="edit-disabled" id="idimage">
+        <td align="center">
+            <label for="idimage">IDimage</label>
+            <input value="<?= $valueidimage ?>" type="text" disabled class="edit-disabled" id="idimage" >
         </td>
-        <td>
-            <input value="<?= $valuepseudo ?>" type="text" id="team">
+        <td align="center">
+            <label for="team">Team</label>
+            <input value="<?= $valueteam ?>" type="text" id="team" style="width:<?php $longteam = strlen($valueteam) ; if ($longteam <= 15){ echo "170";}else{echo $longteam *7 ;} ?>px">
         </td>
     </tr>
     <tr>
-        <td>
-            <input value="<?= $valuedroit ?>" type="text" id="Droit">
+        <td align="center">
+            <label for="Droit">Droit</label>
+            <input value="<?= $valuedroit ?>" type="text" id="Droit" style="width:<?php $longDroit = strlen($valuedroit) ; if ($longDroit <= 35){ echo "170";}else{echo $longDroit *6  ;} ?>px">
+
         </td>
-        <td>
-            <input value="<?= $valueslogan ?>" type="text" id="Slogan">
+        <td align="center">
+            <label for="Slogan">Slogan</label>
+            <input value="<?= $valueslogan ?>" type="text" id="Slogan" style="width:<?php $longslogan = strlen($valueslogan) ; if ($longslogan <= 35){ echo "170";}else{echo $longslogan *6 ;} ?>px" >
         </td>
-        <td>
-            <input value="<?= $valueprovenance ?>" type="text" id="Pseudo">
+        <td align="center">
+            <label for="Pseudo">Pseudo</label>
+            <input value="<?= $valuepseudo ?>" type="text" id="Pseudo" >
         </td>
 
     </tr>
