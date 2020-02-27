@@ -5,7 +5,7 @@
  * Date: 13.02.2020
  * Time: 11.19
  */
-
+$title = "Modifications";
 ob_start();
 ?>
 <h1 align="center">Modifier les infos</h1>

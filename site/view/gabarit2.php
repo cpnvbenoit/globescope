@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Globescope</title>
+    <title><?=$title?></title>
 
 
 </head>

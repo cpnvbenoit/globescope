@@ -5,12 +5,12 @@
  * Date: 13.02.2020
  * Time: 11.19
  */
-
+$title ="Affichage";
 ob_start();
 ?>
 <h1 align="center">Afficher les enfants</h1>
 <h4>Trier par</h4>
-<table>
+<table class="table">
     <form action="">
     <tr>
         <td>
