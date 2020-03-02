@@ -25,17 +25,22 @@ function tryLogin()
     $users=getUsers();
     $username=$_POST['username'];
     $password=$_POST['password'];
+    unset($_SESSION['username']);
+
     foreach ($users as $user){
         if (($username==$user['username'])&&($password==$user['password'])){
 
-            $_SESSION['username']=$username;
+            $_SESSION['username']=$username;//a röussi
+
         }
     }
-    if (isset($_SESSION['username'])==false){
-        $_SESSION['fail']=true;
+    if (isset($_SESSION['username'])){//si a reussi
+        echo "pomme";
+        $_SESSION['fail']=false;//resusi
         require_once 'view/succeslogin.php';
     }else{
-        $_SESSION['fail']=false;
+        echo "Banane";
+        $_SESSION['fail']=true;//pas susi
         require_once 'view/home.php';
     }
 
