@@ -1,4 +1,3 @@
-
 var allowedKeys = {// ok modif
 
     //unlockall
