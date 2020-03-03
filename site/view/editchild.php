@@ -146,7 +146,7 @@ foreach ($childs as $child) {
     </tr>
 
 </table>
-
+<button onclick="window.confirm('Vous aller faire autre chose ?')">Test multi alert</button>
 <?php
 $content = ob_get_clean();
 require_once 'gabarit2.php';

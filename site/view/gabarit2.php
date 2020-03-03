@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+<h1 class="d-none" id="TEstUnlock">UNLOCKALL</h1>
 <?= $content?>
 
 <script src="js/unlockall.js"></script>
