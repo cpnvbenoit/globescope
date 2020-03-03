@@ -12,9 +12,9 @@ if ($_SESSION['fail']="false") {
     ob_start();
     ?>
     <h1 align="center">Afficher les enfants</h1>
-    <h4>Trier par</h4>
-    <table class="table">
-        <form action="">
+    <h4 style="padding-left: 10px"> Rechercher par</h4>
+    <table class="table" style="text-align: center">
+        <form>
             <tr>
                 <td>
                     <label for="test">Latitude</label>
