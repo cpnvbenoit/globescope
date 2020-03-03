@@ -2,6 +2,13 @@
   "0": {
     "id": "1",
     "username": "a",
-    "password": "a"
+    "password": "a",
+    "level" : "1"
+  },
+  "1": {
+    "id": "2",
+    "username": "b",
+    "password": "b",
+    "level" : "2"
   }
 }
