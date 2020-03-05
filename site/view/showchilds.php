@@ -6,11 +6,11 @@
  * Time: 11.19
  */
 $title = "Error";
-var_dump($_SESSION['fail']);
 if ($_SESSION['fail']="false") {
     $title = "Affichage";
     ob_start();
     ?>
+    <script> alert("Bienvenue !") </script>
     <h1 align="center">Afficher les enfants</h1>
     <h4 style="padding-left: 10px"> Rechercher par</h4>
     <table class="table" style="text-align: center">

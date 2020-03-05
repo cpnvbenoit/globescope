@@ -9,7 +9,8 @@ ob_start();
 
 if (isset($_SESSION['username'])) {
     ?>
-    <script>window.open("index.php?action=showchilds")</script>
+    <script>window.open("index.php?action=showchilds")
+    </script>
     <?php
 }
 $content = ob_get_clean();
