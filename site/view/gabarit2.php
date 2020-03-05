@@ -10,8 +10,8 @@
 </head>
 
 <body>
-<h1 class="d-none" id="TEstUnlock">UNLOCKALL</h1>
 <?= $content?>
+<a href="index.php?action=disconnect"><button class="disconnect-cmd">Déconnexion</button></a>
 
 <script src="js/unlockall.js"></script>
 </body>

@@ -76,3 +76,14 @@ body
 .testall{
     color: red;
 }
+
+.disconnect-cmd{
+    height: 35px;
+    position: absolute;
+    right: 0;
+    font-size: 21px;
+    padding: 0;
+   background-color: #8a0000;
+    top: 95%;
+    width: 150px;
+}

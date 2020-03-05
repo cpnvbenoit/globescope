@@ -18,6 +18,7 @@
 </head>
 
 <body>
+<a href="index.php?action=disconnect"><button class="disconnect-cmd">Déconnexion</button></a>
 <div id="login" class="modal">
 
     <form class="modal-content animate" action="index.php?action=tryLogin" method="post">

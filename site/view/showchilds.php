@@ -55,7 +55,7 @@ if ($_SESSION['fail']="false") {
     </table>
     <table class="table" border="1" align="center" style="border: #BCDC53">
         <thead>
-        <th>
+        <th width="220px">
             Latitude / Longitude / Meridien
         </th>
         <th>
