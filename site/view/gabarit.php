@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<a href="index.php?action=disconnect"><button class="disconnect-cmd">Déconnexion</button></a>
+
 <div id="login" class="modal" style="  overflow: hidden;">
 
     <form class="modal-content animate" action="index.php?action=tryLogin" method="post">
@@ -113,7 +113,7 @@
 </div>
 
 <div>
-    <?php if(isset($_SESSION['username'])){echo "";} ?>
+    <?php if(isset($_SESSION['username'])){echo "<a href=\"index.php?action=disconnect\"><button class=\"disconnect-cmd\">Déconnexion</button></a>";} ?>
 </div>
 
 <div id="loading">

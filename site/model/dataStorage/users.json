@@ -2,13 +2,13 @@
   "0": {
     "id": "1",
     "username": "a",
-    "password": "a",
+    "password": "$2y$10$B0Q4IEqe/4L7Wn7fTXUV/ed5M0QRxykx1o8Uyi7.U7ZYzKARXFqjS",
     "level" : "1"
   },
   "1": {
     "id": "2",
     "username": "m",
-    "password": "m",
+    "password": "$2y$10$MEbZ3EGUOhTBkTt58D.cQOfAoTEvoY0vOsWfKcZHM1ESSfCm0fn3G",
     "level" : "2"
   }
 }

@@ -147,7 +147,6 @@ foreach ($childs as $child) {
 
 </table>
 <button id="UnlockallCMD">UnlockAll</button>
-<button id="LockallCMD" class="d-none">LockAll</button>
 <button onclick="window.confirm('Vous aller faire autre chose ?')">Test multi alert</button>
 <?php
 $content = ob_get_clean();

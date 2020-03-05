@@ -32,6 +32,9 @@ switch ($action) {
     case 'disconnect';
         disconnect();
         break;
+    case 'testhashed';
+        testhashed();
+        break;
     default:
         home();
         break;

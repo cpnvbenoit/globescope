@@ -21,6 +21,10 @@ function disconnect()
     $_SESSION['fail'] = true;
     require_once 'view/home.php';
 }
+function testhashed(){
+    $_SESSION['hash']=$_POST['testhash'];
+    require_once 'view/testhash.php';
+}
 function tryLogin()
 {
 
@@ -30,7 +34,7 @@ function tryLogin()
     unset($_SESSION['username']);
 
     foreach ($users as $user){
-        if (($username==$user['username'])&&($password==$user['password'])){
+        if (($username==$user['username'])&&($password==password_verify($password,$user['password']))){
 
             $_SESSION['username']=$username;//a röussi
 
