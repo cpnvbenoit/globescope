@@ -29,6 +29,9 @@ switch ($action) {
     case 'tryLogin';
         tryLogin();
         break;
+    case 'disconnect';
+        disconnect();
+        break;
     default:
         home();
         break;

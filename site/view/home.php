@@ -6,6 +6,7 @@
  * Time: 15:49
  */
 ob_start();
+var_dump($_SESSION['username']);
 ?>
 <?php
 $content = ob_get_clean();

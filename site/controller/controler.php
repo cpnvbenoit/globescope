@@ -16,7 +16,9 @@ function home()
 
 function disconnect()
 {
-    unset($_SESSION);
+
+    unset($_SESSION['username']);
+    $_SESSION['fail'] = true;
     require_once 'view/home.php';
 }
 function tryLogin()
@@ -35,11 +37,9 @@ function tryLogin()
         }
     }
     if (isset($_SESSION['username'])){//si a reussi
-        echo "Connécter";
         $_SESSION['fail']=false;//resusi
         require_once 'view/succeslogin.php';
     }else{
-        echo "La connexion a échoué";
         $_SESSION['fail']=true;//pas susi
         require_once 'view/home.php';
     }
