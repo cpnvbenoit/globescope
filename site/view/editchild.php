@@ -14,7 +14,7 @@ ob_start();
 <table  border="1" align="center" class="table" style="width: 80%">
     <thead>
     <th>
-        Longitude / Latitude / Meridien
+        Meridien / Latitude / Longitude
     </th>
     <th>
         IDPlace
@@ -44,7 +44,7 @@ ob_start();
             ?>
             <tr>
                 <td>
-                    <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
+                    <p><?= $child['mer'] ?> / <?= $child['lat'] ?> / <?= $child['lon'] ?> </p>
                 </td>
                 <td>
                     <p><?= $child['IDPlace'] ?></p>
@@ -99,6 +99,10 @@ foreach ($childs as $child) {
 <table align="center" class="table" style="width: 80%">
     <tr>
         <td align="center">
+            <label for="meridien">Meridien</label>
+            <input value="<?= $valuemer ?>" type="text" disabled class="edit-disabled" id="meridien">
+        </td>
+        <td align="center">
             <label for="latitude">Latitude</label>
             <input value="<?= $valuelat ?>" type="text" disabled class="edit-disabled" id="latitude" >
 
@@ -107,10 +111,6 @@ foreach ($childs as $child) {
         <td align="center">
             <label for="longitude">Longitude</label>
             <input value="<?= $valuelon ?>" type="text" disabled class="edit-disabled" id="longitude">
-        </td>
-        <td align="center">
-            <label for="meridien">Meridien</label>
-            <input value="<?= $valuemer ?>" type="text" disabled class="edit-disabled" id="meridien">
         </td>
 
     </tr>
@@ -146,6 +146,7 @@ foreach ($childs as $child) {
     </tr>
 
 </table>
+<button id="UnlockallCMD">UnlockAll</button>
 <button onclick="window.confirm('Vous aller faire autre chose ?')">Test multi alert</button>
 <?php
 $content = ob_get_clean();
