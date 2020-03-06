@@ -19,6 +19,7 @@
 
 <body>
 
+
 <div id="login" class="modal" style="  overflow: hidden;">
 
     <form class="modal-content animate" action="index.php?action=tryLogin" method="post">
@@ -42,7 +43,7 @@
 </div>
 <div class="test">
 
-<?=$content?>
+    <?= $content ?>
 
 
 </div>
@@ -62,10 +63,12 @@
             <hr>
             <p id="aideAgrandirImage">Double-cliquez sur l'image pour l'agrandir et afficher ses informations</p>
             <hr>
-            <p id="aideRecherche">Pour recherche un/votre pseudo cliquez sur la loupe et ecrivez ensuite un/votre pseudo.</p>
+            <p id="aideRecherche">Pour recherche un/votre pseudo cliquez sur la loupe et ecrivez ensuite un/votre
+                pseudo.</p>
         </div>
         <div class="languageSelect">
-            <span id="FR" onclick="aideFr()">FR</span>/<span id="EN" onclick="aideAng()">EN</span>/<span id="creditSpan" onclick="credit()">Credits</span>
+            <span id="FR" onclick="aideFr()">FR</span>/<span id="EN" onclick="aideAng()">EN</span>/<span id="creditSpan"
+                                                                                                         onclick="credit()">Credits</span>
         </div>
     </div>
     <div id="creditBox">
@@ -113,7 +116,9 @@
 </div>
 
 <div>
-    <?php if(isset($_SESSION['username'])){echo "<a href=\"index.php?action=disconnect\"><button class=\"disconnect-cmd\">Déconnexion</button></a>";} ?>
+    <?php if (isset($_SESSION['username'])) {
+        echo "<a href=\"index.php?action=disconnect\"><button class=\"disconnect-cmd\">Déconnexion</button></a>";
+    } ?>
 </div>
 
 <div id="loading">
@@ -137,6 +142,7 @@ void main() {
     gl_Position = projectionMatrix * modelViewMatrix * pos;
 }
 
+
 </script>
 <script type="application/x-glsl" id="sky-fragment">
 uniform sampler2D texture;
@@ -146,6 +152,7 @@ void main() {
     vec4 sample = texture2D(texture, vUV);
     gl_FragColor = vec4(sample.xyz, sample.w);
 }
+
 
 </script>
 

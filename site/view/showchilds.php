@@ -1,7 +1,7 @@
 <?php
 /**
  * Created By PhpStorm
- * User: simon.cuany
+ * User: simon.cuany and benoit.pierrehumbert
  * Date: 13.02.2020
  * Time: 11.19
  */
@@ -58,7 +58,7 @@ if ($_SESSION['fail']="false") {
         <th width="220px">
             Latitude / Longitude / Meridien
         </th>
-        <th>
+        <th >
             IDPlace
         </th>
         <th>

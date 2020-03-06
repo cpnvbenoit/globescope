@@ -1,7 +1,7 @@
 <?php
 /**
  * Created By PhpStorm
- * User: benoit.pierrehumbert
+ * User: benoit.pierrehumbert  and simon.cuany
  * Date: 04.02.2020
  * Time: 15:57
  */

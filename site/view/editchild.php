@@ -1,7 +1,7 @@
 <?php
 /**
  * Created By PhpStorm
- * User: simon.cuany
+ * User: simon.cuany and benoit.pierrehumbert
  * Date: 13.02.2020
  * Time: 11.19
  */
@@ -146,8 +146,8 @@ foreach ($childs as $child) {
     </tr>
 
 </table>
-<button id="UnlockallCMD">UnlockAll</button>
-<button onclick="window.confirm('Vous aller faire autre chose ?')">Test multi alert</button>
+<button id="UnlockallCMD" class="btn btn-danger">UnlockAll</button>
+<button onclick="window.confirm('Vous aller faire autre chose ?')" class="btn btn-primary" >Test multi alert</button>
 <?php
 $content = ob_get_clean();
 require_once 'gabarit2.php';

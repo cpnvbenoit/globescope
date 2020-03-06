@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
 <a href="index.php?action=disconnect"><button class="disconnect-cmd">Déconnexion</button></a>
 <?= $content?>
 
