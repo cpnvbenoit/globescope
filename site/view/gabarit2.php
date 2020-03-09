@@ -11,7 +11,7 @@
 
 <body>
 
-<a href="index.php?action=disconnect"><button class="disconnect-cmd">Déconnexion</button></a>
+<a href="index.php?action=disconnect"><button class="btn btn-danger">Déconnexion</button></a>
 <?= $content?>
 
 <script src="js/unlockall.js"></script>
