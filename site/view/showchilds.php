@@ -111,8 +111,8 @@ if ($_SESSION['fail']="false") {
                     <p><?= $child['Provenance'] ?></p>
                 </td>
                 <td>
-                    <button><a href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
-                               style="text-decoration: none ; color: black">Modifier</a></button>
+                    <button class="btn btn-primary"><a href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
+                               style="text-decoration: none ; color: #ffffff">Modifier</a></button>
                 </td>
             </tr>
 
