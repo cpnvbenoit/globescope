@@ -148,6 +148,7 @@ foreach ($childs as $child) {
 </table>
 <br>
 <div style="text-align: center">
+<img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -25px" alt="Images id : <?= $valueidimage ?>"><br><br>
 <button id="UnlockallCMD" class="btn btn-danger">UnlockAll</button>
 <button id="Save" class="btn btn-success">Sauvegarder</button>
 <button onclick="window.confirm('Vous êtes sur le point d\'acheter votre poids en chocolat ?')" class="btn btn-primary" >Test multi alert</button>
