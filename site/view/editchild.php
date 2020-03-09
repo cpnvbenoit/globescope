@@ -98,57 +98,62 @@ foreach ($childs as $child) {
 <br>
 <table align="center" class="table" style="width: 80%">
     <tr>
-        <td align="center">
+        <td class="form-group">
             <label for="meridien">Meridien</label>
-            <input value="<?= $valuemer ?>" type="text" disabled class="edit-disabled" id="meridien">
+            <input value="<?= $valuemer ?>" type="text" disabled class="form-control" id="meridien">
         </td>
-        <td align="center">
+        <td class="form-group">
             <label for="latitude">Latitude</label>
-            <input value="<?= $valuelat ?>" type="text" disabled class="edit-disabled" id="latitude" >
+            <input value="<?= $valuelat ?>" type="text" disabled class="form-control" id="latitude" >
 
 
         </td>
-        <td align="center">
+        <td class="form-group">
             <label for="longitude">Longitude</label>
-            <input value="<?= $valuelon ?>" type="text" disabled class="edit-disabled" id="longitude">
+            <input value="<?= $valuelon ?>" type="text" disabled class="form-control" id="longitude">
         </td>
 
     </tr>
     <tr>
-        <td align="center">
+        <td class="form-group">
             <label for="idplace">IDplace</label>
-            <input value="<?= $valueidplace ?>" type="text" disabled class="edit-disabled" id="idplace">
+            <input value="<?= $valueidplace ?>" type="text" disabled class="form-control" id="idplace">
         </td>
-        <td align="center">
+        <td class="form-group">
             <label for="idimage">IDimage</label>
-            <input value="<?= $valueidimage ?>" type="text" disabled class="edit-disabled" id="idimage" >
+            <input value="<?= $valueidimage ?>" type="text" disabled class="form-control" id="idimage" >
         </td>
-        <td align="center">
+        <td class="form-group">
             <label for="team">Team</label>
-            <input value="<?= $valueteam ?>" type="text" id="team" style="width:<?php $longteam = strlen($valueteam) ; if ($longteam <= 15){ echo "170";}else{echo $longteam *7 ;} ?>px">
+            <input value="<?= $valueteam ?>" type="text" id="team" class="form-control">
         </td>
     </tr>
     <tr>
-        <td align="center">
+        <td class="form-group">
             <label for="Droit">Droit</label>
-            <input value="<?= $valuedroit ?>" type="text" id="Droit" style="width:<?php $longDroit = strlen($valuedroit) ; if ($longDroit <= 35){ echo "170";}else{echo $longDroit *6  ;} ?>px">
+            <input value="<?= $valuedroit ?>" type="text" id="Droit" class="form-control">
 
         </td>
-        <td align="center">
+        <td class="form-group">
             <label for="Slogan">Slogan</label>
-            <input value="<?= $valueslogan ?>" type="text" id="Slogan" style="width:<?php $longslogan = strlen($valueslogan) ; if ($longslogan <= 35){ echo "170";}else{echo $longslogan *6 ;} ?>px" >
+            <input value="<?= $valueslogan ?>" type="text" class="form-control" id="Slogan">
         </td>
-        <td align="center">
+        <td class="form-group">
             <label for="Pseudo">Pseudo</label>
-            <input value="<?= $valuepseudo ?>" type="text" id="Pseudo" >
+            <input value="<?= $valuepseudo ?>" class="form-control" type="text" id="Pseudo" >
         </td>
 
     </tr>
 
 </table>
+<br>
+<div style="text-align: center">
 <button id="UnlockallCMD" class="btn btn-danger">UnlockAll</button>
-<button onclick="window.confirm('Vous aller faire autre chose ?')" class="btn btn-primary" >Test multi alert</button>
-<?php
+<button id="Save" class="btn btn-success">Sauvegarder</button>
+<button onclick="window.confirm('Vous êtes sur le point d\'acheter votre poids en chocolat ?')" class="btn btn-primary" >Test multi alert</button>
+</div>
+    <?php
+
 $content = ob_get_clean();
 require_once 'gabarit2.php';
 ?>
