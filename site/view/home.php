@@ -6,7 +6,6 @@
  * Time: 15:49
  */
 ob_start();
-var_dump($_SESSION['username']);
 ?>
 <?php
 if (isset($_SESSION['flashmessage'])){
