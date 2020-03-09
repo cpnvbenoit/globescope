@@ -16,6 +16,5 @@
 
 <?= $content?>
 
-<script src="js/unlockall.js"></script>
 </body>
 </html>
