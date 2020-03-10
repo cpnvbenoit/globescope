@@ -1,15 +1,14 @@
 document.addEventListener("DOMContentLoaded", init);
-
 function init() {
-    UnlockallCMD.addEventListener("click",windowsconfirm());
-    UnlockallCMD.addEventListener('click',unlock);
+    UnlockallCMD.addEventListener('click',windowsconfirm);
 }
 
 function windowsconfirm() {
-    windows.confirm("Voulez vous vraiment activer la modification des options de positionnement de l'image ?");
-    var r = confirm("Press a button!");
+    var r = confirm("Voulez vous vraiment activer la modification des options de positionnement de l'image ?");
     if (r == true) {
         unlock();
+    }else{
+        lock();
     }
 
 }
@@ -19,4 +18,11 @@ function unlock() {
     longitude.disabled = false;
     idplace.disabled = false;
     idimage.disabled = false;
+}
+function lock() {
+    meridien.disabled = true;
+    latitude.disabled = true;
+    longitude.disabled = true;
+    idplace.disabled = true;
+    idimage.disabled = true;
 }
