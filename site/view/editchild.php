@@ -8,31 +8,38 @@
 $title = "Modifications";
 ob_start();
 ?>
-<h1 align="center">Modifier les infos</h1>
+
+<h1 align="center">Modifier les infos</h1> <br>
 
 
-<table  border="1" align="center" class="table" style="width: 80%">
+<table  border="1" align="center" class="table" style="width: 80% ; border-color: #BCDC53 ">
     <thead>
-    <th>
-        Meridien / Latitude / Longitude
+    <th style="text-align: center">
+        Méridien / Latitude / Longitude
     </th>
-    <th>
+    <th style="text-align: center">
         IDPlace
     </th>
-    <th>
+    <th style="text-align: center">
         IDImage
     </th>
-    <th>
+    <th style="text-align: center">
         Pseudo
     </th>
-    <th>
+    <th style="text-align: center">
         Droit
     </th>
-    <th>
+    <th style="text-align: center">
         Slogan
     </th>
-    <th>
-        Team
+    <th style="text-align: center">
+        Origine des données
+    </th>
+    <th style="text-align: center">
+       Pays
+    </th>
+    <th style="text-align: center">
+       Ville
     </th>
     </thead  align="center">
     <tbody align="center">
@@ -66,6 +73,12 @@ ob_start();
                 <td>
                     <p><?= $child['Provenance'] ?></p>
                 </td>
+                <td>
+                    <p><?= $child['Pays'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Ville'] ?></p>
+                </td>
 
             </tr>
             <!-- le temp de benoit va dans TEMPBENOIT.TXT-->
@@ -92,6 +105,9 @@ foreach ($childs as $child) {
         $valuedroit = $child['Droit'];
         $valueslogan = $child['Slogan'];
         $valueteam = $child['Provenance'];
+        $valueville = $child['Ville'];
+        $valuespays = $child['Pays'];
+
     }
 }
 ?>
@@ -99,7 +115,7 @@ foreach ($childs as $child) {
 <table align="center" class="table" style="width: 80%">
     <tr>
         <td class="form-group">
-            <label for="meridien">Meridien</label>
+            <label for="meridien">Méridien</label>
             <input value="<?= $valuemer ?>" type="text" disabled class="form-control" id="meridien">
         </td>
         <td class="form-group">
@@ -142,6 +158,21 @@ foreach ($childs as $child) {
             <label for="Pseudo">Pseudo</label>
             <input value="<?= $valuepseudo ?>" class="form-control" type="text" id="Pseudo" >
         </td>
+    </tr>
+    <tr>
+        <td class="form-group">
+            <label for="Pseudo">Pays</label>
+            <input value="<?= $valuespays ?>" class="form-control" type="text" id="Pseudo" >
+        </td>
+        <td class="form-group">
+            <label for="Pseudo">Ville</label>
+            <input value="<?= $valueville ?>" class="form-control" type="text" id="Pseudo" >
+        </td>
+        <td class="form-group">
+            <label for="Pseudo">Align</label>
+            <input value="<?= $valueville ?>" class="form-control" type="text" id="Pseudo" >
+        </td>
+
 
     </tr>
 
@@ -151,7 +182,6 @@ foreach ($childs as $child) {
 <img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -25px" alt="Images id : <?= $valueidimage ?>"><br><br>
 <button id="UnlockallCMD" class="btn btn-danger">UnlockAll</button>
 <button id="Save" class="btn btn-success">Sauvegarder</button>
-<button id="confirmUA" class="btn btn-primary" >Test multi alert</button>
 </div>
     <?php
 

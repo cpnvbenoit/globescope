@@ -11,7 +11,7 @@ if ($_SESSION['fail']="false") {
     ob_start();
     ?>
     <script> alert("Bienvenue !") </script>
-    <h1 align="center">Afficher les enfants</h1>
+    <h1 align="center">Afficher les enfants</h1><br>
     <h4 style="padding-left: 10px"> Rechercher par</h4>
     <table class="table" style="text-align: center">
         <form>
@@ -47,8 +47,28 @@ if ($_SESSION['fail']="false") {
                     <input type="radio" id="test" name="Recherche">
                 </td>
                 <td>
-                    <label for="test">Origine</label>
+                    <label for="test">Origine des données</label>
                     <input type="radio" id="test" name="Recherche">
+                </td>
+            </tr>
+            <tr >
+                <td>
+                    <label for="test">Pays</label >
+                    <input type="radio" id="test" name="Recherche">
+                </td>
+                <td>
+                    <label for="test">Ville</label>
+                    <input type="radio" id="test" name="Recherche">
+                </td>
+                <td>
+                    <label for="test">Team</label>
+                    <input type="radio" id="test" name="Recherche">
+                </td>
+                <td>
+
+                    <label for="test">Tous</label>
+                    <input type="radio" id="test" name="Recherche">
+
                 </td>
             </tr>
         </form>
@@ -74,7 +94,16 @@ if ($_SESSION['fail']="false") {
             Slogan
         </th>
         <th>
-            Origine
+            Origine des données
+        </th>
+        <th>
+            Pays
+        </th>
+        <th>
+            Ville
+        </th>
+        <th>
+            Team
         </th>
         <th>
             Modifier
@@ -110,6 +139,16 @@ if ($_SESSION['fail']="false") {
                 <td>
                     <p><?= $child['Provenance'] ?></p>
                 </td>
+                <td>
+                    <p><?= $child['Pays'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Ville'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Equipe'] ?></p>
+                </td>
+
                 <td>
                     <button class="btn btn-primary"><a href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
                                style="text-decoration: none ; color: #ffffff">Modifier</a></button>
