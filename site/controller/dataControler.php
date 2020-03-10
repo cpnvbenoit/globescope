@@ -7,8 +7,8 @@
  */
 function GetData(){
     //Get JSON Params
-    $obj = json_decode($_POST["x"], false);
 
+    $obj = json_decode($_POST["x"], false);
     $data = json_decode(file_get_contents('model/dataStorage/images.json'),true); // by default, return everything as an associative array
     $query = "";
     if (isset($_POST['Mode']))
@@ -41,5 +41,6 @@ function GetData(){
         }
     }
     echo json_encode($res);
+
 }
 ?>

@@ -96,6 +96,10 @@
             <p id="childPseudo"></p>
             <p id="childCitation"></p>
             <p id="childRight"></p>
+            <?php if ($_SESSION['fail']=="false"){echo "<p id=\"childIDPlace\"></p>";} ?>
+            <p id="childPays"></p>
+            <p id="childVille"></p>
+            <p id="childEquipe"></p>
         </div>
     </div>
     <div id="onSearchDetails" class="flexContainer">
