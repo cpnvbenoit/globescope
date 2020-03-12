@@ -9,7 +9,7 @@ $title = "Modifications";
 ob_start();
 ?>
 
-<h1 align="center">Modifier les infos</h1> <br>
+<h1 align="center">Modifier les infos</h1>
 
 
 <table  border="1" align="center" class="table" style="width: 80% ; border-color: #BCDC53 ">
@@ -160,26 +160,26 @@ foreach ($childs as $child) {
         </td>
     </tr>
     <tr>
+
         <td class="form-group">
             <label for="Pseudo">Pays</label>
             <input value="<?= $valuespays ?>" class="form-control" type="text" id="Pseudo" >
+        </td>
+
+        <td class="form-group">
+
         </td>
         <td class="form-group">
             <label for="Pseudo">Ville</label>
             <input value="<?= $valueville ?>" class="form-control" type="text" id="Pseudo" >
         </td>
-        <td class="form-group">
-            <label for="Pseudo">Align</label>
-            <input value="<?= $valueville ?>" class="form-control" type="text" id="Pseudo" >
-        </td>
-
 
     </tr>
 
 </table>
 <br>
 <div style="text-align: center">
-<img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -25px" alt="Images id : <?= $valueidimage ?>"><br><br>
+<img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -80px" alt="Images id : <?= $valueidimage ?>"><br><br>
 <button id="UnlockallCMD" class="btn btn-danger">UnlockAll</button>
 <button id="Save" class="btn btn-success">Sauvegarder</button>
 </div>
