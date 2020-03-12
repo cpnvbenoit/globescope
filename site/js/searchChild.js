@@ -1,10 +1,13 @@
 function searchChild(camera,scene)
 {
-    var objJSON,dbParam,xmlhttp,myObj;
+    var objJSON,dbParam,xmlhttp,myObj,objJSON2,objJSON3,objJSON4;
 
     //les paramètres a passer dans la requête SQL
     //SearchTextBox => input de la barre de recherche
-    objJSON = {"Pseudo":SearchTextBox.value }
+    objJSON = {"Pseudo":SearchTextBox.value };
+    objJSON2 = {"Pays":SearchTextBox.value };
+    objJSON3 = {"Ville":SearchTextBox.value };
+    objJSON4 = {"Equipe":SearchTextBox.value };
     dbParam = JSON.stringify(objJSON);
 
     xmlhttp = new XMLHttpRequest();
@@ -13,6 +16,7 @@ function searchChild(camera,scene)
     onSearchDetails.innerHTML = "";
 
     xmlhttp.onreadystatechange = function()
+
     {
         if(this.readyState ==4 && this.status==200)
         {
@@ -67,6 +71,7 @@ function searchChild(camera,scene)
                         det.appendChild(searchPseudo);
 
                         details.appendChild(det);
+
 
                     }
                 })(i);

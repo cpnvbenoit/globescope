@@ -31,7 +31,6 @@ function onImageClick(x)
                     childPseudo.textContent = myObj.Pseudo;
                     childCitation.textContent =  myObj.Slogan;
                     childRight.textContent = myObj.Droit;
-                    alert(myObj.Droit);
                     childIDPlace.textContent = myObj.IDPlace;
                     childEquipe.textContent = myObj.Equipe;
                     childVille.textContent = myObj.Ville;
@@ -45,6 +44,5 @@ function onImageClick(x)
     xmlhttp.open("POST", "index.php?action=GetData", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam +"&Mode=click");
-    alert(xmlhttp);
 
 }
