@@ -86,4 +86,7 @@ function editchild($IDimage)
 
 }
 
+function save($IDimage){
+
+}
 ?>

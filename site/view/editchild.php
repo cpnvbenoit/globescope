@@ -81,7 +81,7 @@ ob_start();
                 </td>
 
             </tr>
-            <!-- le temp de benoit va dans TEMPBENOIT.TXT-->
+
 
             <?php
         }
@@ -113,6 +113,7 @@ foreach ($childs as $child) {
 ?>
 <br>
 <table align="center" class="table" style="width: 80%">
+    <form action="index.php?action=save">
     <tr>
         <td class="form-group">
             <label for="meridien">Méridien</label>
@@ -175,13 +176,13 @@ foreach ($childs as $child) {
         </td>
 
     </tr>
-
+    </form>
 </table>
 <br>
 <div style="text-align: center">
 <img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -80px" alt="Images id : <?= $valueidimage ?>"><br><br>
 <button id="UnlockallCMD" class="btn btn-danger">UnlockAll</button>
-<button id="Save" class="btn btn-success">Sauvegarder</button>
+<button id="Save" type="submit" class="btn btn-success">Sauvegarder</button>
 </div>
     <?php
 

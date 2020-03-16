@@ -20,6 +20,9 @@ switch ($action) {
     case 'editchild';
         editchild($IDimage);
         break;
+    case 'save';
+        save($IDimage);
+        break;
     case 'showchilds';
         showchilds();
         break;
