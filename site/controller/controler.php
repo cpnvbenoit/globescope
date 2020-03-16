@@ -86,7 +86,12 @@ function editchild($IDimage)
 
 }
 
-function save($IDimage){
+function save($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville){
+    $childs = getChilds();
+    foreach ($childs as $child){
+        if ($child['IDImage'] == $idplace) {
 
+        }
+    }
 }
 ?>

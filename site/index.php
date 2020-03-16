@@ -12,6 +12,42 @@ $action=$_GET['action'];
 if (isset($_GET['IDimage'])){
     $IDimage=$_GET['IDimage'];
 }
+//Set var for save -----------------------------------------
+if (isset($_POST['meridien'])){
+    $meridien=$_POST['meridien'];
+}
+if (isset($_POST['latitude'])){
+    $latitude=$_POST['latitude'];
+}
+if (isset($_POST['longitude'])){
+    $longitude=$_POST['longitude'];
+}
+if (isset($_POST['idplace'])){
+    $idplace=$_POST['idplace'];
+}
+if (isset($_POST['idimage'])){
+    $idimage=$_POST['idimage'];
+}
+if (isset($_POST['team'])){
+    $team=$_POST['team'];
+}
+if (isset($_POST['Droit'])){
+    $Droit=$_POST['Droit'];
+}
+if (isset($_POST['Slogan'])){
+    $Slogan=$_POST['Slogan'];
+}
+if (isset($_POST['Pseudo'])){
+    $Pseudo=$_POST['Pseudo'];
+}
+if (isset($_POST['Pays'])){
+    $Pays=$_POST['Pays'];
+}
+if (isset($_POST['Ville'])){
+    $Ville=$_POST['Ville'];
+}
+
+//END set var for save -----------------------------------------
 
 switch ($action) {
     case 'home';
@@ -21,7 +57,7 @@ switch ($action) {
         editchild($IDimage);
         break;
     case 'save';
-        save($IDimage);
+        save($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville);
         break;
     case 'showchilds';
         showchilds();

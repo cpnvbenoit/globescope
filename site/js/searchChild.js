@@ -7,7 +7,7 @@ function searchChild(camera,scene)
     objJSON = {"Pseudo":SearchTextBox.value };
     objJSON2 = {"Pays":SearchTextBox.value };
     objJSON3 = {"Ville":SearchTextBox.value };
-    objJSON4 = {"Equipe":SearchTextBox.value };
+    objJSON4 = {"Team":SearchTextBox.value };
     dbParam = JSON.stringify(objJSON);
 
     xmlhttp = new XMLHttpRequest();

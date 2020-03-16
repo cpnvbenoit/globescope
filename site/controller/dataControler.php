@@ -20,8 +20,19 @@ function GetData(){
             $pattern = "/{$obj->Pseudo}/i";
             $res = [];
             foreach ($data as $image)
-                if (preg_match($pattern, $image['Pseudo'])) // match
+                if (preg_match($pattern, $image['Pseudo'])) { // match
                     $res[] = $image;
+                }else if (preg_match($pattern, $image['Slogan'])){
+                    $res[] = $image;
+                }else if (preg_match($pattern, $image['Droit'])){
+                    $res[] = $image;
+                }else if (preg_match($pattern, $image['Pays'])){
+                    $res[] = $image;
+                }else if (preg_match($pattern, $image['Ville'])){
+                    $res[] = $image;
+                }else if (preg_match($pattern, $image['Team'])){
+                    $res[] = $image;
+                }
         } else if ($mode == "click")
         {
             foreach ($data as $key => $image)

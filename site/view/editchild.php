@@ -104,7 +104,7 @@ foreach ($childs as $child) {
         $valuepseudo = $child['Pseudo'];
         $valuedroit = $child['Droit'];
         $valueslogan = $child['Slogan'];
-        $valueteam = $child['Provenance'];
+        $valueteam = $child['Team'];
         $valueville = $child['Ville'];
         $valuespays = $child['Pays'];
 
@@ -113,66 +113,66 @@ foreach ($childs as $child) {
 ?>
 <br>
 <table align="center" class="table" style="width: 80%">
-    <form action="index.php?action=save">
+    <form method="post" action="index.php?action=save">
     <tr>
         <td class="form-group">
             <label for="meridien">Méridien</label>
-            <input value="<?= $valuemer ?>" type="text" disabled class="form-control" id="meridien">
+            <input name="meridien" value="<?= $valuemer ?>" type="text" disabled class="form-control" id="meridien">
         </td>
         <td class="form-group">
             <label for="latitude">Latitude</label>
-            <input value="<?= $valuelat ?>" type="text" disabled class="form-control" id="latitude" >
+            <input name="latitude" value="<?= $valuelat ?>" type="text" disabled class="form-control" id="latitude" >
 
 
         </td>
         <td class="form-group">
             <label for="longitude">Longitude</label>
-            <input value="<?= $valuelon ?>" type="text" disabled class="form-control" id="longitude">
+            <input name="longitude" value="<?= $valuelon ?>" type="text" disabled class="form-control" id="longitude">
         </td>
 
     </tr>
     <tr>
         <td class="form-group">
             <label for="idplace">IDplace</label>
-            <input value="<?= $valueidplace ?>" type="text" disabled class="form-control" id="idplace">
+            <input name="idplace" value="<?= $valueidplace ?>" type="text" disabled class="form-control" id="idplace">
         </td>
         <td class="form-group">
             <label for="idimage">IDimage</label>
-            <input value="<?= $valueidimage ?>" type="text" disabled class="form-control" id="idimage" >
+            <input name="idimage" value="<?= $valueidimage ?>" type="text" disabled class="form-control" id="idimage" >
         </td>
         <td class="form-group">
             <label for="team">Team</label>
-            <input value="<?= $valueteam ?>" type="text" id="team" class="form-control">
+            <input name="team" value="<?= $valueteam ?>" type="text" id="team" class="form-control">
         </td>
     </tr>
     <tr>
         <td class="form-group">
             <label for="Droit">Droit</label>
-            <input value="<?= $valuedroit ?>" type="text" id="Droit" class="form-control">
+            <input name="Droit" value="<?= $valuedroit ?>" type="text" id="Droit" class="form-control">
 
         </td>
         <td class="form-group">
             <label for="Slogan">Slogan</label>
-            <input value="<?= $valueslogan ?>" type="text" class="form-control" id="Slogan">
+            <input name="Slogan" value="<?= $valueslogan ?>" type="text" class="form-control" id="Slogan">
         </td>
         <td class="form-group">
             <label for="Pseudo">Pseudo</label>
-            <input value="<?= $valuepseudo ?>" class="form-control" type="text" id="Pseudo" >
+            <input name="Pseudo" value="<?= $valuepseudo ?>" class="form-control" type="text" id="Pseudo" >
         </td>
     </tr>
     <tr>
 
         <td class="form-group">
-            <label for="Pseudo">Pays</label>
-            <input value="<?= $valuespays ?>" class="form-control" type="text" id="Pseudo" >
+            <label for="Pays">Pays</label>
+            <input name="Pays" value="<?= $valuespays ?>" class="form-control" type="text" id="Pays" >
         </td>
 
         <td class="form-group">
 
         </td>
         <td class="form-group">
-            <label for="Pseudo">Ville</label>
-            <input value="<?= $valueville ?>" class="form-control" type="text" id="Pseudo" >
+            <label for="Ville">Ville</label>
+            <input name="Ville" value="<?= $valueville ?>" class="form-control" type="text" id="Ville" >
         </td>
 
     </tr>
