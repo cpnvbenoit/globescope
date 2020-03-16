@@ -9,7 +9,7 @@ $title = "Modifications";
 ob_start();
 ?>
 
-<h1 align="center">Modifier les infos</h1>
+<h1 align="center">Modifier les infos</h1><br>
 
 
 <table  border="1" align="center" class="table" style="width: 80% ; border-color: #BCDC53 ">
