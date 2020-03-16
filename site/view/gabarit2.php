@@ -14,5 +14,7 @@
 
 <?= $content?>
 
+<script src="js/searchChild2.js"></script>
+<script src="js/childClicked2.js"></script>
 </body>
 </html>
