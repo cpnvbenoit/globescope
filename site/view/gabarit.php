@@ -100,6 +100,7 @@
             <p id="childPays"></p>
             <p id="childVille"></p>
             <p id="childEquipe"></p>
+            <a href="?action=editchild"><button style="width: 300px ; height: 50px ; background-color: #000c8f " >Edit</button></a>
         </div>
     </div>
     <div id="onSearchDetails" class="flexContainer">
