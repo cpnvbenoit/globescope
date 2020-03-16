@@ -14,9 +14,9 @@ if ($_SESSION['fail'] = "false") {
 
         <form action="index.php?action=showchilds" class="form-group" style="width: 20% ; float: right">
             <div class="input-group">
-                <input class="form-control" type="text" value=" " placeholder="Search"/>
+                <input class="form-control" type="text" id="searchText" value=" " placeholder="Search"/>
                 <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit">
+                    <button class="btn btn-default" id="searchButton" >
                         <i class="glyphicon glyphicon-search"></i>
                     </button>
                 </div>
@@ -116,9 +116,6 @@ if ($_SESSION['fail'] = "false") {
             Ville
         </th>
         <th>
-            Team
-        </th>
-        <th>
             Modifier
         </th>
         </thead  align="center" >
@@ -150,16 +147,13 @@ if ($_SESSION['fail'] = "false") {
                     </p>
                 </td>
                 <td>
-                    <p><?= $child['Provenance'] ?></p>
+                    <p><?= $child['Team'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['Pays'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['Ville'] ?></p>
-                </td>
-                <td>
-                    <p><?= $child['Equipe'] ?></p>
                 </td>
 
                 <td>
@@ -175,7 +169,27 @@ if ($_SESSION['fail'] = "false") {
 
         </tbody>
     </table>
+    <div id="sideBar" class="GUI">
+        <p id="closeSideBar" class="closeButton">X</p>
+        <div class="loader" id="imageLoader"></div>
+        <div id="onClickDetails">
+            <img id="childImage">
+            <span id="separator"></span>
+            <div id="description">
+                <p id="childPseudo"></p>
+                <p id="childCitation"></p>
+                <p id="childRight"></p>
+                <?php if ($_SESSION['fail']=="false"){echo "<p id=\"childIDPlace\"></p>";} ?>
+                <p id="childPays"></p>
+                <p id="childVille"></p>
+                <p id="childEquipe"></p>
+            </div>
+        </div>
+        <div id="onSearchDetails" class="flexContainer">
+            <h1>Resultat de la recherche</h1>
 
+        </div>
+    </div>
 
     <?php
     $content = ob_get_clean();
