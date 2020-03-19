@@ -69,7 +69,7 @@ function showchilds()
     }
 
 }
-function showsearchChild()
+function showchildsSearch()
 {
 /*"IDPlace":
 "IDImage":
