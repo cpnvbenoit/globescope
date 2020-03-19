@@ -126,44 +126,53 @@ if ($_SESSION['fail'] = "false") {
             //foreach ($_SESSION['searchChild'] as $element ){compare si $idplace == $elment['idplace'] }
             //SI oui il affachie l'enfant
             //si nn rien
-            ?>
-            <tr>
-                <td>
-                    <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
-                </td>
-                <td>
-                    <p><?= $child['IDPlace'] ?></p>
-                </td>
-                <td>
-                    <p><?= $child['IDImage'] ?></p>
-                </td>
-                <td>
-                    <p><?= $child['Pseudo'] ?></p>
-                </td>
-                <td>
-                    <p><?= $child['Droit'] ?></p>
-                </td>
-                <td>
-                    <p>
-                        <?= $child['Slogan'] ?>
-                    </p>
-                </td>
-                <td>
-                    <p><?= $child['Team'] ?></p>
-                </td>
-                <td>
-                    <p><?= $child['Pays'] ?></p>
-                </td>
-                <td>
-                    <p><?= $child['Ville'] ?></p>
-                </td>
+            foreach ($_SESSION['searchChild'] as $element)
+            {
+            if ($child['IDPlace'] == $element['$IDPlace']){?>
+                <tr>
+                    <td>
+                        <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
+                    </td>
+                    <td>
+                        <p><?= $child['IDPlace'] ?></p>
+                    </td>
+                    <td>
+                        <p><?= $child['IDImage'] ?></p>
+                    </td>
+                    <td>
+                        <p><?= $child['Pseudo'] ?></p>
+                    </td>
+                    <td>
+                        <p><?= $child['Droit'] ?></p>
+                    </td>
+                    <td>
+                        <p>
+                            <?= $child['Slogan'] ?>
+                        </p>
+                    </td>
+                    <td>
+                        <p><?= $child['Team'] ?></p>
+                    </td>
+                    <td>
+                        <p><?= $child['Pays'] ?></p>
+                    </td>
+                    <td>
+                        <p><?= $child['Ville'] ?></p>
+                    </td>
 
-                <td>
-                    <button class="btn btn-primary"><a
-                                href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
-                                style="text-decoration: none ; color: #ffffff">Modifier</a></button>
-                </td>
-            </tr>
+                    <td>
+                        <button class="btn btn-primary"><a
+                                    href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
+                                    style="text-decoration: none ; color: #ffffff">Modifier</a></button>
+                    </td>
+                </tr><?php
+            }
+            else{
+                echo "";
+            }
+            }
+            ?>
+
 
             <?php
         }
