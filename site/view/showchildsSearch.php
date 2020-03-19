@@ -12,9 +12,9 @@ if ($_SESSION['fail'] = "false") {
     ?>
     <div id="searchbar">
 
-        <form action="index.php?action=showchilds" class="form-group" style="width: 20% ; float: right">
+        <form method="post" action="index.php?action=showchilds" class="form-group" style="width: 20% ; float: right">
             <div class="input-group">
-                <input class="form-control" type="text" id="searchText" value=" " placeholder="Search"/>
+                <input class="form-control" type="text" name="searchText" value=" " placeholder="Search"/>
                 <div class="input-group-btn">
                     <button class="btn btn-default" id="searchButton" >
                         <i class="glyphicon glyphicon-search"></i>
@@ -23,7 +23,6 @@ if ($_SESSION['fail'] = "false") {
             </div>
         </form>
     </div>
-    <script> alert("Bienvenue !") </script>
     <h1 style=" position: absolute ; left: 42%">Afficher les enfants</h1><br><br>
     <h4 style="padding-left: 10px"> Rechercher par</h4>
     <table class="table" style="text-align: center">

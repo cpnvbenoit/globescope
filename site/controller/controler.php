@@ -71,9 +71,37 @@ function showchilds()
 }
 function showsearchChild()
 {
-
+/*"IDPlace":
+"IDImage":
+"mer": "0"
+"lat": "24
+"lon": "9"
+"Pseudo":
+"Droit": "
+"Slogan":
+"Team": ""
+"ImageOK":
+"Pays" : "
+"Ville" : */
     if (isset($_SESSION['username']) == true) {
+        $searchText=$_POST['searchText'];
         $childs = getChilds();
+        foreach ($childs as $child){
+            $in=false;
+            if ($child['IDPlace']==$searchText){$in=true;}
+            else if ($child['IDImage']==$searchText){$in=true;}
+            else if ($child['mer']==$searchText){$in=true;}
+            else if ($child['lat']==$searchText){$in=true;}
+            else if ($child['lon']==$searchText){$in=true;}
+            else if ($child['Pseudo']==$searchText){$in=true;}
+            else if ($child['Droit']==$searchText){$in=true;}
+            else if ($child['Slogan']==$searchText){$in=true;}
+            else if ($child['Team']==$searchText){$in=true;}
+            else if ($child['ImageOK']==$searchText){$in=true;}
+            else if ($child['Pays']==$searchText){$in=true;}
+            else if ($child['Ville']==$searchText){$in=true;}
+            if ($in==true){$_SESSION['searchChild'][]=$child['IDPlace'];}
+        }
         require_once 'view/showchildsSearch.php';
     } else {
         $_SESSION['flashmessage'] = "Pas touche !" ;
