@@ -63,6 +63,9 @@ switch ($action) {
     case 'showchilds';
         showchilds();
         break;
+    case 'showsearchChild';
+        showsearchChild();
+        break;
     case 'GetData';
         GetData();
         break;

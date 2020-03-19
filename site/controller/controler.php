@@ -69,6 +69,18 @@ function showchilds()
     }
 
 }
+function showsearchChild()
+{
+
+    if (isset($_SESSION['username']) == true) {
+        $childs = getChilds();
+        require_once 'view/showchildsSearch.php';
+    } else {
+        $_SESSION['flashmessage'] = "Pas touche !" ;
+        require 'view/home.php';
+    }
+
+}
 
 function editchild($IDimage)
 {
