@@ -48,7 +48,8 @@ if (isset($_POST['Ville'])){
 }
 
 //END set var for save -----------------------------------------
-
+//set var for shearched child
+$_SESSION['searchChild'] = array();
 switch ($action) {
     case 'home';
         home();

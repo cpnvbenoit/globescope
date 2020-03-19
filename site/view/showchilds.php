@@ -169,7 +169,7 @@ if ($_SESSION['fail'] = "false") {
 
         </tbody>
     </table>
- 
+
 
     <?php
     $content = ob_get_clean();
