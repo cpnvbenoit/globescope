@@ -123,7 +123,9 @@ if ($_SESSION['fail'] = "false") {
 
         <?php
         foreach ($childs as $child) {
-
+            //foreach ($_SESSION['searchChild'] as $element ){compare si $idplace == $elment['idplace'] }
+            //SI oui il affachie l'enfant
+            //si nn rien
             ?>
             <tr>
                 <td>
