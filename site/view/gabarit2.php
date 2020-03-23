@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title><?=$title?></title>
-    <link rel="stylesheet" href="site/css/cssinhtml.css">
+    <link rel="stylesheet" href="css/cssinhtml.css">
     <script type="text/javascript" src="js/editchild.js"></script>
 </head>
 

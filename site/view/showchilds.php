@@ -24,7 +24,7 @@ if ($_SESSION['fail'] = "false") {
         </form>
     </div>
     <script> alert("Bienvenue !") </script>
-    <h1 class="titleshowchild">Afficher les enfants</h1><br><br>
+    <h1 class="titleshowchild">Afficher les enfants</h1>
     <!--
     <h4 style="padding-left: 10px"> Rechercher par</h4>
     <table class="table" style="text-align: center">
@@ -88,6 +88,7 @@ if ($_SESSION['fail'] = "false") {
         </form>
     </table>
     -->
+    <br>
     <table class="table" border="1" align="center" style="border: #BCDC53">
         <thead>
         <th width="220px">
