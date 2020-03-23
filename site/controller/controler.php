@@ -89,7 +89,7 @@ function showchildsSearch()
             $inSlogan=false;
             $inTeam=false;
             $inPays=false;
-            $inVille=false;
+            $inVille=false;//(preg_match($pattern, $image['Pseudo']))
             if ($child['IDPlace']==$searchText){$in=true;$inIDPlace=true;}//eviter recherche exacte pour pseudo/droit/equipe/slogan
             else if ($child['IDImage']==$searchText){$in=true;$inIDImage=true;}
             else if ($child['mer']==$searchText){$in=true;$inmer=true;}
@@ -102,7 +102,8 @@ function showchildsSearch()
             else if ($child['Pays']==$searchText){$in=true;$inPays=true;}
             else if ($child['Ville']==$searchText){$in=true;$inVille=true;}
             if ($in==true) {
-                $data=["id"=>$compteur ,"IDPlace" => $child['IDPlace'],"inIDPlace"=>$inIDPlace,
+                $data=["id"=>$compteur,
+                    "IDPlace" => $child['IDPlace'],
                     "inIDImage"=>$inIDImage,
                     "inmer"=>$inmer,
                     "inlat"=>$inlat,
@@ -113,17 +114,16 @@ function showchildsSearch()
                     "inTeam="=>$inTeam,
                     "inPays="=>$inPays,
                     "inVille"=>$inVille,
-                    "IDImage"=>$inIDImage,
-                    "mer"=>$inmer,
-                    "lat"=>$inlat,
-                    "lon'"=>$inlon,
-                    "Pseudo"=>$inPseudo,
-                    "Droit"=>$inDroit,
-                    "Slogan"=>$inSlogan,
-                    "Team="=>$inTeam,
-                    "Pays="=>$inPays,
-                    "Ville"=>$inVille,
-
+                    "IDImage"=>$child['IDImage'],
+                    "mer"=>$child['mer'],
+                    "lat"=>$child['lat'],
+                    "lon'"=>$child['lon'],
+                    "Pseudo"=>$child['Pseudo'],
+                    "Droit"=>$child['Droit'],
+                    "Slogan"=>$child['Slogan'],
+                    "Team="=>$child['Team'],
+                    "Pays="=>$child['Pays'],
+                    "Ville"=>$child['Ville']
                 ];
                 $search[]=$data;
             }
