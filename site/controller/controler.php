@@ -74,26 +74,57 @@ function showchildsSearch()
 
     if (isset($_SESSION['username']) == true) {
         $searchText=$_POST['searchText'];
-        $childs = getChilds();
+        $childs = getChilds();//Verifier si utile/ necessaire
         $compteur=-1;
         $search=["id"=>"test" ,"IDPlace" =>"158"];
         foreach ($childs as $child){
             $compteur++;
             $in=false;
-            if ($child['IDPlace']==$searchText){$in=true;}
-            else if ($child['IDImage']==$searchText){$in=true;}
-            else if ($child['mer']==$searchText){$in=true;}
-            else if ($child['lat']==$searchText){$in=true;}
-            else if ($child['lon']==$searchText){$in=true;}
-            else if ($child['Pseudo']==$searchText){$in=true;}
-            else if ($child['Droit']==$searchText){$in=true;}
-            else if ($child['Slogan']==$searchText){$in=true;}
-            else if ($child['Team']==$searchText){$in=true;}
-            else if ($child['ImageOK']==$searchText){$in=true;}
-            else if ($child['Pays']==$searchText){$in=true;}
-            else if ($child['Ville']==$searchText){$in=true;}
+            $inIDImage=false;
+            $inmer=false;
+            $inlat=false;
+            $inlon=false;
+            $inPseudo=false;
+            $inDroit=false;
+            $inSlogan=false;
+            $inTeam=false;
+            $inPays=false;
+            $inVille=false;
+            if ($child['IDPlace']==$searchText){$in=true;$inIDPlace=true;}//eviter recherche exacte pour pseudo/droit/equipe/slogan
+            else if ($child['IDImage']==$searchText){$in=true;$inIDImage=true;}
+            else if ($child['mer']==$searchText){$in=true;$inmer=true;}
+            else if ($child['lat']==$searchText){$in=true;$inlat=true;}
+            else if ($child['lon']==$searchText){$in=true;$inlon=true;}
+            else if ($child['Pseudo']==$searchText){$in=true;$inPseudo=true;}
+            else if ($child['Droit']==$searchText){$in=true;$inDroit=true;}
+            else if ($child['Slogan']==$searchText){$in=true;$inSlogan=true;}
+            else if ($child['Team']==$searchText){$in=true;$inTeam=true;}
+            else if ($child['Pays']==$searchText){$in=true;$inPays=true;}
+            else if ($child['Ville']==$searchText){$in=true;$inVille=true;}
             if ($in==true) {
-                $data=["id"=>$compteur ,"IDPlace" => $child['IDPlace']];
+                $data=["id"=>$compteur ,"IDPlace" => $child['IDPlace'],"inIDPlace"=>$inIDPlace,
+                    "inIDImage"=>$inIDImage,
+                    "inmer"=>$inmer,
+                    "inlat"=>$inlat,
+                    "inlon'"=>$inlon,
+                    "inPseudo"=>$inPseudo,
+                    "inDroit"=>$inDroit,
+                    "inSlogan"=>$inSlogan,
+                    "inTeam="=>$inTeam,
+                    "inPays="=>$inPays,
+                    "inVille"=>$inVille,
+                    "IDImage"=>$inIDImage,
+                    "mer"=>$inmer,
+                    "lat"=>$inlat,
+                    "lon'"=>$inlon,
+                    "Pseudo"=>$inPseudo,
+                    "Droit"=>$inDroit,
+                    "Slogan"=>$inSlogan,
+                    "Team="=>$inTeam,
+                    "Pays="=>$inPays,
+                    "Ville"=>$inVille,
+
+                ];
                 $search[]=$data;
             }
         }
