@@ -71,22 +71,14 @@ function showchilds()
 }
 function showchildsSearch()
 {
-/*"IDPlace":
-"IDImage":
-"mer": "0"
-"lat": "24
-"lon": "9"
-"Pseudo":
-"Droit": "
-"Slogan":
-"Team": ""
-"ImageOK":
-"Pays" : "
-"Ville" : */
+
     if (isset($_SESSION['username']) == true) {
         $searchText=$_POST['searchText'];
         $childs = getChilds();
+        $compteur=-1;
+        $search=["id"=>"test" ,"IDPlace" =>"158"];
         foreach ($childs as $child){
+            $compteur++;
             $in=false;
             if ($child['IDPlace']==$searchText){$in=true;}
             else if ($child['IDImage']==$searchText){$in=true;}
@@ -100,7 +92,10 @@ function showchildsSearch()
             else if ($child['ImageOK']==$searchText){$in=true;}
             else if ($child['Pays']==$searchText){$in=true;}
             else if ($child['Ville']==$searchText){$in=true;}
-            if ($in==true){$_SESSION['searchChild'][]=$child['IDPlace'];}
+            if ($in==true) {
+                $data=["id"=>$compteur ,"IDPlace" => $child['IDPlace']];
+                $search[]=$data;
+            }
         }
         require_once 'view/showchildsSearch.php';
     } else {

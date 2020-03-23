@@ -125,9 +125,10 @@ if ($_SESSION['fail'] = "false") {
             //foreach ($_SESSION['searchChild'] as $element ){compare si $idplace == $elment['idplace'] }
             //SI oui il affachie l'enfant
             //si nn rien
-            foreach ($_SESSION['searchChild'] as $element)
-            {
-            if ($child['IDPlace'] == $element['$IDPlace']){?>
+
+            foreach ($search as $element)
+            {$idplace=$element['IDPlace'];
+            if ($child['IDPlace'] == $idplace){?>
                 <tr>
                     <td>
                         <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
