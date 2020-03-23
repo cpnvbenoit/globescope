@@ -12,7 +12,7 @@ if ($_SESSION['fail'] = "false") {
     ?>
     <div id="searchbar">
 
-        <form method="post" action="index.php?action=showchildsSearch" class="form-group" style="width: 20% ; float: right">
+        <form method="post" action="index.php?action=showchildsSearch" class="form-group formscs">
             <div class="input-group">
                 <input class="form-control" type="text" name="searchText" value=" " placeholder="Search"/>
                 <div class="input-group-btn">
@@ -163,7 +163,7 @@ if ($_SESSION['fail'] = "false") {
                     <td>
                         <button class="btn btn-primary"><a
                                     href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
-                                    style="text-decoration: none ; color: #ffffff">Modifier</a></button>
+                                    class="buttoneditscs">Modifier</a></button>
                     </td>
                 </tr><?php
             }
