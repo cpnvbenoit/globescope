@@ -12,7 +12,7 @@ ob_start();
 <h1 align="center">Modifier les infos</h1><br>
 
 
-<table  border="1" align="center" class="table" style="width: 80% ; border-color: #BCDC53 ">
+<table  border="1" align="center" class="table-edit">
     <thead>
     <th style="text-align: center">
         Méridien / Latitude / Longitude
