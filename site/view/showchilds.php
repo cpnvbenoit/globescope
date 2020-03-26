@@ -119,6 +119,15 @@ if ($_SESSION['fail'] = "false") {
             Ville
         </th>
         <th>
+            Media
+        </th>
+        <th>
+            Anneeprod
+        </th>
+        <th>
+            Desc
+        </th>
+        <th>
             Modifier
         </th>
         </thead  align="center" >
@@ -157,6 +166,15 @@ if ($_SESSION['fail'] = "false") {
                 </td>
                 <td>
                     <p><?= $child['Ville'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Media'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Anneeprod'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Desc'] ?></p>
                 </td>
 
                 <td>

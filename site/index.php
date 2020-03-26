@@ -46,6 +46,15 @@ if (isset($_POST['Pays'])){
 if (isset($_POST['Ville'])){
     $Ville=$_POST['Ville'];
 }
+if (isset($_POST['Media'])){
+    $Media=$_POST['Media'];
+}
+if (isset($_POST['Anneeprod'])){
+    $Anneeprod=$_POST['Anneeprod'];
+}
+if (isset($_POST['desc'])){
+    $desc=$_POST['desc'];
+}
 
 //END set var for save -----------------------------------------
 //set var for shearched child
