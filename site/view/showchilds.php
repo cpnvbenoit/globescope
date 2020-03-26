@@ -61,7 +61,7 @@ if ($_SESSION['fail'] = "false") {
                     <input type="radio" id="test" name="Recherche-Slogan">
                 </td>
                 <td>
-                    <label for="test">Origine des données</label>
+                    <label for="test">Team</label>
                     <input type="radio" id="test" name="Recherche-Origine-des-données">
                 </td>
             </tr>
@@ -110,7 +110,7 @@ if ($_SESSION['fail'] = "false") {
             Slogan
         </th>
         <th>
-            Origine des données
+           Team
         </th>
         <th>
             Pays
