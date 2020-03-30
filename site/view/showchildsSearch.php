@@ -86,17 +86,17 @@ if ($_SESSION['fail'] = "false") {
         </form>
     </table>-->
 <table class="table">
-        <tr><td class="category rouge ">Latitude</td></tr>
-        <tr><td class="category orange  ">Longitude</td></tr>
-        <tr><td class="category jaune  ">Meridien</td></tr>
-        <tr><td class="category vert ">IDPlace</td></tr>
-        <tr><td class="category bleu ">IDImage</td></tr>
-        <tr><td class="category violet  ">Pseudo</td></tr>
-        <tr><td class="category bleu  ">Droit</td></tr>
-        <tr><td class="category vert ">Slogan</td></tr>
-        <tr><td class="category jaune   ">Team</td></tr>
-        <tr><td class="category orange ">Pays</td></tr>
-        <tr><td class="category rouge  ">Ville</td></tr>
+        <tr><td class="category rouge">Latitude</td></tr>
+        <tr><td class="category orange">Longitude</td></tr>
+        <tr><td class="category jaune">Meridien</td></tr>
+        <tr><td class="category vert">IDPlace</td></tr>
+        <tr><td class="category bleu">IDImage</td></tr>
+        <tr><td class="category violet">Pseudo</td></tr>
+        <tr><td class="category bleu">Droit</td></tr>
+        <tr><td class="category vert">Slogan</td></tr>
+        <tr><td class="category jaune">Team</td></tr>
+        <tr><td class="category orange">Pays</td></tr>
+        <tr><td class="category rouge">Ville</td></tr>
 </table>
     <table class="table" border="1" align="center" style="border: #BCDC53">
         <thead>
