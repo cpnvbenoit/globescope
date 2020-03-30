@@ -86,17 +86,17 @@ if ($_SESSION['fail'] = "false") {
         </form>
     </table>-->
 <table class="table">
-        <tr><td class="category">Latitude</td></tr>
-        <tr><td class="category">Longitude</td></tr>
-        <tr><td class="category">Meridien</td></tr>
-        <tr><td class="category">IDPlace</td></tr>
-        <tr><td class="category">IDImage</td></tr>
-        <tr><td class="category">Pseudo</td></tr>
-        <tr><td class="category">Droit</td></tr>
-        <tr><td class="category">Slogan</td></tr>
-        <tr><td class="category">Team</td></tr>
-        <tr><td class="category">Pays</td></tr>
-        <tr><td class="category">Ville</td></tr>
+        <tr><td class="category rouge ">Latitude</td></tr>
+        <tr><td class="category orange  ">Longitude</td></tr>
+        <tr><td class="category jaune  ">Meridien</td></tr>
+        <tr><td class="category vert ">IDPlace</td></tr>
+        <tr><td class="category bleu ">IDImage</td></tr>
+        <tr><td class="category violet  ">Pseudo</td></tr>
+        <tr><td class="category bleu  ">Droit</td></tr>
+        <tr><td class="category vert ">Slogan</td></tr>
+        <tr><td class="category jaune   ">Team</td></tr>
+        <tr><td class="category orange ">Pays</td></tr>
+        <tr><td class="category rouge  ">Ville</td></tr>
 </table>
     <table class="table" border="1" align="center" style="border: #BCDC53">
         <thead>
@@ -136,11 +136,7 @@ if ($_SESSION['fail'] = "false") {
 
 
         <?php
-        foreach ($childs as $child) {
-
-            foreach ($search as $element)
-            {$idplace=$element['IDPlace'];
-            if ($child['IDPlace'] == $idplace){?>
+            foreach ($search as $child)            {?>
                 <tr>
                     <td>
                         <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
@@ -177,19 +173,7 @@ if ($_SESSION['fail'] = "false") {
                                     href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
                                     class="buttoneditscs">Modifier</a></button>
                     </td>
-                </tr><?php
-            }
-            else{
-                echo "";
-            }
-            }
-            ?>
-
-
-            <?php
-        }
-        ?>
-
+                </tr><?php } ?>
         </tbody>
 
 

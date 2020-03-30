@@ -31,5 +31,23 @@
     color: white;
     text-align: center;
     font-size: 1.5em;
-    background-color: red
+}
+.rouge{
+    background-color: red;
+}
+.orange{
+    background-color:darkorange ;
+}
+.jaune{
+    background-color: yellow;
+}
+
+.vert{
+    background-color: mediumseagreen;
+}
+.bleu{
+    background-color:dodgerblue ;
+}
+.violet{
+    background-color: blueviolet;
 }

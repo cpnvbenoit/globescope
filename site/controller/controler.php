@@ -76,11 +76,11 @@ function showchildsSearch()
         $searchText=$_POST['searchText'];
         $childs = getChilds();//Verifier si utile/ necessaire
         $compteur=-1;
-        $search=["id"=>"test" ,"IDPlace" =>"158"];
         foreach ($childs as $child){
             $compteur++;
             $in=false;
             $inIDImage=false;
+            $inIDPlace=false;
             $inmer=false;
             $inlat=false;
             $inlon=false;
@@ -104,6 +104,7 @@ function showchildsSearch()
             if ($in==true) {
                 $data=["id"=>$compteur,
                     "IDPlace" => $child['IDPlace'],
+                    "inIDPlace" => $inIDPlace,
                     "inIDImage"=>$inIDImage,
                     "inmer"=>$inmer,
                     "inlat"=>$inlat,
@@ -140,7 +141,7 @@ function editchild($IDimage)
 {
     if (isset($_SESSION['username']) == true) {
         $idchild = $IDimage;
-        $childs = getChilds();
+        $childs = $_SESSION['childs'];
         require_once 'view/editchild.php';
     } else {
         $_SESSION['flashmessage'] = "Pas touche !" ;
