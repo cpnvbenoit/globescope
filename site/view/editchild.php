@@ -107,6 +107,9 @@ foreach ($childs as $child) {
         $valueteam = $child['Team'];
         $valueville = $child['Ville'];
         $valuespays = $child['Pays'];
+        $valuemedia = $child['Media'];
+        $valueanneeprod = $child['Anneeprod'];
+        $valuedesc = $child['Desc'];
 
     }
 }
@@ -168,19 +171,34 @@ foreach ($childs as $child) {
         </td>
 
         <td class="form-group">
-
-        </td>
-        <td class="form-group">
             <label for="Ville">Ville</label>
             <input name="Ville" value="<?= $valueville ?>" class="form-control" type="text" id="Ville" >
         </td>
+        <td class="form-group">
+            <label for="Media">Media</label>
+            <input name="Media" value="<?= $valuemedia ?>" class="form-control" type="text" id="Media" >
+        </td>
+
 
     </tr>
+        <tr>
+            <td class="form-group">
+                <label for="Anneeprod">Annéeproduction</label>
+                <input name="Anneeprod" value="<?= $valueanneeprod ?>" class="form-control" type="text" id="Anneeprod" >
+            </td>
+
+            <td class="form-group">
+                <label for="Desc">Description</label>
+                <input name="Desc " value="<?= $valuedesc ?>" class="form-control" type="text" id="Desc" >
+            </td>
+
+        </tr>
+
     </form>
 </table>
 <br>
 <div style="text-align: center">
-<img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -80px" alt="Images id : <?= $valueidimage ?>"><br><br>
+<img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -40px" alt="Images id : <?= $valueidimage ?>"><br><br>
 <button id="UnlockallCMD" class="btn btn-danger">UnlockAll</button>
 <button id="Save" type="submit" class="btn btn-success">Sauvegarder</button>
 </div>

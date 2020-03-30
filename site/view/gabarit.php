@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/searchResults.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/helpStyle.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/progressBar.css?d=<?php echo time(); ?>">
-    <link rel="stylesheet" href="site/css/cssinhtml.css">
+    <link rel="stylesheet" href="css/cssinhtml.css">
     <script src="js/Loginstyle.js"></script>
 
 

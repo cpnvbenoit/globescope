@@ -7,7 +7,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/pomme.css">
     <title><?=$title?></title>
-    <link rel="stylesheet" href="site/css/cssinhtml.css">
+    <link rel="stylesheet" href="css/cssinhtml.css">
     <script type="text/javascript" src="js/editchild.js"></script>
 </head>
 

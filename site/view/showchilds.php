@@ -24,7 +24,7 @@ if ($_SESSION['fail'] = "false") {
         </form>
     </div>
     <script> alert("Bienvenue !") </script>
-    <h1 class="titleshowchild">Afficher les enfants</h1><br><br>
+    <h1 class="titleshowchild">Afficher les enfants</h1>
     <!--
     <h4 style="padding-left: 10px"> Rechercher par</h4>
     <table class="table" style="text-align: center">
@@ -61,7 +61,7 @@ if ($_SESSION['fail'] = "false") {
                     <input type="radio" id="test" name="Recherche-Slogan">
                 </td>
                 <td>
-                    <label for="test">Origine des données</label>
+                    <label for="test">Team</label>
                     <input type="radio" id="test" name="Recherche-Origine-des-données">
                 </td>
             </tr>
@@ -88,6 +88,7 @@ if ($_SESSION['fail'] = "false") {
         </form>
     </table>
     -->
+    <br>
     <table class="table" border="1" align="center" style="border: #BCDC53">
         <thead>
         <th width="220px">
@@ -109,13 +110,22 @@ if ($_SESSION['fail'] = "false") {
             Slogan
         </th>
         <th>
-            Origine des données
+           Team
         </th>
         <th>
             Pays
         </th>
         <th>
             Ville
+        </th>
+        <th>
+            Media
+        </th>
+        <th>
+            Anneeprod
+        </th>
+        <th>
+            Desc
         </th>
         <th>
             Modifier
@@ -156,6 +166,15 @@ if ($_SESSION['fail'] = "false") {
                 </td>
                 <td>
                     <p><?= $child['Ville'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Media'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Anneeprod'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Desc'] ?></p>
                 </td>
 
                 <td>

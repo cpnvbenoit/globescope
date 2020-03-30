@@ -152,12 +152,36 @@ function editchild($IDimage)
 
 }
 
-function save($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville){
-    $childs = getChilds();
+function backup($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville,$Media,$Anneeprod,$desc){
+    $backup=getBackup();
+    $backup[]=[
+        "IDPlace" =>$idplace ,
+        "IDImage"=>$IDimage ,
+        "mer" =>$meridien ,
+        "lat"=> $latitude,
+        "lon"=>$longitude ,
+        "Pseudo"=>$Pseudo ,
+        "Droit" =>$Droit ,
+        "Slogan"=>$Slogan ,
+        "Team"=>$team ,
+        "ImageOK"=> "VRAI",
+        "Pays"=> $Pays,
+        "Ville"=> $Ville,
+        "Media"=>$Media ,
+        "Anneeprod"=>$Anneeprod ,
+        "desc"=> $desc
+    ];
+    putBackup($backup);
+}
+
+function save($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville,$Media,$Anneeprod,$desc){
+    /*$childs = getChilds();
     foreach ($childs as $child){
         if ($child['IDImage'] == $idplace) {
 
         }
-    }
+    }*/
+    backup($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville,$Media,$Anneeprod,$desc);
 }
+
 ?>
