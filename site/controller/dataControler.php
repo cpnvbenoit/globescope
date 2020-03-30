@@ -18,6 +18,7 @@ function GetData(){
         if ($mode == "search")
         {
             $pattern = "/{$obj->Pseudo}/i";
+
             $res = [];
             foreach ($data as $image)
                 if (preg_match($pattern, $image['Pseudo'])) { // match
