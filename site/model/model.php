@@ -12,7 +12,8 @@ function getUsers()
 
 function getChilds()
 {
-    return json_decode(file_get_contents("model/dataStorage/images.json"),true);
+    $_SESSION['childs']=json_decode(file_get_contents("model/dataStorage/images.json"),true);
+    return  $_SESSION['childs'];
 }
 
 ?>
