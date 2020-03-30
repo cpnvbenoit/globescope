@@ -73,7 +73,8 @@ function showchildsSearch()
 {
 
     if (isset($_SESSION['username']) == true) {
-        $searchText=$_POST['searchText'];
+        $searchText="/".$_POST['searchText']."/";
+
         $childs = getChilds();//Verifier si utile/ necessaire
         $compteur=-1;
         foreach ($childs as $child){
@@ -90,17 +91,17 @@ function showchildsSearch()
             $inTeam=false;
             $inPays=false;
             $inVille=false;//(preg_match($pattern, $image['Pseudo']))
-            if ($child['IDPlace']==$searchText){$in=true;$inIDPlace=true;}//eviter recherche exacte pour pseudo/droit/equipe/slogan
-            else if ($child['IDImage']==$searchText){$in=true;$inIDImage=true;}
-            else if ($child['mer']==$searchText){$in=true;$inmer=true;}
-            else if ($child['lat']==$searchText){$in=true;$inlat=true;}
-            else if ($child['lon']==$searchText){$in=true;$inlon=true;}
-            else if ($child['Pseudo']==$searchText){$in=true;$inPseudo=true;}
-            else if ($child['Droit']==$searchText){$in=true;$inDroit=true;}
-            else if ($child['Slogan']==$searchText){$in=true;$inSlogan=true;}
-            else if ($child['Team']==$searchText){$in=true;$inTeam=true;}
-            else if ($child['Pays']==$searchText){$in=true;$inPays=true;}
-            else if ($child['Ville']==$searchText){$in=true;$inVille=true;}
+            if ($searchText==['IDPlace']){$in=true;$inIDPlace=true;}
+            else if ($searchText==['IDImage']){$in=true;$inIDImage=true;}
+            else if ($searchText==['mer']){$in=true;$inmer=true;}
+            else if ($searchText==['lat']){$in=true;$inlat=true;}
+            else if ($searchText==['lon']){$in=true;$inlon=true;}
+           // else if (preg_match($searchText,$child['Pseudo'])){$in=true;$inPseudo=true;}//vague
+            else if (preg_match($searchText,$child['Droit'])){$in=true;$inDroit=true;}//vague
+            else if (preg_match($searchText,$child['Slogan'])){$in=true;$inSlogan=true;}//vague
+            else if (preg_match($searchText,$child['Team'])){$in=true;$inTeam=true;}//vague
+            else if (preg_match($searchText,$child['Pays'])){$in=true;$inPays=true;}//vague
+            else if (preg_match($searchText,$child['Ville'])){$in=true;$inVille=true;}//vague
             if ($in==true) {
                 $data=["id"=>$compteur,
                     "IDPlace" => $child['IDPlace'],
@@ -178,7 +179,7 @@ function backup($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$S
 function save($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville,$Media,$Anneeprod,$desc){
     /*$childs = getChilds();
     foreach ($childs as $child){
-        if ($child['IDImage'] == $idplace) {
+        if (preg_match($searchText,$child['IDImage'] == $idplace) {
 
         }
     }*/
