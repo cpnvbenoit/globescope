@@ -1,53 +1,65 @@
-.table-edit{
-    width: 80% ;
+.table-edit {
+    width: 80%;
     border-color: #BCDC53;
 }
 
-.formshow{
-    width: 20% ;
+.formshow {
+    width: 20%;
     float: right;
 }
 
-.titleshowchild{
-    position: absolute ;
+.titleshowchild {
+    position: absolute;
     left: 42%;
 }
 
-.buttoneditshowchild{
+.buttoneditshowchild {
     text-decoration: none;
     color: #ffffff;
 }
 
-.formscs{
-    width: 20% ;
+.formscs {
+    width: 20%;
     float: right;
 }
 
-.buttoneditscs{
-    text-decoration: none ;
+.buttoneditscs {
+    text-decoration: none;
     color: #ffffff
 }
-.category{
+
+.category {
     color: white;
     text-align: center;
     font-size: 1.5em;
 }
-.rouge{
+
+.rouge {
     background-color: red;
 }
-.orange{
-    background-color:darkorange ;
+
+.orange {
+    background-color: darkorange;
 }
-.jaune{
+
+.jaune {
     background-color: yellow;
 }
 
-.vert{
+.vert {
     background-color: mediumseagreen;
 }
-.bleu{
-    background-color:dodgerblue ;
+
+.bleu {
+    background-color: dodgerblue;
 }
-.violet{
+
+.violet {
     background-color: blueviolet;
+}
+
+.editbuttonglobe {
+    width: 300px;
+    height: 50px;
+    background-color: #000c8f
 }
