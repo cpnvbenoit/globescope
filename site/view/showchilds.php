@@ -115,7 +115,7 @@ if ($_SESSION['fail'] = "false") {
         <th>
             Pays
         </th>
-        <th>
+        <th width="8%">
             Ville
         </th>
         <th>
@@ -168,7 +168,8 @@ if ($_SESSION['fail'] = "false") {
                     <p><?= $child['Ville'] ?></p>
                 </td>
                 <td>
-                    <p><?= $child['Media'] ?></p>
+                    <p><?php if ($child['Media']!=''){echo substr($child['Media'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+
                 </td>
                 <td>
                     <p><?= $child['Anneeprod'] ?></p>
