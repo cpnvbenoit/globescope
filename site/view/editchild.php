@@ -41,6 +41,15 @@ ob_start();
     <th style="text-align: center">
        Ville
     </th>
+    <th style="text-align: center">
+    Media
+    </th>
+    <th style="text-align: center">
+       Année-production
+    </th>
+    <th style="text-align: center">
+       Résumé
+    </th>
     </thead  align="center">
     <tbody align="center">
 
@@ -71,13 +80,22 @@ ob_start();
                     </p>
                 </td>
                 <td>
-                    <p><?= $child['Provenance'] ?></p>
+                    <p><?= $child['Team'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['Pays'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['Ville'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Media'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Anneeprod'] ?></p>
+                </td>
+                <td>
+                    <p><?php echo substr($child['Desc'], 0,15)  ?></p>
                 </td>
 
             </tr>

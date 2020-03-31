@@ -122,10 +122,10 @@ if ($_SESSION['fail'] = "false") {
             Media
         </th>
         <th>
-            Anneeprod
+            Année-production
         </th>
         <th>
-            Desc
+            Résumé
         </th>
         <th>
             Modifier
@@ -174,7 +174,7 @@ if ($_SESSION['fail'] = "false") {
                     <p><?= $child['Anneeprod'] ?></p>
                 </td>
                 <td>
-                    <p><?= $child['Desc'] ?></p>
+                    <p><?php echo substr($child['Desc'], 0,15)  ?></p>
                 </td>
 
                 <td>
