@@ -174,7 +174,7 @@ if ($_SESSION['fail'] = "false") {
                     <p><?= $child['Anneeprod'] ?></p>
                 </td>
                 <td>
-                    <p><?php echo substr($child['Desc'], 0,15)  ?></p>
+                    <p><?php if ($child['Desc']!=''){echo substr($child['Desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
                 </td>
 
                 <td>

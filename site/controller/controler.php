@@ -73,70 +73,114 @@ function showchildsSearch()
 {
 
     if (isset($_SESSION['username']) == true) {
-        $searchText="/".$_POST['searchText']."/";
+        $searchText = "/" . $_POST['searchText'] . "/";
 
         $childs = getChilds();//Verifier si utile/ necessaire
-        $compteur=-1;
-        foreach ($childs as $child){
+        $compteur = -1;
+        foreach ($childs as $child) {
             $compteur++;
-            $in=false;
-            $inIDImage=false;
-            $inIDPlace=false;
-            $inmer=false;
-            $inlat=false;
-            $inlon=false;
-            $inPseudo=false;
-            $inDroit=false;
-            $inSlogan=false;
-            $inTeam=false;
-            $inPays=false;
-            $inVille=false;//(preg_match($pattern, $image['Pseudo']))
-            if ($searchText==['IDPlace']){$in=true;$inIDPlace=true;}
-            else if ($searchText==['IDImage']){$in=true;$inIDImage=true;}
-            else if ($searchText==['mer']){$in=true;$inmer=true;}
-            else if ($searchText==['lat']){$in=true;$inlat=true;}
-            else if ($searchText==['lon']){$in=true;$inlon=true;}
-           // else if (preg_match($searchText,$child['Pseudo'])){$in=true;$inPseudo=true;}//vague
-            else if (preg_match($searchText,$child['Droit'])){$in=true;$inDroit=true;}//vague
-            else if (preg_match($searchText,$child['Slogan'])){$in=true;$inSlogan=true;}//vague
-            else if (preg_match($searchText,$child['Team'])){$in=true;$inTeam=true;}//vague
-            else if (preg_match($searchText,$child['Pays'])){$in=true;$inPays=true;}//vague
-            else if (preg_match($searchText,$child['Ville'])){$in=true;$inVille=true;}//vague
-            if ($in==true) {
-                $data=["id"=>$compteur,
-                    "IDPlace" => $child['IDPlace'],
-                    "inIDPlace" => $inIDPlace,
-                    "inIDImage"=>$inIDImage,
-                    "inmer"=>$inmer,
-                    "inlat"=>$inlat,
-                    "inlon'"=>$inlon,
-                    "inPseudo"=>$inPseudo,
-                    "inDroit"=>$inDroit,
-                    "inSlogan"=>$inSlogan,
-                    "inTeam="=>$inTeam,
-                    "inPays="=>$inPays,
-                    "inVille"=>$inVille,
-                    "IDImage"=>$child['IDImage'],
-                    "mer"=>$child['mer'],
-                    "lat"=>$child['lat'],
-                    "lon'"=>$child['lon'],
-                    "Pseudo"=>$child['Pseudo'],
-                    "Droit"=>$child['Droit'],
-                    "Slogan"=>$child['Slogan'],
-                    "Team="=>$child['Team'],
-                    "Pays="=>$child['Pays'],
-                    "Ville"=>$child['Ville']
-                ];
-                $search[]=$data;
-            }
+            $in = false;
+            $inIDImage = false;
+            $inIDPlace = false;
+            $inmer = false;
+            $inlat = false;
+            $inlon = false;
+            $inPseudo = false;
+            $inDroit = false;
+            $inSlogan = false;
+            $inTeam = false;
+            $inPays = false;
+            $inVille = false;
+            $fields = [
+                ["field" => $child['Pseudo'], "var" => "1"],
+                ["field" => $child['Droit'], "var" => "2"],
+                ["field" => $child['Slogan'], "var" => "3"],
+                ["field" => $child['Team'], "var" => "4"],
+                ["field" => $child['Pays'], "var" => "5"],
+                ["field" => $child['Ville'], "var" => "6"]
+            ];
+            foreach ($fields as $field) {
+                if (preg_match($searchText, $child['field'])) {
+                    $in = true;
+                    switch ($field['var']) {
+                        case 1:
+                            $inPseudo = true;
+                            break;
+                        case 2:
+                            $inDroit = true;
+                            break;
+                        case 3:
+                            $inSlogan = true;
+                            break;
+                        case 4:
+                            $inTeam = true;
+                            break;
+                        case 5:
+                            $inPays = true;
+                            break;
+                        case 6:
+                            $inVille = true;
+                            break;
+                    }
+                }
+                if ($searchText == ['IDPlace']) {
+                    $in = true;
+                    $inIDPlace = true;
+                } else if ($searchText == ['IDImage']) {
+                    $in = true;
+                    $inIDImage = true;
+                } else if ($searchText == ['mer']) {
+                    $in = true;
+                    $inmer = true;
+                } else if ($searchText == ['lat']) {
+                    $in = true;
+                    $inlat = true;
+                } else if ($searchText == ['lon']) {
+                    $in = true;
+                    $inlon = true;
+                }
+                //  else if (preg_match($searchText,$child['Pseudo'])){$in=true;$inPseudo=true;}//vague
+                //  else if (preg_match($searchText,$child['Droit'])){$in=true;$inDroit=true;}//vague
+                //  else if (preg_match($searchText,$child['Slogan'])){$in=true;$inSlogan=true;}//vague
+                //  else if (preg_match($searchText,$child['Team'])){$in=true;$inTeam=true;}//vague
+                //  else if (preg_match($searchText,$child['Pays'])){$in=true;$inPays=true;}//vague
+                //  else if (preg_match($searchText,$child['Ville'])){$in=true;$inVille=true;}//vague
+                if ($in == true) {
+                    $data = ["id" => $compteur,
+                        "IDPlace" => $child['IDPlace'],
+                        "inIDPlace" => $inIDPlace,
+                        "inIDImage" => $inIDImage,
+                        "inmer" => $inmer,
+                        "inlat" => $inlat,
+                        "inlon'" => $inlon,
+                        "inPseudo" => $inPseudo,
+                        "inDroit" => $inDroit,
+                        "inSlogan" => $inSlogan,
+                        "inTeam=" => $inTeam,
+                        "inPays=" => $inPays,
+                        "inVille" => $inVille,
+                        "IDImage" => $child['IDImage'],
+                        "mer" => $child['mer'],
+                        "lat" => $child['lat'],
+                        "lon" => $child['lon'],
+                        "Pseudo" => $child['Pseudo'],
+                        "Droit" => $child['Droit'],
+                        "Slogan" => $child['Slogan'],
+                        "Team" => $child['Team'],
+                        "Pays" => $child['Pays'],
+                        "Ville" => $child['Ville']
+                    ];
+                    $search[] = $data;
+                }
+            }}
+            require_once 'view/showchildsSearch.php';}
+
+    else {
+            $_SESSION['flashmessage'] = "Pas touche !";
+            require 'view/home.php';
         }
-        require_once 'view/showchildsSearch.php';
-    } else {
-        $_SESSION['flashmessage'] = "Pas touche !" ;
-        require 'view/home.php';
     }
 
-}
 
 function editchild($IDimage)
 {
