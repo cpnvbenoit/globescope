@@ -27,7 +27,7 @@ function onImageClick(x)
                 if(myObj.ImageOK != 0)
                 {
                     var details =  document.getElementById("onClickDetails").childNodes;
-                    childImage.src = "images/400-500/"+myObj.IDImage+".jpg";
+                    childImage.src = "../images/400-500/"+myObj.IDImage+".jpg";
                     childPseudo.textContent = myObj.Pseudo;
                     childCitation.textContent =  myObj.Slogan;
                     childRight.textContent = myObj.Droit;

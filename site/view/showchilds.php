@@ -14,7 +14,7 @@ if ($_SESSION['fail'] = "false") {
 
         <form method="post" action="index.php?action=showchildsSearch" class="form-group formshow">
             <div class="input-group">
-                <input class="form-control" type="text" name="searchText" value="<?= $search['searchText']?>"/>
+                <input class="form-control" type="text" name="searchText" value=""/>
                 <div class="input-group-btn">
                     <button class="btn btn-default" id="searchButton" >
                         <i class="glyphicon glyphicon-search"></i>

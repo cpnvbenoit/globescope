@@ -14,7 +14,7 @@ ob_start();
 
     <form method="post" action="index.php?action=showchildsSearch" class="form-group formscs">
         <div class="input-group">
-            <input class="form-control" type="text" name="searchText" value=" " placeholder="Search"/>
+            <input class="form-control" type="text" name="searchText" value="" placeholder="Search"/>
             <div class="input-group-btn">
                 <button class="btn btn-default" id="searchButton">
                     <i class="glyphicon glyphicon-search"></i>

@@ -112,8 +112,6 @@ ob_start();
 
 foreach ($childs as $child) {
     if ($child['IDImage'] == $idchild) {
-
-
         $valuelat = $child['lat'];
         $valuemer = $child['mer'];
         $valuelon = $child['lon'];

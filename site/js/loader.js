@@ -62,7 +62,7 @@ function loadData(scene,canvContainer,controls)
                 if(data[i].ImageOK == "VRAI")
                     totalImages++;
             }
-            TextureLoader.load( 'images/earth.jpg', function ( texture )
+            TextureLoader.load( '../images/earth.jpg', function ( texture )
             {
                 var geometry = new THREE.SphereGeometry( rayon - 15, 30, 30 );
                 var material = new THREE.MeshBasicMaterial( { map: texture, overdraw: 0.5 } );
@@ -80,7 +80,7 @@ function loadData(scene,canvContainer,controls)
                         index++;
                         //afficher le canvas lorsque la dernière image est chargée
                         
-                        file ="images/64-64/"+data[x].IDImage+".png";                   
+                        file ="../images/64-64/"+data[x].IDImage+".png";
                         texture =  textureLoader.load( file, function()
                         {
                             imageLoaded++;
