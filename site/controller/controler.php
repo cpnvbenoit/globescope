@@ -57,23 +57,24 @@ function tryLogin()
 
 }//2020_CPNV_A1
 
-function showchilds()
+function showchilds($welcome)
 {
 
     if (isset($_SESSION['username']) == true) {
         $childs = getChilds();
         require_once 'view/showchilds.php';
     } else {
-        $_SESSION['flashmessage'] = "Pas touche !" ;
+        $_SESSION['flashmessage'] = "Pas touche !";
         require 'view/home.php';
     }
 
 }
+
 function showchildsSearch()
 {
 
     if (isset($_SESSION['username']) == true) {
-        $searchText = "/" . $_POST['searchText'] . "/";
+        $searchText = "/" . $_POST['searchText'] . "/i";
 
         $childs = getChilds();//Verifier si utile/ necessaire
         $compteur = -1;
@@ -91,7 +92,7 @@ function showchildsSearch()
             $inTeam = false;
             $inPays = false;
             $inVille = false;
-            $fields = [
+         /*   $fields = [
                 ["field" => $child['Pseudo'], "var" => "1"],
                 ["field" => $child['Droit'], "var" => "2"],
                 ["field" => $child['Slogan'], "var" => "3"],
@@ -100,7 +101,7 @@ function showchildsSearch()
                 ["field" => $child['Ville'], "var" => "6"]
             ];
             foreach ($fields as $field) {
-                if (preg_match($searchText, $child['field'])) {
+                if (preg_match($searchText, $field['field'])) {
                     $in = true;
                     switch ($field['var']) {
                         case 1:
@@ -122,42 +123,47 @@ function showchildsSearch()
                             $inVille = true;
                             break;
                     }
-                }
+                }*/
                 if ($searchText == ['IDPlace']) {
                     $in = true;
                     $inIDPlace = true;
-                } else if ($searchText == ['IDImage']) {
+                }
+                if ($searchText == ['IDImage']) {
                     $in = true;
                     $inIDImage = true;
-                } else if ($searchText == ['mer']) {
+                }
+                if ($searchText == ['mer']) {
                     $in = true;
                     $inmer = true;
-                } else if ($searchText == ['lat']) {
+                }
+                if ($searchText == ['lat']) {
                     $in = true;
                     $inlat = true;
-                } else if ($searchText == ['lon']) {
+                }
+                if ($searchText == ['lon']) {
                     $in = true;
                     $inlon = true;
                 }
-                //  else if (preg_match($searchText,$child['Pseudo'])){$in=true;$inPseudo=true;}//vague
-                //  else if (preg_match($searchText,$child['Droit'])){$in=true;$inDroit=true;}//vague
-                //  else if (preg_match($searchText,$child['Slogan'])){$in=true;$inSlogan=true;}//vague
-                //  else if (preg_match($searchText,$child['Team'])){$in=true;$inTeam=true;}//vague
-                //  else if (preg_match($searchText,$child['Pays'])){$in=true;$inPays=true;}//vague
-                //  else if (preg_match($searchText,$child['Ville'])){$in=true;$inVille=true;}//vague
+                if (preg_match($searchText,$child['Pseudo'])){$in=true;$inPseudo=true;}//vague
+                if (preg_match($searchText,$child['Droit'])){$in=true;$inDroit=true;}//vague
+                if (preg_match($searchText,$child['Slogan'])){$in=true;$inSlogan=true;}//vague
+                if (preg_match($searchText,$child['Team'])){$in=true;$inTeam=true;}//vague
+                if (preg_match($searchText,$child['Pays'])){$in=true;$inPays=true;}//vague
+                if (preg_match($searchText,$child['Ville'])){$in=true;$inVille=true;}//vague
                 if ($in == true) {
-                    $data = ["id" => $compteur,
+                    $search[] = ["id" => $compteur,
+                        "searchText"=> $_POST['searchText'],
                         "IDPlace" => $child['IDPlace'],
                         "inIDPlace" => $inIDPlace,
                         "inIDImage" => $inIDImage,
                         "inmer" => $inmer,
                         "inlat" => $inlat,
-                        "inlon'" => $inlon,
+                        "inlon" => $inlon,
                         "inPseudo" => $inPseudo,
                         "inDroit" => $inDroit,
                         "inSlogan" => $inSlogan,
-                        "inTeam=" => $inTeam,
-                        "inPays=" => $inPays,
+                        "inTeam" => $inTeam,
+                        "inPays" => $inPays,
                         "inVille" => $inVille,
                         "IDImage" => $child['IDImage'],
                         "mer" => $child['mer'],
@@ -170,16 +176,15 @@ function showchildsSearch()
                         "Pays" => $child['Pays'],
                         "Ville" => $child['Ville']
                     ];
-                    $search[] = $data;
                 }
-            }}
-            require_once 'view/showchildsSearch.php';}
+            }
 
-    else {
-            $_SESSION['flashmessage'] = "Pas touche !";
-            require 'view/home.php';
-        }
+        require_once 'view/showchildsSearch.php';
+    } else {
+        $_SESSION['flashmessage'] = "Pas touche !";
+        require 'view/home.php';
     }
+}
 
 
 function editchild($IDimage)
@@ -189,45 +194,44 @@ function editchild($IDimage)
         $childs = $_SESSION['childs'];
         require_once 'view/editchild.php';
     } else {
-        $_SESSION['flashmessage'] = "Pas touche !" ;
+        $_SESSION['flashmessage'] = "Pas touche !";
         require 'view/home.php';
     }
 
 
-
-
 }
 
-function backup($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville,$Media,$Anneeprod,$desc){
-    $backup=getBackup();
-    $backup[]=[
-        "IDPlace" =>$idplace ,
-        "IDImage"=>$IDimage ,
-        "mer" =>$meridien ,
-        "lat"=> $latitude,
-        "lon"=>$longitude ,
-        "Pseudo"=>$Pseudo ,
-        "Droit" =>$Droit ,
-        "Slogan"=>$Slogan ,
-        "Team"=>$team ,
-        "ImageOK"=> "VRAI",
-        "Pays"=> $Pays,
-        "Ville"=> $Ville,
-        "Media"=>$Media ,
-        "Anneeprod"=>$Anneeprod ,
-        "desc"=> $desc
+function backup($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc)
+{
+    $backup = getBackup();
+    $backup[] = [
+        "IDPlace" => $idplace,
+        "IDImage" => $IDimage,
+        "mer" => $meridien,
+        "lat" => $latitude,
+        "lon" => $longitude,
+        "Pseudo" => $Pseudo,
+        "Droit" => $Droit,
+        "Slogan" => $Slogan,
+        "Team" => $team,
+        "ImageOK" => "VRAI",
+        "Pays" => $Pays,
+        "Ville" => $Ville,
+        "Media" => $Media,
+        "Anneeprod" => $Anneeprod,
+        "desc" => $desc
     ];
     putBackup($backup);
 }
-
-function save($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville,$Media,$Anneeprod,$desc){
+function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc)
+{
     /*$childs = getChilds();
     foreach ($childs as $child){
         if (preg_match($searchText,$child['IDImage'] == $idplace) {
 
         }
     }*/
-    backup($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville,$Media,$Anneeprod,$desc);
+    backup($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc);
 }
 
 ?>

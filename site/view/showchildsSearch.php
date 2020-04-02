@@ -21,6 +21,8 @@ ob_start();
                 </button>
             </div>
         </div>
+            <br>
+            <a class="link" href="index.php?action=showchilds&welcome=no">Annuler la recherche.</a>
     </form>
 </div>
 <h1 style=" position: absolute ; left: 42%">Afficher les enfants</h1><br><br>
@@ -155,7 +157,7 @@ ob_start();
       'Team=' => string 'Attributions_IdehfiFr11-2.xlsx' (length=30)
       'Pays=' => string '' (length=0)
       'Ville' => string '' (length=0)*/
-    var_dump($search);
+
     foreach ($search as $child) {
         if (($child['inIDPlace']==true)&&($inIDPlace==true)){echo "<tr><td colspan='10' class=\"category rouge  \">IDPlace</td></tr>";$inIDPlace = false;}
         if (($child['inIDImage']==true)&&($inIDImage==true)){echo "<tr><td colspan='10' class=\"category orange  \">IDImage</td></tr>";$inIDImage = false;}

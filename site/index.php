@@ -8,9 +8,14 @@
 session_start();
 require 'controller/dataControler.php';
 require "controller/controler.php";
-$action=$_GET['action'];
+if (isset($_GET['action'])){
+    $action=$_GET['action'];
+}
 if (isset($_GET['IDimage'])){
     $IDimage=$_GET['IDimage'];
+}
+if (isset($_GET['welcome'])){
+    $welcome=$_GET['welcome'];
 }
 //Set var for save -----------------------------------------
 if (isset($_POST['meridien'])){
@@ -69,7 +74,7 @@ switch ($action) {
         save($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville);
         break;
     case 'showchilds';
-        showchilds();
+        showchilds($welcome);
         break;
     case 'showchildsSearch';
         showchildsSearch();

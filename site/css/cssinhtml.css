@@ -68,3 +68,14 @@
     text-decoration: underline;
     color: #3498db;
 }
+.scTeam{
+    width: 150px;
+}
+.link{
+    color: #3498db;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+.link :hover{
+    color: black;
+}

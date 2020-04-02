@@ -14,7 +14,7 @@ if ($_SESSION['fail'] = "false") {
 
         <form method="post" action="index.php?action=showchildsSearch" class="form-group formshow">
             <div class="input-group">
-                <input class="form-control" type="text" name="searchText" value=" "/>
+                <input class="form-control" type="text" name="searchText" value="<?= $search['searchText']?>"/>
                 <div class="input-group-btn">
                     <button class="btn btn-default" id="searchButton" >
                         <i class="glyphicon glyphicon-search"></i>
@@ -23,7 +23,7 @@ if ($_SESSION['fail'] = "false") {
             </div>
         </form>
     </div>
-    <script> alert("Bienvenue !") </script>
+    <?php if ($welcome!='no'){echo"<script> alert(\"Bienvenue !\") </script>";}?>
     <h1 class="titleshowchild">Afficher les enfants</h1>
     <!--
     <h4 style="padding-left: 10px"> Rechercher par</h4>
@@ -151,15 +151,13 @@ if ($_SESSION['fail'] = "false") {
                     <p><?= $child['Pseudo'] ?></p>
                 </td>
                 <td>
-                    <p><?= $child['Droit'] ?></p>
+                    <p><?php if ($child['Droit']!=''){echo substr($child['Droit'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
                 </td>
                 <td>
-                    <p>
-                        <?= $child['Slogan'] ?>
-                    </p>
+                    <p><?php if ($child['Slogan']!=''){echo substr($child['Slogan'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
                 </td>
                 <td>
-                    <p><?= $child['Team'] ?></p>
+                    <p class="scTeam"><?= $child['Team'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['Pays'] ?></p>
