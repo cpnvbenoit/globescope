@@ -13,8 +13,6 @@ window.onclick = function(event) {
     }
     login.addEventListener('click',d_block);
 
-
-
 }
 //not used
 function d_block() {

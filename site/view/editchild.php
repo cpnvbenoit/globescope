@@ -132,7 +132,7 @@ foreach ($childs as $child) {
 ?>
 <br>
 <table align="center" class="table" style="width: 80%">
-    <form method="post" action="index.php?action=save">
+    <form method="post" id="formedit" action="index.php?action=save">
     <tr>
         <td class="form-group">
             <label for="meridien">Méridien</label>
@@ -202,18 +202,17 @@ foreach ($childs as $child) {
                 <label for="Anneeprod">Annéeproduction</label>
                 <input name="Anneeprod" value="<?= $valueanneeprod ?>" class="form-control" type="text" id="Anneeprod" >
             </td>
-
+            <td class="form-group"></td>
             <td class="form-group">
                 <label for="Desc">Description</label>
-                <input name="Desc " value="<?= $valuedesc ?>" class="form-control" type="text" id="Desc" >
+                <textarea rows="8" maxlength="1000"   class="form-control" name="Desc" id="Desc" form="formedit"><?= $valuedesc ?></textarea>
             </td>
 
         </tr>
-
     </form>
 </table>
 <br>
-<div style="text-align: center">
+<div class="buttonEdit">
 <img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -40px" alt="Images id : <?= $valueidimage ?>"><br><br>
 <button id="UnlockallCMD" class="btn btn-danger">UnlockAll</button>
 <button id="Save" type="submit" class="btn btn-success">Sauvegarder</button>

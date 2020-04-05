@@ -6,7 +6,7 @@
  * Time: 11.19
  */
 $title = "Error";
-if ($_SESSION['fail'] = "false") {
+if ($_SESSION['fail'] == false) {
     $title = "Affichage";
     ob_start();
     ?>
@@ -25,69 +25,6 @@ if ($_SESSION['fail'] = "false") {
     </div>
     <?php if ($welcome!='no'){echo"<script> alert(\"Bienvenue !\") </script>";}?>
     <h1 class="titleshowchild">Afficher les enfants</h1>
-    <!--
-    <h4 style="padding-left: 10px"> Rechercher par</h4>
-    <table class="table" style="text-align: center">
-        <form>
-            <tr>
-                <td>
-                    <label for="test">Latitude</label>
-                    <input type="radio" id="test" name="Recherche-Latitude">
-                </td>
-                <td>
-                    <label for="test">Longitude</label>
-                    <input type="radio" id="test" name="Recherche-Longitude">
-                </td>
-                <td>
-                    <label for="test">Meridien</label>
-                    <input type="radio" id="test" name="Recherche-Meridien">
-                </td>
-                <td>
-                    <label for="test">id image</label>
-                    <input type="radio" id="test" name="Recherche-idimage">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="test">Pseudo</label>
-                    <input type="radio" id="test" name="Recherche-Pseudo">
-                </td>
-                <td>
-                    <label for="test">Droit</label>
-                    <input type="radio" id="test" name="Recherche-Droit">
-                </td>
-                <td>
-                    <label for="test">Slogan</label>
-                    <input type="radio" id="test" name="Recherche-Slogan">
-                </td>
-                <td>
-                    <label for="test">Team</label>
-                    <input type="radio" id="test" name="Recherche-Origine-des-données">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="test">Pays</label>
-                    <input type="radio" id="test" name="Recherche-Pays">
-                </td>
-                <td>
-                    <label for="test">Ville</label>
-                    <input type="radio" id="test" name="Recherche-Ville">
-                </td>
-                <td>
-                    <label for="test">Team</label>
-                    <input type="radio" id="test" name="Recherche-Team">
-                </td>
-                <td>
-
-                    <label for="test">Tous</label>
-                    <input type="radio" id="test" name="Recherche-Tous">
-
-                </td>
-            </tr>
-        </form>
-    </table>
-    -->
     <br>
     <table class="table" border="1" align="center" style="border: #BCDC53">
         <thead>

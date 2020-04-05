@@ -94,14 +94,33 @@
         <img id="childImage">
         <span id="separator"></span>
         <div id="description">
-            <p id="childPseudo"></p>
-            <p id="childCitation"></p>
-            <p id="childRight"></p>
-            <?php if ($_SESSION['fail']=="false"){echo "<p id=\"childIDPlace\"></p>";} ?>
-            <p id="childPays"></p>
-            <p id="childVille"></p>
-            <p id="childEquipe"></p>
-            <a href="?action=editchild" target="_blank"><button class="editbuttonglobe">Edit</button></a>
+            <table>
+                <tr>
+                    <td><p id="childPseudo"></p></td>
+                    <td><p id="childCitation"></p></td>
+                </tr>
+                <tr>
+                    <td><p id="childRight"></p></td>
+                    <td><p id="childPays"></p></td>
+                </tr>
+                <tr>
+                    <td><p id="childVille"></p></td>
+                    <td><p id="childEquipe"></p></td>
+                </tr>
+                <tr>
+                    <td><a href=""></a></td>
+                </tr>
+                <?php if ($_SESSION['fail']==false){echo "
+                    <tr>
+                        <td><p id=\"childIDPlace\"></p></td>
+                        <td><a id=\"childEdit\" target=\"_blank\"><button class=\"editbuttonglobe\">Edit</button></a></td>
+                    </tr>
+                ";} ?>
+
+
+            </table>
+
+            <?php if ($_SESSION['fail']==false){echo "";} ?>
         </div>
     </div>
     <div id="onSearchDetails" class="flexContainer">

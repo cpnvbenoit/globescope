@@ -6,7 +6,7 @@
  * Time: 11.19
  */
 $title = "Error";
-if ($_SESSION['fail'] = "false") {
+if ($_SESSION['fail'] == false) {
 $title = "Affichage";
 ob_start();
 ?>

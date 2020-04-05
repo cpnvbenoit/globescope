@@ -27,14 +27,15 @@ function onImageClick(x)
                 if(myObj.ImageOK != 0)
                 {
                     var details =  document.getElementById("onClickDetails").childNodes;
-                    childImage.src = "../images/400-500/"+myObj.IDImage+".jpg";
-                    childPseudo.textContent = myObj.Pseudo;
-                    childCitation.textContent =  myObj.Slogan;
-                    childRight.textContent = myObj.Droit;
-                    childIDPlace.textContent = myObj.IDPlace;
-                    childEquipe.textContent = myObj.Team;
-                    childVille.textContent = myObj.Ville;
-                    childPays.textContent = myObj.Pays;
+                    childImage.src = "images/400-500/"+myObj.IDImage+".jpg";
+                    childPseudo.textContent ="Pseudo: "+ myObj.Pseudo;
+                    childCitation.textContent ="Slogan: "+  myObj.Slogan;
+                    childRight.textContent ="Droit: "+ myObj.Droit;
+                    childIDPlace.textContent ="Idimage: "+ myObj.IDImage;
+                    childEdit.href = "?action=editchild&IDimage="+myObj.IDImage;
+                    childEquipe.textContent ="Equipe: "+ myObj.Team;
+                    childVille.textContent ="Ville: "+ myObj.Ville;
+                    childPays.textContent ="Pays: "+ myObj.Pays;
                 }
             }
         }
