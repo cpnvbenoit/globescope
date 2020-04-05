@@ -80,7 +80,7 @@
     color: black;
 }
 .buttonEdit{
-    margin-top: -180px;
+    margin-top: -130px;
     text-align: center;
     margin-bottom: 35px;
 }
@@ -89,4 +89,8 @@
     color: white;
     background-color: #00A000;
     border-color: black;
+}
+.UnlockallCMD{
+    position: absolute;
+    margin-left: 43px;
 }

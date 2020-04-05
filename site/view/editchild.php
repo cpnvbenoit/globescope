@@ -8,7 +8,7 @@
 $title = "Modifications";
 ob_start();
 ?>
-
+<button id="UnlockallCMD" class="UnlockallCMD btn btn-danger">UnlockAll</button>
 <h1 align="center">Modifier les infos</h1><br>
 
 
@@ -55,7 +55,7 @@ ob_start();
 
     <?php
     foreach ($childs as $child) {
-        if ($child['IDImage'] == $idchild) {
+        if ($child['IDImage'] == $_SESSION['idchild']) {
 
             ?>
             <tr>
@@ -111,7 +111,7 @@ ob_start();
 <?php
 
 foreach ($childs as $child) {
-    if ($child['IDImage'] == $idchild) {
+    if ($child['IDImage'] == $_SESSION['idchild']) {
         $valuelat = $child['lat'];
         $valuemer = $child['mer'];
         $valuelon = $child['lon'];
@@ -124,99 +124,103 @@ foreach ($childs as $child) {
         $valueville = $child['Ville'];
         $valuespays = $child['Pays'];
         $valuemedia = $child['Media'];
+        $valuetitre = $child['Titre'];
         $valueanneeprod = $child['Anneeprod'];
         $valuedesc = $child['Desc'];
-
+        $_SESSION['backupnull']=[
+            "lat"=>$valuelat,
+            "mer"=>$valuemer,
+            "lon"=>$valuelon,
+            "IDPlace"=>$valueidplace,
+            "IDImage"=>$valueidimage,
+        ];
     }
 }
 ?>
 <br>
-<table align="center" class="table" style="width: 80%">
-    <form method="post" id="formedit" action="index.php?action=save">
-    <tr>
-        <td class="form-group">
-            <label for="meridien">Méridien</label>
-            <input name="meridien" value="<?= $valuemer ?>" type="text" disabled class="form-control" id="meridien">
-        </td>
-        <td class="form-group">
-            <label for="latitude">Latitude</label>
-            <input name="latitude" value="<?= $valuelat ?>" type="text" disabled class="form-control" id="latitude" >
-
-
-        </td>
-        <td class="form-group">
-            <label for="longitude">Longitude</label>
-            <input name="longitude" value="<?= $valuelon ?>" type="text" disabled class="form-control" id="longitude">
-        </td>
-
-    </tr>
-    <tr>
-        <td class="form-group">
-            <label for="idplace">IDplace</label>
-            <input name="idplace" value="<?= $valueidplace ?>" type="text" disabled class="form-control" id="idplace">
-        </td>
-        <td class="form-group">
-            <label for="idimage">IDimage</label>
-            <input name="idimage" value="<?= $valueidimage ?>" type="text" disabled class="form-control" id="idimage" >
-        </td>
-        <td class="form-group">
-            <label for="team">Team</label>
-            <input name="team" value="<?= $valueteam ?>" type="text" id="team" class="form-control">
-        </td>
-    </tr>
-    <tr>
-        <td class="form-group">
-            <label for="Droit">Droit</label>
-            <input name="Droit" value="<?= $valuedroit ?>" type="text" id="Droit" class="form-control">
-
-        </td>
-        <td class="form-group">
-            <label for="Slogan">Slogan</label>
-            <input name="Slogan" value="<?= $valueslogan ?>" type="text" class="form-control" id="Slogan">
-        </td>
-        <td class="form-group">
-            <label for="Pseudo">Pseudo</label>
-            <input name="Pseudo" value="<?= $valuepseudo ?>" class="form-control" type="text" id="Pseudo" >
-        </td>
-    </tr>
-    <tr>
-
-        <td class="form-group">
-            <label for="Pays">Pays</label>
-            <input name="Pays" value="<?= $valuespays ?>" class="form-control" type="text" id="Pays" >
-        </td>
-
-        <td class="form-group">
-            <label for="Ville">Ville</label>
-            <input name="Ville" value="<?= $valueville ?>" class="form-control" type="text" id="Ville" >
-        </td>
-        <td class="form-group">
-            <label for="Media">Media</label>
-            <input name="Media" value="<?= $valuemedia ?>" class="form-control" type="text" id="Media" >
-        </td>
-
-
-    </tr>
+<form method="post" id="formedit" action="index.php?action=save">
+    <table align="center" class="table" style="width: 80%">
         <tr>
             <td class="form-group">
-                <label for="Anneeprod">Annéeproduction</label>
-                <input name="Anneeprod" value="<?= $valueanneeprod ?>" class="form-control" type="text" id="Anneeprod" >
+                <label for="meridien">Méridien</label>
+                <input name="meridien" value="<?= $valuemer ?>" type="text" disabled class="form-control" id="meridien">
             </td>
-            <td class="form-group"></td>
             <td class="form-group">
-                <label for="Desc">Description</label>
-                <textarea rows="8" maxlength="1000"   class="form-control" name="Desc" id="Desc" form="formedit"><?= $valuedesc ?></textarea>
+                <label for="latitude">Latitude</label>
+                <input name="latitude" value="<?= $valuelat ?>" type="text" disabled class="form-control" id="latitude" >
+            </td>
+            <td class="form-group">
+                <label for="longitude">Longitude</label>
+                <input name="longitude" value="<?= $valuelon ?>" type="text" disabled class="form-control" id="longitude">
+            </td>
+        </tr>
+        <tr>
+            <td class="form-group">
+                <label for="idplace">IDplace</label>
+                <input name="idplace" value="<?= $valueidplace ?>" type="text" disabled class="form-control" id="idplace">
+            </td>
+            <td class="form-group">
+                <label for="idimage">IDimage</label>
+                <input name="idimage" value="<?= $valueidimage ?>" type="text" disabled class="form-control" id="idimage" >
+            </td>
+            <td class="form-group">
+                <label for="team">Team</label>
+                <input name="team" value="<?= $valueteam ?>" type="text" id="team" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td class="form-group">
+                <label for="Droit">Droit</label>
+                <input name="Droit" value="<?= $valuedroit ?>" type="text" id="Droit" class="form-control">
+
+            </td>
+            <td class="form-group">
+                <label for="Slogan">Slogan</label>
+                <input name="Slogan" value="<?= $valueslogan ?>" type="text" class="form-control" id="Slogan">
+            </td>
+            <td class="form-group">
+                <label for="Pseudo">Pseudo</label>
+                <input name="Pseudo" value="<?= $valuepseudo ?>" class="form-control" type="text" id="Pseudo" >
+            </td>
+        </tr>
+        <tr>
+            <td class="form-group">
+                <label for="Pays">Pays</label>
+                <input name="Pays" value="<?= $valuespays ?>" class="form-control" type="text" id="Pays" >
             </td>
 
+            <td class="form-group">
+                <label for="Ville">Ville</label>
+                <input name="Ville" value="<?= $valueville ?>" class="form-control" type="text" id="Ville" >
+            </td>
+            <td class="form-group">
+                <label for="Media">Media</label>
+                <input name="Media" value="<?= $valuemedia ?>" class="form-control" type="text" id="Media" >
+            </td>
         </tr>
-    </form>
-</table>
+        <tr>
+            <td class="form-group">
+                <label for="Anneeprod">Année de production</label>
+                <input name="Anneeprod" value="<?= $valueanneeprod ?>" class="form-control" type="text" id="Anneeprod" >
+            </td>
+            <td class="form-group">
+                <label for="Titre">Titre du média</label>
+                <input name="Titre" value="<?= $valuetitre ?>" class="form-control" type="text" id="Titre" >
+            </td>
+            <td class="form-group">
+                <label for="Desc">Description</label>
+                <textarea rows="8" maxlength="1000"   class="form-control" name="desc" id="Desc" form="formedit"><?= $valuedesc ?></textarea>
+            </td>
+        </tr>
+    </table>
+    <div class="buttonEdit">
+        <img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -30px" alt="Images id : <?= $valueidimage ?>"><br><br>
+        <button id="Save" type="submit" class="btn btn-success">Sauvegarder</button>
+    </div>
+</form>
 <br>
-<div class="buttonEdit">
-<img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -40px" alt="Images id : <?= $valueidimage ?>"><br><br>
-<button id="UnlockallCMD" class="btn btn-danger">UnlockAll</button>
-<button id="Save" type="submit" class="btn btn-success">Sauvegarder</button>
-</div>
+
+
     <?php
 
 $content = ob_get_clean();

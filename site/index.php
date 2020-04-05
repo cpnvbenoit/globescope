@@ -54,15 +54,16 @@ if (isset($_POST['Ville'])){
 if (isset($_POST['Media'])){
     $Media=$_POST['Media'];
 }
+if (isset($_POST['Titre'])){
+    $Titre=$_POST['Titre'];
+}
 if (isset($_POST['Anneeprod'])){
     $Anneeprod=$_POST['Anneeprod'];
 }
 if (isset($_POST['desc'])){
     $desc=$_POST['desc'];
 }
-
 //END set var for save -----------------------------------------
-//set var for shearched child
 switch ($action) {
     case 'home';
         home();
@@ -71,10 +72,13 @@ switch ($action) {
         editchild($IDimage);
         break;
     case 'save';
-        save($IDimage,$meridien,$latitude,$longitude,$idplace,$team,$Droit,$Slogan,$Pseudo,$Pays,$Ville);
+        save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc,$Titre);
         break;
     case 'showchilds';
         showchilds($welcome);
+        break;
+    case 'showBackup';
+        showBackup();
         break;
     case 'showchildsSearch';
         showchildsSearch();

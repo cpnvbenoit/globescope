@@ -55,7 +55,7 @@ function tryLogin()
     }
 
 
-}//2020_CPNV_A1
+}//edmadmin 2020_CPNV_A1
 
 function showchilds($welcome)
 {
@@ -63,6 +63,18 @@ function showchilds($welcome)
     if (isset($_SESSION['username']) == true) {
         $childs = getChilds();
         require_once 'view/showchilds.php';
+    } else {
+        $_SESSION['flashmessage'] = "Pas touche !";
+        require 'view/home.php';
+    }
+
+}
+function showBackup()
+{
+
+    if (isset($_SESSION['username']) == true) {
+        $childs = getBackup();
+        require_once 'view/showbackup.php';
     } else {
         $_SESSION['flashmessage'] = "Pas touche !";
         require 'view/home.php';
@@ -92,38 +104,6 @@ function showchildsSearch()
             $inTeam = false;
             $inPays = false;
             $inVille = false;
-         /*   $fields = [
-                ["field" => $child['Pseudo'], "var" => "1"],
-                ["field" => $child['Droit'], "var" => "2"],
-                ["field" => $child['Slogan'], "var" => "3"],
-                ["field" => $child['Team'], "var" => "4"],
-                ["field" => $child['Pays'], "var" => "5"],
-                ["field" => $child['Ville'], "var" => "6"]
-            ];
-            foreach ($fields as $field) {
-                if (preg_match($searchText, $field['field'])) {
-                    $in = true;
-                    switch ($field['var']) {
-                        case 1:
-                            $inPseudo = true;
-                            break;
-                        case 2:
-                            $inDroit = true;
-                            break;
-                        case 3:
-                            $inSlogan = true;
-                            break;
-                        case 4:
-                            $inTeam = true;
-                            break;
-                        case 5:
-                            $inPays = true;
-                            break;
-                        case 6:
-                            $inVille = true;
-                            break;
-                    }
-                }*/
                 if ($searchText == ['IDPlace']) {
                     $in = true;
                     $inIDPlace = true;
@@ -186,12 +166,11 @@ function showchildsSearch()
     }
 }
 
-
 function editchild($IDimage)
 {
     if (isset($_SESSION['username']) == true) {
-        $idchild = $IDimage;
-        $childs = $_SESSION['childs'];
+        $_SESSION['idchild'] = $IDimage;
+        $childs = getChilds();
         require_once 'view/editchild.php';
     } else {
         $_SESSION['flashmessage'] = "Pas touche !";
@@ -201,9 +180,14 @@ function editchild($IDimage)
 
 }
 
-function backup($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc)
+function backup($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc,$Titre)
 {
     $backup = getBackup();
+    if ($meridien==null){$meridien=$_SESSION['backupnull']['mer'];}
+    if ($latitude==null){$latitude=$_SESSION['backupnull']['lat'];}
+    if ($longitude==null){$longitude=$_SESSION['backupnull']['lon'];}
+    if ($idplace==null){$idplace=$_SESSION['backupnull']['IDPlace'];}
+    if ($IDimage==null){$IDimage=$_SESSION['backupnull']['IDImage'];}
     $backup[] = [
         "IDPlace" => $idplace,
         "IDImage" => $IDimage,
@@ -218,20 +202,19 @@ function backup($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Dr
         "Pays" => $Pays,
         "Ville" => $Ville,
         "Media" => $Media,
+        "Titre" => $Titre,
         "Anneeprod" => $Anneeprod,
-        "desc" => $desc
+        "desc" => $desc,
+        "date"=>strtotime("now")
     ];
     putBackup($backup);
 }
-function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc)
+function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc,$Titre)
 {
-    /*$childs = getChilds();
-    foreach ($childs as $child){
-        if (preg_match($searchText,$child['IDImage'] == $idplace) {
+    $childs = getChilds();
 
-        }
-    }*/
-    backup($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc);
+    backup($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc,$Titre);
+    require_once 'view/editchild.php';
 }
 
 ?>

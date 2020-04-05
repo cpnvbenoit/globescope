@@ -113,11 +113,11 @@
                     <td><p id="childEquipe"></p></td>
                 </tr>
                 <tr>
-                    <p><a  id="childMedia"></a></p>
-                    <h3 id="childAnneeprod"></h3>
-                    <hr>
-                    <h3 id="childDesc"></h3>
-                    <td></td>
+                    <td><p id="childMedia"></p>: <p id="childMedialink"></p></td>
+                    <td><p id="childAnneeprod"></p></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="50" rows="4"></textarea></td>
                 </tr>
                 <?php if ($_SESSION['fail']==false){echo "
                     <tr>
