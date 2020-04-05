@@ -78,6 +78,9 @@ function loadData(scene,canvContainer,controls)
                     if(data[x].ImageOK != 0)
                     {
                         index++;
+                        if (data[x].Media != ""){
+                        alert("Cap'tain Bicepssssssssssssssssss")
+                        }
                         //afficher le canvas lorsque la dernière image est chargée
                         
                         file ="images/64-64/"+data[x].IDImage+".png";
@@ -90,6 +93,8 @@ function loadData(scene,canvContainer,controls)
                                 controls.autoRotate = false;                                
                             }
                         });
+
+
                         //Inversion des textures --
                         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
                         texture.repeat.x = -1;
