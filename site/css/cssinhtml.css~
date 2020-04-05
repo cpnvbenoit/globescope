@@ -84,9 +84,3 @@
     text-align: center;
     margin-bottom: 35px;
 }
-.buttonMedia{
-    border-radius: 8px;
-    color: white;
-    background-color: #00A000;
-    border-color: black;
-}

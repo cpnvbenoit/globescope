@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/progressBar.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/cssinhtml.css">
     <script src="js/Loginstyle.js"></script>
+    <script src="js/Media.js"></script>
 
 
 </head>
@@ -42,6 +43,10 @@
 
     </form>
 </div>
+
+
+
+
 <div class="test">
 
     <?= $content ?>
@@ -108,7 +113,11 @@
                     <td><p id="childEquipe"></p></td>
                 </tr>
                 <tr>
-                    <td><a href=""></a></td>
+                    <p><a  id="childMedia"></a></p>
+                    <h3 id="childAnneeprod"></h3>
+                    <hr>
+                    <h3 id="childDesc"></h3>
+                    <td></td>
                 </tr>
                 <?php if ($_SESSION['fail']==false){echo "
                     <tr>
@@ -157,6 +166,10 @@
 <script src="js/searchChild.js"></script>
 <script src="js/childClicked.js"></script>
 <script src="js/Tween.js"></script>
+<div class="pop-up">
+
+</div>
+
 
 <script type="application/x-glsl" id="sky-vertex">
 varying vec2 vUV;

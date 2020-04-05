@@ -91,6 +91,10 @@ var childEdit = document.getElementById("childEdit");
 var childEquipe = document.getElementById("childEquipe");
 var childVille = document.getElementById("childVille");
 var childPays = document.getElementById("childPays");
+var childMedia = document.getElementById("childPays");
+var childAnneeprod = document.getElementById("childPays");
+var childDesc = document.getElementById("childPays");
+
 
 childImage.onload = showOnClickDetails;
 closeSideBar.onclick = hideSideBar;
