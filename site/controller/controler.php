@@ -87,8 +87,7 @@ function showchildsSearch()
 
     if (isset($_SESSION['username']) == true) {
         $searchText = "/" . $_POST['searchText'] . "/i";
-
-        $childs = getChilds();//Verifier si utile/ necessaire
+        $childs = getChilds();
         $compteur = -1;
         foreach ($childs as $child) {
             $compteur++;
@@ -154,7 +153,11 @@ function showchildsSearch()
                         "Slogan" => $child['Slogan'],
                         "Team" => $child['Team'],
                         "Pays" => $child['Pays'],
-                        "Ville" => $child['Ville']
+                        "Ville" => $child['Ville'],
+                        "Media" => $child['Media'] ,
+                        "Titre" => $child['Titre'] ,
+                        "Anneeprod" => $child['Anneeprod'] ,
+                        "desc" => $child['desc']
                     ];
                 }
             }
@@ -180,41 +183,67 @@ function editchild($IDimage)
 
 }
 
-function backup($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc,$Titre)
+function backup()
 {
     $backup = getBackup();
-    if ($meridien==null){$meridien=$_SESSION['backupnull']['mer'];}
-    if ($latitude==null){$latitude=$_SESSION['backupnull']['lat'];}
-    if ($longitude==null){$longitude=$_SESSION['backupnull']['lon'];}
-    if ($idplace==null){$idplace=$_SESSION['backupnull']['IDPlace'];}
-    if ($IDimage==null){$IDimage=$_SESSION['backupnull']['IDImage'];}
-    $backup[] = [
-        "IDPlace" => $idplace,
-        "IDImage" => $IDimage,
-        "mer" => $meridien,
-        "lat" => $latitude,
-        "lon" => $longitude,
-        "Pseudo" => $Pseudo,
-        "Droit" => $Droit,
-        "Slogan" => $Slogan,
-        "Team" => $team,
-        "ImageOK" => "VRAI",
-        "Pays" => $Pays,
-        "Ville" => $Ville,
-        "Media" => $Media,
-        "Titre" => $Titre,
-        "Anneeprod" => $Anneeprod,
-        "desc" => $desc,
+    $backup[]=[
+        "IDPlace" =>     $_SESSION['valueidplace'],
+        "IDImage" =>    $_SESSION['valueidimage'],
+        "mer" =>       $_SESSION['valuemer'],
+        "lat" =>   $_SESSION['valuelat'],
+        "lon" =>     $_SESSION['valuelon'],
+        "Pseudo" => $_SESSION['valuepseudo'],
+        "Droit" => $_SESSION['valuedroi'],
+        "Slogan" => $_SESSION['valueslogan'],
+        "Team" => $_SESSION['valueteam'],
+        "ImageOK" =>  "VRAI",
+        "Pays" => $_SESSION['valuespays'],
+        "Ville" =>    $_SESSION['valueville'],
+        "Media" =>    $_SESSION['valuemedia'],
+        "Titre" =>  $_SESSION['valuetitre'],
+        "Anneeprod" =>$_SESSION['valueanneeprod'],
+        "desc" => $_SESSION['valuedesc'],
         "date"=>strtotime("now")
     ];
     putBackup($backup);
 }
 function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc,$Titre)
 {
-    $childs = getChilds();
+        backup();
+        $save = getChilds();
+        $compteur=0;
+        if ($meridien==null){$meridien=$_SESSION['backupnull']['mer'];}
+        if ($latitude==null){$latitude=$_SESSION['backupnull']['lat'];}
+        if ($longitude==null){$longitude=$_SESSION['backupnull']['lon'];}
+        if ($idplace==null){$idplace=$_SESSION['backupnull']['IDPlace'];}
+        if ($IDimage==null){$IDimage=$_SESSION['backupnull']['IDImage'];}
+        foreach ($save as $element){
+            if ($IDimage==$element['IDImage']){
+                $save[$compteur] = [
+                    "IDPlace" => $idplace,
+                    "IDImage" => $IDimage,
+                    "mer" => $meridien,
+                    "lat" => $latitude,
+                    "lon" => $longitude,
+                    "Pseudo" => $Pseudo,
+                    "Droit" => $Droit,
+                    "Slogan" => $Slogan,
+                    "Team" => $team,
+                    "ImageOK" => "VRAI",
+                    "Pays" => $Pays,
+                    "Ville" => $Ville,
+                    "Media" => $Media,
+                    "Titre" => $Titre,
+                    "Anneeprod" => $Anneeprod,
+                    "desc" => $desc,
+                ];
+            }
+            $compteur++;
+        }
+        putSave($save);
+        $childs = $save;
+        require_once 'view/editchild.php';
 
-    backup($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc,$Titre);
-    require_once 'view/editchild.php';
 }
 
 ?>

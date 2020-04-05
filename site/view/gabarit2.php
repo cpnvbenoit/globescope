@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+<a class="backup" target="_blank" href="index.php?action=showBackup"><button class="btn btn-primary">Backup</button></a>
 <a href="index.php?action=disconnect"><button class="btn btn-danger">Déconnexion</button></a>
 
 <?= $content?>

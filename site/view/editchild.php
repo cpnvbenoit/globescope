@@ -95,16 +95,13 @@ ob_start();
                     <p><?= $child['Anneeprod'] ?></p>
                 </td>
                 <td>
-                    <p><?php echo substr($child['Desc'], 0,15)  ?></p>
+                    <p><?php echo substr($child['desc'], 0,15)  ?></p>
                 </td>
 
             </tr>
 
 
-            <?php
-        }
-    }
-    ?>
+            <?php } }?>
 
     </tbody>
 </table>
@@ -112,27 +109,27 @@ ob_start();
 
 foreach ($childs as $child) {
     if ($child['IDImage'] == $_SESSION['idchild']) {
-        $valuelat = $child['lat'];
-        $valuemer = $child['mer'];
-        $valuelon = $child['lon'];
-        $valueidplace = $child['IDPlace'];
-        $valueidimage = $child['IDImage'];
-        $valuepseudo = $child['Pseudo'];
-        $valuedroit = $child['Droit'];
-        $valueslogan = $child['Slogan'];
-        $valueteam = $child['Team'];
-        $valueville = $child['Ville'];
-        $valuespays = $child['Pays'];
-        $valuemedia = $child['Media'];
-        $valuetitre = $child['Titre'];
-        $valueanneeprod = $child['Anneeprod'];
-        $valuedesc = $child['Desc'];
+        $_SESSION['valuelat']        = $child['lat'];
+        $_SESSION['valuemer']        = $child['mer'];
+        $_SESSION['valuelon']        = $child['lon'];
+        $_SESSION['valueidplace']    = $child['IDPlace'];
+        $_SESSION['valueidimage']    = $child['IDImage'];
+        $_SESSION['valuepseudo']     = $child['Pseudo'];
+        $_SESSION['valuedroit']      = $child['Droit'];
+        $_SESSION['valueslogan']     = $child['Slogan'];
+        $_SESSION['valueteam']       = $child['Team'];
+        $_SESSION['valueville']      = $child['Ville'];
+        $_SESSION['valuespays']      = $child['Pays'];
+        $_SESSION['valuemedia']      = $child['Media'];
+        $_SESSION['valuetitre']      = $child['Titre'];
+        $_SESSION['valueanneeprod']  = $child['Anneeprod'];
+        $_SESSION['valuedesc']       = $child['desc'];
         $_SESSION['backupnull']=[
-            "lat"=>$valuelat,
-            "mer"=>$valuemer,
-            "lon"=>$valuelon,
-            "IDPlace"=>$valueidplace,
-            "IDImage"=>$valueidimage,
+            "lat"=>$_SESSION['valuelat'],
+            "mer"=>$_SESSION['valuemer'],
+            "lon"=>$_SESSION['valuelon'],
+            "IDPlace"=>$_SESSION['valueidplace'],
+            "IDImage"=>$_SESSION['valueidimage']
         ];
     }
 }
@@ -143,78 +140,78 @@ foreach ($childs as $child) {
         <tr>
             <td class="form-group">
                 <label for="meridien">Méridien</label>
-                <input name="meridien" value="<?= $valuemer ?>" type="text" disabled class="form-control" id="meridien">
+                <input name="meridien" value="<?= $_SESSION['valuemer'] ?>" type="text" disabled class="form-control" id="meridien">
             </td>
             <td class="form-group">
                 <label for="latitude">Latitude</label>
-                <input name="latitude" value="<?= $valuelat ?>" type="text" disabled class="form-control" id="latitude" >
+                <input name="latitude" value="<?= $_SESSION['valuelat'] ?>" type="text" disabled class="form-control" id="latitude" >
             </td>
             <td class="form-group">
                 <label for="longitude">Longitude</label>
-                <input name="longitude" value="<?= $valuelon ?>" type="text" disabled class="form-control" id="longitude">
+                <input name="longitude" value="<?= $_SESSION['valuelon'] ?>" type="text" disabled class="form-control" id="longitude">
             </td>
         </tr>
         <tr>
             <td class="form-group">
                 <label for="idplace">IDplace</label>
-                <input name="idplace" value="<?= $valueidplace ?>" type="text" disabled class="form-control" id="idplace">
+                <input name="idplace" value="<?= $_SESSION['valueidplace'] ?>" type="text" disabled class="form-control" id="idplace">
             </td>
             <td class="form-group">
                 <label for="idimage">IDimage</label>
-                <input name="idimage" value="<?= $valueidimage ?>" type="text" disabled class="form-control" id="idimage" >
+                <input name="idimage" value="<?= $_SESSION['valueidimage'] ?>" type="text" disabled class="form-control" id="idimage" >
             </td>
             <td class="form-group">
                 <label for="team">Team</label>
-                <input name="team" value="<?= $valueteam ?>" type="text" id="team" class="form-control">
+                <input name="team" value="<?= $_SESSION['valueteam'] ?>" type="text" id="team" class="form-control">
             </td>
         </tr>
         <tr>
             <td class="form-group">
                 <label for="Droit">Droit</label>
-                <input name="Droit" value="<?= $valuedroit ?>" type="text" id="Droit" class="form-control">
+                <input name="Droit" value="<?= $_SESSION['valuedroit'] ?>" type="text" id="Droit" class="form-control">
 
             </td>
             <td class="form-group">
                 <label for="Slogan">Slogan</label>
-                <input name="Slogan" value="<?= $valueslogan ?>" type="text" class="form-control" id="Slogan">
+                <input name="Slogan" value="<?= $_SESSION['valueslogan'] ?>" type="text" class="form-control" id="Slogan">
             </td>
             <td class="form-group">
                 <label for="Pseudo">Pseudo</label>
-                <input name="Pseudo" value="<?= $valuepseudo ?>" class="form-control" type="text" id="Pseudo" >
+                <input name="Pseudo" value="<?= $_SESSION['valuepseudo'] ?>" class="form-control" type="text" id="Pseudo" >
             </td>
         </tr>
         <tr>
             <td class="form-group">
                 <label for="Pays">Pays</label>
-                <input name="Pays" value="<?= $valuespays ?>" class="form-control" type="text" id="Pays" >
+                <input name="Pays" value="<?= $_SESSION['valuespays'] ?>" class="form-control" type="text" id="Pays" >
             </td>
 
             <td class="form-group">
                 <label for="Ville">Ville</label>
-                <input name="Ville" value="<?= $valueville ?>" class="form-control" type="text" id="Ville" >
+                <input name="Ville" value="<?= $_SESSION['valueville'] ?>" class="form-control" type="text" id="Ville" >
             </td>
             <td class="form-group">
                 <label for="Media">Media</label>
-                <input name="Media" value="<?= $valuemedia ?>" class="form-control" type="text" id="Media" >
+                <input name="Media" value="<?= $_SESSION['valuemedia'] ?>" class="form-control" type="text" id="Media" >
             </td>
         </tr>
         <tr>
             <td class="form-group">
                 <label for="Anneeprod">Année de production</label>
-                <input name="Anneeprod" value="<?= $valueanneeprod ?>" class="form-control" type="text" id="Anneeprod" >
+                <input name="Anneeprod" value="<?= $_SESSION['valueanneeprod'] ?>" class="form-control" type="text" id="Anneeprod" >
             </td>
             <td class="form-group">
                 <label for="Titre">Titre du média</label>
-                <input name="Titre" value="<?= $valuetitre ?>" class="form-control" type="text" id="Titre" >
+                <input name="Titre" value="<?= $_SESSION['valuetitre'] ?>" class="form-control" type="text" id="Titre" >
             </td>
             <td class="form-group">
                 <label for="Desc">Description</label>
-                <textarea rows="8" maxlength="1000"   class="form-control" name="desc" id="Desc" form="formedit"><?= $valuedesc ?></textarea>
+                <textarea rows="8" maxlength="1000"   class="form-control" name="desc" id="Desc" form="formedit"><?= $_SESSION['valuedesc'] ?></textarea>
             </td>
         </tr>
     </table>
     <div class="buttonEdit">
-        <img src="images/400-500/<?= $valueidimage ?>.jpg" width="15%" style="margin-top: -30px" alt="Images id : <?= $valueidimage ?>"><br><br>
+        <img src="images/400-500/<?= $_SESSION['valueidimage'] ?>.jpg" width="15%" style="margin-top: -30px" alt="Images id : <?= $_SESSION['valueidimage'] ?>"><br><br>
         <button id="Save" type="submit" class="btn btn-success">Sauvegarder</button>
     </div>
 </form>

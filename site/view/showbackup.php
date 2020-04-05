@@ -15,6 +15,9 @@ if ($_SESSION['fail'] == false) {
     <br><br><br><br><br>
     <table class="table" border="1" align="center" style="border: #BCDC53">
         <thead>
+        <th>
+            Date
+        </th>
         <th width="220px">
             Latitude / Longitude / Meridien
         </th>
@@ -51,16 +54,15 @@ if ($_SESSION['fail'] == false) {
         <th>
             Résumé
         </th>
-        <th>
-            Date
-        </th>
         </thead  align="center" >
         <tbody align="center">
 
         <?php
         $childs=array_reverse($childs);
         foreach ($childs as $child) { ?>
-            <tr>
+            <tr><td>
+                    <?php echo date('m/d/Y H:i:s', $child['date']);  ?>
+                </td>
                 <td>
                     <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
                 </td>
@@ -74,10 +76,10 @@ if ($_SESSION['fail'] == false) {
                     <p><?= $child['Pseudo'] ?></p>
                 </td>
                 <td>
-                    <p><?php if ($child['Droit']!=''){echo substr($child['Droit'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+                    <p style="width: 400px"><?= $child['Droit'] ?></p>
                 </td>
                 <td>
-                    <p><?php if ($child['Slogan']!=''){echo substr($child['Slogan'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+                    <p style="width: 400px"><?= $child['Slogan'] ?></p>
                 </td>
                 <td>
                     <p class="scTeam"><?= $child['Team'] ?></p>
@@ -89,17 +91,15 @@ if ($_SESSION['fail'] == false) {
                     <p><?= $child['Ville'] ?></p>
                 </td>
                 <td>
-                    <p><?php if ($child['Media']!=''){echo substr($child['Media'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+                    <p><?= $child['Media'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['Anneeprod'] ?></p>
                 </td>
                 <td>
-                    <p><?php if ($child['Desc']!=''){echo substr($child['desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+                    <p><?=$child['desc']  ?></p>
                 </td>
-                <td>
-                    <?php echo date('m/d/Y H:i:s', $child['date']);  ?>
-                </td>
+
             </tr>
             <?php }?>
         </tbody>

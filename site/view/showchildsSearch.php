@@ -10,6 +10,7 @@ if ($_SESSION['fail'] == false) {
 $title = "Affichage";
 ob_start();
 ?>
+
 <div id="searchbar">
 
     <form method="post" action="index.php?action=showchildsSearch" class="form-group formscs">
@@ -27,66 +28,6 @@ ob_start();
 </div>
 <h1 style=" position: absolute ; left: 42%">Afficher les enfants</h1><br><br>
 <h4 style="padding-left: 10px"> Rechercher par</h4>
-<!-- <table class="table" style="text-align: center">
-     <form>
-         <tr>
-             <td>
-                 <label for="test">Latitude</label>
-                 <input type="radio" id="test" name="Recherche-Latitude">
-             </td>
-             <td>
-                 <label for="test">Longitude</label>
-                 <input type="radio" id="test" name="Recherche-Longitude">
-             </td>
-             <td>
-                 <label for="test">Meridien</label>
-                 <input type="radio" id="test" name="Recherche-Meridien">
-             </td>
-             <td>
-                 <label for="test">id image</label>
-                 <input type="radio" id="test" name="Recherche-idimage">
-             </td>
-         </tr>
-         <tr>
-             <td>
-                 <label for="test">Pseudo</label>
-                 <input type="radio" id="test" name="Recherche-Pseudo">
-             </td>
-             <td>
-                 <label for="test">Droit</label>
-                 <input type="radio" id="test" name="Recherche-Droit">
-             </td>
-             <td>
-                 <label for="test">Slogan</label>
-                 <input type="radio" id="test" name="Recherche-Slogan">
-             </td>
-             <td>
-                 <label for="test">Origine des données</label>
-                 <input type="radio" id="test" name="Recherche-Origine-des-données">
-             </td>
-         </tr>
-         <tr>
-             <td>
-                 <label for="test">Pays</label>
-                 <input type="radio" id="test" name="Recherche-Pays">
-             </td>
-             <td>
-                 <label for="test">Ville</label>
-                 <input type="radio" id="test" name="Recherche-Ville">
-             </td>
-             <td>
-                 <label for="test">Team</label>
-                 <input type="radio" id="test" name="Recherche-Team">
-             </td>
-             <td>
-
-                 <label for="test">Tous</label>
-                 <input type="radio" id="test" name="Recherche-Tous">
-
-             </td>
-         </tr>
-     </form>
- </table>-->
 
 <table class="table" border="1" align="center" style="border: #BCDC53">
     <thead>
@@ -109,13 +50,22 @@ ob_start();
         Slogan
     </th>
     <th>
-        Origine des données
+        Team
     </th>
     <th>
         Pays
     </th>
-    <th>
+    <th width="8%">
         Ville
+    </th>
+    <th>
+        Media
+    </th>
+    <th>
+        Année-production
+    </th>
+    <th>
+        Résumé
     </th>
     <th>
         Modifier
@@ -134,29 +84,7 @@ ob_start();
     $inTeam = false;
     $inPays = false;
     $inVille = false;
-/*      'id' => int 1292
-      'IDPlace' => string '4643' (length=4)
-      'inIDPlace' => boolean false
-      'inIDImage' => boolean false
-      'inmer' => boolean false
-      'inlat' => boolean false
-      'inlon'' => boolean false
-      'inPseudo' => boolean false
-      'inDroit' => boolean false
-      'inSlogan' => boolean false
-      'inTeam=' => boolean true
-      'inPays=' => boolean false
-      'inVille' => boolean false
-      'IDImage' => string '11-17-10' (length=8)
-      'mer' => string '11' (length=2)
-      'lat' => string '17' (length=2)
-      'lon'' => string '10' (length=2)
-      'Pseudo' => string 'Nono 2' (length=6)
-      'Droit' => string '' (length=0)
-      'Slogan' => string '' (length=0)
-      'Team=' => string 'Attributions_IdehfiFr11-2.xlsx' (length=30)
-      'Pays=' => string '' (length=0)
-      'Ville' => string '' (length=0)*/
+
 
     foreach ($search as $child) {
         if (($child['inIDPlace']==true)&&($inIDPlace==true)){echo "<tr><td colspan='10' class=\"category rouge  \">IDPlace</td></tr>";$inIDPlace = false;}
@@ -171,6 +99,7 @@ ob_start();
         if (($child['inPays']==true)&&($inPays==true)){echo "<tr><td colspan='10' class=\"category orange\">Pays</td></tr>";$inPays = false;}
         if (($child['inVille']==true)&&($inVille==true)){echo "<tr><td colspan='10' class=\"category rouge \">Ville</td></tr>";$inVille = false;}
         ?>
+        <tr>
         <td>
             <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
         </td>
@@ -184,15 +113,13 @@ ob_start();
             <p><?= $child['Pseudo'] ?></p>
         </td>
         <td>
-            <p><?= $child['Droit'] ?></p>
+            <p><?php if ($child['Droit']!=''){echo substr($child['Droit'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
         </td>
         <td>
-            <p>
-                <?= $child['Slogan'] ?>
-            </p>
+            <p><?php if ($child['Slogan']!=''){echo substr($child['Slogan'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
         </td>
         <td>
-            <p><?= $child['Team'] ?></p>
+            <p class="scTeam"><?= $child['Team'] ?></p>
         </td>
         <td>
             <p><?= $child['Pays'] ?></p>
@@ -200,11 +127,21 @@ ob_start();
         <td>
             <p><?= $child['Ville'] ?></p>
         </td>
+        <td>
+            <p><?php if ($child['Media']!=''){echo substr($child['Media'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+
+        </td>
+        <td>
+            <p><?= $child['Anneeprod'] ?></p>
+        </td>
+        <td>
+            <p><?php if ($child['desc']!=''){echo substr($child['desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+        </td>
 
         <td>
             <button class="btn btn-primary"><a
                         href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
-                        class="buttoneditscs">Modifier</a></button>
+                        class="buttoneditshowchild">Modifier</a></button>
         </td>
         </tr><?php } ?>
     </tbody>

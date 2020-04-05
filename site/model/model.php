@@ -24,4 +24,8 @@ function putBackup($backup)
 {
     file_put_contents('model/dataStorage/backup.json', json_encode($backup));
 }
+function putSave($save)
+{
+    file_put_contents('model/dataStorage/images.json', json_encode($save));
+}
 ?>

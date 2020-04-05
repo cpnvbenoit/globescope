@@ -10,6 +10,7 @@ if ($_SESSION['fail'] == false) {
     $title = "Affichage";
     ob_start();
     ?>
+
     <div id="searchbar">
 
         <form method="post" action="index.php?action=showchildsSearch" class="form-group formshow">
@@ -110,7 +111,7 @@ if ($_SESSION['fail'] == false) {
                     <p><?= $child['Anneeprod'] ?></p>
                 </td>
                 <td>
-                    <p><?php if ($child['Desc']!=''){echo substr($child['Desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+                    <p><?php if ($child['desc']!=''){echo substr($child['desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
                 </td>
 
                 <td>
