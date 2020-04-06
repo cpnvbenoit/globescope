@@ -16,7 +16,7 @@ if ($_SESSION['fail'] == false) {
     <table class="table" border="1" align="center" style="border: #BCDC53">
         <thead>
         <th>
-            Date
+            Date (j-m-a)
         </th>
         <th width="220px">
             Latitude / Longitude / Meridien
@@ -59,9 +59,9 @@ if ($_SESSION['fail'] == false) {
 
         <?php
         $childs=array_reverse($childs);
-        foreach ($childs as $child) { ?>
+        foreach ($childs as $child) {  ?>
             <tr><td>
-                    <?php echo date('m/d/Y H:i:s', $child['date']);  ?>
+                    <?php echo date('d/m/Y H:i:s', $child['date']);  ?>
                 </td>
                 <td>
                     <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>

@@ -113,7 +113,7 @@
                     <td><p id="childEquipe"></p></td>
                 </tr>
                 <tr>
-                    <td><p id="childMedia">id="childMedialink</p></td>
+                    <td><p id="childMedia"></p><p id="childMedialink"></p></td>
                     <td><p id="childAnneeprod"></p></td>
                 </tr>
                 <tr>
@@ -193,6 +193,8 @@ void main() {
 
 
 </script>
+
+
 
 <script src="js/globescope.js"></script>
 <script src="js/Login.js"></script>
