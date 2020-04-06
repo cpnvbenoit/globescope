@@ -86,6 +86,8 @@ ob_start();
     $inVille = false;
 
 
+
+    if (isset($search)){
     foreach ($search as $child) {
         if (($child['inIDPlace']==true)&&($inIDPlace==true)){echo "<tr><td colspan='10' class=\"category rouge  \">IDPlace</td></tr>";$inIDPlace = false;}
         if (($child['inIDImage']==true)&&($inIDImage==true)){echo "<tr><td colspan='10' class=\"category orange  \">IDImage</td></tr>";$inIDImage = false;}
@@ -135,7 +137,7 @@ ob_start();
             <p><?= $child['Anneeprod'] ?></p>
         </td>
         <td>
-            <p><?php if ($child['desc']!=''){echo substr($child['desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+            <p><?php if (isset($child['desc'])){echo substr($child['desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
         </td>
 
         <td>
@@ -143,7 +145,9 @@ ob_start();
                         href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
                         class="buttoneditshowchild">Modifier</a></button>
         </td>
-        </tr><?php } ?>
+        </tr><?php }} else{
+        require_once 'view/failsearch.php';
+    }?>
     </tbody>
 
 
