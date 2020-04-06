@@ -159,6 +159,8 @@ function showchildsSearch()
                         "Anneeprod" => $child['Anneeprod'] ,
                         "desc" => $child['desc']
                     ];
+                }else {
+                    require_once 'view/failsearch.php';
                 }
             }
 
