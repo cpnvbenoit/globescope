@@ -62,14 +62,14 @@
         <p id="closeHelp" class="closeButton" onclick="closeHelp()">X</p>
         <div id="direction">
             <img src="images/arrowKeys.png" height="50" width="80" alt="touches directions"/>
-            <p id="aideDeplacementSouris"> déplacez vous en maintenant le clic gauche de la souris.</p>
+            <p id="aideDeplacementSouris"> Déplacez vous en maintenant le clic gauche de la souris.</p>
         </div>
         <div id="Aidereste" class="Aide">
-            <p id="aideZoom">utilisez les touches +/- pour zoomer/dézoomer</p>
+            <p id="aideZoom">Utilisez les touches +/- pour zoomer/dézoomer.</p>
             <hr>
-            <p id="aideAgrandirImage">Double-cliquez sur l'image pour l'agrandir et afficher ses informations</p>
+            <p id="aideAgrandirImage">Double-cliquez sur l'image pour l'agrandir et afficher ses informations.</p>
             <hr>
-            <p id="aideRecherche">Pour recherche un/votre pseudo cliquez sur la loupe et ecrivez ensuite un/votre
+            <p id="aideRecherche">Pour rechercher un pseudo cliquez sur la loupe et écrivez ensuite un
                 pseudo.</p>
         </div>
         <div class="languageSelect">
@@ -113,7 +113,7 @@
                     <td><p id="childEquipe"></p></td>
                 </tr>
                 <tr>
-                    <td><p id="childMedia"></p>: <p id="childMedialink"></p></td>
+                    <td><p id="childMedia">id="childMedialink</p></td>
                     <td><p id="childAnneeprod"></p></td>
                 </tr>
                 <tr>

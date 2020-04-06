@@ -64,40 +64,41 @@ if (isset($_POST['desc'])){
     $desc=$_POST['desc'];
 }
 //END set var for save -----------------------------------------
-switch ($action) {
-    case 'home';
-        home();
-        break;
-    case 'editchild';
-        editchild($IDimage);
-        break;
-    case 'save';
-        save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc,$Titre);
-        break;
-    case 'showchilds';
-        showchilds($welcome);
-        break;
-    case 'showBackup';
-        showBackup();
-        break;
-    case 'showchildsSearch';
-        showchildsSearch();
-        break;
-    case 'GetData';
-        GetData();
-        break;
-    case 'tryLogin';
-        tryLogin();
-        break;
-    case 'disconnect';
-        disconnect();
-        break;
-    case 'testhashed';
-        testhashed();
-        break;
-    default:
-        home();
-        break;
+if (isset($action)) {
+    switch ($action) {
+        case 'home';
+            home();
+            break;
+        case 'editchild';
+            editchild($IDimage);
+            break;
+        case 'save';
+            save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc, $Titre);
+            break;
+        case 'showchilds';
+            showchilds($welcome);
+            break;
+        case 'showBackup';
+            showBackup();
+            break;
+        case 'showchildsSearch';
+            showchildsSearch();
+            break;
+        case 'GetData';
+            GetData();
+            break;
+        case 'tryLogin';
+            tryLogin();
+            break;
+        case 'disconnect';
+            disconnect();
+            break;
+        case 'testhashed';
+            testhashed();
+            break;
+        default:
+            home();
+            break;
+    }
 }
-
 ?>

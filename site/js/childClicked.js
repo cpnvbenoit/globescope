@@ -36,10 +36,10 @@ function onImageClick(x)
                     childEquipe.textContent ="Equipe: "+ myObj.Team;
                     childVille.textContent ="Ville: "+ myObj.Ville;
                     childPays.textContent ="Pays: "+ myObj.Pays;
-                    childMedialink.textContent=myObj.Media,
+                    childMedialink.textContent="<a href=\""+myObj.Media+"\" ></a>",
                     childMedia.textContent=myObj.Titre,
                     childAnneeprod.textContent=myObj.Anneeprod,
-                    childDesc.textContent=myObj.Desc
+                    childDesc.textContent=myObj.desc
                 }
             }
         }

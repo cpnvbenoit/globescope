@@ -194,16 +194,16 @@ function aideAng()
     credit.style.display = 'none';
 
     var deplacementSouris = document.getElementById('aideDeplacementSouris');
-    deplacementSouris.textContent = "Drag the mouse arround while maintaining the left button down to explore the globe.";
+    deplacementSouris.textContent = "Drag the mouse arround while maintaining the left button down to explore the globe";
 
     var aideZoom = document.getElementById('aideZoom');
-    aideZoom.textContent = "Use +/- or the mouse wheel to zoom/out.";
+    aideZoom.textContent = "use +/- or the mouse wheel  to zoom/out";
 
     var aideAgrandirImage = document.getElementById('aideAgrandirImage');
-    aideAgrandirImage.textContent = "Doubleclick on the picture to enlarge and display the informations.";
+    aideAgrandirImage.textContent = "Doubleclick on the picture to enlarge and display the informations";
 
     var aideRecherche = document.getElementById('aideRecherche');
-    aideRecherche.textContent = "To find a pseudo, click on the magnifying glass and write a pseudo.";
+    aideRecherche.textContent = "To find a/your pseudo, click on the magnifying glass and write a/your pseudo";
 }
 
 function credit()

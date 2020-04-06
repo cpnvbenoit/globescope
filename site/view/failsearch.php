@@ -16,5 +16,5 @@ if (isset($_SESSION['username'])) {
 }
 $content = ob_get_clean();
 
-require "gabarit.php";
+require "gabarit2.php";
 ?>
