@@ -84,9 +84,6 @@ ob_start();
     $inTeam = false;
     $inPays = false;
     $inVille = false;
-
-
-
     if (isset($search)){
     foreach ($search as $child) {
         if (($child['inIDPlace']==true)&&($inIDPlace==true)){echo "<tr><td colspan='10' class=\"category rouge  \">IDPlace</td></tr>";$inIDPlace = false;}
@@ -145,12 +142,10 @@ ob_start();
                         href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
                         class="buttoneditshowchild">Modifier</a></button>
         </td>
-        </tr><?php }} else{
-        require_once 'view/failsearch.php';
-    }?>
+        </tr><?php }}
+    else{echo "<script>alert('Aucun résultat !')</script>";}?>
+
     </tbody>
-
-
     <?php
     $content = ob_get_clean();
     require_once 'gabarit2.php';

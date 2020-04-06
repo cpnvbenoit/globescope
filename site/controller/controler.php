@@ -193,7 +193,7 @@ function backup()
         "lat" =>   $_SESSION['valuelat'],
         "lon" =>     $_SESSION['valuelon'],
         "Pseudo" => $_SESSION['valuepseudo'],
-        "Droit" => $_SESSION['valuedroi'],
+        "Droit" => $_SESSION['valuedroit'],
         "Slogan" => $_SESSION['valueslogan'],
         "Team" => $_SESSION['valueteam'],
         "ImageOK" =>  "VRAI",
@@ -203,7 +203,7 @@ function backup()
         "Titre" =>  $_SESSION['valuetitre'],
         "Anneeprod" =>$_SESSION['valueanneeprod'],
         "desc" => $_SESSION['valuedesc'],
-        "date"=>strtotime("now")
+        "date"=>strtotime("now")+7200
     ];
     putBackup($backup);
 }
@@ -242,6 +242,7 @@ function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droi
         }
         putSave($save);
         $childs = $save;
+        echo "<script>alert('Sauvegarde réussie !')</script>";
         require_once 'view/editchild.php';
 
 }
