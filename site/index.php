@@ -100,5 +100,7 @@ if (isset($action)) {
             home();
             break;
     }
+}else{
+    home();
 }
 ?>

@@ -80,10 +80,11 @@ body
 .disconnect-cmd{
     height: 35px;
     position: absolute;
-    right: 0;
+    left: 0;
     font-size: 21px;
     padding: 0;
    background-color: #8a0000;
     top: 94%;
     width: 150px;
+    bottom:45px;
 }
