@@ -17,6 +17,9 @@ if (isset($_GET['IDimage'])){
 if (isset($_GET['welcome'])){
     $welcome=$_GET['welcome'];
 }
+if (!isset($_SESSION['fail'])){
+    $_SESSION['fail']=true;
+}
 //Set var for save -----------------------------------------
 if (isset($_POST['meridien'])){
     $meridien=$_POST['meridien'];

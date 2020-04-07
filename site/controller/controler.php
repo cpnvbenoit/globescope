@@ -30,7 +30,6 @@ function testhashed()
 
 function tryLogin()
 {
-
     $users = getUsers();
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -38,9 +37,7 @@ function tryLogin()
 
     foreach ($users as $user) {
         if (($username == $user['username']) && ($password == password_verify($password, $user['password']))) {
-
             $_SESSION['username'] = $username;//a röussi
-
         }
     }
     if (isset($_SESSION['username'])) {//si a reussi
@@ -48,13 +45,8 @@ function tryLogin()
         require_once 'view/succeslogin.php';
     } else {
         $_SESSION['fail'] = true;//pas susi
-        ?>
-        <script> alert("Login échoué")</script>
-        <?php
         require_once 'view/home.php';
     }
-
-
 }//edmadmin 2020_CPNV_A1
 
 function showchilds($welcome)
