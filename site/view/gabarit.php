@@ -99,8 +99,8 @@
         <img id="childImage">
         <span id="separator"></span>
         <div id="description">
-            <table>
-                <tr>
+            <table class="tablehome-infos">
+              <!-- <tr>
                     <td><p id="childPseudo"></p></td>
                     <td><p id="childCitation"></p></td>
                 </tr>
@@ -118,6 +118,20 @@
                 </tr>
                 <tr>
                     <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="50" rows="4"></textarea></td>
+                </tr>-->
+                <tr>
+                    <td>
+                        <h3>Pseudo : <span id="childPseudo"></span> </h3>
+                        <h3>Slogan : <span id="childCitation"></span> </h3>
+                        <h3>Droit : <span id="childRight"></span> </h3>
+                        <h3>Pays : <span id="childPays"></span> </h3>
+                    </td>
+                    <td>
+                        <h3>Ville : <span id="childVille"></span> </h3>
+                        <h3>Équipe : <span id="childEquipe"></span> </h3>
+                        <h3><a target="_blank" id="childMedia"></a></h3>
+                        <h3>Année de production : <span id="childAnneeprod"></span> </h3>
+                    </td>
                 </tr>
                 <?php if ($_SESSION['fail']==false){echo "
                     <tr>

@@ -33,11 +33,11 @@ function onImageClick(x)
                     childRight.textContent ="Droit: "+ myObj.Droit;
                     childDesc.textContent = myObj.desc;
                     childAnneeprod.textContent ="Droit: "+ myObj.Anneeprod;
-                    childMedia.textContent ="Droit: "+ myObj.Titre;
-                    childMedialink.textContent ="Droit: "+ myObj.Media;
                     childPays.textContent ="Droit: "+ myObj.Pays;
                     childVille.textContent ="Droit: "+ myObj.Ville;
                     childEquipe.textContent ="Droit: "+ myObj.Team;
+                    childMedia.textContent = myObj.Titre;
+                    childMedia.href = myObj.Media;
                     childIDPlace.textContent ="Droit: "+ myObj.IDImage;
                     childEdit.href = "?action=editchild&IDimage="+myObj.IDImage;
 
