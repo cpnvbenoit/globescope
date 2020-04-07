@@ -31,15 +31,16 @@ function onImageClick(x)
                     childPseudo.textContent ="Pseudo: "+ myObj.Pseudo;
                     childCitation.textContent ="Slogan: "+  myObj.Slogan;
                     childRight.textContent ="Droit: "+ myObj.Droit;
-                    childIDPlace.textContent ="Idimage: "+ myObj.IDImage;
+                    childDesc.textContent = myObj.desc;
+                    childAnneeprod.textContent ="Droit: "+ myObj.Anneeprod;
+                    childMedia.textContent ="Droit: "+ myObj.Titre;
+                    childMedialink.textContent ="Droit: "+ myObj.Media;
+                    childPays.textContent ="Droit: "+ myObj.Pays;
+                    childVille.textContent ="Droit: "+ myObj.Ville;
+                    childEquipe.textContent ="Droit: "+ myObj.Team;
+                    childIDPlace.textContent ="Droit: "+ myObj.IDImage;
                     childEdit.href = "?action=editchild&IDimage="+myObj.IDImage;
-                    childEquipe.textContent ="Equipe: "+ myObj.Team;
-                    childVille.textContent ="Ville: "+ myObj.Ville;
-                    childPays.textContent ="Pays: "+ myObj.Pays;
-                    childMedialink.textContent=myObj.Media,
-                    childMedia.textContent=myObj.Titre,
-                    childAnneeprod.textContent=myObj.Anneeprod,
-                    childDesc.textContent=myObj.desc
+
                 }
             }
         }
