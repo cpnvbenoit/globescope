@@ -79,7 +79,7 @@ function loadData(scene,canvContainer,controls)
                     {
                         index++;
                         if (data[x].Media != ""){
-                        //Pour afficherceux qui ont le media
+                        //Pour afficher ceux qui ont le media
                         }
                         //afficher le canvas lorsque la dernière image est chargée
                         
