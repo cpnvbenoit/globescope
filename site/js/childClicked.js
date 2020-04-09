@@ -28,17 +28,17 @@ function onImageClick(x)
                 {
                     var details =  document.getElementById("onClickDetails").childNodes;
                     childImage.src = "images/400-500/"+myObj.IDImage+".jpg";
-                    childPseudo.textContent ="Pseudo: "+ myObj.Pseudo;
-                    childCitation.textContent ="Slogan: "+  myObj.Slogan;
-                    childRight.textContent ="Droit: "+ myObj.Droit;
-                    childDesc.textContent = myObj.desc;
-                    childAnneeprod.textContent ="Droit: "+ myObj.Anneeprod;
-                    childPays.textContent ="Droit: "+ myObj.Pays;
-                    childVille.textContent ="Droit: "+ myObj.Ville;
-                    childEquipe.textContent ="Droit: "+ myObj.Team;
+                    childPseudo.textContent =myObj.Pseudo;
+                    childCitation.textContent =  myObj.Slogan;
+                    childAnneeprod.textContent =  myObj.Anneeprod;
+                    childRight.textContent = myObj.Droit;
+                    childPays.textContent = myObj.Pays;
+                    childVille.textContent =myObj.Ville;
+                    childEquipe.textContent = myObj.Team;
                     childMedia.textContent = myObj.Titre;
+                    childDesc.textContent =  myObj.desc;
                     childMedia.href = myObj.Media;
-                    childIDPlace.textContent ="Droit: "+ myObj.IDImage;
+                    childIDPlace.textContent = myObj.IDImage;
                     childEdit.href = "?action=editchild&IDimage="+myObj.IDImage;
 
                 }
