@@ -56,6 +56,7 @@ container.id = "CanvContainer";
 container.className = "canvas";
 /**Tout les composant concernant la barre de recherche */
 var showSearchButton = document.getElementById('showSearch');
+showSearchButton.onload = showSearch;
 showSearchButton.onclick = showSearch;
 
 var SearchBox = document.getElementById('searchBar');
