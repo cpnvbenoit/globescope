@@ -116,9 +116,7 @@
                     <td><p id="childMedia"></p><p id="childMedialink"></p></td>
                     <td><p id="childAnneeprod"></p></td>
                 </tr>
-                <tr>
-                    <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="50" rows="4"></textarea></td>
-                </tr>-->
+                -->
                 <tr>
                     <td>
                         <h3>Pseudo : <span id="childPseudo"></span> </h3>
@@ -132,6 +130,9 @@
                         <h3><a target="_blank" id="childMedia"></a></h3>
                         <h3>Année de production : <span id="childAnneeprod"></span> </h3>
                     </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="50" rows="4"></textarea></td>
                 </tr>
                 <?php if ($_SESSION['fail']==false){echo "
                     <tr>
