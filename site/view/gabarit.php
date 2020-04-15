@@ -119,16 +119,15 @@
                 -->
                 <tr>
                     <td>
-                        <h6 class="infosuppleft">Pseudo :<span id="childPseudo"></span></h6>
-                        <h6 class="infosuppleft">Slogan :<span id="childCitation"></span></h6>
-                        <h6 class="infosuppleft">Droit :<span id="childRight"></span></h6>
-                        <h6 class="infosuppleft">Pays : <span id="childPays"></span></h6>
-                    </td>
-                    <td>
-                        <h6 class="infosuppleft">Ville : <span id="childVille"></span></h6>
-                        <h6 class="infosuppleft">Équipe :<span id="childEquipe"></span></h6>
-                        <h6 class="infosuppleft">Média :<a target="_blank" id="childMedia"></a></span></h6>
-                        <h6 class="infosuppleft">Année de production :<span id="childAnneeprod"></span></h6>
+                        <h6 class="infosuppleft" align="left"><b>Pseudo</b> : <span id="childPseudo"></span></h6>
+                        <h6 class="infosuppleft" align="left"><b>Slogan</b> : <span id="childCitation"></span></h6>
+                        <h6 class="infosuppleft" align="left"><b>Droit</b> : <span id="childRight"></span></h6>
+                        <h6 class="infosuppleft" align="left"><b>Pays</b> : <span id="childPays"></span></h6>
+
+                        <h6 class="infosuppleft" align="left"><b>Ville</b> : <span id="childVille"></span></h6>
+                        <h6 class="infosuppleft" align="left"><b>Équipe</b> : <span id="childEquipe"></span></h6>
+                        <h6 class="infosuppleft" align="left"><b>Média</b> : <a class="medialink" target="_blank" id="childMedia"></a></span></h6>
+                        <h6 class="infosuppleft" align="left"><b>Année de production</b> : <span id="childAnneeprod"></span></h6>
                     </td>
                 </tr>
                 <tr>

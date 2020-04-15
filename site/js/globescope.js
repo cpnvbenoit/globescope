@@ -56,10 +56,11 @@ container.id = "CanvContainer";
 container.className = "canvas";
 /**Tout les composant concernant la barre de recherche */
 var showSearchButton = document.getElementById('showSearch');
+showSearchButton.onload = showSearch;
 showSearchButton.onclick = showSearch;
 
 var SearchBox = document.getElementById('searchBar');
-SearchBox.style.display = 'none';
+SearchBox.style.display = 'inline';
 
 var xmlSearch;
 var SearchTextBox = document.getElementById('searchText');
@@ -246,7 +247,7 @@ function closeSideBarEsc(e)
 function showSearch()
 {
     SearchBox.style.display = 'flex';
-    showSearchButton.style.display = 'none';
+    showSearchButton.style.display = 'inline';
     SearchBox.className = "GUI w3-animate-top";
     SearchTextBox.focus();
 }
