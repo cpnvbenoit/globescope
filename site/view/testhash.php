@@ -6,7 +6,6 @@
  * Time: 11.19
  */
 $title = "testhash";
-var_dump($_SESSION['hash']);
 ob_start();
 
 ?>

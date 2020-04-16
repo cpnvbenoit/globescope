@@ -99,6 +99,9 @@ if (isset($action)) {
         case 'testhashed';
             testhashed();
             break;
+            case 'testsecret';
+            testsecret();
+            break;
         default:
             home();
             break;

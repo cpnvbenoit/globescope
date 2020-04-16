@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="css/cssinhtml.css">
     <script src="js/Loginstyle.js"></script>
     <script src="js/Media.js"></script>
-
+    <link rel="shortcut icon" type="image/x-icon" href="https://image.flaticon.com/icons/svg/814/814513.svg" />
 
 </head>
 
 <body>
 
-
+<!-- Code de la pop-up de login sur le globe -->
 <div id="login" class="modal" style="  overflow: hidden;">
 
     <form class="modal-content animate" action="index.php?action=tryLogin" method="post">
@@ -61,7 +61,7 @@
         </div>
         <p id="closeHelp" class="closeButton" onclick="closeHelp()">X</p>
         <div id="direction">
-            <img src="images/arrowKeys.png" height="50" width="80" alt="touches directions"/>
+            <a href="?action=testsecret"> <img src="images/arrowKeys.png" height="50" width="80" alt="touches directions" class="default"/></a>
             <p id="aideDeplacementSouris"> Déplacez vous en maintenant le clic gauche de la souris.</p>
         </div>
         <div id="Aidereste" class="Aide">
@@ -96,7 +96,7 @@
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails">
-        <img id="childImage">
+        <a href="">  <img id="childImage"></a>
         <span id="separator"></span>
         <div id="description">
             <table class="tablehome-infos">
@@ -128,6 +128,8 @@
                         <h6 class="infosuppleft" align="left"><b>Équipe</b> : <span id="childEquipe"></span></h6>
                         <h6 class="infosuppleft" align="left"><b>Média</b> : <a class="medialink" target="_blank" id="childMedia"></a></span></h6>
                         <h6 class="infosuppleft" align="left"><b>Année de production</b> : <span id="childAnneeprod"></span></h6>
+                        <h6 class="infosuppleft" align="left"><b>ID de la place</b> : <span id="childIDPlace"></span></h6>
+
                     </td>
                 </tr>
                 <tr>
@@ -135,7 +137,7 @@
                 </tr>
                 <?php if ($_SESSION['fail']==false){echo "
                     <tr>
-                        <td><p id=\"childIDPlace\"></p></td>
+                    
                         <td><a id=\"childEdit\" target=\"_blank\"><button class=\"editbuttonglobe\">Edit</button></a></td>
                     </tr>
                 ";} ?>
