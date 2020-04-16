@@ -92,31 +92,16 @@
     </div>
 </div>
 
-<div id="sideBar" class="GUI">
+<div id="sideBar" class="GUI" style="height: 1300px">
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
-    <div id="onClickDetails">
-        <a href="">  <img id="childImage"></a>
+    <div id="onClickDetails" style="margin-top: 350px">
+        <a href=""><img id="childImage"></a>
         <span id="separator"></span>
+
         <div id="description">
             <table class="tablehome-infos">
-              <!-- <tr>
-                    <td><p id="childPseudo"></p></td>
-                    <td><p id="childCitation"></p></td>
-                </tr>
-                <tr>
-                    <td><p id="childRight"></p></td>
-                    <td><p id="childPays"></p></td>
-                </tr>
-                <tr>
-                    <td><p id="childVille"></p></td>
-                    <td><p id="childEquipe"></p></td>
-                </tr>
-                <tr>
-                    <td><p id="childMedia"></p><p id="childMedialink"></p></td>
-                    <td><p id="childAnneeprod"></p></td>
-                </tr>
-                -->
+
                 <tr>
                     <td>
                         <h6 class="infosuppleft" align="left"><b>Pseudo</b> : <span id="childPseudo"></span></h6>
