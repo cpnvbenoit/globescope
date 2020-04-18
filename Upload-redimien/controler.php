@@ -19,8 +19,8 @@ function upload(){
             $errors[]="Le format n'est pas reconnu, merci de choisir un fichier en .JPEG ou .PNG.";
         }
 
-        if($file_size > 2097152){
-            $errors[]='Le fichier ne doit pas dépasser 2 MB';
+        if($file_size > 8388608){
+            $errors[]='Le fichier ne doit pas dépasser 4 MB';
         }
 
         if(empty($errors)==true){
@@ -39,7 +39,7 @@ function upload(){
         }
     }
 }
-function redim()
+function redim($size,$name,$id)
 {
     /**
      * Code Copier du site : https://codes-sources.commentcamarche.net/faq/881-php-redimensionner-image-picto-apres-upload
@@ -77,6 +77,24 @@ function redim()
 // $redimOK = fct_redim_image(120,80,'reppicto/','monpicto.jpg','repimage/','monimage.jpg');
 // if ($redimOK == 1) { echo 'Redimensionnement OK !';  }
 // --------------------------------------------------------------------------------------------------
+    switch ($size){
+        case 64:
+            $Wmax=64;
+            $Hmax=64;
+            break;
+        case 128:
+            $Wmax=128;
+            $Hmax=128;
+            break;
+        case 400:
+            $Wmax=400;
+            $Hmax=500;
+            break;
+    }//set var $Wmax, $Hmax
+    $rep_Dst='imgredi/';
+    $img_Dst='redi_'.$size.'_'.$name;
+    $img_Src=$name;
+    $rep_Src='uploads/';
     function fct_redim_image($Wmax, $Hmax, $rep_Dst, $img_Dst, $rep_Src, $img_Src)
     {
         // ------------------------------------------------------------------
@@ -189,6 +207,12 @@ function redim()
         } else {
             return false;
         }
+    }
+    $worked=fct_redim_image($Wmax, $Hmax, $rep_Dst, $img_Dst, $rep_Src, $img_Src);
+    if ($worked==true){
+        require_once 'showredim.php';
+    }else{
+        home();
     }
 // --------------------------------------------------------------------------------------------------
 }//fonction pour le redimensionement

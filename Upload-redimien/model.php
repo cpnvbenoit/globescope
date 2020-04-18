@@ -7,13 +7,13 @@
  */
 function getUploads()
 {
-    return json_decode(file_get_contents("uploads.json"),true);
+    return json_decode(file_get_contents("uploads/uploads.json"),true);
 }
 
 
 function putUploads($uploads)
 {
-    file_put_contents('uploads.json', json_encode($uploads));
+    file_put_contents('uploads/uploads.json', json_encode($uploads));
 }
 
 ?>

@@ -10,18 +10,18 @@ require "controler.php";
 if (isset($_GET['action'])){
     $action=$_GET['action'];
 }
-if (isset($_GET['IDimage'])){
-    $IDimage=$_GET['IDimage'];
-}
-if (isset($_GET['welcome'])){
-    $welcome=$_GET['welcome'];
-}
-if (!isset($_SESSION['fail'])){
-    $_SESSION['fail']=true;
-}
 //Set var for save -----------------------------------------
 if (isset($_POST['image'])){
     $image=$_POST['image'];
+}
+if (isset($_GET['size'])){
+    $size=$_GET['size'];
+}
+if (isset($_GET['name'])){
+    $name=$_GET['name'];
+}
+if (isset($_GET['id'])){
+    $id=$_GET['id'];
 }
 
 if (isset($action)) {
@@ -31,6 +31,9 @@ if (isset($action)) {
             break;
         case 'upload';
             upload();
+            break;
+        case 'redim';
+            redim($size,$name,$id);
             break;
         default:
             home();

@@ -1,5 +1,9 @@
-<?php//code copier de https://www.tutorialspoint.com/php/php_file_uploading.htm
+<?php
+//code copier de https://www.tutorialspoint.com/php/php_file_uploading.htm
 ob_start();
+if (isset($_FILES['image'])){
+    unset($_FILES['image']);
+}
 ?>
 <html>
 <body>
