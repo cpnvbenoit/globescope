@@ -74,6 +74,10 @@ function showBackup()
 
 }
 
+function testsecret(){
+    require 'view/testsecret.php';
+}
+
 function showchildsSearch()
 {
 
