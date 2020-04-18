@@ -20,7 +20,15 @@ if (isset($_FILES['image'])){
     <input type="file" name="image" />
     <input type="submit"/>
 </form>
-
+<h1>GD extention : <?php
+    $testGD = get_extension_funcs("gd"); // Grab function list
+    if (!$testGD){
+        echo "GD not even installed.";
+        phpinfo();  // Display the php configuration for the web server
+        exit;
+    }
+    echo"<pre>".print_r($testGD,true)."</pre>";?>
+</h1>
 </body>
 </html>
 <?php

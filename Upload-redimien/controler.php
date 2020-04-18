@@ -35,11 +35,11 @@ function upload(){
             putUploads($uploads);
             require_once 'showUploads.php';
         }else{
-            require_once 'upload.php';
+            require_once 'home.php';
         }
     }
 }
-function redim($size,$name,$id)
+function redim2($size,$name)
 {
     /**
      * Code Copier du site : https://codes-sources.commentcamarche.net/faq/881-php-redimensionner-image-picto-apres-upload
@@ -90,9 +90,13 @@ function redim($size,$name,$id)
             $Wmax=400;
             $Hmax=500;
             break;
+        default:
+            $Wmax=400;
+            $Hmax=500;
+            break;
     }//set var $Wmax, $Hmax
-    $rep_Dst='imgredi/';
-    $img_Dst='redi_'.$size.'_'.$name;
+    $rep_Dst='';
+    $img_Dst='redi_';//.$size.'_'.$name
     $img_Src=$name;
     $rep_Src='uploads/';
     function fct_redim_image($Wmax, $Hmax, $rep_Dst, $img_Dst, $rep_Src, $img_Src)
@@ -165,12 +169,12 @@ function redim($size,$name,$id)
                     switch ($extension) {
                         case 'jpg':
                         case 'jpeg':
-                            $Ress_Src = imagecreatefromjpeg($rep_Src . $img_Src);
                             $Ress_Dst = ImageCreateTrueColor($W, $H);
+                            $Ress_Src = imagecreatefromjpeg($rep_Src . $img_Src);
                             break;
                         case 'png':
-                            $Ress_Src = imagecreatefrompng($rep_Src . $img_Src);
                             $Ress_Dst = ImageCreateTrueColor($W, $H);
+                            $Ress_Src = imagecreatefrompng($rep_Src . $img_Src);
                             // fond transparent (pour les png avec transparence)
                             imagesavealpha($Ress_Dst, true);
                             $trans_color = imagecolorallocatealpha($Ress_Dst, 0, 0, 0, 127);
@@ -210,10 +214,147 @@ function redim($size,$name,$id)
     }
     $worked=fct_redim_image($Wmax, $Hmax, $rep_Dst, $img_Dst, $rep_Src, $img_Src);
     if ($worked==true){
-        require_once 'showredim.php';
+        require_once 'succes.html';
     }else{
-        home();
+        require_once 'fail.html';
     }
 // --------------------------------------------------------------------------------------------------
 }//fonction pour le redimensionement
+function redim($size,$name){
+    /**
+     * Fonction qui permet de redimensionner une image en conservant les proportions
+     * @param  string  $image_path Chemin de l'image
+     * @param  string  $image_dest Chemin de destination de l'image redimentionnée (si vide remplace l'image envoyée)
+     * @param  integer $max_size   Taille maximale en pixels
+     * @param  integer $qualite    Qualité de l'image entre 0 et 100
+     * @param  string  $type       'auto' => prend le coté le plus grand
+     *                             'width' => prend la largeur en référence
+     *                             'height' => prend la hauteur en référence
+     * @return string              'success' => redimentionnement effectué avec succès
+     *                             'wrong_path' => le chemin du fichier est incorrect
+     *                             'no_img' => le fichier n'est pas une image
+     *                             'resize_error' => le redimensionnement a échoué
+     */
+
+    function resize_img($image_path,$image_dest,$new_width,$new_height,$qualite = 100){
+
+        // Vérification que le fichier existe
+        if(!file_exists($image_path)):
+            return 'wrong_path';
+        endif;
+
+        if($image_dest == ""):
+            $image_dest = $image_path;
+        endif;
+        // Extensions et mimes autorisés
+        $extensions = array('jpg','jpeg','png','gif');
+        $mimes = array('image/jpeg','image/gif','image/png');
+
+        // Récupération de l'extension de l'image
+        $tab_ext = explode('.', $image_path);
+        $extension  = strtolower($tab_ext[count($tab_ext)-1]);
+
+        // Récupération des informations de l'image
+        $image_data = getimagesize($image_path);
+
+        // Si c'est une image envoyé alors son extension est .tmp et on doit d'abord la copier avant de la redimentionner
+        if($extension == 'tmp' && in_array($image_data['mime'],$mimes)):
+            copy($image_path,$image_dest);
+            $image_path = $image_dest;
+
+            $tab_ext = explode('.', $image_path);
+            $extension  = strtolower($tab_ext[count($tab_ext)-1]);
+        endif;
+
+        // Test si l'extension est autorisée
+        if (in_array($extension,$extensions) && in_array($image_data['mime'],$mimes)):
+
+            // On stocke les dimensions dans des variables
+            $img_width = $image_data[0];
+            $img_height = $image_data[1];
+
+            //Création de la ressource pour la nouvelle image
+            $dest = imagecreatetruecolor($new_width, $new_height);
+
+            // En fonction de l'extension on prépare l'iamge
+            switch($extension) {
+                case 'jpg':
+                case 'jpeg':
+                    $src = imagecreatefromjpeg($image_path); // Pour les jpg et jpeg
+                    break;
+
+                case 'png':
+                    $src = imagecreatefrompng($image_path); // Pour les png
+                    break;
+            }
+
+            // Création de l'image redimentionnée
+            if(imagecopyresampled($dest, $src, 0, 0, 0, 0, $new_width, $new_height, $img_width, $img_height)):
+
+                // On remplace l'image en fonction de l'extension
+                switch($extension){
+                    case 'jpg':
+                    case 'jpeg':
+                        imagejpeg($dest , $image_dest, $qualite); // Pour les jpg et jpeg
+                        break;
+
+                    case 'png':
+                        imagepng($dest , $image_dest, $qualite); // Pour les png
+                        break;
+
+                }
+
+                return 'success';
+
+            else:
+                return 'resize_error';
+            endif;
+
+        else:
+            return 'no_img';
+        endif;
+    }
+    $rep_Dst='imgredi/';
+    $img_Dst='redi_';//.$size.'_'.$name
+    $img_Src=$name;
+    $rep_Src='uploads/';
+    $image_path=$rep_Src.$img_Src;
+    $image_dest=$rep_Dst.$img_Dst;
+    switch ($size){
+        case 64:
+            $new_width=64;
+            $new_height=64;
+            break;
+        case 128:
+            $new_width=128;
+            $new_height=128;
+            break;
+        case 400:
+            $new_width=400;
+            $new_height=500;
+            break;
+        default:
+            $new_width=400;
+            $new_height=500;
+            break;
+    }//set var $Wmax, $Hmax
+    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$qualite = 100);
+    switch ($result){
+        case 'success':
+            require_once 'succes.html';
+        break;
+        case 'wrong_path':
+            $error="wrong_path";
+            require_once 'fail.php';
+        break;
+        case 'no_img':
+            $error="no_img";
+            require_once 'fail.php';
+        break;
+        case 'resize_error':
+            $error="resize_error";
+            require_once 'fail.php';
+        break;
+    }
+}
 ?>

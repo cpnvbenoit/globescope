@@ -33,7 +33,7 @@ if (isset($action)) {
             upload();
             break;
         case 'redim';
-            redim($size,$name,$id);
+            redim($size,$name);
             break;
         default:
             home();
