@@ -32,8 +32,8 @@ if (isset($action)) {
         case 'upload';
             upload();
             break;
-        case 'redim';
-            redim($size,$name);
+        case 'redmi3size';
+            redmi3size($name);
             break;
         default:
             home();
