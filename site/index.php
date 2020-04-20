@@ -69,7 +69,7 @@ if (isset($_POST['desc'])){
 //END set var for save -----------------------------------------
 if (isset($action)) {
     switch ($action) {
-        case 'home';
+         case 'home';
             home();
             break;
         case 'editchild';
@@ -102,11 +102,12 @@ if (isset($action)) {
             case 'testsecret';
             testsecret();
             break;
+
         default:
-            home();
+            homepage();
             break;
     }
 }else{
-    home();
+    homepage();
 }
 ?>
