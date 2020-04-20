@@ -100,11 +100,17 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #2A61BC;
+}
+
+li:active{
+    background-color: white;
+    color: #2A61BC;
 }
 
 li {
     float: left;
+    transition: 0.4s;
 }
 
 li a {
@@ -116,17 +122,17 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #75A3F0;;
+    color: white;
 }
 
-.active {
-    background-color: #4CAF50;
-}
+
 
 .imghome1 {
     padding-right: 20px;
     height: 300px;
 }
+
 .imghome2 {
     padding-right: 20px;
     height: 300px;
@@ -135,13 +141,32 @@ li a:hover:not(.active) {
 .imghome3 {
 
     height: 300px;
+
 }
 
 .body {
     background-color: #F6F6F6;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .imgshop {
     height: 300px;
+    border: solid;
+    border-color: black;
 }
 
+.imgup {
+    width: 12em;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 19px;
+    padding-left: 22px;
+}
+.imgforum{
+    height: 300px;
+    border: solid;
+    border-color: black;
+}
