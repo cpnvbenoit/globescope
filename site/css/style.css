@@ -1,20 +1,19 @@
-@font-face{
+@font-face {
     font-family: "CurvedFont";
     src: url("Font/Poppins-Regular.ttf");
 }
-html, body
-{
+
+html, body {
     height: 100%;
 }
 
-body 
-{ 
+body {
     background-color: white;
     margin: 0px;
-    overflow: hidden;  
+    overflow: hidden;
 }
-.loader
-{
+
+.loader {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -32,60 +31,142 @@ body
 }
 
 
-@keyframes spin 
-{
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.canvas
-{
-    z-index : -9999;
+.canvas {
+    z-index: -9999;
 }
-.GUI
-{
+
+.GUI {
     text-align: center;
     color: black;
     z-index: 2;
 }
-.closeButton
-{
+
+.closeButton {
     cursor: pointer;
-    color:black;
-    
+    color: black;
+
     font-weight: bold;
     font-size: 1.7em;
-    
+
     position: absolute;
     top: -15px;
     right: 20px;
 }
-#loading
-{
+
+#loading {
     position: absolute;
     z-index: 1;
-    color:white;
-    
-    left:50%;
-    top :2%;
-    
-    margin : -0px 0 0 -100px;
-    
+    color: white;
+
+    left: 50%;
+    top: 2%;
+
+    margin: -0px 0 0 -100px;
+
     font-size: 1.7em;
 }
-.testall{
+
+.testall {
     color: red;
 }
 
-.disconnect-cmd{
+.disconnect-cmd {
     height: 35px;
     position: absolute;
     left: 0;
     font-size: 21px;
     padding: 0;
-   background-color: #8a0000;
+    background-color: #8a0000;
     top: 94%;
     width: 150px;
-    bottom:45px;
+    bottom: 45px;
 }
-.default {cursor: default;}
+
+.default {
+    cursor: default;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2A61BC;
+}
+
+li:active{
+    background-color: white;
+    color: #2A61BC;
+}
+
+li {
+    float: left;
+    transition: 0.4s;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #75A3F0;;
+    color: white;
+}
+
+
+
+.imghome1 {
+    padding-right: 20px;
+    height: 300px;
+}
+
+.imghome2 {
+    padding-right: 20px;
+    height: 300px;
+}
+
+.imghome3 {
+
+    height: 300px;
+
+}
+
+.body {
+    background-color: #F6F6F6;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.imgshop {
+    height: 300px;
+    border: solid;
+    border-color: black;
+}
+
+.imgup {
+    width: 12em;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 19px;
+    padding-left: 22px;
+}
+.imgforum{
+    height: 300px;
+    border: solid;
+    border-color: black;
+}
