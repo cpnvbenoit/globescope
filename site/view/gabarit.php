@@ -92,11 +92,11 @@
     </div>
 </div>
 
-<div id="sideBar" class="GUI" style="height: 1300px">
+<div id="sideBar" class="GUI" style="height: 640px">
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
-    <div id="onClickDetails" style="margin-top: 350px">
-        <a href=""><img id="childImage"></a>
+    <div id="onClickDetails" style="overflow-y: scroll; height:630px;" >
+        <img style="margin-top: 175px;width:260px;height:325px;" id="childImage">
         <span id="separator"></span>
 
         <div id="description">
