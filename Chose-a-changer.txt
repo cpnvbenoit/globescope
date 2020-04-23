@@ -1,0 +1,2 @@
+Changer la structure de l'acceuil, il doit pouvoir fonctionner sans passer sur le net... Pas de edm.mycpnv.ch
+, ca ne marchera pas apres si non

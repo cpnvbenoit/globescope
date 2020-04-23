@@ -6,7 +6,6 @@
  * Time: 15:57
  */
 session_start();
-require 'controller/dataControler.php';
 require "controller/controler.php";
 if (isset($_GET['action'])){
     $action=$_GET['action'];
@@ -99,8 +98,17 @@ if (isset($action)) {
         case 'testhashed';
             testhashed();
             break;
-            case 'testsecret';
+        case 'testsecret';
             testsecret();
+            break;
+        case 'uploadmedia';
+                uploadmedia();
+            break;
+        case 'forum';
+            forum();
+            break;
+        case 'boutique';
+            boutique();
             break;
 
         default:

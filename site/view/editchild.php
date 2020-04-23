@@ -42,7 +42,7 @@ ob_start();
        Ville
     </th>
     <th style="text-align: center">
-    Media
+    Média
     </th>
     <th style="text-align: center">
        Année-production
@@ -191,8 +191,9 @@ foreach ($childs as $child) {
                 <input name="Ville" value="<?= $_SESSION['valueville'] ?>" class="form-control" type="text" id="Ville" >
             </td>
             <td class="form-group">
-                <label for="Media">Media</label>
+                <label for="Media">Média</label>
                 <input name="Media" value="<?= $_SESSION['valuemedia'] ?>" class="form-control" type="text" id="Media" >
+                <a href="index.php?action=uploadmedia" ><button disabled>Upload</button></a>
             </td>
         </tr>
         <tr>
