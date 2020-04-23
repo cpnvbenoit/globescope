@@ -254,16 +254,27 @@ function backup()
 }
 function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc,$Titre)
 {
+    if (isset($_SESSION['username']) == true) {
         backup();
         $save = getChilds();
-        $compteur=0;
-        if ($meridien==null){$meridien=$_SESSION['backupnull']['mer'];}
-        if ($latitude==null){$latitude=$_SESSION['backupnull']['lat'];}
-        if ($longitude==null){$longitude=$_SESSION['backupnull']['lon'];}
-        if ($idplace==null){$idplace=$_SESSION['backupnull']['IDPlace'];}
-        if ($IDimage==null){$IDimage=$_SESSION['backupnull']['IDImage'];}
-        foreach ($save as $element){
-            if ($IDimage==$element['IDImage']){
+        $compteur = 0;
+        if ($meridien == null) {
+            $meridien = $_SESSION['backupnull']['mer'];
+        }
+        if ($latitude == null) {
+            $latitude = $_SESSION['backupnull']['lat'];
+        }
+        if ($longitude == null) {
+            $longitude = $_SESSION['backupnull']['lon'];
+        }
+        if ($idplace == null) {
+            $idplace = $_SESSION['backupnull']['IDPlace'];
+        }
+        if ($IDimage == null) {
+            $IDimage = $_SESSION['backupnull']['IDImage'];
+        }
+        foreach ($save as $element) {
+            if ($IDimage == $element['IDImage']) {
                 $save[$compteur] = [
                     "IDPlace" => $idplace,
                     "IDImage" => $IDimage,
@@ -290,17 +301,19 @@ function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droi
         echo "<script>alert('Sauvegarde réussie !')</script>";
         require_once 'view/editchild.php';
 
+    }
+    else {
+        $_SESSION['flashmessage'] = "Pas touche !";
+        require 'view/home.php';
+    }
 }
-
 function homepage(){
     require_once 'view/Homepage.php';
 }
 function test(){
     require_once 'foorter.html';
 }
-function pageupload(){
 
-}
 function boutique(){
     require_once 'boutique/index.php';
 }
@@ -308,6 +321,32 @@ function forum(){
     require_once 'forum/index.php';
 }
 function uploadmedia(){
+    require_once 'view/upload.php';
+}
+function uploadredim($IDimage){
+    if(isset($_FILES['image'])){
+        $errors= array();
+        $file_name = $_FILES['image']['name'];
+        $file_size =$_FILES['image']['size'];
+        $file_tmp =$_FILES['image']['tmp_name'];
+        $file_type=$_FILES['image']['type'];
+        $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
+        $expensions= array("jpeg","jpg","png");
 
+        if(in_array($file_ext,$expensions)=== false){
+            $errors[]="Le format n'est pas reconnu, merci de choisir un fichier en .JPEG ou .PNG.";
+        }
+
+        if($file_size > 83886080){
+            $errors[]='Le fichier ne doit pas dépasser 8 MB';
+        }
+
+        if(empty($errors)==true){
+                move_uploaded_file($file_tmp, "model/uploads/temp/img_redim" . $file_ext);
+        }else{
+            echo "<script>alert(".$errors.")</script>";
+            editchild($IDimage);
+        }
+    }
 }
 ?>

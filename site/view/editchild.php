@@ -192,8 +192,8 @@ foreach ($childs as $child) {
             </td>
             <td class="form-group">
                 <label for="Media">Média</label>
-                <input name="Media" value="<?= $_SESSION['valuemedia'] ?>" class="form-control" type="text" id="Media" >
-                <a href="index.php?action=uploadmedia" ><button disabled>Upload</button></a>
+                <input name="Media" value="<?= $_SESSION['valuemedia'] ?>" class="form-control" type="text" id="Media txt_uploadway" >
+                <?php if ($_SESSION['valuemedia']==''){echo "<a href=\"index.php?action=uploadmedia&id=\"".$_SESSION['idchild']."><button>Upload</button></a>";}else{echo"<button id=\"cmd_uploadway\">Upload</button>";}?>
             </td>
         </tr>
         <tr>
