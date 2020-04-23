@@ -110,6 +110,9 @@ if (isset($action)) {
         case 'boutique';
             boutique();
             break;
+        case 'test';
+            test();
+            break;
 
         default:
             homepage();

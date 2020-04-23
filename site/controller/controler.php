@@ -295,6 +295,9 @@ function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droi
 function homepage(){
     require_once 'view/Homepage.php';
 }
+function test(){
+    require_once 'foorter.html';
+}
 function pageupload(){
 
 }
