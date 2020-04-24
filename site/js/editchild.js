@@ -6,7 +6,7 @@ function init() {
 function upload() {
     var o = confirm("Si vous continuer, le lien déja présent du média sera écrasé. Voulez-vous vraiment continuer ?");
     if (o == true) {
-        window.open("index.php?action=uploadmedia","_self")
+        window.open("index.php?action=uploadmedia")
     }
 
 }

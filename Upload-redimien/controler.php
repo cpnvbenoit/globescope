@@ -20,7 +20,7 @@ function upload(){
         }
 
         if($file_size > 83886080){
-            $errors[]='Le fichier ne doit pas dépasser 4 MB';
+            $errors[]='Le fichier ne doit pas dépasser 8 MB';
         }
 
         if(empty($errors)==true){
