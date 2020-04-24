@@ -100,10 +100,12 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    margin-top: 120px;
     background-color: #2A61BC;
+
 }
 
-li:active{
+li:active {
     background-color: white;
     color: #2A61BC;
 }
@@ -125,7 +127,6 @@ li a:hover:not(.active) {
     background-color: #75A3F0;;
     color: white;
 }
-
 
 
 .imghome1 {
@@ -155,18 +156,27 @@ li a:hover:not(.active) {
     border-color: black;
 }
 
-.imgup {
-    width: 12em;
-    height: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 50px;
-    padding-top: 19px;
-    padding-left: 22px;
-}
-.imgforum{
+
+.imgforum {
     height: 300px;
     border: solid;
     border-color: black;
+}
+
+.labelup {
+
+    text-align: center;
+
+}
+
+
+.imgup {
+    width: 12em;
+    padding-bottom: 50px;
+    padding-left: 22px;
+    position: absolute;
+    }
+.imglobe{
+    height: 50px;
+    padding: 25px;
 }
