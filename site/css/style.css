@@ -174,9 +174,13 @@ li a:hover:not(.active) {
     width: 12em;
     padding-bottom: 50px;
     padding-left: 22px;
-    position: absolute;
+
     }
 .imglobe{
     height: 50px;
     padding: 25px;
+}
+
+.imgchoix{
+
 }
