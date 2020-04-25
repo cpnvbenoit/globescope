@@ -19,6 +19,10 @@ function getBackup()
 {
     return json_decode(file_get_contents("model/dataStorage/backup.json"),true);
 }
+function getUpload()
+{
+    return json_decode(file_get_contents("model/dataStorage/uploads/temp/upload_temp.json"),true);
+}
 
 function putBackup($backup)
 {
@@ -28,4 +32,9 @@ function putSave($save)
 {
     file_put_contents('model/dataStorage/images.json', json_encode($save));
 }
+function putUpload($upload)
+{
+    file_put_contents('model/dataStorage/uploads/temp/upload_temp.json', json_encode($upload));
+}
+
 ?>

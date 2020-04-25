@@ -12,16 +12,14 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="css/homepage.css">
     <title>Accueil</title>
+    <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" />
 </head>
 <body class="body">
 
 
-<a href="#">
-    <img src="https://cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" alt="" class="imglobe"
-         align="right">
-</a>
+
 
 <div>
     <label for="logoedm" class="labelup"><h3>Avec le Globe «Un Monde Plus Juste», les enfants défendent leurs

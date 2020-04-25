@@ -15,12 +15,10 @@
     <link rel="stylesheet" href="css/cssinhtml.css">
     <script src="js/Loginstyle.js"></script>
     <script src="js/Media.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="https://image.flaticon.com/icons/svg/814/814513.svg" />
-
+    <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" />
 </head>
 
 <body>
-
 <!-- Code de la pop-up de login sur le globe -->
 <div id="login" class="modal" style="  overflow: hidden;">
 
