@@ -104,14 +104,14 @@ if (isset($action)) {
         case 'uploadmedia';
                 uploadmedia();
             break;
+        case 'upload';
+            upload($IDimage);
+            break;
         case 'forum';
             forum();
             break;
         case 'boutique';
             boutique();
-            break;
-        case 'test';
-            test();
             break;
 
         default:

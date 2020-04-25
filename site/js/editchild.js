@@ -6,7 +6,15 @@ function init() {
 function upload() {
     var o = confirm("Si vous continuer, le lien déja présent du média sera écrasé. Voulez-vous vraiment continuer ?");
     if (o == true) {
-        window.open("index.php?action=uploadmedia")
+        window.open('index.php?action=uploadmedia');
+    }else{
+       /*
+        window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURIComponent,[k,v]=i.split("="),o[u(k)]=v&&u(v),o),{});
+        var link ="index.php?action=editchild&id=";
+        link+=$_GET['id'];
+        alert($_GET);
+        window.open(link);
+       * */
     }
 
 }

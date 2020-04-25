@@ -148,14 +148,7 @@ function showchildsSearch()
             $inTeam = false;
             $inPays = false;
             $inVille = false;
-                if ($searchText == ['IDPlace']) {
-                    $in = true;
-                    $inIDPlace = true;
-                }
-                if ($searchText == ['IDImage']) {
-                    $in = true;
-                    $inIDImage = true;
-                }
+
                 if ($searchText == ['mer']) {
                     $in = true;
                     $inmer = true;
@@ -167,6 +160,14 @@ function showchildsSearch()
                 if ($searchText == ['lon']) {
                     $in = true;
                     $inlon = true;
+                }
+                if ($searchText == ['IDPlace']) {
+                    $in = true;
+                    $inIDPlace = true;
+                }
+                if ($searchText == ['IDImage']) {
+                    $in = true;
+                    $inIDImage = true;
                 }
                 if (preg_match($searchText,$child['Pseudo'])){$in=true;$inPseudo=true;}//vague
                 if (preg_match($searchText,$child['Droit'])){$in=true;$inDroit=true;}//vague
@@ -323,7 +324,7 @@ function forum(){
 function uploadmedia(){
     require_once 'view/upload.php';
 }
-function uploadredim($IDimage){
+function upload($IDimage){
     if(isset($_FILES['image'])){
         $errors= array();
         $file_name = $_FILES['image']['name'];
