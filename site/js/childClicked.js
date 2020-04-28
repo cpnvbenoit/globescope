@@ -38,7 +38,7 @@ function onImageClick(x)
                     childMedia.textContent = myObj.Titre;
                     childDesc.textContent =  myObj.desc;
                     childMedia.href = myObj.Media;
-                    childIDPlace.textContent = myObj.IDImage;
+                    childIDPlace.textContent = myObj.IDPlace;
                     childEdit.href = "?action=editchild&IDimage="+myObj.IDImage;
 
                 }

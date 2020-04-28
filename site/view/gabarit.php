@@ -90,10 +90,10 @@
     </div>
 </div>
 
-<div id="sideBar" class="GUI" style="height: 640px">
+<div id="sideBar" class="GUI" style="height: 560px">
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
-    <div id="onClickDetails" style="overflow-y: scroll; height:630px;" >
+    <div id="onClickDetails" style="overflow-y: scroll; height:550px;" >
         <img style="margin-top: 175px;width:260px;height:325px;" id="childImage">
         <span id="separator"></span>
 

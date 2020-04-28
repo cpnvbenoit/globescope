@@ -34,7 +34,7 @@ function putSave($save)
 }
 function putUpload($upload)
 {
-    file_put_contents('model/dataStorage/uploads/temp/upload_temp.json', json_encode($upload));
+    file_put_contents('model/dataStorage/upload_temp.json', json_encode($upload));
 }
 
 ?>

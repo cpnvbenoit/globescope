@@ -331,8 +331,7 @@ function uploadimage($IDimage){
         }
 
         if(empty($errors)==true){
-            move_uploaded_file($file_tmp, "model/uploads/temp/img_redim" . $file_ext);
-            $img_temp="model/uploads/temp/img_redim" . $file_ext;
+            move_uploaded_file($file_tmp, "model/uploads/temp/".$file_name);
            //write in uploads file
             $uploads[0]=[
                 "name"=>$file_name,
@@ -341,7 +340,7 @@ function uploadimage($IDimage){
                 "type"=>$file_type,
                 "ext"=>$file_ext];
             putUpload($uploads);
-            redmi3size($IDimage);
+            redmi3size($file_name);
         }else{
             echo "<script>alert(".$errors.")</script>";
             editchild($IDimage);
@@ -367,7 +366,7 @@ function resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualit
      */
     // Vérification que le fichier existe
     if(!file_exists($image_path)):
-        return 'wrong_path';
+        $_SESSION['errors_redi'][]='Wrong_path';
     endif;
 
     if($image_dest == ""):
@@ -419,16 +418,14 @@ function resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualit
         if(imagecopyresampled($dest, $src, 0, 0, 0, 0, $new_width, $new_height, $img_width, $img_height)):
             switch ($size){
                 case 64:
-                    $extension_img=".png";
-                    break;
                 case 128:
-                    $extension_img=".png";
+                    $extension_img="png";
                     break;
                 case 400:
-                    $extension_img=".jpg";
+                    $extension_img="jpg";
                     break;
                 default:
-                    $extension_img=".png";
+                    $extension_img="jpg";
                     break;
             }
             // On remplace l'image en fonction de l'extension
@@ -455,18 +452,18 @@ function resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualit
             return 'success';
 
         else:
-            return 'resize_error';
+            $_SESSION['errors_redi'][]= 'resize_error';
         endif;
 
     else:
-        return 'no_img';
+        $_SESSION['errors_redi'][]= 'no_img';
     endif;
 }//fonction de redimensionement
 function fct_redim($size,$name,$rep_size){
     $rep_Dst='img/'.$rep_size.'/';
     $img_Dst=$name;
     $img_Src=$name;
-    $rep_Src='uploads/';
+    $rep_Src='model/uploads/temp/';
     $image_path=$rep_Src.$img_Src;
     $image_dest=$rep_Dst.$img_Dst;
     switch ($size){
@@ -498,7 +495,7 @@ function fct_redim2($size,$name,$rep_size){
     $rep_Dst='img/'.$rep_size.'/';
     $img_Dst=$name;
     $img_Src=$name;
-    $rep_Src='uploads/';
+    $rep_Src='model/uploads/temp/';
     $image_path=$rep_Src.$img_Src;
     $image_dest=$rep_Dst.$img_Dst;
     switch ($size){
@@ -530,7 +527,7 @@ function fct_redim3($size,$name,$rep_size){
     $rep_Dst='img/'.$rep_size.'/';
     $img_Dst=$name;
     $img_Src=$name;
-    $rep_Src='uploads/';
+    $rep_Src='model/uploads/temp/';
     $image_path=$rep_Src.$img_Src;
     $image_dest=$rep_Dst.$img_Dst;
     switch ($size){
@@ -551,6 +548,7 @@ function fct_redim3($size,$name,$rep_size){
             $new_height=500;
             break;
     }//set var $Wmax, $Hmax
+    $_SESSION['errors_redi'][]=$image_path;
     $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 100);
     if ($result!='success'){
         return 'fail';
@@ -559,6 +557,7 @@ function fct_redim3($size,$name,$rep_size){
     }
 }//fonction pour le redimensionement 400*500
 function redmi3size($name){
+    unset($_SESSION['errors_redi']);
     //64*64
     $rep_size="64-64";
     $size=64;
@@ -578,7 +577,7 @@ function redmi3size($name){
     if (($redi64=="success")&&($redi128=="success")&&($redi400=="success")){
         require_once 'view/succes.html';
     }else {
-        require_once 'view/fail.html';
+        require_once 'view/fail.php';
     }
 }//fonction pour redimensioner en 3 taille distincte
 /* log date heure: Modif: avant vs après/ si upload: nom fichier + ou save*/
