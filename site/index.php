@@ -98,11 +98,14 @@ if (isset($action)) {
         case 'testhashed';
             testhashed();
             break;
-        case 'testsecret';
-            testsecret();
+        case 'easteregg';
+            easteregg();
             break;
         case 'uploadmedia';
-                uploadmedia();
+            uploadmedia($IDimage);
+            break;
+        case 'uploadimage';
+            uploadimage($IDimage);
             break;
         case 'forum';
             forum();
@@ -110,10 +113,6 @@ if (isset($action)) {
         case 'boutique';
             boutique();
             break;
-        case 'test';
-            test();
-            break;
-
         default:
             homepage();
             break;

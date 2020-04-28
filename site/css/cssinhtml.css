@@ -107,4 +107,14 @@
 .medialink{
     color: #0040D0;
 }
+.cmd_uploadway{
+    text-decoration: underline;
+    color: #3498db;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 15px;
+}
+.cmd_uploadway :hover{
+    color: black;
+}
 

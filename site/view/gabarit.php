@@ -15,12 +15,10 @@
     <link rel="stylesheet" href="css/cssinhtml.css">
     <script src="js/Loginstyle.js"></script>
     <script src="js/Media.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="https://image.flaticon.com/icons/svg/814/814513.svg" />
-
+    <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" />
 </head>
 
 <body>
-
 <!-- Code de la pop-up de login sur le globe -->
 <div id="login" class="modal" style="  overflow: hidden;">
 
@@ -92,10 +90,10 @@
     </div>
 </div>
 
-<div id="sideBar" class="GUI" style="height: 640px">
+<div id="sideBar" class="GUI" style="height: 560px">
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
-    <div id="onClickDetails" style="overflow-y: scroll; height:630px;" >
+    <div id="onClickDetails" style="overflow-y: scroll; height:550px;" >
         <img style="margin-top: 175px;width:260px;height:325px;" id="childImage">
         <span id="separator"></span>
 

@@ -14,9 +14,8 @@
 <h1 align="center" style="color: white">Bienvenue - Welcome - Willkommen - benvenuto !</h1>
 <div align="center">
     <br><br><br>
-    <a href="https://www.youtube.com/watch?v=BBGEG21CGo0" >
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Bg-easter-eggs.jpg" width="25%" >
-    </a>
+    <iframe width="1000"  height="500" src="https://www.youtube.com/embed/BBGEG21CGo0?controls=0;&autoplay=1" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <div align="center" style="color: white">
 <h2>FR : Cette page est un secret et je vous félicite de l'avoir trouvée !</h2>

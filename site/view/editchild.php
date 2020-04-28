@@ -14,126 +14,125 @@ ob_start();
 
 <table  border="1" align="center" class="table-edit">
     <thead>
-    <th style="text-align: center">
+    <th class="center">
         Méridien / Latitude / Longitude
     </th>
-    <th style="text-align: center">
+    <th class="center">
         IDPlace
     </th>
-    <th style="text-align: center">
+    <th class="center">
         IDImage
     </th>
-    <th style="text-align: center">
+    <th class="center">
         Pseudo
     </th>
-    <th style="text-align: center">
+    <th class="center">
         Droit
     </th>
-    <th style="text-align: center">
+    <th class="center">
         Slogan
     </th>
-    <th style="text-align: center">
+    <th class="center">
         Origine des données
     </th>
-    <th style="text-align: center">
+    <th class="center">
        Pays
     </th>
-    <th style="text-align: center">
+    <th class="center">
        Ville
     </th>
-    <th style="text-align: center">
+    <th class="center">
     Média
     </th>
-    <th style="text-align: center">
+    <th class="center">
        Année-production
     </th>
-    <th style="text-align: center">
+    <th class="center">
+       Titre
+    </th>
+    <th class="center">
        Résumé
     </th>
     </thead  align="center">
     <tbody align="center">
-
     <?php
+
     foreach ($childs as $child) {
         if ($child['IDImage'] == $_SESSION['idchild']) {
-
-            ?>
+            $_SESSION['valuelat']        = $child['lat'];
+            $_SESSION['valuemer']        = $child['mer'];
+            $_SESSION['valuelon']        = $child['lon'];
+            $_SESSION['valueidplace']    = $child['IDPlace'];
+            $_SESSION['valueidimage']    = $child['IDImage'];
+            $_SESSION['valuepseudo']     = $child['Pseudo'];
+            $_SESSION['valuedroit']      = $child['Droit'];
+            $_SESSION['valueslogan']     = $child['Slogan'];
+            $_SESSION['valueteam']       = $child['Team'];
+            $_SESSION['valueville']      = $child['Ville'];
+            $_SESSION['valuespays']      = $child['Pays'];
+            $_SESSION['valuemedia']      = $child['Media'];
+            $_SESSION['valuetitre']      = $child['Titre'];
+            $_SESSION['valueanneeprod']  = $child['Anneeprod'];
+            $_SESSION['valuedesc']       = $child['desc'];
+            $_SESSION['backupnull']=[
+                "lat"=>$_SESSION['valuelat'],
+                "mer"=>$_SESSION['valuemer'],
+                "lon"=>$_SESSION['valuelon'],
+                "IDPlace"=>$_SESSION['valueidplace'],
+                "IDImage"=>$_SESSION['valueidimage']
+            ];
+        }
+    }
+    ?>
+   
             <tr>
                 <td>
-                    <p><?= $child['mer'] ?> / <?= $child['lat'] ?> / <?= $child['lon'] ?> </p>
+                    <p><?= $_SESSION['valuemer'] ?> / <?=  $_SESSION['valuelat'] ?> / <?= $_SESSION['valuelon'] ?> </p>
                 </td>
                 <td>
-                    <p><?= $child['IDPlace'] ?></p>
+                    <p><?=  $_SESSION['valueidplace'] ?></p>
                 </td>
                 <td>
-                    <p><?= $child['IDImage'] ?></p>
+                    <p><?=$_SESSION['valueidimage']  ?></p>
                 </td>
                 <td>
-                    <p><?= $child['Pseudo'] ?></p>
+                    <p><?=  $_SESSION['valuepseudo'] ?></p>
                 </td>
                 <td>
-                    <p><?= $child['Droit'] ?></p>
+                    <p><?= $_SESSION['valuedroit']  ?></p>
                 </td>
                 <td>
                     <p>
-                        <?= $child['Slogan'] ?>
+                        <?=  $_SESSION['valueslogan'] ?>
                     </p>
                 </td>
                 <td>
-                    <p><?= $child['Team'] ?></p>
+                    <p><?= $_SESSION['valueteam']  ?></p>
                 </td>
                 <td>
-                    <p><?= $child['Pays'] ?></p>
+                    <p><?= $_SESSION['valuespays'] ?></p>
                 </td>
                 <td>
-                    <p><?= $child['Ville'] ?></p>
+                    <p><?= $_SESSION['valuemedia'] ?></p>
                 </td>
                 <td>
-                    <p><?= $child['Media'] ?></p>
+                    <p><?= $_SESSION['valuemedia'] ?></p>
                 </td>
                 <td>
-                    <p><?= $child['Anneeprod'] ?></p>
+                    <p><?= $_SESSION['valueanneeprod'] ?></p>
                 </td>
                 <td>
-                    <p><?php echo substr($child['desc'], 0,15)  ?></p>
+                    <p><?= $_SESSION['valuetitre'] ?></p>
+                </td>
+                <td>
+                    <p><?php echo substr($_SESSION['valuedesc'], 0,25)  ?></p>
                 </td>
 
             </tr>
 
-
-            <?php } }?>
-
     </tbody>
 </table>
-<?php
 
-foreach ($childs as $child) {
-    if ($child['IDImage'] == $_SESSION['idchild']) {
-        $_SESSION['valuelat']        = $child['lat'];
-        $_SESSION['valuemer']        = $child['mer'];
-        $_SESSION['valuelon']        = $child['lon'];
-        $_SESSION['valueidplace']    = $child['IDPlace'];
-        $_SESSION['valueidimage']    = $child['IDImage'];
-        $_SESSION['valuepseudo']     = $child['Pseudo'];
-        $_SESSION['valuedroit']      = $child['Droit'];
-        $_SESSION['valueslogan']     = $child['Slogan'];
-        $_SESSION['valueteam']       = $child['Team'];
-        $_SESSION['valueville']      = $child['Ville'];
-        $_SESSION['valuespays']      = $child['Pays'];
-        $_SESSION['valuemedia']      = $child['Media'];
-        $_SESSION['valuetitre']      = $child['Titre'];
-        $_SESSION['valueanneeprod']  = $child['Anneeprod'];
-        $_SESSION['valuedesc']       = $child['desc'];
-        $_SESSION['backupnull']=[
-            "lat"=>$_SESSION['valuelat'],
-            "mer"=>$_SESSION['valuemer'],
-            "lon"=>$_SESSION['valuelon'],
-            "IDPlace"=>$_SESSION['valueidplace'],
-            "IDImage"=>$_SESSION['valueidimage']
-        ];
-    }
-}
-?>
 <br>
 <form method="post" id="formedit" action="index.php?action=save">
     <table align="center" class="table" style="width: 80%">
@@ -193,7 +192,11 @@ foreach ($childs as $child) {
             <td class="form-group">
                 <label for="Media">Média</label>
                 <input name="Media" value="<?= $_SESSION['valuemedia'] ?>" class="form-control" type="text" id="Media txt_uploadway" >
-                <?php if ($_SESSION['valuemedia']==''){echo "<a href=\"index.php?action=uploadmedia&id=\"".$_SESSION['idchild']."><button>Upload</button></a>";}else{echo"<button id=\"cmd_uploadway\">Upload</button>";}?>
+                <?php if ($_SESSION['valuemedia']==''){
+                    echo "<a href=\"index.php?action=uploadmedia&id=".$_SESSION['valueidimage']."\"><span class='cmd_uploadway'>Upload</span></a>";
+                }else{
+                    echo "<a href=\"index.php?action=editchild&id=".$_SESSION['valueidimage']."\" id=\"cmd_uploadway\"><span class='cmd_uploadway'>Upload</span></a>";
+                }?>
             </td>
         </tr>
         <tr>
@@ -220,7 +223,6 @@ foreach ($childs as $child) {
 
 
     <?php
-
 $content = ob_get_clean();
 require_once 'gabarit2.php';
 ?>

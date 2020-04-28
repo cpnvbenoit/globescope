@@ -30,7 +30,7 @@ if ($_SESSION['fail'] == false) {
     <table class="table" border="1" align="center" style="border: #BCDC53">
         <thead>
         <th width="220px">
-            Latitude / Longitude / Meridien
+            Meridien / Latitude  / Longitude
         </th>
         <th>
             IDPlace
@@ -77,7 +77,7 @@ if ($_SESSION['fail'] == false) {
             ?>
             <tr>
                 <td>
-                    <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
+                    <p><?= $child['mer'] ?> / <?= $child['lat'] ?> / <?= $child['lon'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['IDPlace'] ?></p>

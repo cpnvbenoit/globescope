@@ -32,7 +32,7 @@ ob_start();
 <table class="table" border="1" align="center" style="border: #BCDC53">
     <thead>
     <th width="220px">
-        Latitude / Longitude / Meridien
+        Meridien / Latitude  / Longitude
     </th>
     <th>
         IDPlace
@@ -99,49 +99,49 @@ ob_start();
         if (($child['inVille']==true)&&($inVille==true)){echo "<tr><td colspan='10' class=\"category rouge \">Ville</td></tr>";$inVille = false;}
         ?>
         <tr>
-        <td>
-            <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
-        </td>
-        <td>
-            <p><?= $child['IDPlace'] ?></p>
-        </td>
-        <td>
-            <p><?= $child['IDImage'] ?></p>
-        </td>
-        <td>
-            <p><?= $child['Pseudo'] ?></p>
-        </td>
-        <td>
-            <p><?php if ($child['Droit']!=''){echo substr($child['Droit'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
-        </td>
-        <td>
-            <p><?php if ($child['Slogan']!=''){echo substr($child['Slogan'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
-        </td>
-        <td>
-            <p class="scTeam"><?= $child['Team'] ?></p>
-        </td>
-        <td>
-            <p><?= $child['Pays'] ?></p>
-        </td>
-        <td>
-            <p><?= $child['Ville'] ?></p>
-        </td>
-        <td>
-            <p><?php if ($child['Media']!=''){echo substr($child['Media'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+            <td>
+                <p><?= $child['mer'] ?> / <?= $child['lat'] ?> / <?= $child['lon'] ?></p>
+            </td>
+            <td>
+                <p><?= $child['IDPlace'] ?></p>
+            </td>
+            <td>
+                <p><?= $child['IDImage'] ?></p>
+            </td>
+            <td>
+                <p><?= $child['Pseudo'] ?></p>
+            </td>
+            <td>
+                <p><?php if ($child['Droit']!=''){echo substr($child['Droit'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+            </td>
+            <td>
+                <p><?php if ($child['Slogan']!=''){echo substr($child['Slogan'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+            </td>
+            <td>
+                <p class="scTeam"><?= $child['Team'] ?></p>
+            </td>
+            <td>
+                <p><?= $child['Pays'] ?></p>
+            </td>
+            <td>
+                <p><?= $child['Ville'] ?></p>
+            </td>
+            <td>
+                <p><?php if ($child['Media']!=''){echo substr($child['Media'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
 
-        </td>
-        <td>
-            <p><?= $child['Anneeprod'] ?></p>
-        </td>
-        <td>
-            <p><?php if (isset($child['desc'])){echo substr($child['desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
-        </td>
+            </td>
+            <td>
+                <p><?= $child['Anneeprod'] ?></p>
+            </td>
+            <td>
+                <p><?php if (isset($child['desc'])){echo substr($child['desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+            </td>
 
-        <td>
-            <button class="btn btn-primary"><a
-                        href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
-                        class="buttoneditshowchild">Modifier</a></button>
-        </td>
+            <td>
+                <button class="btn btn-primary"><a
+                            href="index.php?action=editchild&IDimage=<?= $child['IDImage'] ?>" target="_blank"
+                            class="buttoneditshowchild">Modifier</a></button>
+            </td>
         </tr><?php }}
     else{echo "<script>alert('Aucun résultat !')</script>";}?>
 
