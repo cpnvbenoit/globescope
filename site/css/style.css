@@ -130,8 +130,8 @@ li a:hover:not(.active) {
 
 
 .imghome1 {
-    padding-right: 20px;
-    height: 300px;
+    height: 600px;
+
 }
 
 .imghome2 {
@@ -175,12 +175,26 @@ li a:hover:not(.active) {
     padding-bottom: 50px;
     padding-left: 22px;
 
-    }
-.imglobe{
-    height: 50px;
-    padding: 25px;
 }
 
-.imgchoix{
+.imglobe {
+    height: 50px;
+
+
+}
+
+.imgchoix {
+    margin: auto;
+    background-color: #222222;
+}
+
+.divtable {
+    width: 100%;
+    text-align: center;
+ 
+
+
+}
+.menuhomepage{
 
 }
