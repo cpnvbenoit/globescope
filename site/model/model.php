@@ -30,12 +30,12 @@ function putBackup($backup)
 }
 function getLog()
 {
-    return json_decode(file_get_contents("'model/dataStorage/media.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/log.json"),true);
 }
 
 function putLog($log)
 {
-    file_put_contents('model/dataStorage/backup.json', json_encode($log));
+    file_put_contents('model/dataStorage/log.json', json_encode($log));
 }
 function putSave($save)
 {
