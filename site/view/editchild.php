@@ -113,7 +113,7 @@ ob_start();
                     <p><?= $_SESSION['valuespays'] ?></p>
                 </td>
                 <td>
-                    <p><?= $_SESSION['valuemedia'] ?></p>
+                    <p><?= $_SESSION['valueville'] ?></p>
                 </td>
                 <td>
                     <p><?= $_SESSION['valuemedia'] ?></p>
@@ -193,9 +193,9 @@ ob_start();
                 <label for="Media">Média</label>
                 <input name="Media" value="<?= $_SESSION['valuemedia'] ?>" class="form-control" type="text" id="Media txt_uploadway" >
                 <?php if ($_SESSION['valuemedia']==''){
-                    echo "<a href=\"index.php?action=uploadmedia&id=".$_SESSION['valueidimage']."\"><span class='cmd_uploadway'>Upload</span></a>";
+                    echo "<a href=\"index.php?action=uploadmedia&IDimage=".$_SESSION['valueidimage']."\"><span class='cmd_uploadway'>Upload</span></a>";
                 }else{
-                    echo "<a href=\"index.php?action=editchild&id=".$_SESSION['valueidimage']."\" id=\"cmd_uploadway\"><span class='cmd_uploadway'>Upload</span></a>";
+                    echo "<a href=\"index.php?action=editchild&IDimage=".$_SESSION['valueidimage']."\" id=\"cmd_uploadway\"><span class='cmd_uploadway'>Upload</span></a>";
                 }?>
             </td>
         </tr>
@@ -216,6 +216,7 @@ ob_start();
     </table>
     <div class="buttonEdit">
         <img src="images/400-500/<?= $_SESSION['valueidimage'] ?>.jpg" width="15%" style="margin-top: -30px" alt="Images id : <?= $_SESSION['valueidimage'] ?>"><br><br>
+        <a href="index.php?action=uploadimg&IDimage=<?= $_SESSION['valueidimage'] ?>" target="_blank">Remplacer l'image</a>
         <button id="Save" type="submit" class="btn btn-success">Sauvegarder</button>
     </div>
 </form>

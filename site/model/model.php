@@ -19,14 +19,23 @@ function getBackup()
 {
     return json_decode(file_get_contents("model/dataStorage/backup.json"),true);
 }
-function getUpload()
+function getMedia()
 {
-    return json_decode(file_get_contents("model/dataStorage/uploads/temp/upload_temp.json"),true);
+    return json_decode(file_get_contents("model/dataStorage/media.json"),true);
 }
 
 function putBackup($backup)
 {
     file_put_contents('model/dataStorage/backup.json', json_encode($backup));
+}
+function getLog()
+{
+    return json_decode(file_get_contents("'model/dataStorage/media.json"),true);
+}
+
+function putLog($log)
+{
+    file_put_contents('model/dataStorage/backup.json', json_encode($log));
 }
 function putSave($save)
 {
@@ -35,6 +44,10 @@ function putSave($save)
 function putUpload($upload)
 {
     file_put_contents('model/dataStorage/upload_temp.json', json_encode($upload));
+}
+function putMedia($upload)
+{
+    file_put_contents('model/dataStorage/media.json', json_encode($upload));
 }
 
 ?>

@@ -6,7 +6,7 @@
  * Time: 15:57
  */
 session_start();
-require "controller/controler.php";
+require "controler/controler.php";
 if (isset($_GET['action'])){
     $action=$_GET['action'];
 }
@@ -15,6 +15,9 @@ if (isset($_GET['IDimage'])){
 }
 if (isset($_GET['welcome'])){
     $welcome=$_GET['welcome'];
+}
+if (isset($_GET['errors'])){
+    $errors=$_GET['errors'];
 }
 if (!isset($_SESSION['fail'])){
     $_SESSION['fail']=true;
@@ -101,8 +104,14 @@ if (isset($action)) {
         case 'easteregg';
             easteregg();
             break;
+        case 'uploadfile';
+            uploadfile($IDimage);
+            break;
+        case 'uploadimg';
+            uploadimg($IDimage);
+            break;
         case 'uploadmedia';
-            uploadmedia($IDimage);
+            uploadmedia($IDimage,$errors);
             break;
         case 'uploadimage';
             uploadimage($IDimage);
