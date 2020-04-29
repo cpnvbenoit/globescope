@@ -371,8 +371,8 @@ function uploadfile($IDimage){
                     $save[$compteur] = [
                         "IDPlace" => $_SESSION['valueidplace'],
                         "IDImage" => $_SESSION['valueidimage'],
-                        "mer" => $_SESSION['valuelat'],
-                        "lat" => $_SESSION['valuemer'],
+                        "mer" => $_SESSION['valuemer'],
+                        "lat" => $_SESSION['valuelat'],
                         "lon" => $_SESSION['valuelon'],
                         "Pseudo" =>$_SESSION['valuepseudo'],
                         "Droit" => $_SESSION['valuedroit'],
