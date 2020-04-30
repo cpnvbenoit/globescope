@@ -110,7 +110,7 @@
                         <div class=moduletable>
                             <div class=custom><p><a href=/fr/media-publication/actualites/derniere-newsletter/newsletter
                                                     style="background-color: transparent;"><img
-                                                src=/images/stories/icons/newsletter_white.png alt="newsletter white"
+                                                src=/images/newsletter_white.png alt="newsletter white"
                                                 width=40
                                                 height=30 style="vertical-align: middle; margin-right: 10px;"/>S'abonner</a>
                                 </p>
@@ -120,19 +120,19 @@
                             <div class=custom><p>Suivez-nous!</p>
                                 <p><a href=https://www.facebook.com/EnfantsDuMonde/ target=_blank
                                       rel="noopener noreferrer"><img style="margin-right: 10px;"
-                                                                     src=/images/stories/icons/fa-facebook.png
+                                                                     src=/images/fa-facebook.png
                                                                      alt="fa facebook" width=40 height=40/></a><a
                                             href=https://www.youtube.com/user/edmsuisse target=_blank
                                             rel="noopener noreferrer"><img style="margin-right: 10px;"
-                                                                           src=/images/stories/icons/fa-youtube.png
+                                                                           src=/images/fa-youtube.png
                                                                            alt="fa youtube" width=40 height=40/></a><a
                                             href=https://www.flickr.com/photos/enfants_du_monde/ target=_blank
                                             rel="noopener noreferrer"><img style="margin-right: 10px;"
-                                                                           src=/images/stories/icons/fa-flickr.png
+                                                                           src=/images/fa-flickr.png
                                                                            alt="fa flickr" width=40 height=40/></a><a
                                             href=https://www.instagram.com/enfantsdumonde.ch/ target=_blank
                                             rel="noopener noreferrer"><img style="margin-right: 10px;"
-                                                                           src=/images/stories/icons/fa-instagram.png
+                                                                           src=/images/fa-instagram.png
                                                                            alt="fa instagram" width=40 height=40/></a>
                                 </p>
                             </div>
@@ -155,7 +155,7 @@
                                       href=https://www.ge.ch/dossier/1-tous-label-faveur-emploi target=_blank
                                       rel="noopener noreferrer"><img
                                                 style="margin-right: 10px; margin-left: 10px; float: right;"
-                                                src=/images/stories/icons/items/unpluspourtous.png alt=zewo width=98
+                                                src=/images/unpluspourtous.png alt=zewo width=98
                                                 height=74/></a>
                                 </p></div>
                         </div>
@@ -168,7 +168,7 @@
             <div class="inner clearfix">
                 <div class=moduletable>
                     <div class=custom><p><a href=/fr/aider/don class=button title="Faire un don à Enfants du Monde"><img
-                                        src=/images/stories/icons/don-grey.png alt="don grey" width=24 height=26
+                                        src=/images/don-grey.png alt="don grey" width=24 height=26
                                         style="vertical-align: middle; margin-right: 5px;"/>Faire un don</a></p></div>
                 </div>
             </div>
