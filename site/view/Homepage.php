@@ -18,10 +18,7 @@
 <body class="body">
 
 
-<a href="#">
-    <img src="https://cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" alt="" class="imglobe"
-         align="right">
-</a><br><div>
+<br><div>
 <h1 align="center">Bienvenue sur la page d'accueil d'enfants du monde ! </h1>
 
 </div>
@@ -43,7 +40,7 @@
         <li><a href="https://edm.mycpnv.ch/?action=home">Globe - EDM</a></li>
         <li><a href="https://edm.mycpnv.ch/boutique/">Boutique</a></li>
         <li><a href="https://edm.mycpnv.ch/forum/">Forum</a></li>
-        <a href="#" class="languagehome">| FR |</a><a href="#" class="languagehome"> EN </a><a href="#" class="languagehome" >| DE |</a>
+        <a href="#" class="languagehome"> FR |</a><a href="#" class="languagehome">EN</a><a href="#" class="languagehome" >| DE |</a>
     </ul>
 
 
@@ -145,7 +142,7 @@
                             <div class=custom><p><a href=/fr/aider/confiance/zewo-controles target=_blank
                                                     rel="noopener noreferrer"><img
                                                 style="margin-right: 10px; margin-left: 10px; float: right;"
-                                                src=/images/stories/icons/items/zewo.png alt=zewo width=73
+                                                src=/images/zewo.png alt=zewo width=73
                                                 height=79/></a></p>
                                 <p>&nbsp;</p>
                                 <p>&nbsp;</p>

@@ -148,6 +148,7 @@ li a:hover:not(.active) {
 .body {
     background-color: #F6F6F6;
     font-family: 'Open Sans', sans-serif;
+
 }
 
 .imgshop {
@@ -190,15 +191,12 @@ li a:hover:not(.active) {
 .divtable {
     width: 100%;
     text-align: center;
- 
 
 
 }
-.menuhomepage{
 
-}
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 15px;
 }
 
 /* Track */
@@ -209,17 +207,19 @@ li a:hover:not(.active) {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: green;
+    background: #BCDF57;
     border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: darkgreen;
+    background: #769041;
 }
-.languagehome{
+
+.languagehome {
     float: right;
     transition: 0.4s;
     color: whitesmoke;
-
+    padding-top: 15px;
+    padding-right: 15px;
 }
