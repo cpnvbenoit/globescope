@@ -17,7 +17,6 @@
 </head>
 <body class="body">
 
-<br><div><br><div>
 
 <br><div>
 <h1 align="center">Bienvenue sur la page d'accueil d'enfants du monde ! </h1>
