@@ -40,7 +40,7 @@
         <li><a href="https://edm.mycpnv.ch/?action=home">Globe - EDM</a></li>
         <li><a href="https://edm.mycpnv.ch/boutique/">Boutique</a></li>
         <li><a href="https://edm.mycpnv.ch/forum/">Forum</a></li>
-        <a href="#" class="languagehome"> FR |</a><a href="#" class="languagehome">EN</a><a href="#" class="languagehome" >| DE |</a>
+        <a href="#" class="languagehome">| FR |</a><a href="#" class="languagehome"> EN </a><a href="#" class="languagehome" >| DE |</a>
     </ul>
 
 
