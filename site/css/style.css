@@ -217,3 +217,9 @@ li a:hover:not(.active) {
 ::-webkit-scrollbar-thumb:hover {
     background: darkgreen;
 }
+.languagehome{
+    float: right;
+    transition: 0.4s;
+    color: whitesmoke;
+
+}

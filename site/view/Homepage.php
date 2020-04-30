@@ -14,33 +14,37 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/homepage.css">
     <title>Accueil</title>
-    <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" />
+    <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png"/>
 </head>
 <body class="body">
-
 
 
 <a href="#">
     <img src="https://cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" alt="" class="imglobe"
          align="right">
-</a><br>
-<h1 align="center">Bienvenue sur la page d'accueil d'enfants du monde !</h1>
+</a><br><div>
+<h1 align="center">Bienvenue sur la page d'accueil d'enfants du monde ! </h1>
 
+</div>
 
 
 
 <div>
     <label for="logoedm" class="labelup"><h3>Avec le Globe «Un Monde Plus Juste», les enfants défendent leurs
             droits</h3></label>
-    <a href="https://www.edm.ch/fr/"><img src="https://edm.mycpnv.ch/images/Logo_bleu_RGB.png" class="imgup"
+    <a href="https://edm.mycpnv.ch/"><img src="https://edm.mycpnv.ch/images/Logo_bleu_RGB.png" class="imgup"
                                           id="logoedm"> </a>
+
 </div>
+
+
 <div class="divtable">
     <ul class="menuhomepage">
         <li><a href="https://www.edm.ch/fr/">Home</a></li>
-        <li><a href="https://edm.mycpnv.ch/">Globe - EDM</a></li>
+        <li><a href="https://edm.mycpnv.ch/?action=home">Globe - EDM</a></li>
         <li><a href="https://edm.mycpnv.ch/boutique/">Boutique</a></li>
         <li><a href="https://edm.mycpnv.ch/forum/">Forum</a></li>
+        <a href="#" class="languagehome">| FR |</a><a href="#" class="languagehome"> EN </a><a href="#" class="languagehome" >| DE |</a>
     </ul>
 
 
