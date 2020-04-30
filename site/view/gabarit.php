@@ -94,12 +94,11 @@
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails" style="overflow-y: scroll; height:550px;" >
-        <img style="margin-top: 175px;width:260px;height:325px;" id="childImage">
+        <img style="margin-top: 250px;width:260px;height:325px;" id="childImage">
         <span id="separator"></span>
 
         <div id="description">
             <table class="tablehome-infos">
-
                 <tr>
                     <td>
                         <h6 class="infosuppleft" align="left"><b>Pseudo</b> : <span id="childPseudo"></span></h6>
@@ -112,7 +111,6 @@
                         <h6 class="infosuppleft" align="left"><b>Média</b> : <a class="medialink" target="_blank" id="childMedia"></a></span></h6>
                         <h6 class="infosuppleft" align="left"><b>Année de production</b> : <span id="childAnneeprod"></span></h6>
                         <h6 class="infosuppleft" align="left"><b>ID de la place</b> : <span id="childIDPlace"></span></h6>
-
                     </td>
                 </tr>
                 <tr>
