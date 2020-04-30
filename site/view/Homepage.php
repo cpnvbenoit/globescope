@@ -17,11 +17,9 @@
 </head>
 <body class="body">
 
+<br><div><br><div>
 
-<a href="#">
-    <img src="https://cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" alt="" class="imglobe"
-         align="right">
-</a><br><div>
+<br><div>
 <h1 align="center">Bienvenue sur la page d'accueil d'enfants du monde ! </h1>
 
 </div>
