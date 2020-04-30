@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" />
 </head>
 
-<body>
+<body class="bodyglob">
 <!-- Code de la pop-up de login sur le globe -->
 <div id="login" class="modal" style="  overflow: hidden;">
 
