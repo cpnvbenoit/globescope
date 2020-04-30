@@ -145,7 +145,7 @@
                             <div class=custom><p><a href=/fr/aider/confiance/zewo-controles target=_blank
                                                     rel="noopener noreferrer"><img
                                                 style="margin-right: 10px; margin-left: 10px; float: right;"
-                                                src=/images/stories/icons/items/zewo.png alt=zewo width=73
+                                                src=/images/zewo.png alt=zewo width=73
                                                 height=79/></a></p>
                                 <p>&nbsp;</p>
                                 <p>&nbsp;</p>
