@@ -19,7 +19,7 @@
 <body class="body">
 
 
-<<<<<<< HEAD
+
 <a href="#">
     <img src="https://cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" alt="" class="imglobe"
          align="right">
