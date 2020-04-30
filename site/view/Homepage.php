@@ -40,6 +40,10 @@
         <li><a href="https://edm.mycpnv.ch/?action=home">Globe - EDM</a></li>
         <li><a href="https://edm.mycpnv.ch/boutique/">Boutique</a></li>
         <li><a href="https://edm.mycpnv.ch/forum/">Forum</a></li>
+        <li><a href="https://www.edm.ch/fr/sensibilisation/projet-enfants-reporters">Les droits de l'enfant</a></li>
+        <li><a href="https://fr.wikipedia.org/wiki/Concours">Concours</a></li><!-- Pas de lien sur le site de EDM ! -->
+        <li><a href="https://www.edm.ch/fr/sensibilisation/projet-un-monde-plus-juste">Un Monde Plus Juste</a></li>
+        <li><a href="https://www.edm.ch/fr/media-publication">Les enquêtes</a></li>
         <a href="#" class="languagehome">| FR |</a><a href="#" class="languagehome"> EN </a><a href="#" class="languagehome" >| DE |</a>
     </ul>
 
@@ -139,7 +143,7 @@
                 <div id=footer-module-4 class="flexiblemodule ">
                     <div class="inner clearfix">
                         <div class=moduletable>
-                            <div class=custom><p><a href=/fr/aider/confiance/zewo-controles target=_blank
+                            <div class=custom><p><a href= https://www.edm.ch/fr/aider/confiance target=_blank
                                                     rel="noopener noreferrer"><img
                                                 style="margin-right: 10px; margin-left: 10px; float: right;"
                                                 src=/images/zewo.png alt=zewo width=73
