@@ -210,7 +210,7 @@ ob_start();
             </td>
             <td class="form-group">
                 <label for="Desc">Description</label>
-                <textarea rows="8" maxlength="1000"   class="form-control" name="desc" id="Desc" form="formedit"><?= $_SESSION['valuedesc'] ?></textarea>
+                <textarea rows="8" maxlength="1000" class="form-control" name="desc" id="Desc" form="formedit"><?= $_SESSION['valuedesc'] ?></textarea>
             </td>
         </tr>
     </table>

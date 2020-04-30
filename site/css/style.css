@@ -223,3 +223,6 @@ li a:hover:not(.active) {
     padding-top: 15px;
     padding-right: 15px;
 }
+textarea {
+    resize: none;
+}

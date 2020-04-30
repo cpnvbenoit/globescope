@@ -107,7 +107,7 @@ if (isset($action)) {
         case 'uploadfile';
             uploadfile($IDimage);
             break;
-        case 'uploadimg';
+        case 'uploadimg';//marche pas en ligne
             uploadimg($IDimage);
             break;
         case 'uploadmedia';
