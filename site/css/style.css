@@ -207,13 +207,13 @@ li a:hover:not(.active) {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #BCDF57;
+    background: #2A61BC;
     border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #769041;
+    background: #264a94;
 }
 
 .languagehome {
