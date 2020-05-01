@@ -85,7 +85,7 @@
             <p id="groupeMembresContenu"></p>
         </div>
         <!-- Groupe 2.0 -->
-        <img id="imageGroupe" src="images/photoGroupe2.0.jpg" alt="Development Group">
+        <img id="imageGroupe" src="images/PhotoGroupe2.0.jpg" alt="Development Group">
         <div id="Groupe">
            Benoit Pierrehumbert, Kevin Vaucher, Simon Cuany
         </div>
