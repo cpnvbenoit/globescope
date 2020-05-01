@@ -16,7 +16,7 @@ if (isset($_FILES['image'])){
 <body>
 
 <h1>Merci de donner une image en .jpg ou .jpeg ou .png.</h1>
-<h2>L'image doit avoir une taille plus grande ou égale à: 400px/500px (largeur/hauteur) </h2>
+<h2>L'image doit avoir une taille de: 400px/500px (largeur/hauteur) </h2>
 <form action="index.php?action=uploadimage&IDimage=<?= $IDimage?>" method="POST" enctype="multipart/form-data">
     <input type="file" name="image" />
     <input type="submit"/>

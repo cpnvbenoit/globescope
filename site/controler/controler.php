@@ -435,7 +435,9 @@ function uploadimage($IDimage){
         }
 
         if(empty($errors)==true){
+            $name_dst=$IDimage.".".$file_ext;
             move_uploaded_file($file_tmp, "model/uploads/temp/".$file_name);
+            rename ("model/uploads/temp/".$file_name, 'model/uploads/temp/'.$name_dst);
            //write in uploads file
             $uploads[0]=[
                 "name"=>$file_name,
@@ -563,7 +565,7 @@ function resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualit
         $_SESSION['errors_redi'][]= 'no_img';
     endif;
 }//fonction de redimensionement
-function fct_redim($size,$name,$rep_size,$name_dst){
+function fct_redim($size,$name,$rep_size){
     $rep_Dst='images/'.$rep_size.'/';
     $img_Dst=$name;
     $img_Src=$name;
@@ -589,14 +591,14 @@ function fct_redim($size,$name,$rep_size,$name_dst){
             break;
     }//set var $Wmax, $Hmax
     $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 100);
-    rename ($rep_Dst.$name, $rep_Dst.$name_dst);
+    //rename ($rep_Dst.$name, $rep_Dst.$name_dst);
     if ($result!='success'){
         return 'fail';
     }else{
         return 'success';
     }
 }//fonction pour le redimensionement 64*64
-function fct_redim2($size,$name,$rep_size,$name_dst){
+function fct_redim2($size,$name,$rep_size){
     $rep_Dst='images/'.$rep_size.'/';
     $img_Dst=$name;
     $img_Src=$name;
@@ -622,14 +624,14 @@ function fct_redim2($size,$name,$rep_size,$name_dst){
             break;
     }//set var $Wmax, $Hmax
     $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 100);
-    rename ($rep_Dst.$name, $rep_Dst.$name_dst);
+    //rename ($rep_Dst.$name, $rep_Dst.$name_dst);
     if ($result!='success'){
         return 'fail';
     }else{
         return 'success';
     }
 }//fonction pour le redimensionement 128*128
-function fct_redim3($size,$name,$rep_size,$name_dst){
+function fct_redim3($size,$name,$rep_size){
     $rep_Dst='images/'.$rep_size.'/';
     $img_Dst=$name;
     $img_Src=$name;
@@ -656,7 +658,7 @@ function fct_redim3($size,$name,$rep_size,$name_dst){
     }//set var $Wmax, $Hmax
     $_SESSION['errors_redi'][]=$image_path;
     $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 100);
-    rename ($rep_Dst.$name, $rep_Dst.$name_dst);
+
     if ($result!='success'){
         return 'fail';
     }else{
@@ -665,21 +667,21 @@ function fct_redim3($size,$name,$rep_size,$name_dst){
 }//fonction pour le redimensionement 400*500
 function redmi3size($name,$IDimage,$file_ext){
     unset($_SESSION['errors_redi']);
-    $name_dst=$IDimage.".".$file_ext;
+
     //64*64
     $rep_size="64-64";
     $size=64;
-    $redi64=fct_redim($size,$name,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
+    $redi64=fct_redim($size,$name,$rep_size);//doit etre = à "success" si non le redimensionnement n'a pas marcher
 
     //128*128
     $rep_size="128-128";
     $size=128;
-    $redi128=fct_redim2($size,$name,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
+    $redi128=fct_redim2($size,$name,$rep_size);//doit etre = à "success" si non le redimensionnement n'a pas marcher
 
     //400*500
     $rep_size="400-500";
     $size=400;
-    $redi400=fct_redim3($size,$name,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
+    $redi400=fct_redim3($size,$name,$rep_size);//doit etre = à "success" si non le redimensionnement n'a pas marcher
 
     $temp_img="model/uploads/temp/".$name;
     unlink($temp_img);
