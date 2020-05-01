@@ -79,143 +79,162 @@
 </body>
 </html>
 
-<!-- récupération des données depuis le fichier json -->
-<script src="images.js"></script>
 
 <!-- script de génération du poster -->
 <script type="text/javascript">
+	//Variables globales
+	var aI= new Array();
 
-	//convertir en vrai JSON
-		var JSimg = JSON.stringify(aimages, null, "\t");
-	//convertir en tableau, liste ordres
-		var aI = JSON.parse(JSimg);
-	
 	//Récupération de la place via le lien html
-		//écriture du paramètre ?id=
-		var chaine = window.location.search;
+	//écriture du paramètre ?id=
+	var chaine = window.location.search;
 
-		//on retire jusqu'au signe =
-		n = chaine.indexOf("=");
-		chaine = chaine.substring(n + 1, 10);
-		document.getElementById("search").value = chaine;
-
-		//emplacement sur le globe de l'image qu'on veut charger
-		var placeGlobe = parseInt(chaine);
-
-		//emplacement de l'enfant dans le tableau
-		var placeTableau = fnRecherche(placeGlobe);
-
-		if(placeTableau == undefined){
-			alert("Numéro de place invalide !");
-		}
-
-		//variables pour faciliter l'appel des informations de l'enfant
-		var imgID = aI[placeTableau].IDImage;
-		var imgPseudo = aI[placeTableau].Pseudo;
-		var imgDroit = aI[placeTableau].Droit;
-		var imgSlogan = aI[placeTableau].Slogan;
+	//on retire jusqu'au signe =
+	n = chaine.indexOf("=");
+	chaine = chaine.substring(n + 1, 10);
+	document.getElementById("search").value = chaine;
 
 	//Lien avec le canvas
-		var canvas = document.getElementById("canvas1"); //pour écrire dans le canvas
-		var ctx = canvas.getContext("2d");
-		var nbImagesChargees = 0;
+	var canvas = document.getElementById("canvas1"); //pour écrire dans le canvas
+	var ctx = canvas.getContext("2d");
 
-	//Lien vers les images
-		//variable pour l'image de fond
-		var imgFond = new Image();			//on ne sait pas encore laquelle charger
-		//variable pour l'image de l'enfant
-		var imgPortrait = new Image(); 		//on ne sait pas encore laquelle charger
-		imgFond.src = "../images/Souvenir_Maquette_Vertical_Leger.png";
-		imgFond.onload = function () { fnAffiche() };
+	//emplacement sur le globe de l'image qu'on veut charger
+	var placeGlobe = parseInt(chaine);
+	var placeTableau=0;//provisoire
+	//variables pour faciliter l'appel des informations de l'enfant, pour l'instant vides
+	var imgID = "";
+	var imgPseudo = "";
+	var imgDroit = "";
+	var imgSlogan = "";
+	var flagChargement=0;// le chargement du fond=1, des données=2, de l'image de l'enfant=4
 
-		//définition de l'image d'enfant à charger
-		imgPortrait.src = fnChemin(placeTableau);
+	//variable pour l'image de fond
+	var imgFond = new Image();			//on ne sait pas encore laquelle charger
+	//variable pour l'image de l'enfant
+	var imgPortrait = new Image(); 		//on ne sait pas encore laquelle charger
+	imgFond.src = "../images/Souvenir_Maquette_Vertical_Leger.png";
+	imgFond.onload = function () {
+		flagChargement+=1;
+		fnAffiche();
+	};
 
-		//chargement du portrait de l'enfant
-		imgPortrait.onload = function () { fnAffiche(); }
+	//Appeler le fichier json
+	var requestURL = '../model/dataStorage/images.json';// pour l'instant sans chemin
+	var request = new XMLHttpRequest();
+	request.open('POST', requestURL);
+	request.responseType = 'json';
+	request.send();
 
+	request.onload = function() {
+		flagChargement+=2;
+		var aimages = request.response;
+		//convertir en vrai JSON
+		var JSimg = JSON.stringify(aimages, null, "\t");
+		//convertir en tableau, liste ordres
+		aI = JSON.parse(JSimg);
+
+		//emplacement de l'enfant dans le tableau
+		placeTableau = fnRecherche(placeGlobe);
+
+		if (placeTableau == undefined) {
+			alert("Numéro de place invalide !");
+		} else {
+
+			//variables pour faciliter l'appel des informations de l'enfant
+			imgID = aI[placeTableau].IDImage;
+			imgPseudo = aI[placeTableau].Pseudo;
+			imgDroit = aI[placeTableau].Droit;
+			imgSlogan = aI[placeTableau].Slogan;
+
+			//Lien vers les images
+			//définition de l'image d'enfant à charger
+			imgPortrait.src = fnChemin(placeTableau);
+
+			//chargement du portrait de l'enfant
+			imgPortrait.onload = function () {
+				flagChargement += 4;
+				fnAffiche();
+			}
+		}
+	}
 // Ensemble des fonctions appelées dans le script
 	
 	//Procédure qui génère le souvenir personnalisé
-		function fnAffiche() {
-			//ajoute 1 chaque fois qu'on l'appelle, c'est-à-dire au moment où une image est chargée
-				nbImagesChargees++;
+	function fnAffiche() {
 
-			//si le fond et le portrait sont chargés
-				if (nbImagesChargees >= 2) {
-					//afficher le fond
-						ctx.drawImage(imgFond, 0, 0, 1260, 1782);
+		//si le fond, le portrait et les données sont chargées
+		if (flagChargement == 7) {
+			//afficher le fond
+			ctx.drawImage(imgFond, 0, 0, 1260, 1782);
 
-					//charger le portrait dans son cadre
-						ctx.drawImage(imgPortrait, 597, 399, 540, 675);
+			//charger le portrait dans son cadre
+			ctx.drawImage(imgPortrait, 597, 399, 540, 675);
 
-					//afficher le pseudo de l'enfant
-						//pseudo qui doit être affiché -> récupéré depuis l'ID
-							var pseudo = imgPseudo;
-						//police et taille du texte
-							ctx.font = "small-caps 42px Source Sans Pro Black";
-						//couleur du texte (remplissage)
-							ctx.fillStyle = '#006CB7';
-						//couleur du texte (contour)
-							ctx.strokeStyle = '#006CB7';
-						//alignement du texte (vertical et horizontal)
-							ctx.textAlign = "center";
-							ctx.textBaseline = "center";
-						//vérification de la longueur du pseudo
-							pseudo = fnLimit("catPseudo", pseudo);
-						//positionnement du texte
-							ctx.fillText(pseudo, 871, 1208);
+			//afficher le pseudo de l'enfant
+			//pseudo qui doit être affiché -> récupéré depuis l'ID
+			var pseudo = imgPseudo;
+			//police et taille du texte
+			ctx.font = "small-caps 42px Source Sans Pro Black";
+			//couleur du texte (remplissage)
+			ctx.fillStyle = '#006CB7';
+			//couleur du texte (contour)
+			ctx.strokeStyle = '#006CB7';
+			//alignement du texte (vertical et horizontal)
+			ctx.textAlign = "center";
+			ctx.textBaseline = "center";
+			//vérification de la longueur du pseudo
+			pseudo = fnLimit("catPseudo", pseudo);
+			//positionnement du texte
+			ctx.fillText(pseudo, 871, 1208);
 
+			//afficher le droit choisi par l'enfant
+			//droit qui doit être affiché -> récupéré depuis ^droit
+			var droit = imgDroit;
+			//police et taille du texte
+			ctx.font = "22pt Source Sans Pro Regular";
+			//couleur du texte (remplissage)
+			ctx.fillStyle = '#000000';
+			//couleur du texte (contour)
+			ctx.strokeStyle = '#000000';
+			//alignement du texte (vertical et horizontal)
+			ctx.textAlign = "center";
+			ctx.textBaseline = "center";
+			//vérification de la longueur du droit
+			droit = fnLimit("catDroit", droit);
+			//positionnement du texte
+			ctx.fillText(droit, 479, 1458);
 
-					//afficher le droit choisi par l'enfant
-						//droit qui doit être affiché -> récupéré depuis ^droit
-							var droit = imgDroit;
-						//police et taille du texte
-							ctx.font = "22pt Source Sans Pro Regular";
-						//couleur du texte (remplissage)
-							ctx.fillStyle = '#000000';
-						//couleur du texte (contour)
-							ctx.strokeStyle = '#000000';
-						//alignement du texte (vertical et horizontal)
-							ctx.textAlign = "center";
-							ctx.textBaseline = "center";
-						//vérification de la longueur du droit	
-							droit = fnLimit("catDroit", droit);
-						//positionnement du texte
-							ctx.fillText(droit, 479, 1458);
+			//afficher le slogan de l'enfant
+			//slogan qui doit être affiché -> récupéré depuis le slogan
+			var slogan = imgSlogan;
+			//police et taille du texte
+			ctx.font = "22pt Source Sans Pro Regular";
+			//Pas de changement de couleur -> Couleur identique au droit
+			//alignement du texte (vertical et horizontal)
+			ctx.textAlign = "center";
+			ctx.textBaseline = "center";
+			//vérification de la longueur du slogan
+			slogan = fnLimit("catSlogan", slogan);
+			//positionnement du texte
+			ctx.fillText(slogan, 479, 1539);
 
-
-					//afficher le slogan de l'enfant
-						//slogan qui doit être affiché -> récupéré depuis le slogan
-							var slogan = imgSlogan;
-						//police et taille du texte
-							ctx.font = "22pt Source Sans Pro Regular";
-						//Pas de changement de couleur -> Couleur identique au droit
-						//alignement du texte (vertical et horizontal)
-							ctx.textAlign = "center";
-							ctx.textBaseline = "center";
-						//vérification de la longueur du slogan
-							slogan = fnLimit("catSlogan", slogan);
-						//positionnement du texte
-							ctx.fillText(slogan, 479, 1539);
-
-					//afficher le numéro de place de l'enfant
-						//place qui doit être affiché -> récupéré depuis la place
-							var place = "Place n° " + placeGlobe;
-						//police et taille du texte	
-							ctx.font = "16pt Source Sans Pro Regular";
-						//alignement du texte (vertical et horizontal)
-							ctx.textAlign = "right";
-							ctx.textBaseline = "center";
-						//positionnement du texte
-							ctx.fillText(place, 803, 1613);
-				}
+			//afficher le numéro de place de l'enfant
+			//place qui doit être affiché -> récupéré depuis la place
+			var place = "Place n° " + placeGlobe;
+			//police et taille du texte
+			ctx.font = "16pt Source Sans Pro Regular";
+			//alignement du texte (vertical et horizontal)
+			ctx.textAlign = "right";
+			ctx.textBaseline = "center";
+			//positionnement du texte
+			ctx.fillText(place, 803, 1613);
 		}
+	}
 
 	//Procédure pour abréger les textes qui sont trop conséquents
 		function fnLimit(catégorie, txt) {
 			//variable pour stocker la valeur de la longueur du texte
-				var mesure = ctx.measureText(txt).width;
+			var mesure = ctx.measureText(txt).width;
 			//variables pour récupérer les caractères excédant la limite de caractères
 				var txtReste = "";
 				var mot = "";
@@ -317,25 +336,25 @@
 		}
 
 	//Procédure pour recherche l'image associée à la place.
-		function fnRecherche(numeroPlace) {
-			//parcourir le tableau pour trouver l'ID
-				var emplacementTableau;
-				if(numeroPlace < 5000){
-					//boucle pour parcourir le tableau afin de trouver la correspondance
-					for (var i = 0; i < aI.length; i++) {
-							
-						//vérifie la correspondance entre le numéro donné et l'ID de la place
-						if (aI[i].IDPlace == numeroPlace) {
-							//enregistre le nom de l'image
-							emplacementTableau = i;
-							return emplacementTableau;
-						}
-					}
-				}		
+	function fnRecherche(numeroPlace) {
+		//parcourir le tableau pour trouver l'ID
+		var emplacementTableau;
+		if(numeroPlace < 5000){
+			//boucle pour parcourir le tableau afin de trouver la correspondance
+			for (var i = 0; i < aI.length; i++) {
 
-				emplacementTableau = undefined;
-				//window.location =  adresse boutique ou autre page erreur -> a la place de l'alerte
-
-				return emplacementTableau;
+				//vérifie la correspondance entre le numéro donné et l'ID de la place
+				if (aI[i].IDPlace == numeroPlace) {
+					//enregistre le nom de l'image
+					emplacementTableau = i;
+					return emplacementTableau;
+				}
+			}
 		}
+
+		emplacementTableau = undefined;
+		//window.location =  adresse boutique ou autre page erreur -> a la place de l'alerte
+
+		return emplacementTableau;
+	}
 </script>

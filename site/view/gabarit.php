@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/cssinhtml.css">
     <script src="js/Loginstyle.js"></script>
     <script src="js/Media.js"></script>
-    <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png" />
+    <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png"/>
 </head>
 
 <body class="bodyglob">
@@ -43,8 +43,6 @@
 </div>
 
 
-
-
 <div class="test">
 
     <?= $content ?>
@@ -59,7 +57,8 @@
         </div>
         <p id="closeHelp" class="closeButton" onclick="closeHelp()">X</p>
         <div id="direction">
-            <a href="?action=testsecret" target="_blank"> <img src="images/arrowKeys.png" height="50" width="80" alt="touches directions" class="default"/></a>
+            <a href="?action=testsecret" target="_blank"> <img src="images/arrowKeys.png" height="50" width="80"
+                                                               alt="touches directions" class="default"/></a>
             <p id="aideDeplacementSouris"> Déplacez vous en maintenant le clic gauche de la souris.</p>
         </div>
         <div id="Aidereste" class="Aide">
@@ -80,9 +79,15 @@
             <h3 class="credit" a href="">Credit</h3>
         </div>
         <p id="closeCredit" class="closeButton" onclick="closeHelp()">X</p>
+        <!-- Groupe 1.0 -->
         <img id="imageGroupe" src="images/photoGroupe.png" alt="Development Group">
         <div id="Groupe">
             <p id="groupeMembresContenu"></p>
+        </div>
+        <!-- Groupe 2.0 -->
+        <img id="imageGroupe" src="images/photoGroupe2.0.jpg" alt="Development Group">
+        <div id="Groupe">
+           Benoit Pierrehumbert, Kevin Vaucher, Simon Cuany
         </div>
         <div class="languageSelect">
             <span id="creditSpan" onclick="aideFr()">Help</span>
@@ -93,40 +98,47 @@
 <div id="sideBar" class="GUI" style="height: 560px">
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
-    <div id="onClickDetails" style="overflow-y: scroll; height:550px;" >
-        <img style="margin-top: 250px;width:260px;height:325px;" id="childImage">
+    <div id="onClickDetails" style="overflow-y: scroll; height:550px;">
+        <img style="margin-top: 150px;width:260px;height:325px;" id="childImage">
         <span id="separator"></span>
 
+        <h6 class="infosuppleft" align="left"><b>Pseudo</b> : <span id="childPseudo"></span></h6>
+        <h6 class="infosuppleft" align="left"><b>Slogan</b> : <span id="childCitation"></span></h6>
         <div id="description">
             <table class="tablehome-infos">
                 <tr>
                     <td>
-                        <h6 class="infosuppleft" align="left"><b>Pseudo</b> : <span id="childPseudo"></span></h6>
-                        <h6 class="infosuppleft" align="left"><b>Slogan</b> : <span id="childCitation"></span></h6>
-                        <h6 class="infosuppleft" align="left"><b>Droit</b> : <span id="childRight"></span></h6>
-                        <h6 class="infosuppleft" align="left"><b>Pays</b> : <span id="childPays"></span></h6>
+                        <h6 class="infosuppleft" align="center"><b>Droit</b> : <span id="childRight"></span></h6>
 
-                        <h6 class="infosuppleft" align="left"><b>Ville</b> : <span id="childVille"></span></h6>
-                        <h6 class="infosuppleft" align="left"><b>Équipe</b> : <span id="childEquipe"></span></h6>
-                        <h6 class="infosuppleft" align="left"><b>Média</b> : <a class="medialink" target="_blank" id="childMedia"></a></span></h6>
-                        <h6 class="infosuppleft" align="left"><b>Année de production</b> : <span id="childAnneeprod"></span></h6>
-                        <h6 class="infosuppleft" align="left"><b>ID de la place</b> : <span id="childIDPlace"></span></h6>
+                        <h6 class="infosuppleft" align="center"><b>Équipe</b> : <span id="childEquipe"></span> |
+                            <b>Pays</b> : <span id="childPays">|</span> | <b>Ville</b> : <span id="childVille"></span>
+                        </h6>
+                        <h6 class="infosuppleft" align="center"><b>Média</b> : <a class="medialink" target="_blank"
+                                                                                id="childMedia"></a></span> <b>Année de
+                                production</b> : <span id="childAnneeprod"> <b>ID de la place</b> : <span
+                                        id="childIDPlace"></span></span></h6>
+
+                        <h6 class="infosuppleft" align="left"></h6>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="50" rows="4"></textarea></td>
                 </tr>
-                <?php if ($_SESSION['fail']==false){echo "
+                <?php if ($_SESSION['fail'] == false) {
+                    echo "
                     <tr>
                     
                         <td><a id=\"childEdit\" target=\"_blank\"><button class=\"editbuttonglobe\">Edit</button></a></td>
                     </tr>
-                ";} ?>
+                ";
+                } ?>
 
 
             </table>
 
-            <?php if ($_SESSION['fail']==false){echo "";} ?>
+            <?php if ($_SESSION['fail'] == false) {
+                echo "";
+            } ?>
         </div>
     </div>
     <div id="onSearchDetails" class="flexContainer">
@@ -178,6 +190,7 @@ void main() {
 }
 
 
+
 </script>
 <script type="application/x-glsl" id="sky-fragment">
 uniform sampler2D texture;
@@ -189,8 +202,8 @@ void main() {
 }
 
 
-</script>
 
+</script>
 
 
 <script src="js/globescope.js"></script>
