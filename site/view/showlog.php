@@ -24,10 +24,11 @@ if ($_SESSION['fail'] == false) {
     <h1 class="titleshowchild">Logs</h1>
     <br><br><br><br><br>
     <?php
+    $log=array_reverse($log);
         foreach ($log as $item){
     ?>
-            <h4><?php echo date('d/m/Y H:i:s', $item['date']);  ?>IDimages=<?= $item['IDimages']?> (<?= $item['state']?>): <?= $item['what']?>| Before: <?= $item['before']?>|
-                 After: <?= $item['after']?></h4>
+            <h4><b><?php echo date('d/m/Y H:i:s', $item['date']);  ?></b> IDimages=<b><?= $item['IDimages']?></b> (<?= $item['state']?>): <?= $item['what']?>
+                 <?php if ($item['before']!=''){echo "| Before: ".$item['before'];}?>  <?php if ($item['after']!=''){echo "| After: ".$item['after'];}?></h4>
 <?php }?>
 
     <?php

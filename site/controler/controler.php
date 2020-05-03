@@ -370,7 +370,7 @@ function uploadfile($IDimage){
                 "after"=>"media/".$IDimage.".".$file_ext,
                 "what"=>"Changing Media upload : $file_name",
                 "IDimages"=>$IDimage,
-                "state"=>"succes",
+                "state"=>"Succes",
                 "date"=>strtotime("now")+7200
             ];
             putLog($log);
@@ -577,7 +577,7 @@ function resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualit
         $_SESSION['errors_redi'][]= 'no_img';
     endif;
 }//fonction de redimensionement
-function fct_redim($size,$name,$rep_size,$name_dst){
+function fct_redim($size,$rep_size,$name_dst){
     $rep_Dst='images/'.$rep_size.'/';
     $img_Dst=$name_dst;
     $img_Src=$name_dst;
@@ -610,7 +610,7 @@ function fct_redim($size,$name,$rep_size,$name_dst){
         return 'success';
     }
 }//fonction pour le redimensionement 64*64
-function fct_redim2($size,$name,$rep_size,$name_dst){
+function fct_redim2($size,$rep_size,$name_dst){
     $rep_Dst='images/'.$rep_size.'/';
     $img_Dst=$name_dst;
     $img_Src=$name_dst;
@@ -643,7 +643,7 @@ function fct_redim2($size,$name,$rep_size,$name_dst){
         return 'success';
     }
 }//fonction pour le redimensionement 128*128
-function fct_redim3($size,$name,$rep_size,$name_dst){
+function fct_redim3($size,$rep_size,$name_dst){
     $rep_Dst='images/'.$rep_size.'/';
     $img_Dst=$name_dst;
     $img_Src=$name_dst;
@@ -704,7 +704,7 @@ function redmi3size($name,$IDimage,$file_ext){
             "before"=>"",
             "after"=>"",
             "what"=>"Changing Image : IDimages = ".$name,
-            "IDimages"=>$name,
+            "IDimages"=>$IDimage,
             "state"=>"Succes",
             "date"=>strtotime("now")+7200
         ];
@@ -715,6 +715,7 @@ function redmi3size($name,$IDimage,$file_ext){
             "before"=>"",
             "after"=>"",
             "what"=>"Changing Image : IDimages = ".$name,
+            "IDimages"=>$IDimage,
             "state"=>"Fail",
             "date"=>strtotime("now")+7200
         ];
