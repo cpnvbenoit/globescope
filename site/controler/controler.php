@@ -253,7 +253,7 @@ function backup()
         "Titre" =>  $_SESSION['valuetitre'],
         "Anneeprod" =>$_SESSION['valueanneeprod'],
         "desc" => $_SESSION['valuedesc'],
-        "date"=>strtotime("now")+7200
+        "date"=>strtotime("now")
     ];
     putBackup($backup);
 }
@@ -360,7 +360,7 @@ function uploadfile($IDimage){
                 "Titre" => "-",
                 "Anneeprod" =>"-",
                 "desc" =>"-",
-                "date"=>strtotime("now")+7200
+                "date"=>strtotime("now")
             ];
             putBackup($backup);
             //log
@@ -371,7 +371,7 @@ function uploadfile($IDimage){
                 "what"=>"Changing Media upload : $file_name",
                 "IDimages"=>$IDimage,
                 "state"=>"Succes",
-                "date"=>strtotime("now")+7200
+                "date"=>strtotime("now")
             ];
             putLog($log);
             $compteur=0;
@@ -422,7 +422,7 @@ function uploadfile($IDimage){
                 "what"=>"Changing Media upload : $file_name",
                 "IDimages"=>$IDimage,
                 "state"=>"Fail",
-                "date"=>strtotime("now")+7200
+                "date"=>strtotime("now")
             ];
             putLog($log);
         }
@@ -706,7 +706,7 @@ function redmi3size($name,$IDimage,$file_ext){
             "what"=>"Changing Image : IDimages = ".$name,
             "IDimages"=>$IDimage,
             "state"=>"Succes",
-            "date"=>strtotime("now")+7200
+            "date"=>strtotime("now")
         ];
         putLog($log);
         require_once 'view/succes.php';
@@ -717,7 +717,7 @@ function redmi3size($name,$IDimage,$file_ext){
             "what"=>"Changing Image : IDimages = ".$name,
             "IDimages"=>$IDimage,
             "state"=>"Fail",
-            "date"=>strtotime("now")+7200
+            "date"=>strtotime("now")
         ];
 
         require_once 'view/fail.php';
@@ -732,7 +732,7 @@ $log[]=[
     "what"=>"Changing Image : IDimages = ".$name,
     "IDimages"=>$name,
     "state"=>"succes",
-    "date"=>strtotime("now")+7200
+    "date"=>strtotime("now")
 ];
 putLog($log);
 

@@ -197,6 +197,7 @@ ob_start();
                 }else{
                     echo "<a href=\"index.php?action=editchild&IDimage=".$_SESSION['valueidimage']."\" id=\"cmd_uploadway\"><span class='cmd_uploadway'>Upload</span></a>";
                 }?>
+                <a href="<?= $_SESSION['valuemedia'] ?>" class="link Apercu" target="_blank">Aperçu</a>
             </td>
         </tr>
         <tr>
