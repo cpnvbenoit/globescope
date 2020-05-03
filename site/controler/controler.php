@@ -683,17 +683,17 @@ function redmi3size($name,$IDimage,$file_ext){
     //64*64
     $rep_size="64-64";
     $size=64;
-    $redi64=fct_redim($size,$name,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
+    $redi64=fct_redim($size,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
 
     //128*128
     $rep_size="128-128";
     $size=128;
-    $redi128=fct_redim2($size,$name,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
+    $redi128=fct_redim2($size,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
 
     //400*500
     $rep_size="400-500";
     $size=400;
-    $redi400=fct_redim3($size,$name,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
+    $redi400=fct_redim3($size,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
 
     $temp_img="model/uploads/temp/".$name;
     unlink($temp_img);
