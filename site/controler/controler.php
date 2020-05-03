@@ -68,6 +68,18 @@ function showBackup()
     }
 
 }
+function showLog()
+{
+
+    if (isset($_SESSION['username']) == true) {
+        $log = getLog();
+        require_once 'view/showlog.php';
+    } else {
+        $_SESSION['flashmessage'] = "Pas touche !";
+        require 'view/home.php';
+    }
+
+}
 function GetData(){
     //Get JSON Params
 
@@ -565,10 +577,10 @@ function resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualit
         $_SESSION['errors_redi'][]= 'no_img';
     endif;
 }//fonction de redimensionement
-function fct_redim($size,$name,$rep_size){
+function fct_redim($size,$name,$rep_size,$name_dst){
     $rep_Dst='images/'.$rep_size.'/';
-    $img_Dst=$name;
-    $img_Src=$name;
+    $img_Dst=$name_dst;
+    $img_Src=$name_dst;
     $rep_Src='model/uploads/temp/';
     $image_path=$rep_Src.$img_Src;
     $image_dest=$rep_Dst.$img_Dst;
@@ -598,10 +610,10 @@ function fct_redim($size,$name,$rep_size){
         return 'success';
     }
 }//fonction pour le redimensionement 64*64
-function fct_redim2($size,$name,$rep_size){
+function fct_redim2($size,$name,$rep_size,$name_dst){
     $rep_Dst='images/'.$rep_size.'/';
-    $img_Dst=$name;
-    $img_Src=$name;
+    $img_Dst=$name_dst;
+    $img_Src=$name_dst;
     $rep_Src='model/uploads/temp/';
     $image_path=$rep_Src.$img_Src;
     $image_dest=$rep_Dst.$img_Dst;
@@ -631,10 +643,10 @@ function fct_redim2($size,$name,$rep_size){
         return 'success';
     }
 }//fonction pour le redimensionement 128*128
-function fct_redim3($size,$name,$rep_size){
+function fct_redim3($size,$name,$rep_size,$name_dst){
     $rep_Dst='images/'.$rep_size.'/';
-    $img_Dst=$name;
-    $img_Src=$name;
+    $img_Dst=$name_dst;
+    $img_Src=$name_dst;
     $rep_Src='model/uploads/temp/';
     $image_path=$rep_Src.$img_Src;
     $image_dest=$rep_Dst.$img_Dst;
@@ -667,21 +679,21 @@ function fct_redim3($size,$name,$rep_size){
 }//fonction pour le redimensionement 400*500
 function redmi3size($name,$IDimage,$file_ext){
     unset($_SESSION['errors_redi']);
-
+    $name_dst=$IDimage.".".$file_ext;
     //64*64
     $rep_size="64-64";
     $size=64;
-    $redi64=fct_redim($size,$name,$rep_size);//doit etre = à "success" si non le redimensionnement n'a pas marcher
+    $redi64=fct_redim($size,$name,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
 
     //128*128
     $rep_size="128-128";
     $size=128;
-    $redi128=fct_redim2($size,$name,$rep_size);//doit etre = à "success" si non le redimensionnement n'a pas marcher
+    $redi128=fct_redim2($size,$name,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
 
     //400*500
     $rep_size="400-500";
     $size=400;
-    $redi400=fct_redim3($size,$name,$rep_size);//doit etre = à "success" si non le redimensionnement n'a pas marcher
+    $redi400=fct_redim3($size,$name,$rep_size,$name_dst);//doit etre = à "success" si non le redimensionnement n'a pas marcher
 
     $temp_img="model/uploads/temp/".$name;
     unlink($temp_img);

@@ -10,7 +10,10 @@ if ($_SESSION['fail'] == false) {
     $title = "Backup";
     ob_start();
     ?>
-
+    <style>
+        .backup{display: none};
+        .log{margin-left: -123px}
+    </style>
     <h1 class="titleshowchild">Afficher les enfants (Backup)</h1>
     <br><br><br><br><br>
     <table class="table" border="1" align="center" style="border: #BCDC53">

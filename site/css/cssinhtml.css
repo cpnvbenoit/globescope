@@ -92,11 +92,15 @@
 }
 .UnlockallCMD{
     position: absolute;
-    margin-left: 120px;
+    margin-left: 165px;
 }
 .backup{
     position: absolute;
     margin-left: 123px;
+}
+.log{
+    position: absolute;
+    margin-left: 210px;
 }
 
 .tablehome-infos{

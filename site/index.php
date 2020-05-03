@@ -86,6 +86,9 @@ if (isset($action)) {
         case 'showBackup';
             showBackup();
             break;
+        case 'showLog';
+            showLog();
+            break;
         case 'showchildsSearch';
             showchildsSearch();
             break;
