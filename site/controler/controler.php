@@ -483,7 +483,6 @@ function resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualit
      *                             'resize_error' => le redimensionnement a échoué
      */
     // Vérification que le fichier existe
-    var_dump($image_dest);
     if(!file_exists($image_path)):
         $_SESSION['errors_redi'][]='Wrong_path';
     endif;
@@ -547,8 +546,6 @@ function resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualit
                     $extension_img="jpg";
                     break;
             }
-        var_dump($size);
-        var_dump($extension_img);
             // On remplace l'image en fonction de l'extension
             switch($extension){
                 case 'jpg':
