@@ -102,21 +102,19 @@
         <img style="margin-top: 150px;width:260px;height:325px;" id="childImage">
         <span id="separator"></span>
 
-        <h6 class="infosuppleft" align="left"><b>Pseudo</b> : <span id="childPseudo"></span></h6>
-        <h6 class="infosuppleft" align="left"><b>Slogan</b> : <span id="childCitation"></span></h6>
+        <h6 class="infosuppleft" align="left">Pseudo : <b><span id="childPseudo"></span></b></h6>
+        <h6 class="infosuppleft" align="left">Slogan : <b><span id="childCitation"></span</b>></h6>
         <div id="description">
             <table class="tablehome-infos">
                 <tr>
                     <td>
-                        <h6 class="infosuppleft" align="center"><b>Droit</b> : <span id="childRight"></span></h6>
+                        <h6 class="infosuppleft" align="center">Droit : <b><span id="childRight"></span></b></h6>
 
-                        <h6 class="infosuppleft" align="center"><b>Équipe</b> : <span id="childEquipe"></span> |
-                            <b>Pays</b> : <span id="childPays">|</span> | <b>Ville</b> : <span id="childVille"></span>
+                        <h6 class="infosuppleft" align="center">Équipe : <b><span id="childEquipe"></span></b> |
+                            <b>Pays</b> : <span id="childPays">|</span> | Ville : <b><span id="childVille"></span></b>
                         </h6>
-                        <h6 class="infosuppleft" align="center"><b>Média</b> : <a class="medialink" target="_blank"
-                                                                                id="childMedia"></a></span> <b>Année de
-                                production</b> : <span id="childAnneeprod"> <b>ID de la place</b> : <span
-                                        id="childIDPlace"></span></span></h6>
+                        <h6 class="infosuppleft" align="center">Média : <a class="medialink" target="_blank" id="childMedia"></a> Année de production : <b><span id="childAnneeprod"></b>ID de la place : <b><span
+                                        id="childIDPlace"></span></b></h6>
 
                         <h6 class="infosuppleft" align="left"></h6>
                     </td>

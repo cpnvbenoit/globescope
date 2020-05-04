@@ -185,7 +185,7 @@
                                             data-ep-bf95e=h><span
                                                 data-ep-ab883=fo data-ep-bf95e=.c><span data-ep-bf95e=dm
                                                                                         data-ep-ab883=&#64;&#101;></span></span></span></span></a><br/>2016&nbsp;©
-                            Enfants du Monde | Gestion du site par App'n Web | Conception &amp; Design par Simon Cuany
+                            Enfants du Monde | Gestion du site par App'n Web | Conception &amp; Design par Benoit Pierrehumbert & Simon Cuany
                         </p>
                     </div>
                 </div>
