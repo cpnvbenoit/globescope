@@ -21,7 +21,7 @@ if ($_SESSION['fail'] == false) {
         <th>
             Date (j-m-a)
         </th>
-        <th width="220px">
+        <th>
             Latitude / Longitude / Meridien
         </th>
         <th>
@@ -45,11 +45,14 @@ if ($_SESSION['fail'] == false) {
         <th>
             Pays
         </th>
-        <th width="8%">
+        <th>
             Ville
         </th>
         <th>
             Media
+        </th>
+        <th>
+            Titre
         </th>
         <th>
             Année-production
@@ -64,7 +67,7 @@ if ($_SESSION['fail'] == false) {
         $childs=array_reverse($childs);
         foreach ($childs as $child) {  ?>
             <tr><td>
-                    <?php echo date('d/m/Y H:i:s', $child['date']);  ?>
+                    <?php echo date('d/m/Y H:i:s', $child['date']+7200);  ?>
                 </td>
                 <td>
                     <p><?= $child['lat'] ?> / <?= $child['lon'] ?> / <?= $child['mer'] ?></p>
@@ -79,13 +82,13 @@ if ($_SESSION['fail'] == false) {
                     <p><?= $child['Pseudo'] ?></p>
                 </td>
                 <td>
-                    <p style="width: 400px"><?= $child['Droit'] ?></p>
+                    <p><?= $child['Droit'] ?></p>
                 </td>
                 <td>
-                    <p style="width: 400px"><?= $child['Slogan'] ?></p>
+                    <p><?= $child['Slogan'] ?></p>
                 </td>
                 <td>
-                    <p class="scTeam"><?= $child['Team'] ?></p>
+                    <p><?= $child['Team'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['Pays'] ?></p>
@@ -95,6 +98,9 @@ if ($_SESSION['fail'] == false) {
                 </td>
                 <td>
                     <p><?= $child['Media'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['Titre'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['Anneeprod'] ?></p>

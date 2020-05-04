@@ -335,7 +335,7 @@ function uploadfile($IDimage){
         $file_tmp =$_FILES['media']['tmp_name'];
         $file_type=$_FILES['media']['type'];
         $file_ext=strtolower(end(explode('.',$_FILES['media']['name'])));
-
+        $file_title=substr($_FILES['media']['name'],0,-strlen($file_ext)-1);
 
         if($file_size > 10485760){
             $errors='Le fichier ne doit pas dépasser 10 MB';
@@ -357,7 +357,7 @@ function uploadfile($IDimage){
                 "Pays" => "-",
                 "Ville" => "-",
                 "Media" => "media/".$IDimage.".".$file_ext,
-                "Titre" => "-",
+                "Titre" => $_SESSION['valuetitre'],
                 "Anneeprod" =>"-",
                 "desc" =>"-",
                 "date"=>strtotime("now")
@@ -366,11 +366,11 @@ function uploadfile($IDimage){
             //log
             $log=getLog();
             $log[]=[
-                "before"=>$_SESSION['valuemedia'],
-                "after"=>"media/".$IDimage.".".$file_ext,
+                "before"=>$_SESSION['valuetitre'],
+                "after"=>$file_title,
                 "what"=>"Changing Media upload : $file_name",
                 "IDimages"=>$IDimage,
-                "state"=>"Succes",
+                "state"=>"Success",
                 "date"=>strtotime("now")
             ];
             putLog($log);
@@ -394,7 +394,7 @@ function uploadfile($IDimage){
                         "Pays" =>  $_SESSION['valuespays'],
                         "Ville" =>  $_SESSION['valueville'],
                         "Media" => "media/".$IDimage.".".$file_ext,
-                        "Titre" => $_SESSION['valuetitre'],
+                        "Titre" => $file_title,
                         "Anneeprod" => $_SESSION['valueanneeprod'],
                         "desc" => $_SESSION['valuedesc'],
                     ];
@@ -602,7 +602,7 @@ function fct_redim($size,$rep_size,$name_dst,$IDimage){
             $new_height=500;
             break;
     }//set var $Wmax, $Hmax
-    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 100);
+    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 90);
     //rename ($rep_Dst.$name, $rep_Dst.$name_dst);
     if ($result!='success'){
         return 'fail';
@@ -635,7 +635,7 @@ function fct_redim2($size,$rep_size,$name_dst,$IDimage){
             $new_height=500;
             break;
     }//set var $Wmax, $Hmax
-    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 100);
+    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 90);
     //rename ($rep_Dst.$name, $rep_Dst.$name_dst);
     if ($result!='success'){
         return 'fail';
@@ -669,7 +669,7 @@ function fct_redim3($size,$rep_size,$name_dst,$IDimage){
             break;
     }//set var $Wmax, $Hmax
     $_SESSION['errors_redi'][]=$image_path;
-    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 100);
+    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 90);
 
     if ($result!='success'){
         return 'fail';
@@ -706,7 +706,7 @@ function redmi3size($name,$IDimage,$file_ext){
             "after"=>"",
             "what"=>"Changing Image : IDimages = ".$name,
             "IDimages"=>$IDimage,
-            "state"=>"Succes",
+            "state"=>"Success",
             "date"=>strtotime("now")
         ];
         putLog($log);
@@ -732,7 +732,7 @@ $log[]=[
     "after"=>"",
     "what"=>"Changing Image : IDimages = ".$name,
     "IDimages"=>$name,
-    "state"=>"succes",
+    "state"=>"success",
     "date"=>strtotime("now")
 ];
 putLog($log);

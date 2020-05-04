@@ -4,7 +4,7 @@ function init() {
     cmd_uploadway.addEventListener('click',upload)
 }
 function upload() {
-    var o = confirm("Si vous continuer, le lien déja présent du média sera écrasé. Voulez-vous vraiment continuer ?");
+    var o = confirm("Si vous continuer, les lien et titre déja présent du média seront écrasés. Voulez-vous vraiment continuer ?");
     if (o == true) {
         window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURIComponent,[k,v]=i.split("="),o[u(k)]=v&&u(v),o),{});
         var link ="index.php?action=uploadmedia&IDimage=";
