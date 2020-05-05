@@ -28,46 +28,47 @@ ob_start();
 </div>
 <h1 style=" position: absolute ; left: 42%">Afficher les enfants</h1><br><br>
 <h4 style="padding-left: 10px"> Rechercher par</h4>
-<div class="fixedth">
-    Meridien |
-</div>
+
+
+
+
 
 <table class="table" border="1" align="center" style="border: #BCDC53">
-    <thead >
-    <th width="220px">
-        Meridien / Latitude  / Longitude
+    <thead class="fixedth">
+    <th  class="gradientSCS">
+            <span>Meridien</span> <span>Latitude</span> <span>Longitude</span>
     </th>
-    <th>
+    <th class="rouge">
         IDPlace
     </th>
-    <th>
+    <th class="orange">
         IDImage
     </th>
-    <th>
+    <th class="violet">
         Pseudo
     </th>
-    <th>
+    <th class="bleu2">
         Droit
     </th>
-    <th>
+    <th class="vert2">
         Slogan
     </th>
-    <th>
+    <th class="jaune2">
         Team
     </th>
-    <th>
+    <th class="orange2">
         Pays
     </th>
-    <th width="8%">
+    <th class="rouge2" width="8%">
         Ville
     </th>
-    <th>
+    <th >
         Media
     </th>
     <th>
-        Année-production
+        Année
     </th>
-    <th>
+    <th >
         Résumé
     </th>
     <th>
@@ -75,15 +76,14 @@ ob_start();
     </th>
     </thead  align="center" >
     <tbody align="center">
-    acac
     <?php
     if (isset($search)){
         function cmp($a, $b)
         {
-            return strcmp($a["title"], $b["title"]);
+            return strcmp($a["sort"], $b["sort"]);
         }
 
-        //usort($search, "cmp");
+        usort($search, "cmp");
     foreach ($search as $child) {
         if ($child['inIDPlace']==true){$bc_color="rouge";}
         if ($child['inIDImage']==true){$bc_color="orange";}

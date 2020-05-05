@@ -158,29 +158,34 @@ function showchildsSearch()
                 if ($searchText == ['mer']) {
                     $in = true;
                     $inmer = true;
+                    $sort="a";
                 }
                 if ($searchText == ['lat']) {
                     $in = true;
                     $inlat = true;
+                    $sort="b";
                 }
                 if ($searchText == ['lon']) {
                     $in = true;
                     $inlon = true;
+                    $sort="c";
                 }
                 if ($searchText == ['IDPlace']) {
                     $in = true;
                     $inIDPlace = true;
+                    $sort="d";
                 }
                 if ($searchText == ['IDImage']) {
                     $in = true;
                     $inIDImage = true;
+                    $sort="e";
                 }
-                if (preg_match($searchText,$child['Pseudo'])){$in=true;$inPseudo=true;}//vague
-                if (preg_match($searchText,$child['Droit'])){$in=true;$inDroit=true;}//vague
-                if (preg_match($searchText,$child['Slogan'])){$in=true;$inSlogan=true;}//vague
-                if (preg_match($searchText,$child['Team'])){$in=true;$inTeam=true;}//vague
-                if (preg_match($searchText,$child['Pays'])){$in=true;$inPays=true;}//vague
-                if (preg_match($searchText,$child['Ville'])){$in=true;$inVille=true;}//vague
+                if (preg_match($searchText,$child['Pseudo'])){$in=true;$inPseudo=true;$sort="f";}//vague
+                if (preg_match($searchText,$child['Droit'])){$in=true;$inDroit=true;$sort="g";}//vague
+                if (preg_match($searchText,$child['Slogan'])){$in=true;$inSlogan=true;$sort="h";}//vague
+                if (preg_match($searchText,$child['Team'])){$in=true;$inTeam=true;$sort="i";}//vague
+                if (preg_match($searchText,$child['Pays'])){$in=true;$inPays=true;$sort="j";}//vague
+                if (preg_match($searchText,$child['Ville'])){$in=true;$inVille=true;$sort="k";}//vague
                 if ($in == true) {
                     $search[] = ["id" => $compteur,
                         "searchText"=> $_POST['searchText'],
@@ -196,6 +201,7 @@ function showchildsSearch()
                         "inTeam" => $inTeam,
                         "inPays" => $inPays,
                         "inVille" => $inVille,
+                        "sort"=>$sort,
                         "IDImage" => $child['IDImage'],
                         "mer" => $child['mer'],
                         "lat" => $child['lat'],
