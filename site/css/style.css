@@ -141,16 +141,20 @@ li a:hover:not(.active) {
 
 .imghome3 {
 
-    height: 300px;
+    height: 150px;
 
 }
 
 .body {
-    background-color: #F6F6F6;
+    background-color: white;
     font-family: 'Open Sans', sans-serif;
 
 }
-
+.menuhomepage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .imgshop {
     height: 300px;
     border: solid;
@@ -172,7 +176,7 @@ li a:hover:not(.active) {
 
 
 .imgup {
-    width: 12em;
+    width: 150px;
     padding-left: 22px;
 
 }
@@ -184,7 +188,7 @@ li a:hover:not(.active) {
 }
 
 .imgchoix {
-    margin: auto;
+
     background-color: #222222;
 }
 

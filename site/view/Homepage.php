@@ -18,50 +18,65 @@
 <body class="body">
 
 
-<br><div>
-<h1 align="center">Bienvenue sur la page d'accueil d'enfants du monde ! </h1>
+<br>
+<div>
+    <h1 align="center">Bienvenue sur la page d'accueil d'enfants du monde ! </h1>
 
 </div>
-
 
 
 <div>
     <label for="logoedm" class="labelup"><h3>Avec le Globe «Un Monde Plus Juste», les enfants défendent leurs
             droits</h3></label>
-    <a href="https://edm.mycpnv.ch/"><img src="https://edm.mycpnv.ch/images/Logo_bleu_RGB.png" class="imgup"
-                                          id="logoedm"> </a>
+
 
 </div>
+<div id=header-wrapper>
+    <div class="container-fluid inner ">
+        <div id=header-bg-internal>
+            <div class="inner clearfix">
+                <div class="divtable">
+                    <ul class="menuhomepage">
+                        <li style="background-color: white"><a href="https://edm.mycpnv.ch/"><img
+                                        src="https://edm.mycpnv.ch/images/Logo_bleu_RGB.png" class="imgup"
+                                        id="logoedm"> </a></li>
+                        <li><a href="https://www.edm.ch/fr/">Home</a></li>
+                        <li><a href="https://edm.mycpnv.ch/?action=home">Globe - EDM</a></li>
+                        <li><a href="https://edm.mycpnv.ch/boutique/">Boutique</a></li>
+                        <li><a href="https://edm.mycpnv.ch/forum/">Forum</a></li>
+                        <li><a href="https://www.edm.ch/fr/sensibilisation/projet-enfants-reporters">Les droits de
+                                l'enfant</a></li>
+                        <li><a href="https://fr.wikipedia.org/wiki/Concours">Concours</a></li>
+                        <!-- Pas de lien sur le site de EDM ! -->
+                        <li><a href="https://www.edm.ch/fr/sensibilisation/projet-un-monde-plus-juste">Un Monde Plus
+                                Juste</a></li>
+                        <li><a href="https://www.edm.ch/fr/media-publication">Les enquêtes</a></li>
+                        <li><a href="#" class="languagehome"> FR </a></li>
+                        <li><a href="#" class="languagehome"> EN </a></li>
+                        <li><a href="#" class="languagehome"> DE </a></li>
+
+                    </ul>
 
 
-<div class="divtable">
-    <ul class="menuhomepage">
-        <li><a href="https://www.edm.ch/fr/">Home</a></li>
-        <li><a href="https://edm.mycpnv.ch/?action=home">Globe - EDM</a></li>
-        <li><a href="https://edm.mycpnv.ch/boutique/">Boutique</a></li>
-        <li><a href="https://edm.mycpnv.ch/forum/">Forum</a></li>
-        <li><a href="https://www.edm.ch/fr/sensibilisation/projet-enfants-reporters">Les droits de l'enfant</a></li>
-        <li><a href="https://fr.wikipedia.org/wiki/Concours">Concours</a></li><!-- Pas de lien sur le site de EDM ! -->
-        <li><a href="https://www.edm.ch/fr/sensibilisation/projet-un-monde-plus-juste">Un Monde Plus Juste</a></li>
-        <li><a href="https://www.edm.ch/fr/media-publication">Les enquêtes</a></li>
-        <a href="#" class="languagehome">| FR |</a><a href="#" class="languagehome"> EN </a><a href="#" class="languagehome" >| DE |</a>
-    </ul>
+                    <table align="center" class="imgchoix">
+                        <td>
 
-
-    <table align="center" class="imgchoix">
-        <td>
-
-            <iframe width="575" height="320" src="https://www.youtube.com/embed/vYEH9CIeT_8?start=1" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-        </td>
-        <td>
-            <!-- Acccès globe   -->
-            <a href="?action=home"><img
-                        src="images/Globe.PNG"
-                        class="imghome1" id="globe"></a>
-        </td>
-    </table>
+                            <iframe width="575" height="320" src="https://www.youtube.com/embed/vYEH9CIeT_8?start=1"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </td>
+                        <td>
+                            <!-- Acccès globe   -->
+                            <a href="?action=home"><img
+                                        src="images/Globe.PNG"
+                                        class="imghome1" id="globe"></a>
+                        </td>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <br>
 <!-- Code du Footer de EDM -->
@@ -143,7 +158,7 @@
                 <div id=footer-module-4 class="flexiblemodule ">
                     <div class="inner clearfix">
                         <div class=moduletable>
-                            <div class=custom><p><a href= https://www.edm.ch/fr/aider/confiance target=_blank
+                            <div class=custom><p><a href=https://www.edm.ch/fr/aider/confiance target=_blank
                                                     rel="noopener noreferrer"><img
                                                 style="margin-right: 10px; margin-left: 10px; float: right;"
                                                 src=/images/zewo.png alt=zewo width=73
@@ -185,7 +200,8 @@
                                             data-ep-bf95e=h><span
                                                 data-ep-ab883=fo data-ep-bf95e=.c><span data-ep-bf95e=dm
                                                                                         data-ep-ab883=&#64;&#101;></span></span></span></span></a><br/>2016&nbsp;©
-                            Enfants du Monde | Gestion du site par App'n Web | Conception &amp; Design par Benoit Pierrehumbert & Simon Cuany
+                            Enfants du Monde | Gestion du site par App'n Web | Conception &amp; Design par Benoit
+                            Pierrehumbert & Simon Cuany
                         </p>
                     </div>
                 </div>

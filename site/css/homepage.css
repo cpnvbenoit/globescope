@@ -2521,7 +2521,6 @@ textarea {
 body {
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
     line-height: 18px;
     color: #333;
     background-color: #fff
@@ -3076,7 +3075,7 @@ h4 small {
 
 ul, ol {
     padding: 0;
-    margin: 9px 25px
+    margin: 9px 0px;
 }
 
 ul ul, ul ol, ol ol, ol ul {
@@ -9452,7 +9451,6 @@ body {
     color: #969696;
     text-align: left;
     line-height: 20px;
-    font-size: 16px;
     font-family: open_sansregular
 }
 
@@ -9573,9 +9571,7 @@ ul:not(.nav) li {
     padding-bottom: 2px
 }
 
-#header-wrapper > div.inner {
-    min-height: 300px
-}
+
 
 #header-bg-front > div.inner {
     height: 550px
