@@ -155,27 +155,27 @@ function showchildsSearch()
             $inPays = false;
             $inVille = false;
 
-                if ($searchText == ['mer']) {
+                if ($searchText == $child['mer']) {
                     $in = true;
                     $inmer = true;
                     $sort="a";
                 }
-                if ($searchText == ['lat']) {
+                if ($searchText == $child['lat']) {
                     $in = true;
                     $inlat = true;
                     $sort="b";
                 }
-                if ($searchText == ['lon']) {
+                if ($searchText == $child['lon']) {
                     $in = true;
                     $inlon = true;
                     $sort="c";
                 }
-                if ($searchText == ['IDPlace']) {
+                if ($searchText == $child['IDPlace']) {
                     $in = true;
                     $inIDPlace = true;
                     $sort="d";
                 }
-                if ($searchText == ['IDImage']) {
+                if ($searchText == $child['IDImage']) {
                     $in = true;
                     $inIDImage = true;
                     $sort="e";
