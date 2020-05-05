@@ -113,7 +113,7 @@
                         <h6 class="infosuppleft" align="center">Équipe : <b><span id="childEquipe"></span></b> |
                             <b>Pays</b> : <span id="childPays">|</span> | Ville : <b><span id="childVille"></span></b>
                         </h6>
-                        <h6 class="infosuppleft" align="center">Média : <a class="medialink" target="_blank" id="childMedia"></a> Année de production : <b><span id="childAnneeprod"></b>ID de la place : <b><span
+                        <h6 class="infosuppleft" align="center">Média : <a class="medialink" target="_blank" id="childMedia" ></a> | Année : <b><span id="childAnneeprod"> </b> | ID de la place : <b><span
                                         id="childIDPlace"></span></b></h6>
 
                         <h6 class="infosuppleft" align="left"></h6>
