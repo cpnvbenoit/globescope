@@ -51,9 +51,6 @@
                         <li><a href="https://www.edm.ch/fr/sensibilisation/projet-un-monde-plus-juste">Un Monde Plus
                                 Juste</a></li>
                         <li><a href="https://www.edm.ch/fr/media-publication">Les enquêtes</a></li>
-                        <li><a href="#" class="languagehome"> FR </a></li>
-                        <li><a href="#" class="languagehome"> EN </a></li>
-                        <li><a href="#" class="languagehome"> DE </a></li>
 
                     </ul>
 
