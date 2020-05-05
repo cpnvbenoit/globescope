@@ -28,9 +28,12 @@ ob_start();
 </div>
 <h1 style=" position: absolute ; left: 42%">Afficher les enfants</h1><br><br>
 <h4 style="padding-left: 10px"> Rechercher par</h4>
+<div class="fixedth">
+    Meridien |
+</div>
 
 <table class="table" border="1" align="center" style="border: #BCDC53">
-    <thead>
+    <thead >
     <th width="220px">
         Meridien / Latitude  / Longitude
     </th>
@@ -72,33 +75,32 @@ ob_start();
     </th>
     </thead  align="center" >
     <tbody align="center">
+    acac
     <?php
-    $inIDPlace = false;
-    $inIDImage = false;
-    $inmer = false;
-    $inlat = false;
-    $inlon = false;
-    $inPseudo = false;
-    $inDroit = false;
-    $inSlogan = false;
-    $inTeam = false;
-    $inPays = false;
-    $inVille = false;
     if (isset($search)){
+        function cmp($a, $b)
+        {
+            return strcmp($a["title"], $b["title"]);
+        }
+
+        //usort($search, "cmp");
     foreach ($search as $child) {
-        if (($child['inIDPlace']==true)&&($inIDPlace==true)){echo "<tr><td colspan='10' class=\"category rouge  \">IDPlace</td></tr>";$inIDPlace = false;}
-        if (($child['inIDImage']==true)&&($inIDImage==true)){echo "<tr><td colspan='10' class=\"category orange  \">IDImage</td></tr>";$inIDImage = false;}
-        if (($child['inmer']==true)&&($inmer==true)){echo "<tr><td colspan='10' class=\"category jaune\">Meridien</td></tr>";$inmer = false;}
-        if (($child['inlat']==true)&&($inlat==true)){echo "<tr><td colspan='10' class=\"category vert\">Latitude</td></tr>";$inlat = false;}
-        if (($child['inlon']==true)&&($inlon==true)){echo "<tr><td colspan='10' class=\"category bleu\">Longitude</td></tr>";$inlon = false;}
-        if (($child['inPseudo']==true)&&($inPseudo==true)){echo "<tr><td colspan='10' class=\"category violet\">Pseudo</td></tr>";$inPseudo = false;}
-        if (($child['inDroit']==true)&&($inDroit==true)){echo "<tr><td colspan='10' class=\"category bleu  \">Droit</td></tr>";$inDroit = false;}
-        if (($child['inSlogan']==true)&&($inSlogan==true)){echo "<tr><td colspan='10' class=\"category vert  \">Slogan</td></tr>";$inSlogan = false;}
-        if (($child['inTeam']==true)&&($inTeam==true)){echo "<tr><td colspan='10' class=\"category jaune \">Team</td></tr>";$inTeam = false;}
-        if (($child['inPays']==true)&&($inPays==true)){echo "<tr><td colspan='10' class=\"category orange\">Pays</td></tr>";$inPays = false;}
-        if (($child['inVille']==true)&&($inVille==true)){echo "<tr><td colspan='10' class=\"category rouge \">Ville</td></tr>";$inVille = false;}
+        if ($child['inIDPlace']==true){$bc_color="rouge";}
+        if ($child['inIDImage']==true){$bc_color="orange";}
+        if ($child['inmer']==true){$bc_color="jaune";}
+        if ($child['inlat']==true){$bc_color="vert";}
+        if ($child['inlon']==true){$bc_color="bleu";}
+        if ($child['inPseudo']==true){$bc_color="violet";}
+        if ($child['inDroit']==true){$bc_color="bleu2";}
+        if ($child['inSlogan']==true){$bc_color="vert2";}
+        if ($child['inTeam']==true){$bc_color="jaune2";}
+        if ($child['inPays']==true){$bc_color="orange2";}
+        if ($child['inVille']==true){$bc_color="rouge2";}
+
+
+
         ?>
-        <tr>
+        <tr class="<?= $bc_color ?>">
             <td>
                 <p><?= $child['mer'] ?> / <?= $child['lat'] ?> / <?= $child['lon'] ?></p>
             </td>

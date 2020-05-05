@@ -57,6 +57,29 @@
 .violet {
     background-color: blueviolet;
 }
+.rouge2 {
+    background-color: lightcoral;
+}
+
+.orange2 {
+    background-color: salmon;
+}
+
+.jaune2 {
+    background-color: lightgoldenrodyellow;
+}
+
+.vert2 {
+    background-color: lightgreen;
+}
+
+.bleu2 {
+    background-color: lightblue;
+}
+
+.violet2 {
+    background-color: lavender;
+}
 
 .editbuttonglobe {
     width: 300px;
@@ -121,4 +144,11 @@
 .Apercu{
     margin-left: 35px;
 }
-
+div.fixedth {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    padding: 50px;
+    font-size: 20px;
+}
