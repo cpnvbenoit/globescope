@@ -183,7 +183,7 @@
         <div id=footer-don>
             <div class="inner clearfix">
                 <div class=moduletable>
-                    <div class=custom><p><a href=/fr/aider/don class=button title="Faire un don à Enfants du Monde"><img
+                    <div class=custom><p><a href="https://www.edm.ch/fr/aider/don" class=button title="Faire un don à Enfants du Monde"><img
                                         src=/images/don-grey.png alt="don grey" width=24 height=26
                                         style="vertical-align: middle; margin-right: 5px;"/>Faire un don</a></p></div>
                 </div>
