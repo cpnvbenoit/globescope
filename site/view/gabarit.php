@@ -57,7 +57,7 @@
         </div>
         <p id="closeHelp" class="closeButton" onclick="closeHelp()">X</p>
         <div id="direction">
-            <a href="?action=testsecret" target="_blank"> <img src="images/arrowKeys.png" height="50" width="80"
+            <a href="?action=easteregg" target="_blank"> <img src="images/arrowKeys.png" height="50" width="80"
                                                                alt="touches directions" class="default"/></a>
             <p id="aideDeplacementSouris"> Déplacez vous en maintenant le clic gauche de la souris.</p>
         </div>
@@ -103,7 +103,7 @@
         <span id="separator"></span>
 
         <h6 class="infosuppleft" align="left">Pseudo : <b><span id="childPseudo"></span></b></h6>
-        <h6 class="infosuppleft" align="left">Slogan : <b><span id="childCitation"></span</b>></h6>
+        <h6 class="infosuppleft" align="left">Slogan : <b><span id="childCitation"></span</b></h6>
         <div id="description">
             <table class="tablehome-infos">
                 <tr>
@@ -116,7 +116,7 @@
                         <h6 class="infosuppleft" align="center">Média : <a class="medialink" target="_blank" id="childMedia" ></a> | Année : <b><span id="childAnneeprod"> </b> | ID de la place : <b><span
                                         id="childIDPlace"></span></b></h6>
 
-                        <h6 class="infosuppleft" align="left"></h6>
+
                     </td>
                 </tr>
                 <tr>

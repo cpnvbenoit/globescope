@@ -37,7 +37,7 @@
             <div class="inner clearfix">
                 <div class="divtable">
                     <ul class="menuhomepage">
-                        <li style="background-color: white"><a href="https://edm.mycpnv.ch/"><img
+                        <li style="background-color: white"><a href="https://www.edm.ch/fr//"><img
                                         src="https://edm.mycpnv.ch/images/Logo_bleu_RGB.png" class="imgup"
                                         id="logoedm"> </a></li>
                         <li><a href="https://www.edm.ch/fr/">Home</a></li>
