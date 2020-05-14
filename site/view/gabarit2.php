@@ -16,6 +16,7 @@
 <a class="backup" target="_blank" href="index.php?action=showBackup"><button class="btn btn-primary">Backup</button></a>
 <a class="log" target="_blank" href="index.php?action=showLog"><button class="btn btn-primary">Log</button></a>
 <a href="index.php?action=disconnect"><button class="btn btn-danger">Déconnexion</button></a>
+<a class="homegb2" href="index.php?action=showchilds&welcome=no"><button class="btn btn-success">Accueil</button></a>
 
 <?= $content?>
 

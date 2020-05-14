@@ -155,22 +155,22 @@ function showchildsSearch()
             $inPays = false;
             $inVille = false;
 
-                if ($searchText == $child['mer']) {
+                if ($_POST['searchText'] == $child['mer']) {
                     $in = true;
                     $inmer = true;
                     $sort="a";
                 }
-                if ($searchText == $child['lat']) {
+                if ($_POST['searchText'] == $child['lat']) {
                     $in = true;
                     $inlat = true;
                     $sort="b";
                 }
-                if ($searchText == $child['lon']) {
+                if ($_POST['searchText'] == $child['lon']) {
                     $in = true;
                     $inlon = true;
                     $sort="c";
                 }
-                if ($searchText == $child['IDPlace']) {
+                if ($_POST['searchText'] == $child['IDPlace']) {
                     $in = true;
                     $inIDPlace = true;
                     $sort="d";
@@ -215,11 +215,10 @@ function showchildsSearch()
                         "Media" => $child['Media'] ,
                         "Titre" => $child['Titre'] ,
                         "Anneeprod" => $child['Anneeprod'] ,
-                        "desc" => $child['desc']
+                        "desc" => $child['Desc']
                     ];
                 }
             }
-
         require_once 'view/showchildsSearch.php';
     } else {
         $_SESSION['flashmessage'] = "Pas touche !";

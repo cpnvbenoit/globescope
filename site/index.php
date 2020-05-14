@@ -15,6 +15,8 @@ if (isset($_GET['IDimage'])){
 }
 if (isset($_GET['welcome'])){
     $welcome=$_GET['welcome'];
+}else {
+    $welcome='';
 }
 if (isset($_GET['errors'])){
     $errors=$_GET['errors'];

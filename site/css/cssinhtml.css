@@ -122,6 +122,10 @@
     position: absolute;
     margin-left: 210px;
 }
+.homegb2{
+    position: absolute;
+    right: 0;
+}
 
 .tablehome-infos{
     mso-cellspacing: 1px;
