@@ -126,7 +126,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 } else
 {
     container.onmousedown = onMouseClick;
-    container.ondblclick = onMouseDBClick;
+    container.onclick = onMouseDBClick;
 }
 
 container.onmousemove = onMouseMove;
@@ -277,6 +277,7 @@ function closeHelp()
     helpDiv.style.display = 'none';
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
     {
+
         container.onmousedown = onMouseDBClick;
         helpButton.style.display = 'block';
         showSearchButton.style.display = 'block';
@@ -397,6 +398,7 @@ function onMouseClick(event)
 
 function onMouseDBClick(event)
 {
+
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
     {
         if (controls.autoRotate)
@@ -419,6 +421,7 @@ function onMouseDBClick(event)
             {
                 if (intersects[0].object.type == "VRAI")
                 {
+
                     onImageClick(intersects[0].object.name);
                 }
             }

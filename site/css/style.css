@@ -80,15 +80,20 @@ body .bodyglob {
 }
 
 .disconnect-cmd {
-    height: 35px;
+    height: 32px;
     position: absolute;
-    left: 0;
+    right: 5px;
     font-size: 21px;
     padding: 0;
     background-color: #8a0000;
     top: 94%;
     width: 150px;
-    bottom: 45px;
+    bottom: 50px;
+}
+.logo_edm{
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
 }
 
 .default {
@@ -229,4 +234,10 @@ li a:hover:not(.active) {
 }
 textarea {
     resize: none;
+}
+
+.zoom{
+    position: absolute;
+    top: 75px;
+    left: 5px;
 }

@@ -55,6 +55,7 @@ function loadData(scene,canvContainer,controls)
 
 
             var totalImages = 0;
+            var progressImages = 1;
             var imageLoaded = 0;
             var i;
             for(i in data)
@@ -78,15 +79,20 @@ function loadData(scene,canvContainer,controls)
                     if(data[x].ImageOK != 0)
                     {
                         index++;
-                        if (data[x].Media != ""){
-                        //Pour afficher ceux qui ont le media
-                        }
+
                         //afficher le canvas lorsque la dernière image est chargée
                         
                         file ="images/64-64/"+data[x].IDImage+".png";
                         texture =  textureLoader.load( file, function()
                         {
                             imageLoaded++;
+                            //progress bar
+                            if (imageLoaded==Math.round(totalImages/100)*progressImages)
+                            {
+
+                                progressImages++;
+                                document.getElementById("progress_bar").style.width = progressImages + '%';
+                            }
                             if(imageLoaded == totalImages)
                             {
                                 document.getElementById("loading").style.display = "none";

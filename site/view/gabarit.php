@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Globescope</title>
+    <title>Globe Virtuel</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="css/helpStyle.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/progressBar.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/cssinhtml.css">
+    <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="js/Loginstyle.js"></script>
     <script src="js/Media.js"></script>
-    <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png"/>
+    <script src="https://kit.fontawesome.com/62d62738cd.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="bodyglob">
@@ -95,7 +98,12 @@
     </div>
 </div>
 
-<div id="sideBar" class="GUI" style="height: 560px">
+<div class="zoom GUI">
+    <span style="color: white;font-size: 19px;"><i class="fas fa-plus-circle fa-2x"></i></span><br>
+    <span style="color: white;font-size: 19px"><i class="fas fa-minus-circle fa-2x"></i></span>
+</div>
+
+<div id="sideBar" class=" GUI" style="height: 560px">
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails" style="overflow-y: scroll; height:550px;">
@@ -160,10 +168,14 @@
     <?php if (isset($_SESSION['username'])) {
         echo "<a href=\"index.php?action=disconnect\"><button class=\"disconnect-cmd\">Déconnexion</button></a>";
     } ?>
+    <a href="https://www.edm.ch/fr/sensibilisation"><img src="images/logo_EDM.png" class="logo_edm" alt="Logo d'Enfants du monde" width="200px"></a>
 </div>
 
 <div id="loading">
     <p>Chargement...</p>
+    <div class="w3-light-grey w3-round-xlarge">
+        <div id="progress_bar" class="w3-blue w3-round-xlarge"  style="width:0%;height: 5px;margin-top: -20px"></div>
+    </div>
 </div>
 
 <script src="js/three.min.js"></script>
