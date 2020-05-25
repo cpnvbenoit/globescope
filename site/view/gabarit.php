@@ -52,7 +52,7 @@
 
 
 </div>
-<span><img id="helpButton" class="GUI" src="images/questionMark.png"></span>
+<span><img id="helpButton" class="GUI" src="images/questionMark.png"><span class="help-text GUI">Comment ça marche ?</span></span>
 <div id="Help" class="GUI">
     <div id="box">
         <div id="header">
@@ -156,9 +156,13 @@
 <span><img id="showSearch" class="GUI" src="images/searchIcon.png"></span>
 
 <div id="searchBar" class="GUI">
+    <div class="help-tip">
+        <p>Recherchez par pays, ville, droit, école, équipe…</p>
+    </div>
     <input type="text" id="searchText">
     <span id="searchButton">Recherche</span>
     </input>
+
     <div id="onDynamicSearch">
 
     </div>

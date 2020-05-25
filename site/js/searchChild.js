@@ -36,6 +36,7 @@ function searchChild(camera,scene)
                     {
                         var details =  document.getElementById("onSearchDetails");
                         var det = document.createElement('div');
+                        det.style.cursor = "pointer";
 
                         var img = document.createElement('img');
                         var searchPseudo = document.createElement('p');

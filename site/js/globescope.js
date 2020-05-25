@@ -247,7 +247,7 @@ function closeSideBarEsc(e)
 function showSearch()
 {
     SearchBox.style.display = 'flex';
-    showSearchButton.style.display = 'inline';
+    showSearchButton.style.display = 'none';
     SearchBox.className = "GUI w3-animate-top";
     SearchTextBox.focus();
 }
