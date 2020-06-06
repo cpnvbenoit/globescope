@@ -48,12 +48,15 @@ if ($_SESSION['fail'] == false) {
             Slogan
         </th>
         <th>
-           Team
+            Team
+        </th>
+        <th>
+            École
         </th>
         <th>
             Pays
         </th>
-        <th width="8%">
+        <th>
             Ville
         </th>
         <th>
@@ -95,7 +98,10 @@ if ($_SESSION['fail'] == false) {
                     <p><?php if ($child['Slogan']!=''){echo substr($child['Slogan'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
                 </td>
                 <td>
-                    <p class="scTeam"><?= $child['Team'] ?></p>
+                    <p><?= $child['Team'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['ecole'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['Pays'] ?></p>

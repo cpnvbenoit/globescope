@@ -108,6 +108,8 @@ function GetData(){
                     $res[] = $image;
                 }else if (preg_match($pattern, $image['Team'])){
                     $res[] = $image;
+                }else if (preg_match($pattern, $image['ecole'])){
+                    $res[] = $image;
                 }
         } else if ($mode == "click")
         {
@@ -154,6 +156,7 @@ function showchildsSearch()
             $inTeam = false;
             $inPays = false;
             $inVille = false;
+            $inEcole = false;
 
                 if ($_POST['searchText'] == $child['mer']) {
                     $in = true;
@@ -186,6 +189,7 @@ function showchildsSearch()
                 if (preg_match($searchText,$child['Team'])){$in=true;$inTeam=true;$sort="i";}//vague
                 if (preg_match($searchText,$child['Pays'])){$in=true;$inPays=true;$sort="j";}//vague
                 if (preg_match($searchText,$child['Ville'])){$in=true;$inVille=true;$sort="k";}//vague
+                if (preg_match($searchText,$child['ecole'])){$in=true;$inEcole=true;$sort="l";}//vague
                 if ($in == true) {
                     $search[] = ["id" => $compteur,
                         "searchText"=> $_POST['searchText'],
@@ -201,6 +205,7 @@ function showchildsSearch()
                         "inTeam" => $inTeam,
                         "inPays" => $inPays,
                         "inVille" => $inVille,
+                        "inEcole" => $inEcole,
                         "sort"=>$sort,
                         "IDImage" => $child['IDImage'],
                         "mer" => $child['mer'],
@@ -214,6 +219,7 @@ function showchildsSearch()
                         "Ville" => $child['Ville'],
                         "Media" => $child['Media'] ,
                         "Titre" => $child['Titre'] ,
+                        "ecole" => $child['ecole'] ,
                         "Anneeprod" => $child['Anneeprod'] ,
                         "desc" => $child['Desc']
                     ];
@@ -258,11 +264,12 @@ function backup()
         "Titre" =>  $_SESSION['valuetitre'],
         "Anneeprod" =>$_SESSION['valueanneeprod'],
         "desc" => $_SESSION['valuedesc'],
+        "ecole" => $_SESSION['ecole'],
         "date"=>strtotime("now")
     ];
     putBackup($backup);
 }
-function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc,$Titre)
+function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc, $Titre, $ecole)
 {
     if (isset($_SESSION['username']) == true) {
         backup();
@@ -301,6 +308,7 @@ function save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droi
                     "Media" => $Media,
                     "Titre" => $Titre,
                     "Anneeprod" => $Anneeprod,
+                    "ecole" => $ecole,
                     "desc" => $desc,
                 ];
             }
@@ -361,6 +369,7 @@ function uploadfile($IDimage){
                 "ImageOK" =>"-",
                 "Pays" => "-",
                 "Ville" => "-",
+                "ecole" => "-",
                 "Media" => "media/".$IDimage.".".$file_ext,
                 "Titre" => $_SESSION['valuetitre'],
                 "Anneeprod" =>"-",

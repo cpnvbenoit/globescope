@@ -64,6 +64,9 @@ if (isset($_POST['Media'])){
 if (isset($_POST['Titre'])){
     $Titre=$_POST['Titre'];
 }
+if (isset($_POST['ecole'])){
+    $ecole=$_POST['ecole'];
+}
 if (isset($_POST['Anneeprod'])){
     $Anneeprod=$_POST['Anneeprod'];
 }

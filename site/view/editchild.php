@@ -42,16 +42,19 @@ ob_start();
        Ville
     </th>
     <th class="center">
-    Média
+        Média
     </th>
     <th class="center">
-       Année-production
+        Année-production
     </th>
     <th class="center">
-       Titre
+        École
     </th>
     <th class="center">
-       Résumé
+        Titre
+    </th>
+    <th class="center">
+        Résumé
     </th>
     </thead  align="center">
     <tbody align="center">
@@ -74,6 +77,7 @@ ob_start();
             $_SESSION['valuetitre']      = $child['Titre'];
             $_SESSION['valueanneeprod']  = $child['Anneeprod'];
             $_SESSION['valuedesc']       = $child['desc'];
+            $_SESSION['valueecole']       = $child['ecole'];
             $_SESSION['backupnull']=[
                 "lat"=>$_SESSION['valuelat'],
                 "mer"=>$_SESSION['valuemer'],
@@ -120,6 +124,9 @@ ob_start();
                 </td>
                 <td>
                     <p><?= $_SESSION['valueanneeprod'] ?></p>
+                </td>
+                <td>
+                    <p><?= $_SESSION['ecole'] ?></p>
                 </td>
                 <td>
                     <p><?= $_SESSION['valuetitre'] ?></p>
@@ -190,6 +197,21 @@ ob_start();
                 <input name="Ville" value="<?= $_SESSION['valueville'] ?>" class="form-control" type="text" id="Ville" >
             </td>
             <td class="form-group">
+                <label for="ecole">École</label>
+                <input name="ecole" value="<?= $_SESSION['valueecole'] ?>" class="form-control" type="text" id="ecole" >
+            </td>
+
+        </tr>
+        <tr>
+            <td class="form-group">
+                <label for="Anneeprod">Année de production</label>
+                <input name="Anneeprod" value="<?= $_SESSION['valueanneeprod'] ?>" class="form-control" type="text" id="Anneeprod" >
+            </td>
+            <td class="form-group">
+                <label for="Titre">Titre du média</label>
+                <input name="Titre" value="<?= $_SESSION['valuetitre'] ?>" class="form-control" type="text" id="Titre" >
+            </td>
+            <td class="form-group">
                 <label for="Media">Média</label>
                 <input name="Media" value="<?= $_SESSION['valuemedia'] ?>" class="form-control" type="text" id="Media txt_uploadway" >
                 <?php if ($_SESSION['valuemedia']==''){
@@ -201,14 +223,6 @@ ob_start();
             </td>
         </tr>
         <tr>
-            <td class="form-group">
-                <label for="Anneeprod">Année de production</label>
-                <input name="Anneeprod" value="<?= $_SESSION['valueanneeprod'] ?>" class="form-control" type="text" id="Anneeprod" >
-            </td>
-            <td class="form-group">
-                <label for="Titre">Titre du média</label>
-                <input name="Titre" value="<?= $_SESSION['valuetitre'] ?>" class="form-control" type="text" id="Titre" >
-            </td>
             <td class="form-group">
                 <label for="Desc">Description</label>
                 <textarea rows="8" maxlength="1000" class="form-control" name="desc" id="Desc" form="formedit"><?= $_SESSION['valuedesc'] ?></textarea>

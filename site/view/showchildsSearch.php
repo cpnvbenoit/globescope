@@ -47,6 +47,7 @@ ob_start();
     <th class="violet">
         Pseudo
     </th>
+
     <th class="bleu2">
         Droit
     </th>
@@ -55,6 +56,9 @@ ob_start();
     </th>
     <th class="jaune2">
         Team
+    </th>
+    <th class="violet2">
+        École
     </th>
     <th class="orange2">
         Pays
@@ -91,6 +95,7 @@ ob_start();
         if ($child['inlat']==true){$bc_color="vert";}
         if ($child['inlon']==true){$bc_color="bleu";}
         if ($child['inPseudo']==true){$bc_color="violet";}
+        if ($child['inEcole']==true){$bc_color="violet2";}
         if ($child['inDroit']==true){$bc_color="bleu2";}
         if ($child['inSlogan']==true){$bc_color="vert2";}
         if ($child['inTeam']==true){$bc_color="jaune2";}
@@ -120,7 +125,10 @@ ob_start();
                 <p><?php if ($child['Slogan']!=''){echo substr($child['Slogan'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
             </td>
             <td>
-                <p class="scTeam"><?= $child['Team'] ?></p>
+                <p><?= $child['Team'] ?></p>
+            </td>
+            <td>
+                <p><?= $child['ecole'] ?></p>
             </td>
             <td>
                 <p><?= $child['Pays'] ?></p>

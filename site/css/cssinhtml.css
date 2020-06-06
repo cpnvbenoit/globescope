@@ -57,6 +57,9 @@
 .violet {
     background-color: blueviolet;
 }
+.violet2 {
+    background-color: violet;
+}
 .rouge2 {
     background-color: lightcoral;
 }
@@ -100,7 +103,7 @@
     color: black;
 }
 .buttonEdit{
-    margin-top: -130px;
+    margin-top: -193px;
     text-align: center;
     margin-bottom: 35px;
 }

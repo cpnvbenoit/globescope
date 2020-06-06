@@ -40,7 +40,10 @@ if ($_SESSION['fail'] == false) {
             Slogan
         </th>
         <th>
-           Team
+            Team
+        </th>
+        <th>
+            École
         </th>
         <th>
             Pays
@@ -89,6 +92,9 @@ if ($_SESSION['fail'] == false) {
                 </td>
                 <td>
                     <p><?= $child['Team'] ?></p>
+                </td>
+                <td>
+                    <p><?= $child['ecole'] ?></p>
                 </td>
                 <td>
                     <p><?= $child['Pays'] ?></p>
