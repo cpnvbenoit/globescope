@@ -73,6 +73,9 @@ if (isset($_POST['Anneeprod'])){
 if (isset($_POST['desc'])){
     $desc=$_POST['desc'];
 }
+if (isset($_POST['newtitle'])){
+    $_SESSION['newtitle']=$_POST['newtitle'];
+}
 //END set var for save -----------------------------------------
 if (isset($action)) {
     switch ($action) {
@@ -83,7 +86,7 @@ if (isset($action)) {
             editchild($IDimage);
             break;
         case 'save';
-            save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc, $Titre);
+            save($IDimage, $meridien, $latitude, $longitude, $idplace, $team, $Droit, $Slogan, $Pseudo, $Pays, $Ville, $Media, $Anneeprod, $desc, $Titre,$ecole);
             break;
         case 'showchilds';
             showchilds($welcome);
@@ -119,7 +122,7 @@ if (isset($action)) {
             uploadimg($IDimage);
             break;
         case 'uploadmedia';
-            uploadmedia($IDimage,$errors);
+            uploadmedia($IDimage);
             break;
         case 'uploadimage';
             uploadimage($IDimage);

@@ -16,9 +16,10 @@ if (isset($_FILES['media'])){
 <body>
 
 <h1>Merci de donner un fichier qui ne dépasse pas 10 MB.</h1>
-<h3 class="alert-danger"><?= $errors ?></h3>
 <form action="index.php?action=uploadfile&IDimage=<?= $IDimage?>" method="POST" enctype="multipart/form-data">
-    <input type="file" name="media" />
+    <input type="file" name="media" /><br>
+    <label for="newtitle">Nouveau Titre (Si vide garde l'ancien)</label>
+    <input name="newtitle" type="text">
     <input type="submit"/>
 </form>
 </body>

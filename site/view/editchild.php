@@ -126,7 +126,7 @@ ob_start();
                     <p><?= $_SESSION['valueanneeprod'] ?></p>
                 </td>
                 <td>
-                    <p><?= $_SESSION['ecole'] ?></p>
+                    <p><?= $_SESSION['valueecole'] ?></p>
                 </td>
                 <td>
                     <p><?= $_SESSION['valuetitre'] ?></p>

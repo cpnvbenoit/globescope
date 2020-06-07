@@ -334,7 +334,7 @@ function boutique(){
 function forum(){
     require_once 'forum/index.php';
 }
-function uploadmedia($IDimage,$errors){
+function uploadmedia($IDimage){
     require_once 'view/uploadmedia.php';
 }
 function uploadimg($IDimage){
@@ -353,7 +353,7 @@ function uploadfile($IDimage){
         if($file_size > 10485760){
             $errors='Le fichier ne doit pas dépasser 10 MB';
         }
-
+        unlink($_SESSION['valuemedia']);
         if(empty($errors)==true){
             $backup=getBackup();//making a backup of média
             $backup[]=[
@@ -370,7 +370,7 @@ function uploadfile($IDimage){
                 "Pays" => "-",
                 "Ville" => "-",
                 "ecole" => "-",
-                "Media" => "media/".$IDimage.".".$file_ext,
+                "Media" => $_SESSION['valuemedia'],
                 "Titre" => $_SESSION['valuetitre'],
                 "Anneeprod" =>"-",
                 "desc" =>"-",
@@ -393,7 +393,14 @@ function uploadfile($IDimage){
             $save=$childs;
             foreach ($childs as $child){
                 if ($IDimage == $child['IDImage']) {
-
+                    if (isset($_SESSION['newtitle'])){
+                        echo "<script>alert('new titre')</script>";
+                        $valuetitle=$_SESSION['newtitle'];
+                    }else{
+                        echo "<script>alert('not new titre')</script>";
+                        $valuetitle= $_SESSION['valuetitre'];
+                    }
+                        
                     $save[$compteur] = [
                         "IDPlace" => $_SESSION['valueidplace'],
                         "IDImage" => $_SESSION['valueidimage'],
@@ -408,7 +415,7 @@ function uploadfile($IDimage){
                         "Pays" =>  $_SESSION['valuespays'],
                         "Ville" =>  $_SESSION['valueville'],
                         "Media" => "media/".$IDimage.".".$file_ext,
-                        "Titre" => $file_title,
+                        "Titre" =>$valuetitle,
                         "Anneeprod" => $_SESSION['valueanneeprod'],
                         "desc" => $_SESSION['valuedesc'],
                     ];
