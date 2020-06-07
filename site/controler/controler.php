@@ -434,7 +434,7 @@ function uploadfile($IDimage){
             //write in uploads file
             editchild($IDimage);
         }else{
-            uploadmedia($IDimage,$errors);
+            uploadmedia($IDimage);
             //log
             $log=getLog();
             $log[]=[
