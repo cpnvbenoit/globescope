@@ -22,6 +22,12 @@
 </head>
 
 <body class="bodyglob">
+
+<!-- <div class="languageSelect">
+           <span id="creditSpan"onclick="credit()">Credits</span>
+        </div>
+        -->
+
 <!-- Code de la pop-up de login sur le globe -->
 <div id="login" class="modal" style="  overflow: hidden;">
 
@@ -52,29 +58,24 @@
 
 
 </div>
-<span><img id="helpButton" class="GUI" src="images/questionMark.png"><span class="help-text GUI">Comment ça marche ?</span></span>
+<span><img id="helpButton" class="GUI" src="images/questionMark.png"><span
+            class="help-text GUI">Comment ça marche ?</span></span>
 <div id="Help" class="GUI">
     <div id="box">
         <div id="header">
-            <h3 class="aide" a href="">Help</h3>
+            <h3 class="aide" a href="">Comment ça marche?</h3>
         </div>
         <p id="closeHelp" class="closeButton" onclick="closeHelp()">X</p>
         <div id="direction">
-            <a href="?action=easteregg" target="_blank"> <img src="images/arrowKeys.png" height="50" width="80"
-                                                               alt="touches directions" class="default"/></a>
-            <p id="aideDeplacementSouris"> Déplacez vous en maintenant le clic gauche de la souris.</p>
+            <p id="aideDeplacementSouris">Faites tourner le globe en maintenant le clic gauche de la souris.</p>
         </div>
         <div id="Aidereste" class="Aide">
-            <p id="aideZoom">Utilisez les touches +/- pour zoomer/dézoomer.</p>
-            <hr>
-            <p id="aideAgrandirImage">Double-cliquez sur l'image pour l'agrandir et afficher ses informations.</p>
-            <hr>
-            <p id="aideRecherche">Pour rechercher un pseudo cliquez sur la loupe et écrivez ensuite un
-                pseudo.</p>
-        </div>
-        <div class="languageSelect">
-            <span id="FR" onclick="aideFr()">FR</span>/<span id="EN" onclick="aideAng()">EN</span>/<span id="creditSpan"
-                                                                                                         onclick="credit()">Credits</span>
+            <p id="aideZoom">Utilisez les touches +/- ou la molette de souris pour zoomer et dézoomer.</p>
+
+            <p id="aideAgrandirImage">Cliquez sur l’image pour l’agrandir et afficher ses informations.</p>
+
+            <p id="aideRecherche">Cherchez une photo et ses informations en insérant un mot-clé dans l’outil de
+                recherche : pays, ville, droit, équipe, pseudo, école, enquête, classe…</p>
         </div>
     </div>
     <div id="creditBox">
@@ -90,7 +91,7 @@
         <!-- Groupe 2.0 -->
         <img id="imageGroupe" src="images/PhotoGroupe2.0.jpg" alt="Development Group">
         <div id="Groupe">
-           Benoit Pierrehumbert, Kevin Vaucher, Simon Cuany
+            Benoit Pierrehumbert, Kevin Vaucher, Simon Cuany
         </div>
         <div class="languageSelect">
             <span id="creditSpan" onclick="aideFr()">Help</span>
@@ -110,21 +111,85 @@
         <img style="margin-top: 150px;width:260px;height:325px;" id="childImage">
         <span id="separator"></span>
 
-        <h6 class="infosuppleft" align="left">Pseudo : <b><span id="childPseudo"></span></b></h6>
-        <h6 class="infosuppleft" align="left">Slogan : <b><span id="childCitation"></span</b></h6>
+
         <div id="description">
             <table class="tablehome-infos">
                 <tr>
                     <td>
-                        <h6 class="infosuppleft" align="center">Droit : <b><span id="childRight"></span></b></h6>
+                        Slogan
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childCitation"></span></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Pseudo
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childPseudo"></span></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Droit
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childRight"></span></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Équipe
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childEquipe"></span></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Pays
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childPays"></span></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ville
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childVille"></span></h6>
+                    </td>
 
-                        <h6 class="infosuppleft" align="center">Équipe : <b><span id="childEquipe"></span></b> |
-                            <b>Pays</b> : <span id="childPays">|</span> | Ville : <b><span id="childVille"></span></b>
+                </tr>
+                <tr>
+                    <td>
+                        Média
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><a class="medialink" target="_blank"
+                                                                   id="childMedia"></a></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Année
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left">
+                            <span id="childAnneeprod"></span>
                         </h6>
-                        <h6 class="infosuppleft" align="center">Média : <a class="medialink" target="_blank" id="childMedia" ></a> | Année : <b><span id="childAnneeprod"> </b> | ID de la place : <b><span
-                                        id="childIDPlace"></span></b></h6>
-
-
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Id Place
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span
+                                    id="childIDPlace"></span>
+                        </h6>
                     </td>
                 </tr>
                 <tr>
@@ -138,14 +203,12 @@
                     </tr>
                 ";
                 } ?>
-
-
             </table>
-
             <?php if ($_SESSION['fail'] == false) {
                 echo "";
             } ?>
         </div>
+
     </div>
     <div id="onSearchDetails" class="flexContainer">
         <h1>Resultat de la recherche</h1>
@@ -172,13 +235,14 @@
     <?php if (isset($_SESSION['username'])) {
         echo "<a href=\"index.php?action=disconnect\"><button class=\"disconnect-cmd\">Déconnexion</button></a>";
     } ?>
-    <a href="https://www.edm.ch/fr/sensibilisation"><img src="images/logo_EDM.png" class="logo_edm" alt="Logo d'Enfants du monde" width="200px"></a>
+    <a href="https://www.edm.ch/fr/sensibilisation"><img src="images/logo_EDM.png" class="logo_edm"
+                                                         alt="Logo d'Enfants du monde" width="200px"></a>
 </div>
 
 <div id="loading">
     <p>Chargement...</p>
     <div class="w3-light-grey w3-round-xlarge">
-        <div id="progress_bar" class="w3-blue w3-round-xlarge"  style="width:0%;height: 5px;margin-top: -20px"></div>
+        <div id="progress_bar" class="w3-blue w3-round-xlarge" style="width:0%;height: 5px;margin-top: -20px"></div>
     </div>
 </div>
 
@@ -205,6 +269,13 @@ void main() {
 
 
 
+
+
+
+
+
+
+
 </script>
 <script type="application/x-glsl" id="sky-fragment">
 uniform sampler2D texture;
@@ -214,6 +285,13 @@ void main() {
     vec4 sample = texture2D(texture, vUV);
     gl_FragColor = vec4(sample.xyz, sample.w);
 }
+
+
+
+
+
+
+
 
 
 
