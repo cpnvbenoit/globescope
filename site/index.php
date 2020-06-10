@@ -74,7 +74,11 @@ if (isset($_POST['desc'])){
     $desc=$_POST['desc'];
 }
 if (isset($_POST['newtitle'])){
-    $_SESSION['newtitle']=$_POST['newtitle'];
+    if ($_POST['newtitle']!='') {
+        $_SESSION['newtitle'] = $_POST['newtitle'];
+    }else{
+        $_SESSION['newtitle']=null;
+    }
 }
 //END set var for save -----------------------------------------
 if (isset($action)) {

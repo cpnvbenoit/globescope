@@ -393,12 +393,12 @@ function uploadfile($IDimage){
             $save=$childs;
             foreach ($childs as $child){
                 if ($IDimage == $child['IDImage']) {
+                    var_dump($_SESSION['newtitle']);
                     if (isset($_SESSION['newtitle'])){
                         echo "<script>alert('new titre')</script>";
                         $valuetitle=$_SESSION['newtitle'];
                     }else{
-                        echo "<script>alert('not new titre')</script>";
-                        $valuetitle= $_SESSION['valuetitre'];
+                        $valuetitle= $file_title;
                     }
                         
                     $save[$compteur] = [

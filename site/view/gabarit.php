@@ -23,12 +23,6 @@
 
 <body class="bodyglob">
 
-<!-- <div class="languageSelect">
-           <span id="creditSpan"onclick="credit()">Credits</span>
-        </div>
-        -->
-
-<!-- Code de la pop-up de login sur le globe -->
 <div id="login" class="modal" style="  overflow: hidden;">
 
     <form class="modal-content animate" action="index.php?action=tryLogin" method="post">
@@ -115,67 +109,51 @@
         <div id="description">
             <table class="tablehome-infos">
                 <tr>
-                    <td>
-                        Slogan
-                    </td>
-                    <td>
-                        <h6 class="infosuppleft" align="left"><span id="childCitation"></span></h6>
+                    <td width="25%">Slogan</td>
+                    <td width="70%">
+                        <h6 class="infosuppleft" align="left"><span id="childCitation"></span></h6><br>
                     </td>
                 </tr>
                 <tr>
+                    <td>Pseudo</td>
                     <td>
-                        Pseudo
-                    </td>
-                    <td>
-                        <h6 class="infosuppleft" align="left"><span id="childPseudo"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childPseudo"></span></h6><br>
                     </td>
                 </tr>
                 <tr>
+                    <td>Droit</td>
                     <td>
-                        Droit
-                    </td>
-                    <td>
-                        <h6 class="infosuppleft" align="left"><span id="childRight"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childRight"></span></h6><br>
                     </td>
                 </tr>
                 <tr>
+                    <td>Équipe</td>
                     <td>
-                        Équipe
-                    </td>
-                    <td>
-                        <h6 class="infosuppleft" align="left"><span id="childEquipe"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childEquipe"></span></h6><br>
                     </td>
                 </tr>
                 <tr>
+                    <td>Pays</td>
                     <td>
-                        Pays
-                    </td>
-                    <td>
-                        <h6 class="infosuppleft" align="left"><span id="childPays"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childPays"></span></h6><br>
                     </td>
                 </tr>
                 <tr>
+                    <td>Ville</td>
                     <td>
-                        Ville
-                    </td>
-                    <td>
-                        <h6 class="infosuppleft" align="left"><span id="childVille"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childVille"></span></h6><br>
                     </td>
 
                 </tr>
                 <tr>
-                    <td>
-                        Média
-                    </td>
+                    <td>Média</td>
                     <td>
                         <h6 class="infosuppleft" align="left"><a class="medialink" target="_blank"
-                                                                   id="childMedia"></a></h6>
+                                                                 id="childMedia"></a></h6>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Année
-                    </td>
+                    <td>Année</td>
                     <td>
                         <h6 class="infosuppleft" align="left">
                             <span id="childAnneeprod"></span>
@@ -183,9 +161,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Id Place
-                    </td>
+                    <td>Id Place</td>
                     <td>
                         <h6 class="infosuppleft" align="left"><span
                                     id="childIDPlace"></span>
@@ -193,7 +169,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="50" rows="4"></textarea></td>
+                    <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="45" rows="4"></textarea></td>
                 </tr>
                 <?php if ($_SESSION['fail'] == false) {
                     echo "
@@ -238,12 +214,14 @@
     <a href="https://www.edm.ch/fr/sensibilisation"><img src="images/logo_EDM.png" class="logo_edm"
                                                          alt="Logo d'Enfants du monde" width="200px"></a>
 </div>
-
 <div id="loading">
     <p>Chargement...</p>
-    <div class="w3-light-grey w3-round-xlarge">
-        <div id="progress_bar" class="w3-blue w3-round-xlarge" style="width:0%;height: 5px;margin-top: -20px"></div>
-    </div>
+    <a href="index.php?action=easteregg" target="_blank">
+        <div class="w3-light-grey w3-round-xlarge">
+            <div id="progress_bar" class="w3-blue w3-round-xlarge" style="width:0%;height: 5px;margin-top: -20px"></div>
+        </div>
+    </a>
+
 </div>
 
 <script src="js/three.min.js"></script>
@@ -267,15 +245,6 @@ void main() {
     gl_Position = projectionMatrix * modelViewMatrix * pos;
 }
 
-
-
-
-
-
-
-
-
-
 </script>
 <script type="application/x-glsl" id="sky-fragment">
 uniform sampler2D texture;
@@ -285,15 +254,6 @@ void main() {
     vec4 sample = texture2D(texture, vUV);
     gl_FragColor = vec4(sample.xyz, sample.w);
 }
-
-
-
-
-
-
-
-
-
 
 </script>
 
