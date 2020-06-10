@@ -176,12 +176,13 @@ li a:hover:not(.active) {
 .labelup {
 
     text-align: center;
+    cursor: default;
 
 }
 
 
 .imgup {
-    width: 150px;
+    width: 200px;
     padding-left: 22px;
 
 }
