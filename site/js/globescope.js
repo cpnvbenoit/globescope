@@ -86,6 +86,7 @@ var childImage = document.getElementById("childImage");
 var childPseudo = document.getElementById("childPseudo");
 var childCitation = document.getElementById("childCitation");
 var childRight = document.getElementById("childRight");
+var childEcole = document.getElementById("childEcole");
 var childIDPlace = document.getElementById("childIDPlace");
 var childEdit = document.getElementById("childEdit");
 var childEquipe = document.getElementById("childEquipe");

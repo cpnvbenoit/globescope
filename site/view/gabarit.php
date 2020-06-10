@@ -108,7 +108,7 @@
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails" style="overflow-y: scroll; height:550px;">
-        <img style="margin-top: 150px;width:260px;height:325px;" id="childImage">
+        <img style="margin-top: 500px;width:260px;height:325px;" id="childImage">
         <span id="separator"></span>
 
 
@@ -148,6 +148,14 @@
                 </tr>
                 <tr>
                     <td>
+                        École
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childEcole"></span></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         Pays
                     </td>
                     <td>
@@ -169,7 +177,7 @@
                     </td>
                     <td>
                         <h6 class="infosuppleft" align="left"><a class="medialink" target="_blank"
-                                                                   id="childMedia"></a></h6>
+                                                                 id="childMedia"></a></h6>
                     </td>
                 </tr>
                 <tr>
@@ -276,6 +284,7 @@ void main() {
 
 
 
+
 </script>
 <script type="application/x-glsl" id="sky-fragment">
 uniform sampler2D texture;
@@ -285,6 +294,7 @@ void main() {
     vec4 sample = texture2D(texture, vUV);
     gl_FragColor = vec4(sample.xyz, sample.w);
 }
+
 
 
 

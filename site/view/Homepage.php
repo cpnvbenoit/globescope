@@ -85,14 +85,14 @@
                     <div class="inner clearfix">
                         <div class=moduletable_menu>
                             <ul class="nav menu mod-list">
-                                <li class="item-2640 parent"><a href=/fr/notre-mission>Mission</a></li>
-                                <li class="item-3691 parent"><a href=/fr/education>Education</a></li>
-                                <li class="item-3692 parent"><a href=/fr/sante>Santé</a></li>
-                                <li class="item-4037 parent"><a href=/fr/sensibilisation>Sensibilisation</a></li>
-                                <li class="item-2617 parent"><a href=/fr/aider>Nous soutenir</a></li>
-                                <li class="item-2644 parent"><a href=/fr/media-publication>Média &amp; publications</a>
+                                <li class="item-2640 parent"><a href="https://www.edm.ch/fr/notre-mission">Mission</a></li>
+                                <li class="item-3691 parent"><a href="https://www.edm.ch/fr/education">Education</a></li>
+                                <li class="item-3692 parent"><a href="https://www.edm.ch/fr/sante">Santé</a></li>
+                                <li class="item-4037 parent"><a href="https://www.edm.ch/fr/sensibilisation">Sensibilisation</a></li>
+                                <li class="item-2617 parent"><a href="https://www.edm.ch/fr/aider">Nous soutenir</a></li>
+                                <li class="item-2644 parent"><a href="https://www.edm.ch/fr/media-publication">Média &amp; publications</a>
                                 </li>
-                                <li class="item-2652 parent"><a href=/fr/contact-fr>Contact</a></li>
+                                <li class="item-2652 parent"><a href="https://www.edm.ch/fr/contact-fr">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -110,9 +110,9 @@
                                     attestation pour vos dons de l’année précédente, que vous pourrez joindre à votre
                                     déclaration fiscale.</p>
                                 <p><strong><a title="Conditions générales d'Enfants du Monde"
-                                              href=/components/com_fp_donation/conditions-fr.html>Conditions
+                                              href="https://www.edm.ch/components/com_fp_donation/conditions-fr.html">Conditions
                                             générales</a> | <a title="Protection des données d'Enfants du Monde"
-                                                               href=/fr/protection-donnees/>Protection des
+                                                               href="https://www.edm.ch/fr/protection-donnees/">Protection des
                                             données</a></strong>
                                 </p></div>
                         </div>
@@ -121,7 +121,7 @@
                 <div id=footer-module-3 class="flexiblemodule ">
                     <div class="inner clearfix">
                         <div class=moduletable>
-                            <div class=custom><p><a href=/fr/media-publication/actualites/derniere-newsletter/newsletter
+                            <div class=custom><p><a href="https://www.edm.ch/fr/media-publication/actualites/derniere-newsletter/newsletter"
                                                     style="background-color: transparent;"><img
                                                 src=/images/newsletter_white.png alt="newsletter white"
                                                 width=40

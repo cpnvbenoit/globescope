@@ -32,6 +32,7 @@ function onImageClick(x)
                     childCitation.textContent =  myObj.Slogan;
                     childAnneeprod.textContent =  myObj.Anneeprod;
                     childRight.textContent = myObj.Droit;
+                    childEcole.textContent = myObj.ecole;
                     childPays.textContent = myObj.Pays;
                     childVille.textContent =myObj.Ville;
                     childEquipe.textContent = myObj.Team;
