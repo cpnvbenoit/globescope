@@ -6,6 +6,7 @@
  * Time: 15:57
  */
 session_start();
+
 require "controler/controler.php";
 if (isset($_GET['action'])){
     $action=$_GET['action'];

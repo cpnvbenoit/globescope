@@ -1,3 +1,10 @@
+<?php
+header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -102,7 +109,7 @@
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails" style="overflow-y: scroll; height:550px;">
-        <img style="margin-top: 150px;width:260px;height:325px;" id="childImage">
+        <img style="margin-top: 500px;width:260px;height:325px;" id="childImage">
         <span id="separator"></span>
 
 
@@ -136,6 +143,19 @@
                     <td>Pays</td>
                     <td>
                         <h6 class="infosuppleft" align="left"><span id="childPays"></span></h6><br>
+                        École
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childEcole"></span></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Pays
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childPays"></span></h6>
+
                     </td>
                 </tr>
                 <tr>
@@ -245,6 +265,7 @@ void main() {
     gl_Position = projectionMatrix * modelViewMatrix * pos;
 }
 
+
 </script>
 <script type="application/x-glsl" id="sky-fragment">
 uniform sampler2D texture;
@@ -254,6 +275,7 @@ void main() {
     vec4 sample = texture2D(texture, vUV);
     gl_FragColor = vec4(sample.xyz, sample.w);
 }
+
 
 </script>
 

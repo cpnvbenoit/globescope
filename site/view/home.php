@@ -6,6 +6,7 @@
  * Time: 15:49
  */
 ob_start();
+
 ?>
 <?php
 if (isset($_SESSION['flashmessage'])){
