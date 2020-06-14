@@ -107,6 +107,14 @@
     text-align: center;
     margin-bottom: 35px;
 }
+.GoToChild{
+    background-color: #3498db;
+    padding: 5px;
+    border-radius: 8px;
+    border: groove;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .buttonMedia{
     border-radius: 8px;
     color: white;

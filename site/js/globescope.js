@@ -131,7 +131,6 @@ container.onmousemove = onMouseMove;
 document.body.onkeydown = checkEnter;
 document.body.appendChild(container);
 
-
 loadData(scene, container, controls);
 animate();
 
