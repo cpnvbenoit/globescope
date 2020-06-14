@@ -486,7 +486,7 @@ function uploadimage($IDimage){
         }
     }
 }//upload img for redim function
-function resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 100){
+function resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite){
     /** Ce code à été copier du site http://www.frederic-gerard.com/scripts/script-php-pour-redimentionner-une-image-en-conservant-les-proportions.html
      * Il a été adapter pour correspondre a nos besoin.
      *
@@ -623,7 +623,7 @@ function fct_redim($size,$rep_size,$name_dst,$IDimage){
             $new_height=500;
             break;
     }//set var $Wmax, $Hmax
-    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 90);
+    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 93);
     //rename ($rep_Dst.$name, $rep_Dst.$name_dst);
     if ($result!='success'){
         return 'fail';
@@ -656,7 +656,7 @@ function fct_redim2($size,$rep_size,$name_dst,$IDimage){
             $new_height=500;
             break;
     }//set var $Wmax, $Hmax
-    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 90);
+    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 93);
     //rename ($rep_Dst.$name, $rep_Dst.$name_dst);
     if ($result!='success'){
         return 'fail';
@@ -690,7 +690,7 @@ function fct_redim3($size,$rep_size,$name_dst,$IDimage){
             break;
     }//set var $Wmax, $Hmax
     $_SESSION['errors_redi'][]=$image_path;
-    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 90);
+    $result= resize_img($image_path,$image_dest,$new_width,$new_height,$size,$qualite = 93);
 
     if ($result!='success'){
         return 'fail';
