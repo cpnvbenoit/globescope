@@ -252,8 +252,8 @@ textarea {
 .help-tip{
     margin-top: 8px;
     margin-right: 5px;
-    top: 18px;
-    right: 18px;
+    top: 45px;
+    right: -5px;
     text-align: center;
     background-color: #BCDC53;
     border-radius: 50%;
@@ -262,6 +262,7 @@ textarea {
     font-size: 14px;
     line-height: 26px;
     cursor: default;
+    position: absolute;
 }
 
 .help-tip:before{
