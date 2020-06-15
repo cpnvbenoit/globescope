@@ -144,7 +144,7 @@ ob_start();
                 <p><?= $child['Anneeprod'] ?></p>
             </td>
             <td>
-                <p><?php if (isset($child['desc'])){echo substr($child['desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
+                <p><?php if ($child['desc']!=''){echo substr($child['desc'], 0,15)."<a href=\"index.php?action=editchild&IDimage=". $child['IDImage']."\" target=\"_blank\"><span class='moredesc'>...</span></a>"; } ?></p>
             </td>
 
             <td>

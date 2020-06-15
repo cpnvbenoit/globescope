@@ -1,3 +1,12 @@
+<?php
+if ($_SESSION['fail'] == false) {
+    header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -94,15 +103,15 @@
 </div>
 
 <div class="zoom GUI">
-    <span style="color: white;font-size: 19px;"><i class="fas fa-plus-circle fa-2x"></i></span><br>
-    <span style="color: white;font-size: 19px"><i class="fas fa-minus-circle fa-2x"></i></span>
+    <span style="color: white;font-size: 19px;"><i onclick="dollyIn( getZoomScale() );" class="fas fa-plus-circle fa-2x"></i></span><br>
+    <span style="color: white;font-size: 19px"><i onclick="dollyOut( getZoomScale() );" class="fas fa-minus-circle fa-2x"></i></span>
 </div>
 
 <div id="sideBar" class=" GUI" style="height: 560px">
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails" style="overflow-y: scroll; height:550px;">
-        <img style="margin-top: 150px;width:260px;height:325px;" id="childImage">
+        <img style="margin-top: 500px;width:260px;height:325px;" id="childImage">
         <span id="separator"></span>
 
 
@@ -111,37 +120,48 @@
                 <tr>
                     <td width="25%">Slogan</td>
                     <td width="70%">
-                        <h6 class="infosuppleft" align="left"><span id="childCitation"></span></h6><br>
+                        <h6 class="infosuppleft" align="left"><span id="childCitation"></span></h6>
                     </td>
                 </tr>
                 <tr>
                     <td>Pseudo</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childPseudo"></span></h6><br>
+                        <h6 class="infosuppleft" align="left"><span id="childPseudo"></span></h6>
                     </td>
                 </tr>
                 <tr>
                     <td>Droit</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childRight"></span></h6><br>
+                        <h6 class="infosuppleft" align="left"><span id="childRight"></span></h6>
                     </td>
                 </tr>
                 <tr>
                     <td>Équipe</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childEquipe"></span></h6><br>
+                        <h6 class="infosuppleft" align="left"><span id="childEquipe"></span></h6>
                     </td>
                 </tr>
                 <tr>
-                    <td>Pays</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childPays"></span></h6><br>
+                        École
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childEcole"></span></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Pays
+                    </td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><span id="childPays"></span></h6>
+
                     </td>
                 </tr>
                 <tr>
                     <td>Ville</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childVille"></span></h6><br>
+                        <h6 class="infosuppleft" align="left"><span id="childVille"></span></h6>
                     </td>
 
                 </tr>
@@ -169,13 +189,19 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Lien Boutique</td>
+                    <td>
+                        <h6 class="infosuppleft" align="left"><a href="/boutique">Boutique</a>
+                        </h6>
+                    </td>
+                </tr>
+                <tr>
                     <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="45" rows="4"></textarea></td>
                 </tr>
                 <?php if ($_SESSION['fail'] == false) {
                     echo "
                     <tr>
-                    
-                        <td><a id=\"childEdit\" target=\"_blank\"><button class=\"editbuttonglobe\">Edit</button></a></td>
+                        <td><h6 class=\"infosuppleft\" align=\"left\"><a class='GoToChild' id=\"childEdit\" target=\"_blank\">Modifier</a></h6></td>
                     </tr>
                 ";
                 } ?>
@@ -245,6 +271,7 @@ void main() {
     gl_Position = projectionMatrix * modelViewMatrix * pos;
 }
 
+
 </script>
 <script type="application/x-glsl" id="sky-fragment">
 uniform sampler2D texture;
@@ -254,6 +281,7 @@ void main() {
     vec4 sample = texture2D(texture, vUV);
     gl_FragColor = vec4(sample.xyz, sample.w);
 }
+
 
 </script>
 

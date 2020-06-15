@@ -46,11 +46,11 @@
                         <li><a href="https://edm.mycpnv.ch/forum/">Forum</a></li>
                         <li><a href="https://www.edm.ch/fr/sensibilisation/projet-enfants-reporters">Les droits de
                                 l'enfant</a></li>
-                        <li><a href="https://fr.wikipedia.org/wiki/Concours">Concours</a></li>
-                        <!-- Pas de lien sur le site de EDM ! -->
+
                         <li><a href="https://www.edm.ch/fr/sensibilisation/projet-un-monde-plus-juste">Un Monde Plus
                                 Juste</a></li>
                         <li><a href="https://www.edm.ch/fr/media-publication">Les enquêtes</a></li>
+                        <li><a href="https://www.edm.ch/fr/media-publication">Crédit</a></li>
 
                     </ul>
 
@@ -197,8 +197,7 @@
                                             data-ep-bf95e=h><span
                                                 data-ep-ab883=fo data-ep-bf95e=.c><span data-ep-bf95e=dm
                                                                                         data-ep-ab883=&#64;&#101;></span></span></span></span></a><br/>2016&nbsp;©
-                            Enfants du Monde | Gestion du site par App'n Web | Conception &amp; Design par Benoit
-                            Pierrehumbert & Simon Cuany
+                            Enfants du Monde | Gestion du site par App'n Web
                         </p>
                     </div>
                 </div>

@@ -10,6 +10,7 @@ function upload() {
         var link ="index.php?action=uploadmedia&IDimage=";
         link+=$_GET['IDimage'];
         window.open(link);
+
     }
 
 }
