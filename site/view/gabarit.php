@@ -111,7 +111,7 @@ if ($_SESSION['fail'] == false) {
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails" style="overflow-y: scroll; height:550px;">
-        <img style="margin-top: 500px;width:260px;height:325px;" id="childImage">
+        <img style="margin-top: 500px;width:340px;height:425px;" id="childImage">
         <span id="separator"></span>
 
 
