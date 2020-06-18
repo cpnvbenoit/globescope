@@ -103,8 +103,8 @@ if ($_SESSION['fail'] == false) {
 </div>
 
 <div class="zoom GUI">
-    <span style="color: white;font-size: 19px;"><i onclick="dollyIn( getZoomScale() );" class="fas fa-plus-circle fa-2x"></i></span><br>
-    <span style="color: white;font-size: 19px"><i onclick="dollyOut( getZoomScale() );" class="fas fa-minus-circle fa-2x"></i></span>
+    <span style="color: white;font-size: 19px;"><i id="iconPlus" onclick="alert('OK PLUS');" style="cursor: pointer;" class="fas fa-plus-circle fa-2x"></i></span><br>
+    <span style="color: white;font-size: 19px"><i id="iconMinus" onclick="alert('OK MOINS');;" style="cursor: pointer;" class="fas fa-minus-circle fa-2x"></i></span>
 </div>
 
 <div id="sideBar" class=" GUI" style="height: 560px">
