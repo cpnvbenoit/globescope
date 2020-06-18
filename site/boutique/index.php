@@ -9,7 +9,7 @@ session_start();
 	<title>Un Monde plus Juste</title>
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
  <link rel="stylesheet" href="style/classic/global.css">
  <link rel="stylesheet" media="(min-width: 993px)" href="style/classic/poster.css">
@@ -17,6 +17,9 @@ session_start();
 
  <link rel="stylesheet" media="(max-width: 992px)" href="style/mobile/poster_mobile.css">
  <link rel="stylesheet" media="(max-width: 992px)" href="style/mobile/poster_formulaire_mobile.css">
+
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/homepage.css">
 
  <script type="text/javascript" src="script/script.js"></script>
 </head>
@@ -114,10 +117,34 @@ function ecrire($data){
 <header class="TEMPORAIRE">
 
 
-  <img alt="logo" id="logo" src="../images/Logo_bleu_RGB.png">
-  <div id="banniere"></div>
-  <nav id="nav">
-  </nav>
+    <div id=header-wrapper>
+        <div class="container-fluid inner ">
+            <div id=header-bg-internal>
+                <div class="inner clearfix">
+                    <div class="divtable">
+                        <ul class="menuhomepage">
+                            <li style="background-color: white"><a href="https://www.edm.ch/fr//"><img
+                                            src="https://edm.mycpnv.ch/images/Logo_bleu_RGB.png" class="imgup"
+                                            id="logoedm"> </a></li>
+                            <li><a href="https://www.edm.ch/fr/">Home</a></li>
+                            <li><a href="https://edm.mycpnv.ch/?action=home">Globe - EDM</a></li>
+                            <li><a href="/boutique">Boutique</a></li>
+                            <li><a href="https://edm.mycpnv.ch/forum/">Forum</a></li>
+                            <li><a href="https://www.edm.ch/fr/sensibilisation/projet-enfants-reporters">Les droits de
+                                    l'enfant</a></li>
+
+                            <li><a href="https://www.edm.ch/fr/sensibilisation/projet-un-monde-plus-juste">Un Monde Plus
+                                    Juste</a></li>
+                            <li><a href="https://www.edm.ch/fr/media-publication">Les enquêtes</a></li>
+                            <li><a href="https://www.edm.ch/fr/media-publication">Crédit</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </header>
 <div id="corps_de_page_posters">
   <section id="titre_posters">
@@ -223,7 +250,7 @@ function ecrire($data){
         <div class="poster_inside"><span>Format A4 uniquement</span></div>
         <div class="poster_inside"><span id="card_poster_caractere_invisible">
           <form action="canvas_base.html" method="get">
-          <span id="id_souvenir_perso">ID &nbsp</span><input type="number" name="id" value="0" min="0" width="100px" id="input_id_souvenir">
+          <span id="id_souvenir_perso">ID &nbsp</span><input type="number" name="id" value="0" min="0" width="100px" id="input_id_souvenir" disabled>
           <div class="poster_inside" id="bouton_poster_perso">
         </div>   
           </form></span></div>
@@ -231,22 +258,7 @@ function ecrire($data){
       </div>
     </div>
   </section>
-  <section class="conteneur_lien_USB">
-    <div class="conteneur_lien_USB_div">
-      <div class="lien_USB">
-        <p>Globe USB</p>
-      </div>
-      <div id="div_image_cle_usb">
-        <img src="../images/page_poster_pictures/USB_key3.png" alt="usb_key" id="image_poster_cle_usb">
-      </div>
-      <div class="bouton_download_USB">
-        <a href="mailto:exemple@exmple.com" id="lien_download_USB"> <!-- ADRESSE MAIL A CHANGER-->
-          <div id="bouton_lien_download_USB">Demander</div>
-        </a>  
-      </div>
-    </div>
-  </section>
-  <p class="sous_titre_glob_usb">Vous pouvez demander une clé usb à EDM contenant une version locale du globe si votre connexion n'est pas suffisante. Faites la demande par mail.</p>
+
 </div>
 
 <div id="nouveauFormulaire"></div>

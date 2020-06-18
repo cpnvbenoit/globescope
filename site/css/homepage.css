@@ -104,7 +104,7 @@
     text-indent: 20px;
     line-height: 45px;
     height: 50px;
-    font-family:
+
 }
 
 .mobilebarmaximenuck .mobilebuttonmaximenuck {
@@ -123,7 +123,7 @@
     line-height: 40px;
     height: 50px;
     width: 40px;
-    font-family:
+
 }
 
 .mobilemaximenuck {
@@ -146,7 +146,7 @@
     text-indent: 20px;
     line-height: 45px;
     height: 35px;
-    font-family:
+
 }
 
 .mobilemaximenuck .mobilemaximenuckclose {
@@ -165,7 +165,7 @@
     color: #FFF;
     height: 50px;
     width: 40px;
-    font-family:
+
 }
 
 .mobilemaximenuck a {
@@ -192,7 +192,7 @@
     font-size: 16px;
     color: #FFF;
     line-height: 20px;
-    font-family:
+
 }
 
 .mobilemaximenuck div.level2.maximenuck > a {
@@ -202,13 +202,13 @@
     margin-left: 10px;
     background: #0072C6;
     background-color: #0072C6;
-    background-image: url(/images/stories/icons/bullet_white.png);
+
     background-repeat: no-repeat;
     background-position: left center;
     font-size: 14px;
     color: #FFF;
     line-height: 18px;
-    font-family:
+
 }
 
 .mobilemaximenuck div.level2.maximenuck + .mobilemaximenucksubmenu div.maximenuck > a {
@@ -218,20 +218,9 @@
     font-size: 10px;
     color: #FFF;
     line-height: 14px;
-    font-family:
+
 }
 
-.mobilemaximenuck .mobilemaximenucktogglericon:after {
-    cursor: pointer;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-right: 0px;
-    font-size: 20px;
-    height: 35px;
-    width: 35px;
-    font-family:
-}
 
 .mobilemaximenuck .mobilemaximenucktogglericon:after {
     display: block;
@@ -2291,47 +2280,6 @@ div.mod_search93 input[type="search"] {
     width: auto
 }
 
-@font-face {
-    font-family: 'open_sansbold';
-    src: url(/templates/edm-j3-front/fonts/opensans-bold-webfont.woff2) format('woff2'), url(/templates/edm-j3-front/fonts/opensans-bold-webfont.woff) format('woff');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'open_sansbold_italic';
-    src: url(/templates/edm-j3-front/fonts/opensans-bolditalic-webfont.woff2) format('woff2'), url(/templates/edm-j3-front/fonts/opensans-bolditalic-webfont.woff) format('woff');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'open_sansitalic';
-    src: url(/templates/edm-j3-front/fonts/opensans-italic-webfont.woff2) format('woff2'), url(/templates/edm-j3-front/fonts/opensans-italic-webfont.woff) format('woff');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'open_sansregular';
-    src: url(/templates/edm-j3-front/fonts/opensans-regular-webfont.woff2) format('woff2'), url(/templates/edm-j3-front/fonts/opensans-regular-webfont.woff) format('woff');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'open_sanssemibold';
-    src: url(/templates/edm-j3-front/fonts/opensans-semibold-webfont.woff2) format('woff2'), url(/templates/edm-j3-front/fonts/opensans-semibold-webfont.woff) format('woff');
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'open_sanssemibold_italic';
-    src: url(/templates/edm-j3-front/fonts/opensans-semibolditalic-webfont.woff2) format('woff2'), url(/templates/edm-j3-front/fonts/opensans-semibolditalic-webfont.woff) format('woff');
-    font-weight: normal;
-    font-style: normal
-}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
     display: block
@@ -4498,7 +4446,7 @@ table td[class*="span"], table th[class*="span"], .row-fluid table td[class*="sp
 }
 
 button.close {
-    padding: 3;
+
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -8769,7 +8717,6 @@ div.modal {
     -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
     -webkit-background-clip: padding-box;
-    -moz-background-clip: padding-box;
     background-clip: padding-box;
     outline: none
 }
@@ -8788,9 +8735,7 @@ div.modal.fade.in {
 
 @font-face {
     font-family: 'IcoMoon';
-    src: url(/media/jui/fonts/IcoMoon.eot);
-    src: url(/media/jui/fonts/IcoMoon.eot#iefix) format('embedded-opentype'), url(/media/jui/fonts/IcoMoon.woff) format('woff'), url(/media/jui/fonts/IcoMoon.ttf) format('truetype'), url(/media/jui/fonts/IcoMoon.svg#IcoMoon) format('svg');
-    font-weight: normal;
+       font-weight: normal;
     font-style: normal
 }
 
@@ -9334,9 +9279,7 @@ div.modal.fade.in {
     content: "\e024"
 }
 
-html {
-    height: 101/100%
-}
+
 
 body {
     margin: 0;
@@ -9451,7 +9394,6 @@ body {
     color: #969696;
     text-align: left;
     line-height: 20px;
-    font-family: open_sansregular
 }
 
 a {
@@ -9779,7 +9721,7 @@ ul:not(.nav) li {
 }
 
 #header-don-front > div.inner {
-    background: #;
+
     text-align: center
 }
 
@@ -11271,7 +11213,6 @@ ul:not(.nav) li {
 
 #right .agenda h3 {
     text-align: center;
-    background: url(/images/agenda.png) center top no-repeat;
     margin-top: 25px;
     padding-top: 25px
 }
@@ -11486,7 +11427,6 @@ ul.nav-child li:first-child > a {
 }
 
 .search input.button {
-    background: url(/images/stories/icons/fa-search.png) center no-repeat;
     padding: 0;
     padding-left: 5px;
     margin: 0;
@@ -11711,7 +11651,6 @@ ul.nav-child li:first-child > a {
     -webkit-border-radius: 2px;
     border-radius: 2px;
     width: 50% !important;
-    margin: 0 ! imporant;
     position: relative;
     padding-top: 0 !important;
     padding-bottom: 25px;
@@ -12120,7 +12059,6 @@ ul.nav-child li:first-child > a {
     }
 
     .search input.button {
-        background: url(/images/stories/icons/fa-search-mobile.png) center no-repeat;
         padding: 0;
         padding-left: 0px;
         margin: 0;
