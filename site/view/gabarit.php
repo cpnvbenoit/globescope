@@ -1,11 +1,9 @@
 <?php
-if ($_SESSION['fail'] == false) {
     header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
     header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
     header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
     header("Cache-Control: post-check=0, pre-check=0", false);
     header("Pragma: no-cache");
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -111,7 +109,7 @@ if ($_SESSION['fail'] == false) {
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails" style="overflow-y: scroll; height:550px;">
-        <img style="margin-top: 500px;width:340px;height:425px;" id="childImage">
+        <img style="margin-top: 600px;width:340px;height:425px;" id="childImage">
         <span id="separator"></span>
 
 
@@ -120,33 +118,31 @@ if ($_SESSION['fail'] == false) {
                 <tr>
                     <td width="25%">Slogan</td>
                     <td width="70%">
-                        <h6 class="infosuppleft" align="left"><span id="childCitation"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childCitation">-</span></h6>
                     </td>
                 </tr>
                 <tr>
                     <td>Pseudo</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childPseudo"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childPseudo">-</span></h6>
                     </td>
                 </tr>
                 <tr>
                     <td>Droit</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childRight"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childRight">-</span></h6>
                     </td>
                 </tr>
                 <tr>
                     <td>Équipe</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childEquipe"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childEquipe">-</span></h6>
                     </td>
                 </tr>
                 <tr>
+                    <td>École</td>
                     <td>
-                        École
-                    </td>
-                    <td>
-                        <h6 class="infosuppleft" align="left"><span id="childEcole"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childEcole">-</span></h6>
                     </td>
                 </tr>
                 <tr>
@@ -154,14 +150,14 @@ if ($_SESSION['fail'] == false) {
                         Pays
                     </td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childPays"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childPays">-</span></h6>
 
                     </td>
                 </tr>
                 <tr>
                     <td>Ville</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childVille"></span></h6>
+                        <h6 class="infosuppleft" align="left"><span id="childVille">-</span></h6>
                     </td>
 
                 </tr>
@@ -176,7 +172,7 @@ if ($_SESSION['fail'] == false) {
                     <td>Année</td>
                     <td>
                         <h6 class="infosuppleft" align="left">
-                            <span id="childAnneeprod"></span>
+                            <span id="childAnneeprod">-</span>
                         </h6>
                     </td>
                 </tr>
@@ -184,7 +180,7 @@ if ($_SESSION['fail'] == false) {
                     <td>Id Place</td>
                     <td>
                         <h6 class="infosuppleft" align="left"><span
-                                    id="childIDPlace"></span>
+                                    id="childIDPlace">-</span>
                         </h6>
                     </td>
                 </tr>
