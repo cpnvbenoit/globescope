@@ -18,7 +18,6 @@ function actualiser(){
   document.getElementById("bouton_poster_ellipse").innerHTML = '<div class="bouton_download_poster"><a class="bouton_download_poster_p" href='+lien_elip+' '+'download>Télécharger</a></div>';
   document.getElementById("bouton_poster_perso").innerHTML = '<div class="bouton_download_poster"><input type="submit" class="bouton_download_poster_p_souvenir" value="Générer"></div>';
   document.getElementById("input_id_souvenir").disabled = false;
-  alert("caca");
  }
 }
 

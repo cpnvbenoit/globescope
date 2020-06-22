@@ -3,7 +3,7 @@
 */
 .TEMPORAIRE
 {
-    display: none;
+    display: none; 
 }
 
 
@@ -121,6 +121,7 @@ body
 
 #titre_globe_usb
 {
+  line-height: 40px;
   margin: 0px;
   width: 100%;
   text-align: center;

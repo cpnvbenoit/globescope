@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="js/Loginstyle.js"></script>
     <script src="js/Media.js"></script>
-    <script src="https://kit.fontawesome.com/62d62738cd.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/62d62738cd.js" cros sorigin="anonymous"></script>
+
+
 
 </head>
 
@@ -101,15 +103,15 @@
 </div>
 
 <div class="zoom GUI">
-    <span style="color: white;font-size: 19px;"><i id="iconPlus" onclick="alert('OK PLUS');" style="cursor: pointer;" class="fas fa-plus-circle fa-2x"></i></span><br>
-    <span style="color: white;font-size: 19px"><i id="iconMinus" onclick="alert('OK MOINS');;" style="cursor: pointer;" class="fas fa-minus-circle fa-2x"></i></span>
+    <span style="color: white;font-size: 19px;"><i id="iconPlus" onclick="onKeyPress('PLUS')" style="cursor: pointer;" class="fas fa-plus-circle fa-2x"></i></span><br>
+    <span style="color: white;font-size: 19px"><i id="iconMinus" onclick="onKeyPress('MINUS')" style="cursor: pointer;" class="fas fa-minus-circle fa-2x"></i></span>
 </div>
 
 <div id="sideBar" class=" GUI" style="height: 560px">
     <p id="closeSideBar" class="closeButton">X</p>
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails" style="overflow-y: scroll; height:550px;">
-        <img style="margin-top: 600px;width:340px;height:425px;" id="childImage">
+        <img style="margin-top: 450px;width:340px;height:425px;" id="childImage">
         <span id="separator"></span>
 
 
@@ -118,31 +120,31 @@
                 <tr>
                     <td width="25%">Slogan</td>
                     <td width="70%">
-                        <h6 class="infosuppleft" align="left"><span id="childCitation">-</span></h6>
+                        <span id="childCitation">-</span>
                     </td>
                 </tr>
                 <tr>
                     <td>Pseudo</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childPseudo">-</span></h6>
+                        <span id="childPseudo">-</span>
                     </td>
                 </tr>
                 <tr>
                     <td>Droit</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childRight">-</span></h6>
+                        <span id="childRight">-</span>
                     </td>
                 </tr>
                 <tr>
                     <td>Équipe</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childEquipe">-</span></h6>
+                        <span id="childEquipe">-</span>
                     </td>
                 </tr>
                 <tr>
                     <td>École</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childEcole">-</span></h6>
+                        <span id="childEcole">-</span>
                     </td>
                 </tr>
                 <tr>
@@ -150,45 +152,37 @@
                         Pays
                     </td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childPays">-</span></h6>
-
+                        <span id="childPays">-</span>
                     </td>
                 </tr>
                 <tr>
                     <td>Ville</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span id="childVille">-</span></h6>
+                        <span id="childVille">-</span>
                     </td>
-
                 </tr>
                 <tr>
                     <td>Média</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><a class="medialink" target="_blank"
-                                                                 id="childMedia"></a></h6>
+                        <a class="medialink" target="_blank" id="childMedia"></a>
                     </td>
                 </tr>
                 <tr>
                     <td>Année</td>
                     <td>
-                        <h6 class="infosuppleft" align="left">
                             <span id="childAnneeprod">-</span>
-                        </h6>
                     </td>
                 </tr>
                 <tr>
                     <td>Id Place</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><span
-                                    id="childIDPlace">-</span>
-                        </h6>
+                        <span id="childIDPlace">-</span>
                     </td>
                 </tr>
                 <tr>
                     <td>Lien Boutique</td>
                     <td>
-                        <h6 class="infosuppleft" align="left"><a href="/boutique">Boutique</a>
-                        </h6>
+                        <a href="/boutique">Boutique</a>
                     </td>
                 </tr>
                 <tr>
@@ -240,19 +234,20 @@
     <p>Chargement...</p>
     <a href="index.php?action=easteregg" target="_blank">
         <div class="w3-light-grey w3-round-xlarge">
-            <div id="progress_bar" class="w3-blue w3-round-xlarge" style="width:0%;height: 5px;margin-top: -20px"></div>
+            <div id="progress_bar" class="w3-blue w3-round-xlarge" style="width:0%;height: 5px;margin-top: -20px; cursor: default;"></div>
         </div>
     </a>
 
 </div>
 
 <script src="js/three.min.js"></script>
-<script src="js/three/controls/OrbitControls.js"></script>
+
 <script src="js/three/loaders/DDSLoader.js"></script>
 <script src="js/loader.js"></script>
 <script src="js/searchChild.js"></script>
 <script src="js/childClicked.js"></script>
 <script src="js/Tween.js"></script>
+<script src="js/three/controls/OrbitControls.js"></script>
 <div class="pop-up">
 
 </div>
