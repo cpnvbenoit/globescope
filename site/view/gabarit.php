@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/helpStyle.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/progressBar.css?d=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/cssinhtml.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="icon" type="image/png" href="//cdn.icon-icons.com/icons2/665/PNG/512/earth_icon-icons.com_60279.png"/>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="js/Loginstyle.js"></script>
