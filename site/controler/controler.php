@@ -110,6 +110,8 @@ function GetData(){
                     $res[] = $image;
                 }else if (preg_match($pattern, $image['ecole'])){
                     $res[] = $image;
+                }else if (preg_match($pattern, $image['IDPlace'])){
+                    $res[] = $image;
                 }
         } else if ($mode == "click")
         {

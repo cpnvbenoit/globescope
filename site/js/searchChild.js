@@ -1,6 +1,6 @@
 function searchChild(camera,scene)
 {
-    var objJSON,dbParam,xmlhttp,myObj,objJSON2,objJSON3,objJSON4;
+    var objJSON,dbParam,xmlhttp,myObj,objJSON2,objJSON3,objJSON4,objJSON5,objJSON6;
 
     //les paramètres a passer dans la requête SQL
     //SearchTextBox => input de la barre de recherche
@@ -8,6 +8,8 @@ function searchChild(camera,scene)
     objJSON2 = {"Pays":SearchTextBox.value };
     objJSON3 = {"Ville":SearchTextBox.value };
     objJSON4 = {"Team":SearchTextBox.value };
+    objJSON5 = {"IDPlace":SearchTextBox.value };
+    objJSON6 = {"ecole":SearchTextBox.value };
     dbParam = JSON.stringify(objJSON);
 
     xmlhttp = new XMLHttpRequest();
@@ -42,7 +44,7 @@ function searchChild(camera,scene)
                         var searchPseudo = document.createElement('p');
 
                         img.id=myObj[i].IDImage;
-                        img.src = "images/64-64/"+myObj[i].IDImage+".png"
+                        img.src = "images/64-64/"+myObj[i].IDImage+".png";
                         img.onclick = function()
                         {
                             var plane = scene.getObjectByName( myObj[i].IDPlace );

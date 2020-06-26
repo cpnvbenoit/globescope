@@ -103,8 +103,8 @@
 </div>
 
 <div class="zoom GUI">
-    <span style="color: white;font-size: 19px;"><i id="iconPlus" onclick="onKeyPress('PLUS')" style="cursor: pointer;" class="fas fa-plus-circle fa-2x"></i></span><br>
-    <span style="color: white;font-size: 19px"><i id="iconMinus" onclick="onKeyPress('MINUS')" style="cursor: pointer;" class="fas fa-minus-circle fa-2x"></i></span>
+    <span style="color: white;font-size: 19px;"><i id="iconPlus" onclick="alert('Nous travaillons toujours dessus...')" style="cursor: pointer;" class="fas fa-plus-circle fa-2x"></i></span><br>
+    <span style="color: white;font-size: 19px"><i id="iconMinus" onclick="alert('Nous travaillons toujours dessus...')" style="cursor: pointer;" class="fas fa-minus-circle fa-2x"></i></span>
 </div>
 
 <div id="sideBar" class=" GUI" style="height: 560px">
