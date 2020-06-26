@@ -87,6 +87,9 @@ if (isset($action)) {
          case 'home';
             home();
             break;
+         case 'credits';
+            credits();
+            break;
         case 'editchild';
             editchild($IDimage);
             break;
