@@ -117,6 +117,7 @@
 
         <div id="description">
             <table class="tablehome-infos">
+
                 <tr>
                     <td width="25%">Slogan</td>
                     <td width="70%">
@@ -188,13 +189,16 @@
                 <tr>
                     <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="45" rows="4"></textarea></td>
                 </tr>
+                <tr>
+                    <td><h6 class="infosuppleft" align="left"><a class='GoToChild' id="returnButton" target="_blank">Retour</a></h6></td>
                 <?php if ($_SESSION['fail'] == false) {
                     echo "
-                    <tr>
+                   
                         <td><h6 class=\"infosuppleft\" align=\"left\"><a class='GoToChild' id=\"childEdit\" target=\"_blank\">Modifier</a></h6></td>
-                    </tr>
+                    
                 ";
                 } ?>
+                </tr>
             </table>
             <?php if ($_SESSION['fail'] == false) {
                 echo "";

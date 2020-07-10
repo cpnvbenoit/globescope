@@ -64,12 +64,17 @@ SearchBox.style.display = 'inline';
 var xmlSearch;
 var SearchTextBox = document.getElementById('searchText');
 
+
 SearchTextBox.onfocus = function () {
     xmlSearch = new XMLHttpRequest();
 }
 
 var SearchButton = document.getElementById('searchButton');
+var ReturnButton = document.getElementById('returnButton');
 SearchButton.onclick = showSearchResults;
+ReturnButton.onclick = showSearchResults;
+
+
 
 var dynamicSearchResult = document.getElementById('onDynamicSearch');
 dynamicSearchResult.style.display = 'none';
@@ -247,26 +252,32 @@ function closeHelp() {
     }
 }
 
+
+
 function showSearchResults() {
-    searchChild(camera, scene);
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        SearchBox.style.display = 'none';
-        showSearchButton.style.display = 'none';
-        helpButton.style.display = 'none';
-    } else {
-        SearchBox.style.display = 'none';
-        showSearchButton.style.display = 'block';
-    }
+    if (SearchTextBox.value != "") {
+        searchChild(camera, scene);
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            SearchBox.style.display = 'none';
+            showSearchButton.style.display = 'none';
+            helpButton.style.display = 'none';
+        } else {
+            SearchBox.style.display = 'none';
+            showSearchButton.style.display = 'block';
+        }
 
-    onClickDetails.style.display = 'none';
-    onSearchDetails.style.display = 'flex';
+        onClickDetails.style.display = 'none';
+        onSearchDetails.style.display = 'flex';
 
-    imageLoader.style.display = 'none';
-    var nodes = onSearchDetails.childNodes;
-    var i = 0;
-    for (i = 0; i < nodes.length; i++) {
-        if (nodes[i].style != null)
-            nodes[i].style.display = "block";
+        imageLoader.style.display = 'none';
+        var nodes = onSearchDetails.childNodes;
+        var i = 0;
+        for (i = 0; i < nodes.length; i++) {
+            if (nodes[i].style != null)
+                nodes[i].style.display = "block";
+        }
+    }else{
+        alert("Vous n'avez pas fait de recherche...")
     }
 }
 

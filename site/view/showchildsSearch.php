@@ -35,8 +35,8 @@ ob_start();
 
 <table class="table" border="1" align="center" style="border: #BCDC53">
     <thead class="fixedth">
-    <th  class="gradientSCS">
-            <span>Meridien</span> <span>Latitude</span> <span>Longitude</span>
+    <th class="gradientSCS">
+            <span>Meridien Latitude Longitude</span>
     </th>
     <th class="rouge">
         IDPlace
@@ -66,16 +66,16 @@ ob_start();
     <th class="rouge2" width="8%">
         Ville
     </th>
-    <th >
+    <th class="bc-blanc" >
         Media
     </th>
-    <th>
+    <th class="bc-blanc">
         Année
     </th>
-    <th >
+    <th class="bc-blanc" >
         Résumé
     </th>
-    <th>
+    <th class="bc-blanc">
         Modifier
     </th>
     </thead  align="center" >

@@ -189,7 +189,7 @@ function showchildsSearch()
                 $inIDPlace = true;
                 $sort = "d";
             }
-            if ($searchText == $child['IDImage']) {
+            if ($_POST['searchText'] == $child['IDImage']) {
                 $in = true;
                 $inIDImage = true;
                 $sort = "e";
@@ -198,37 +198,37 @@ function showchildsSearch()
                 $in = true;
                 $inPseudo = true;
                 $sort = "f";
-            }//vague
+            }
             if (preg_match($searchText, $child['Droit'])) {
                 $in = true;
                 $inDroit = true;
                 $sort = "g";
-            }//vague
+            }
             if (preg_match($searchText, $child['Slogan'])) {
                 $in = true;
                 $inSlogan = true;
                 $sort = "h";
-            }//vague
+            }
             if (preg_match($searchText, $child['Team'])) {
                 $in = true;
                 $inTeam = true;
                 $sort = "i";
-            }//vague
+            }
             if (preg_match($searchText, $child['Pays'])) {
                 $in = true;
                 $inPays = true;
                 $sort = "j";
-            }//vague
+            }
             if (preg_match($searchText, $child['Ville'])) {
                 $in = true;
                 $inVille = true;
                 $sort = "k";
-            }//vague
+            }
             if (preg_match($searchText, $child['ecole'])) {
                 $in = true;
                 $inEcole = true;
                 $sort = "l";
-            }//vague
+            }
             if ($in == true) {
                 $search[] = ["id" => $compteur,
                     "searchText" => $_POST['searchText'],
@@ -382,7 +382,7 @@ function forum()
     require_once 'forum/index.php';
 }
 
-function uploadmedia($IDimage)
+function uploadmedia($IDimage,$errors)
 {
     require_once 'view/uploadmedia.php';
 }
@@ -395,7 +395,7 @@ function uploadimg($IDimage)
 function uploadfile($IDimage)
 {
     if (isset($_FILES['media'])) {
-        $errors = array();
+        $errors = null;
         $file_name = $_FILES['media']['name'];
         $file_size = $_FILES['media']['size'];
         $file_tmp = $_FILES['media']['tmp_name'];
@@ -406,6 +406,7 @@ function uploadfile($IDimage)
         if ($file_size > 10485760) {
             $errors = 'Le fichier ne doit pas dépasser 10 MB';
         }
+        var_dump($_SESSION['valuemedia']);
         unlink($_SESSION['valuemedia']);
         if (empty($errors) == true) {
             $backup = getBackup();//making a backup of média
@@ -484,10 +485,9 @@ function uploadfile($IDimage)
                 "path" => "media/" . $IDimage . "." . $file_ext,
                 "ext" => $file_ext];
             putMedia($uploads);
-            //write in uploads file
-            editchild($IDimage);
+            echo "<script>window.close();</script>";
         } else {
-            uploadmedia($IDimage);
+
             //log
             $log = getLog();
             $log[] = [
@@ -499,6 +499,7 @@ function uploadfile($IDimage)
                 "date" => strtotime("now")
             ];
             putLog($log);
+            uploadmedia($IDimage,$errors);
         }
     }
 }//upload for media function

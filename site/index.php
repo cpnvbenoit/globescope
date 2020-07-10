@@ -6,8 +6,8 @@
  * Time: 15:57
  */
 session_start();
-
 require "controler/controler.php";
+$errors=null;
 if (isset($_GET['action'])){
     $action=$_GET['action'];
 }
@@ -130,7 +130,7 @@ if (isset($action)) {
             uploadimg($IDimage);
             break;
         case 'uploadmedia';
-            uploadmedia($IDimage);
+            uploadmedia($IDimage,$errors);
             break;
         case 'uploadimage';
             uploadimage($IDimage);
