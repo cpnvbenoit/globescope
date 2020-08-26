@@ -8,9 +8,32 @@
 session_start();
 require "controler/controler.php";
 $errors=null;
+$url =null;
 if (isset($_GET['action'])){
     $action=$_GET['action'];
 }
+//--------------------------------------------
+
+
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+    $url = "https://";
+else
+    $url = "http://";
+// Append the host(domain name, ip) to the URL.
+$url.= $_SERVER['HTTP_HOST'];
+
+// Append the requested resource location to the URL
+$url.= $_SERVER['REQUEST_URI'];
+
+
+if (strpos($url, 'forum') !== false) {
+    forum();
+}
+if (strpos($url, 'boutique') !== false) {
+    boutique();
+}
+
+//------------------------------------------
 if (isset($_GET['IDimage'])){
     $IDimage=$_GET['IDimage'];
 }
