@@ -13,6 +13,10 @@ function home()
     require_once 'view/home.php';
 }
 
+function alert($text){
+    echo "<script>alert('".$text."')</script>";
+}
+
 function credits()
 {
     require_once 'view/Credits.php';
@@ -374,6 +378,7 @@ function homepage()
 
 function boutique()
 {
+    $_SESSION["indexBoutique"]="us";
     require_once 'boutique/index.php';
 }
 
@@ -442,6 +447,7 @@ function uploadfile($IDimage)
                 "date" => strtotime("now")
             ];
             putLog($log);
+
             $compteur = 0;
             $childs = getChilds();
             $save = $childs;
@@ -449,7 +455,7 @@ function uploadfile($IDimage)
                 if ($IDimage == $child['IDImage']) {
                     var_dump($_SESSION['newtitle']);
                     if (isset($_SESSION['newtitle'])) {
-                        echo "<script>alert('new titre')</script>";
+                        echo "<script>alert('Le Titre du fichier a été changer avec succès !')</script>";
                         $valuetitle = $_SESSION['newtitle'];
                     } else {
                         $valuetitle = $file_title;
@@ -485,7 +491,7 @@ function uploadfile($IDimage)
                 "path" => "media/" . $IDimage . "." . $file_ext,
                 "ext" => $file_ext];
             putMedia($uploads);
-            echo "<script>window.close();</script>";
+            echo "<script>window.open('index.php?action=editchild&IDimage=".$IDimage."');</script>";
         } else {
 
             //log

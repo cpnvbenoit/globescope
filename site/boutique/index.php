@@ -1,5 +1,10 @@
 <?php
 session_start();
+if ($_SESSION["indexBoutique"]=="us"){
+    $us="boutique/";
+}else {
+    $us="";
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,15 +16,15 @@ session_start();
 
  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
- <link rel="stylesheet" href="boutique/style/classic/global.css">
- <link rel="stylesheet" media="(min-width: 993px)" href="style/classic/poster.css">
- <link rel="stylesheet" media="(min-width: 993px)" href="style/classic/poster_formulaire.css">
+ <link rel="stylesheet" href="<?=$us?>style/classic/global.css">
+ <link rel="stylesheet" media="(min-width: 993px)" href="<?=$us?>style/classic/poster.css">
+ <link rel="stylesheet" media="(min-width: 993px)" href="<?=$us?>style/classic/poster_formulaire.css">
 
- <link rel="stylesheet" media="(max-width: 992px)" href="style/mobile/poster_mobile.css">
- <link rel="stylesheet" media="(max-width: 992px)" href="style/mobile/poster_formulaire_mobile.css">
+ <link rel="stylesheet" media="(max-width: 992px)" href="<?=$us?>style/mobile/poster_mobile.css">
+ <link rel="stylesheet" media="(max-width: 992px)" href="<?=$us?>style/mobile/poster_formulaire_mobile.css">
 
- <link rel="stylesheet" href="style/style.css">
- <link rel="stylesheet" href="style/homepage.css">
+ <link rel="stylesheet" href="<?=$us?>style/style.css">
+ <link rel="stylesheet" href="<?=$us?>style/homepage.css">
 
  <script type="text/javascript" src="script/script.js"></script>
 </head>
