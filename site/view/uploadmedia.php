@@ -17,17 +17,37 @@ if (isset($_FILES['media'])) {
     <script>alert(<?=$errors?>)</script>
 <?php } ?>
 <h1>Merci de donner un fichier qui ne dépasse pas 10 MB.</h1>
-<form action="index.php?action=uploadfile&IDimage=<?= $IDimage ?>" method="POST" enctype="multipart/form-data">
-    <input type="file" name="media"/><br>
+<form action="index.php?action=uploadfile&IDimage=<?= $IDimage ?>" method="POST" id="myForm" enctype="multipart/form-data">
+    <input type="file" name="media" id="file"/><br>
     <label for="newtitle">Nouveau Titre (Si vide garde le titre du fichier)</label>
     <input name="newtitle" type="text">
-    <input type="submit"/>
-    <script type="text/javascript">
-        $('#media').bind('change', function () {
-            alert('This file size is: ' + this.files[0].size / 1024 / 1024 + "MB");
-        });
+    <button onclick="Filevalidation()">Envoyer</button>
+    <br><br><br><a href="index.php?action=editchild&IDimage=<?= $IDimage ?>">Retour aux modifications l'enfant</a>
+    <script>
+        Filevalidation = () => {
+            const fi = document.getElementById('file');
+            // Check if any file is selected.
+            if (fi.files.length > 0) {
+                for (const i = 0; i <= fi.files.length - 1; i++) {
+
+                    const fsize = fi.files.item(i).size;
+                    const file = Math.round((fsize / 1024));
+                    // The size of the file.
+                    if (file >= 10240) {
+                        alert(
+                            "Le fichier est trop gros, merci de choisir un fichier de moins de 10 Mb ( "+file/1000+" Mb )" );
+                        window.open("index.php?action=uploadmedia&IDimage=<?= $IDimage ?>");
+                        window.close();
+                    } else {
+                        document.getElementById("myForm").submit();
+
+                    }
+                }
+            }
+        }
     </script>
 
 </form>
+
 </body>
 </html>
