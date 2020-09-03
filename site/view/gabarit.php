@@ -184,7 +184,7 @@
                 <tr>
                     <td>Télécharger les posters</td>
                     <td>
-                        <a href="/boutique">Poster personnalisé</a>
+                        <a href="/boutique" target="_blank">Poster personnalisé</a>
                     </td>
                 </tr>
                 <tr>
