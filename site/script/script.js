@@ -31,7 +31,7 @@ var formulaire = '<div class="masque_formulaire_poster"></div>\
 		<h1>Entrez vos coordonnées</h1>\
 		<h2>Pour télécharger le poster</h2>\
 		<br>\
-		<b id="champ_necessaire"><label class="asterisque">*</label>Champs nécessaire</b>\
+		<b id="champ_necessaire"><label class="asterisque">*</label>Champs nécessaires</b>\
 			<form action="index.php" method="post">\
 				<table border="0" cellspacing="0" cellpadding="0" align="center">\
 				<tr>\
@@ -326,7 +326,7 @@ var formulaire = '<div class="masque_formulaire_poster"></div>\
 						<input type="checkbox" id="" name="NEWSLETTER" value="yes">\
 					</td>\
 					<td>\
-						<label>Je souhaite recevoir la newsletter mensuelle Enfants du Monde </label>\
+						<label>Je souhaite recevoir la newsletter d\'Enfants du Monde </label>\
 					<td>\
 				</tr>\
 				</table>\

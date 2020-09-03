@@ -86,6 +86,7 @@ while ($cur_forum = $db->fetch_assoc($result))
 		$forum_count = 0;
 
 ?>
+
 <div id="idx<?php echo $cat_count ?>" class="blocktable">
 	<h2><span><?php echo pun_htmlspecialchars($cur_forum['cat_name']) ?></span></h2>
 	<div class="box">
