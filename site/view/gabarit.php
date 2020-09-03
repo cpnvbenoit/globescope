@@ -217,9 +217,9 @@
 
 <div id="searchBar" class="GUI">
     <div class="help-tip">
-        <p>Recherchez par pays, ville, droit, école, équipe…</p><!-- prendre celui qui est dqns cm cq marche -->
+        <p>Recherchez par pays, ville, droit, équipe, pseudo, école, numéro de l'enfant</p><!-- prendre celui qui est dqns cm cq marche -->
     </div>
-    <input type="text" id="searchText" placeholder="Recherchez par pays, ville, droit">
+    <input type="text" id="searchText" placeholder="Recherchez par pays, ville, droit...">
     <span id="searchButton">Rechercher</span>
     </input>
 
