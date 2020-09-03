@@ -213,7 +213,7 @@
     </div>
 </div>
 
-<span><img id="showSearch" class="GUI" src="images/searchIcon.png"></span>
+<span id="showSearch"></span>
 
 <div id="searchBar" class="GUI">
     <div class="help-tip">

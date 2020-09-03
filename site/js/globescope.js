@@ -211,11 +211,6 @@ function closeSideBarEsc(e) {
             closeHelp();
         }
     }
-    if (SearchBox.style.display != 'none') {
-        if (e.keyCode == 27) {
-            hideSearch();
-        }
-    }
 }
 
 function showSearch() {
@@ -237,7 +232,6 @@ function showHelp() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         container.onmousedown = null;
         helpButton.style.display = 'none';
-        SearchBox.style.display = 'none';
         showSearchButton.style.display = 'none';
     }
 }
@@ -258,11 +252,9 @@ function showSearchResults() {
     if (SearchTextBox.value != "") {
         searchChild(camera, scene);
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            SearchBox.style.display = 'none';
             showSearchButton.style.display = 'none';
             helpButton.style.display = 'none';
         } else {
-            SearchBox.style.display = 'none';
             showSearchButton.style.display = 'block';
         }
 
