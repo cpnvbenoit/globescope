@@ -249,6 +249,7 @@ function closeHelp() {
 
 
 function showSearchResults() {
+
     if (SearchTextBox.value != "") {
         searchChild(camera, scene);
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -269,7 +270,9 @@ function showSearchResults() {
                 nodes[i].style.display = "block";
         }
     }else{
-        alert("Vous n'avez pas fait de recherche...")
+
+            alert("Vous n'avez pas fait de recherche...")
+
     }
 }
 
