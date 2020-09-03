@@ -30,6 +30,7 @@ var formulaire = '<div class="masque_formulaire_poster"></div>\
 	<div id="zone">\
 		<h1>Entrez vos coordonnées</h1>\
 		<h2>Pour télécharger le poster</h2>\
+		<a href="https://www.edm.ch/fr/protection-donnees/">Protection des données</a>\
 		<br>\
 		<b id="champ_necessaire"><label class="asterisque">*</label>Champs nécessaires</b>\
 			<form action="index.php" method="post">\
