@@ -183,3 +183,9 @@ tr{
     height: 35px;
 
 }
+.search-help{
+    color: white;
+    position: absolute;
+    right: 5px;
+    padding-top: 20px;
+}

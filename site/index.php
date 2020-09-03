@@ -107,8 +107,11 @@ if (isset($_POST['newtitle'])){
 //END set var for save -----------------------------------------
 if (isset($action)) {
     switch ($action) {
-         case 'home';
+        case 'home';
             home();
+            break;
+        case 'OTHER';
+            OTHER();
             break;
          case 'credits';
             credits();

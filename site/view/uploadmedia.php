@@ -40,7 +40,6 @@ if (isset($_FILES['media'])) {
                         window.close();
                     } else {
                         document.getElementById("myForm").submit();
-
                     }
                 }
             }

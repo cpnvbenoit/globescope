@@ -13,15 +13,48 @@ function home()
     require_once 'view/home.php';
 }
 
+//function for one time task
+function OTHER(){
+    $childs=getChilds();
+    $compteur=0;
+    foreach ($childs as $child){
+            $save[$compteur] = [
+                "IDPlace" => $child["IDPlace"],
+                "IDImage" => $child["IDImage"],
+                "mer" => $child["mer"],
+                "lat" => $child["lat"],
+                "lon" => $child["lon"],
+                "Pseudo" => $child["Pseudo"],
+                "Droit" => $child["Droit"],
+                "Slogan" => $child["Slogan"],
+                "Team" => "",
+                "ImageOK" => $child["ImageOK"],
+                "Pays" => $child["Pays"],
+                "Ville" => $child["Ville"],
+                "Media" => $child["Media"],
+                "Titre" => $child["Titre"],
+                "Anneeprod" => $child["Anneeprod"],
+                "ecole" => $child["ecole"],
+                "desc" => $child["desc"]
+            ];
+
+        $compteur++;
+    }
+    //putSave($save);
+}
+
+//function for alert text or variables
 function alert($text){
     echo "<script>alert('".$text."')</script>";
 }
 
+//function for credits
 function credits()
 {
     require_once 'view/Credits.php';
 }
 
+//function for disconnect
 function disconnect()
 {
 
@@ -30,12 +63,14 @@ function disconnect()
     require_once 'view/home.php';
 }
 
+//funtcion for test
 function testhashed()
 {
     $_SESSION['hash'] = $_POST['testhash'];
     require_once 'view/testhash.php';
 }
 
+//function for login
 function tryLogin()
 {
     $users = getUsers();
@@ -55,7 +90,8 @@ function tryLogin()
         $_SESSION['fail'] = true;//pas susi
         require_once 'view/home.php';
     }
-}//edmadmin 2020_CPNV_A1
+}
+
 function showchilds($welcome)
 {
 
@@ -509,6 +545,7 @@ function uploadfile($IDimage)
         }
     }
 }//upload for media function
+
 function uploadimage($IDimage)
 {
     if (isset($_FILES['image'])) {
@@ -547,6 +584,7 @@ function uploadimage($IDimage)
         }
     }
 }//upload img for redim function
+
 function resize_img($image_path, $image_dest, $new_width, $new_height, $size, $qualite)
 {
     /** Ce code à été copier du site http://www.frederic-gerard.com/scripts/script-php-pour-redimentionner-une-image-en-conservant-les-proportions.html
@@ -660,6 +698,7 @@ function resize_img($image_path, $image_dest, $new_width, $new_height, $size, $q
         $_SESSION['errors_redi'][] = 'no_img';
     endif;
 }//fonction de redimensionement
+
 function fct_redim($size, $rep_size, $name_dst, $IDimage)
 {
     $rep_Dst = 'images/' . $rep_size . '/';
@@ -694,6 +733,7 @@ function fct_redim($size, $rep_size, $name_dst, $IDimage)
         return 'success';
     }
 }//fonction pour le redimensionement 64*64
+
 function fct_redim2($size, $rep_size, $name_dst, $IDimage)
 {
     $rep_Dst = 'images/' . $rep_size . '/';
@@ -728,6 +768,7 @@ function fct_redim2($size, $rep_size, $name_dst, $IDimage)
         return 'success';
     }
 }//fonction pour le redimensionement 128*128
+
 function fct_redim3($size, $rep_size, $name_dst, $IDimage)
 {
     $rep_Dst = 'images/' . $rep_size . '/';
@@ -763,6 +804,7 @@ function fct_redim3($size, $rep_size, $name_dst, $IDimage)
         return 'success';
     }
 }//fonction pour le redimensionement 400*500
+
 function redmi3size($name, $IDimage, $file_ext)
 {
     unset($_SESSION['errors_redi']);
@@ -810,7 +852,8 @@ function redmi3size($name, $IDimage, $file_ext)
 
         require_once 'view/fail.php';
     }
-}//fonction pour redimensioner en 3 taille distincte
+}//fonction pour redimensioner en 3 tailles distinctes
+
 /* log date heure: Modif: avant vs après/ si upload: nom fichier + ou save
 Format :
 $log=getLog();
@@ -825,4 +868,5 @@ $log[]=[
 putLog($log);
 
 */
+
 ?>

@@ -4,6 +4,7 @@
     header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
     header("Cache-Control: post-check=0, pre-check=0", false);
     header("Pragma: no-cache");
+    //line: 224 //<p class="search-help">Recherchez par pays, ville, droit, école, équipe…</p>
 ?>
 <!DOCTYPE html>
 <html>
@@ -181,9 +182,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Lien Boutique</td>
+                    <td>Télécharger les posters</td>
                     <td>
-                        <a href="/boutique">Boutique</a>
+                        <a href="/boutique">Poster personnalisé</a>
                     </td>
                 </tr>
                 <tr>
@@ -221,6 +222,7 @@
     <input type="text" id="searchText">
     <span id="searchButton">Recherche</span>
     </input>
+
 
     <div id="onDynamicSearch">
 

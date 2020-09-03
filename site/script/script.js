@@ -8,9 +8,9 @@ window.onload = function () {
 function actualiser(){
  var identifiant = document.getElementById("identifiant").value;
  if (identifiant == "") {
-  document.getElementById("bouton_poster_meridiens").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p">S\'identifier</a></div>';
-  document.getElementById("bouton_poster_ellipse").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p">S\'identifier</a></div>';
-  document.getElementById("bouton_poster_perso").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p_souvenir">S\'identifier</a></div>';
+  document.getElementById("bouton_poster_meridiens").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p">Télécharger</a></div>';
+  document.getElementById("bouton_poster_ellipse").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p">Télécharger</a></div>';
+  document.getElementById("bouton_poster_perso").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p_souvenir">Télécharger</a></div>';
  } else {
   var lien_meri="poster_download_pictures/meridien/"+document.getElementById("choix_poster_meridien_date").value+"/"+document.getElementById("choix_poster_meridien_taille").value+".pdf";
   var lien_elip="poster_download_pictures/ellipse/"+document.getElementById("choix_poster_ellipse_date").value+"/"+document.getElementById("choix_poster_ellipse_taille").value+".pdf";
@@ -57,7 +57,7 @@ var formulaire = '<div class="masque_formulaire_poster"></div>\
 				<tr>\
 					<td class="label">\
 					<label>Nom</label>\
-					<label class="asterisque">*</label>\
+					<label class="asterisque"></label>\
 					</td>\
 					<td colspan="3" class="champ">\
 					<input type="text" value="" name="NOM" required="required" id="Nom" class="zone_champ">\
@@ -66,7 +66,7 @@ var formulaire = '<div class="masque_formulaire_poster"></div>\
 				<tr>\
 					<td>\
 					<label>Prénom</label>\
-					<label class="asterisque">*</label>\
+					<label class="asterisque"></label>\
 					</td>\
 					<td colspan="3" class="champ">\
 					<input type="text" value="" name="PRENOM" required="required" id="mce-PRENOM" class="zone_champ">\
@@ -84,7 +84,7 @@ var formulaire = '<div class="masque_formulaire_poster"></div>\
 				<tr>\
 					<td>\
 					<label>Pays</label>\
-					<label class="asterisque">*</label>\
+					<label class="asterisque"></label>\
 					</td>\
 					<td colspan="3" class="champ">\
 					<select name="PAYS" required="required" id="mce-PAYS" class="zone_champ">\

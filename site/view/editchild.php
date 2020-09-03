@@ -33,7 +33,7 @@ ob_start();
         Slogan
     </th>
     <th class="center">
-        Origine des données
+        Équipe
     </th>
     <th class="center">
        Pays
@@ -225,7 +225,7 @@ ob_start();
         <tr>
             <td class="form-group">
                 <label for="Desc">Description</label>
-                <textarea rows="8" maxlength="1000" class="form-control" name="desc" id="Desc" form="formedit"><?= $_SESSION['valuedesc'] ?></textarea>
+                <textarea style="resize: none" rows="8" maxlength="1000" class="form-control" name="desc" id="Desc" form="formedit"><?= $_SESSION['valuedesc'] ?></textarea>
             </td>
         </tr>
     </table>
