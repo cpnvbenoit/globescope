@@ -167,7 +167,8 @@
                 <tr>
                     <td>Média</td>
                     <td>
-                        <a class="medialink" target="_blank" id="childMedia"></a>
+                        <a class="medialink" target="_blank" id="childMedia"></a>  <span id="childMedia2" ></span>
+                        <p><button class="js-emailcopybtn"><img src="./images/copy-icon.png" /></button></p>
                     </td>
                 </tr>
                 <tr>

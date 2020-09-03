@@ -98,6 +98,7 @@ var childEquipe = document.getElementById("childEquipe");
 var childVille = document.getElementById("childVille");
 var childPays = document.getElementById("childPays");
 var childMedia = document.getElementById("childMedia");
+var childMedia2 = document.getElementById("childMedia2");
 var childMedialink = document.getElementById("childMedialink");
 var childAnneeprod = document.getElementById("childAnneeprod");
 var childDesc = document.getElementById("childDesc");
