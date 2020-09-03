@@ -113,6 +113,7 @@
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails" style="overflow-y: scroll; height:550px;">
         <img style="margin-top: 450px;width:340px;height:425px;" id="childImage">
+        <a class="return-button" id="returnButton" target="_blank">Retour</a>
         <span id="separator"></span>
 
 
@@ -191,7 +192,7 @@
                     <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="45" rows="4"></textarea></td>
                 </tr>
                 <tr>
-                    <td><h6 class="infosuppleft" align="left"><a class='GoToChild' id="returnButton" target="_blank">Retour</a></h6></td>
+
                 <?php if ($_SESSION['fail'] == false) {
                     echo "
                    
