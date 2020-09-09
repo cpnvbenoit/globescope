@@ -250,6 +250,7 @@ textarea {
     top: 21px;
 }
 .help-tip{
+    position: absolute;
     margin-top: 8px;
     margin-right: 5px;
     top: 0px;

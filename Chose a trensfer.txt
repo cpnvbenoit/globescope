@@ -1,0 +1,10 @@
+boutique OK
+controler OK
+css OK
+js OK
+model OK
+script => vers script dans boutique OK
+style => idem OK
+View OK
+index.php OK
+
