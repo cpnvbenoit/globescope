@@ -29,18 +29,44 @@ function onImageClick(x)
                     var details =  document.getElementById("onClickDetails").childNodes;
                     childImage.src = "images/400-500/"+myObj.IDImage+".jpg";
                     childPseudo.textContent =myObj.Pseudo;
-                    childCitation.textContent =  myObj.Slogan;
-                    childAnneeprod.textContent =  myObj.Anneeprod;
-                    childRight.textContent = myObj.Droit;
-                    childEcole.textContent = myObj.ecole;
-                    childPays.textContent = myObj.Pays;
-                    childVille.textContent =myObj.Ville;
-                    childEquipe.textContent = myObj.Team;
-                    childMedia.textContent = myObj.Titre;
-                    childDesc.textContent =  myObj.desc;
-                    childMedia.href = myObj.Media;
-                    childMedia2.textContent + myObj.Media;
-                    childIDPlace.textContent = myObj.IDPlace;
+
+                    if (myObj.Slogan.length>1)
+                        {childCitation.textContent = '<tr><td width="25%">Slogantest</td><td width="70%">'+ myObj.Slogan + '</td></tr>'}
+                    else {childCitation.textContent='test'}
+
+                    if (myObj.Anneeprod.length>1)
+                    {childAnneeprod.textContent = '<tr><td>Année</td><td>'+ myObj.Anneeprod + '</td></tr>'}
+
+                    if (myObj.Droit.length>1)
+                    {childRight.textContent = '<tr><td>Droit</td><td>'+ myObj.Droit + '</td></tr>'}
+
+                    if (myObj.ecole.length>1)
+                    {childEcole.textContent = '<tr><td>Ecole</td><td>'+ myObj.ecole + '</td></tr>'}
+
+                    if (myObj.Pays.length>1)
+                    {childPays.textContent = '<tr><td>Pays</td><td>'+ myObj.Pays + '</td></tr>'}
+
+                    if (myObj.Ville.length>1)
+                    {childVille.textContent = '<tr><td>Ville</td><td>'+ myObj.Ville + '</td></tr>'}
+
+                    if (myObj.Team.length>1)
+                    {childEquipe.textContent = '<tr><td>Equipe</td><td>'+ myObj.Team + '</td></tr>'}
+
+                    if (myObj.Titre.length>1)
+                    {childMedia.textContent = '<tr><td>Titre</td><td>'+ myObj.Titre + '</td></tr>'}
+
+                    if (myObj.desc.length>1)
+                    {childDesc.textContent = '<tr><td colspan="2"><textarea disabled name="desc" cols="45" rows="4">'+ myObj.desc + '</textarea></td></tr>'}
+
+                    if (myObj.desc.length>1)
+                    {childMedia.textContent = '<tr><td>Média</td><td><a href="'+ myObj.Media + '"></a></td></tr>'}
+
+                    if (myObj.IDPlace.length>1)
+                    {childIDPlace.textContent = '<tr><td>IDPlace</td><td>'+ myObj.IDPlace + '</td></tr>'}
+
+
+
+
                     childEdit.href = "?action=editchild&IDimage="+myObj.IDImage;
 
                 }

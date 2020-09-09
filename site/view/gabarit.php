@@ -120,80 +120,33 @@
         <div id="description">
             <table class="tablehome-infos">
 
-                <tr>
-                    <td width="25%">Slogan</td>
-                    <td width="70%">
-                        <span id="childCitation">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Pseudo</td>
-                    <td>
-                        <span id="childPseudo">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Droit</td>
-                    <td>
-                        <span id="childRight">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Équipe</td>
-                    <td>
-                        <span id="childEquipe">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>École</td>
-                    <td>
-                        <span id="childEcole">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Pays
-                    </td>
-                    <td>
-                        <span id="childPays">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ville</td>
-                    <td>
-                        <span id="childVille">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Média</td>
-                    <td>
-                        <a class="medialink" target="_blank" id="childMedia"></a>  <span id="childMedia2" ></span>
-                        <p><button class="js-emailcopybtn"><img src="./images/copy-icon.png" /></button></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Année</td>
-                    <td>
-                            <span id="childAnneeprod">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Id Place</td>
-                    <td>
-                        <span id="childIDPlace">-</span>
-                    </td>
-                </tr>
+
+                        <span id="childCitation"></span>
+
+                        <span id="childPseudo"></span>
+
+                        <span id="childRight"></span>
+
+                        <span id="childEquipe"></span>
+
+                        <span id="childEcole"></span>
+
+                        <span id="childPays"></span>
+
+                        <span id="childVille"></span>
+
+                        <span id="childAnneeprod"></span>
+
+                        <span id="childIDPlace"></span>
                 <tr>
                     <td>Télécharger les posters</td>
                     <td>
                         <a href="/boutique" target="_blank">Poster personnalisé</a>
                     </td>
                 </tr>
-                <tr>
-                    <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="45" rows="4"></textarea></td>
-                </tr>
-                <tr>
+                <span id="childDesc"></span>
 
+                <tr>
                 <?php if ($_SESSION['fail'] == false) {
                     echo "
                    
