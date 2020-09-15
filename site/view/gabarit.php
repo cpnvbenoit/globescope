@@ -130,7 +130,7 @@
                 <tr>
                     <td>Média</td>
                     <td>
-                        <a class="medialink" target="_blank" id="childMedia"></a>  <span id="childMedia2" ></span>
+                        <a class="medialink" target="_blank" id="childMedia"></a>
                     </td>
                 </tr>
                 <tr>
