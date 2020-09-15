@@ -153,8 +153,8 @@ function ecrire($data){
 </header>
 <div id="corps_de_page_posters">
   <section id="titre_posters">
-    <p id="titre_globe_usb">Posters du globe téléchargeables</p>
-	<p class="sous_titre_glob_poster">Nous avons besoin de quelques informations personnelles afin de limiter la libre circulation de ces posters.</p>
+    <p id="titre_globe_usb">Posters du Globe Virtuel</p>
+	<p class="sous_titre_glob_poster">Téléchargez gratuitement des posters du Globe Virtuel !</p>
   </section>
   <section id="section_posters">
     <div class="conteneur_posters">
@@ -252,7 +252,7 @@ function ecrire($data){
           <img class="image_card_poster" src="../images/page_poster_pictures/image_card_perso.png" alt="poster meridien">
         </div>
         <div class="poster_inside"><p class="titre_card_poster">Souvenir personnalisé</p></div>
-        <div class="poster_inside"><span>Format A4 uniquement</span></div>
+        <div class="poster_inside"><span>Format A4 uniquement - Utilisez l'ID Place de la photo que vous désirez pour télécharger en poster.</span></div>
         <div class="poster_inside"><span id="card_poster_caractere_invisible">
           <form action="canvas_base.html" method="get">
           <span id="id_souvenir_perso">ID &nbsp</span><input type="number" name="id" value="0" min="0" width="100px" id="input_id_souvenir" disabled>

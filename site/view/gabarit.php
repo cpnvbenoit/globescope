@@ -143,7 +143,7 @@
                 </tr>
                 <tr>
                     <td>Télécharger les posters</td>
-                    <td><a href="/boutique" target="_blank">Poster personnalisé</a></td>
+                    <td><a target="_blank" id="childPoster">Poster personnalisé</a></td>
                 </tr>
                 <tr><td colspan="2"><textarea disabled name="desc" id="childDesc" cols="45" rows="4"></textarea></td></tr>
                 <tr>

@@ -102,6 +102,7 @@ var childMedia2 = document.getElementById("childMedia2");
 var childMedialink = document.getElementById("childMedialink");
 var childAnneeprod = document.getElementById("childAnneeprod");
 var childDesc = document.getElementById("childDesc");
+var childPoster = document.getElementById("childPoster");
 
 
 childImage.onload = showOnClickDetails;
