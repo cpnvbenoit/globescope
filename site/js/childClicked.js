@@ -26,47 +26,39 @@ function onImageClick(x)
                 //Si l'image existe
                 if(myObj.ImageOK != 0)
                 {
+
+                    //Ensuite remplir (le pseudo reste tout le temps)
                     var details =  document.getElementById("onClickDetails").childNodes;
                     childImage.src = "images/400-500/"+myObj.IDImage+".jpg";
                     childPseudo.textContent =myObj.Pseudo;
 
-                    if (myObj.Slogan.length>1)
-                        {childCitation.outerHTML = "<tr><td width='25%'>Slogantest </td><td width='70%'>"+ myObj.Slogan + "</td></tr>"}
-                    else {childCitation.textContent='test'}
+                    delLineTable("tbl_details", "Slogan");
+                    delLineTable("tbl_details", "Droit");
+                    delLineTable("tbl_details", "Equipe");
+                    delLineTable("tbl_details", "Ecole");
+                    delLineTable("tbl_details", "Pays");
+                    delLineTable("tbl_details", "Ville");
 
-                    if (myObj.Anneeprod.length>1)
-                    {childAnneeprod.outerHTML = '<tr><td>Année</td><td>'+ myObj.Anneeprod + '</td></tr>'}
-
-                    if (myObj.Droit.length>1)
-                    {childRight.outerHTML = '<tr><td>Droit</td><td>'+ myObj.Droit + '</td></tr>'}
-
-                    if (myObj.ecole.length>1)
-                    {childEcole.outerHTML = '<tr><td>Ecole</td><td>'+ myObj.ecole + '</td></tr>'}
-
-                    if (myObj.Pays.length>1)
-                    {childPays.outerHTML = '<tr><td>Pays</td><td>'+ myObj.Pays + '</td></tr>'}
-
-                    if (myObj.Ville.length>1)
-                    {childVille.outerHTML = '<tr><td>Ville</td><td>'+ myObj.Ville + '</td></tr>'}
-
-                    if (myObj.Team.length>1)
-                    {childEquipe.outerHTML = '<tr><td>Equipe</td><td>'+ myObj.Team + '</td></tr>'}
-
-                    if (myObj.Titre.length>1)
-                    {childMedia.outerHTML = '<tr><td>Titre</td><td>'+ myObj.Titre + '</td></tr>'}
-
-                    if (myObj.desc.length>1)
-                    {childDesc.outerHTML = '<tr><td colspan="2"><textarea disabled name="desc" cols="45" rows="4">'+ myObj.desc + '</textarea></td></tr>'}
-
-                    if (myObj.desc.length>1)
-                    {childMedia.outerHTML = '<tr><td>Média</td><td><a href="'+ myObj.Media + '"></a></td></tr>'}
-
-                    if (myObj.IDPlace.length>1)
-                    {childIDPlace.outerHTML = '<tr><td>IDPlace</td><td>'+ myObj.IDPlace + '</td></tr>'}
+                    if (myObj.Ville.length>1) addLineTable("tbl_details",1,"Ville",myObj.Ville);
+                    //childVille.textContent =myObj.Ville;
+                    if (myObj.Pays.length>1) addLineTable("tbl_details",1,"Pays",myObj.Pays);
+                    //childPays.textContent = myObj.Pays;
+                    if (myObj.ecole.length>1) addLineTable("tbl_details",1,"Ecole",myObj.ecole);
+                    //childEcole.textContent = myObj.ecole;
+                    if (myObj.Team.length>1) addLineTable("tbl_details",1,"Equipe",myObj.Team);
+                    //childEquipe.textContent = myObj.Team;
+                    if (myObj.Droit.length>1) addLineTable("tbl_details",1,"Droit",myObj.Droit);
+                    //childRight.textContent = myObj.Droit;
+                    if (myObj.Slogan.length>1) addLineTable("tbl_details",1,"Slogan",myObj.Slogan);
+                   //childCitation.textContent =  myObj.Slogan;
 
 
-
-
+                    childAnneeprod.textContent =  myObj.Anneeprod;
+                    childMedia.textContent = myObj.Titre;
+                    childDesc.textContent =  myObj.desc;
+                    childMedia.href = myObj.Media;
+                    childMedia2.textContent + myObj.Media;
+                    childIDPlace.textContent = myObj.IDPlace;
                     childEdit.href = "?action=editchild&IDimage="+myObj.IDImage;
 
                 }
@@ -80,3 +72,37 @@ function onImageClick(x)
     xmlhttp.send("x=" + dbParam +"&Mode=click");
 
 }
+
+function addLineTable(tableau, pos, v1, v2)
+{ // Cette fonction insère 2 cellules comme une nouvelle ligne dans un tableau
+    if (pos>=0){
+        var newRow = document.getElementById(tableau).insertRow(pos);
+    } else{
+        var newRow = document.getElementById(tableau).insertRow();
+    }
+    var newCell = newRow.insertCell(0);
+    newCell.innerHTML = v1;
+    newCell = newRow.insertCell(1);
+    newCell.innerHTML = v2;
+}
+
+function delLineTable(tableau, titre_ligne){
+    //Cette fonction détruit une ligne d'après son nom (ex Pseudo)
+    //D'abord vider le tableau
+    //On renvoie la ligne détruite pour pouvoir la réintroduire
+    var ligne=-1;
+    var table = document.getElementById(tableau);
+    var rowCount = table.rows.length;
+    for (var i = 1; i < rowCount-2; i++) {
+        if (table.rows[i].cells[0].textContent == titre_ligne) {
+            ligne=i;
+        }
+    }
+    if (ligne>0) {
+        table.deleteRow(ligne);
+       // alert("je détruis la ligne " + ligne + " " + titre_ligne);
+    }
+    return ligne;
+
+}
+

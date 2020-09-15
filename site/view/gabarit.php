@@ -118,41 +118,38 @@
 
 
         <div id="description">
-            <table class="tablehome-infos">
+            <table class="tablehome-infos" id="tbl_details">
 
-
-                        <span id="childCitation"></span>
-
-                        <span id="childPseudo"></span>
-
-                        <span id="childRight"></span>
-
-                        <span id="childEquipe"></span>
-
-                        <span id="childEcole"></span>
-
-                        <span id="childPays"></span>
-
-                        <span id="childVille"></span>
-
-                        <span id="childAnneeprod"></span>
-
-                        <span id="childIDPlace"></span>
                 <tr>
-                    <td>Télécharger les posters</td>
-                    <td>
-                        <a href="/boutique" target="_blank">Poster personnalisé</a>
+                    <td width="25%">Pseudo</td>
+                    <td width="70%">
+                        <span id="childPseudo">-</span>
                     </td>
                 </tr>
-                <span id="childDesc"></span>
 
                 <tr>
+                    <td>Média</td>
+                    <td>
+                        <a class="medialink" target="_blank" id="childMedia"></a>  <span id="childMedia2" ></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Année</td>
+                    <td><span id="childAnneeprod">-</span></td>
+                </tr>
+                <tr>
+                    <td>Id Place</td>
+                    <td><span id="childIDPlace">-</span></td>
+                </tr>
+                <tr>
+                    <td>Télécharger les posters</td>
+                    <td><a href="/boutique" target="_blank">Poster personnalisé</a></td>
+                </tr>
+                <tr><td colspan="2"><textarea disabled name="desc" id="childDesc" cols="45" rows="4"></textarea></td></tr>
+                <tr>
+
                 <?php if ($_SESSION['fail'] == false) {
-                    echo "
-                   
-                        <td><h6 class=\"infosuppleft\" align=\"left\"><a class='GoToChild' id=\"childEdit\" target=\"_blank\">Modifier</a></h6></td>
-                    
-                ";
+                    echo "<td><h6 class=\"infosuppleft\" align=\"left\"><a class='GoToChild' id=\"childEdit\" target=\"_blank\">Modifier</a></h6></td>";
                 } ?>
                 </tr>
             </table>
