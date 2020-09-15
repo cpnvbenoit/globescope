@@ -118,87 +118,38 @@
 
 
         <div id="description">
-            <table class="tablehome-infos">
+            <table class="tablehome-infos" id="tbl_details">
 
                 <tr>
-                    <td width="25%">Slogan</td>
+                    <td width="25%">Pseudo</td>
                     <td width="70%">
-                        <span id="childCitation">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Pseudo</td>
-                    <td>
                         <span id="childPseudo">-</span>
                     </td>
                 </tr>
-                <tr>
-                    <td>Droit</td>
-                    <td>
-                        <span id="childRight">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Équipe</td>
-                    <td>
-                        <span id="childEquipe">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>École</td>
-                    <td>
-                        <span id="childEcole">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Pays
-                    </td>
-                    <td>
-                        <span id="childPays">-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ville</td>
-                    <td>
-                        <span id="childVille">-</span>
-                    </td>
-                </tr>
+
                 <tr>
                     <td>Média</td>
                     <td>
-                        <a class="medialink" target="_blank" id="childMedia"></a>  <span id="childMedia2" ></span>
+                        <a class="medialink" target="_blank" id="childMedia"></a>
                     </td>
                 </tr>
                 <tr>
                     <td>Année</td>
-                    <td>
-                            <span id="childAnneeprod">-</span>
-                    </td>
+                    <td><span id="childAnneeprod">-</span></td>
                 </tr>
                 <tr>
                     <td>Id Place</td>
-                    <td>
-                        <span id="childIDPlace">-</span>
-                    </td>
+                    <td><span id="childIDPlace">-</span></td>
                 </tr>
                 <tr>
                     <td>Télécharger les posters</td>
-                    <td>
-                        <a href="/boutique" target="_blank">Poster personnalisé</a>
-                    </td>
+                    <td><a href="/boutique" target="_blank">Poster personnalisé</a></td>
                 </tr>
-                <tr>
-                    <td colspan="2"><textarea disabled name="desc" id="childDesc" cols="45" rows="4"></textarea></td>
-                </tr>
+                <tr><td colspan="2"><textarea disabled name="desc" id="childDesc" cols="45" rows="4"></textarea></td></tr>
                 <tr>
 
                 <?php if ($_SESSION['fail'] == false) {
-                    echo "
-                   
-                        <td><h6 class=\"infosuppleft\" align=\"left\"><a class='GoToChild' id=\"childEdit\" target=\"_blank\">Modifier</a></h6></td>
-                    
-                ";
+                    echo "<td><h6 class=\"infosuppleft\" align=\"left\"><a class='GoToChild' id=\"childEdit\" target=\"_blank\">Modifier</a></h6></td>";
                 } ?>
                 </tr>
             </table>
