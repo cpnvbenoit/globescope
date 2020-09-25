@@ -67,7 +67,7 @@
 <div id="Help" class="GUI">
     <div id="box">
         <div id="header">
-            <h3 class="aide" a href="">Comment ça marche?</h3>
+            <h3 class="aide" a href="">Comment ça marche ?</h3>
         </div>
         <p id="closeHelp" class="closeButton" onclick="closeHelp()">X</p>
         <div id="direction">
@@ -113,7 +113,7 @@
     <div class="loader" id="imageLoader"></div>
     <div id="onClickDetails" style="overflow-y: scroll; height:550px;">
         <img style="margin-top: 450px;width:340px;height:425px;" id="childImage">
-        <a class="return-button" id="returnButton" target="_blank">Retour</a>
+        <a class="return-button" id="returnButton" target="_blank">Retour aux résultats</a>
         <span id="separator"></span>
 
 
@@ -169,7 +169,7 @@
 
 <div id="searchBar" class="GUI">
     <div class="help-tip">
-        <p>Recherchez par pays, ville, droit, équipe, pseudo, école, numéro de l'enfant</p><!-- prendre celui qui est dqns cm cq marche -->
+        <p>Recherchez par pays, ville, droit, équipe, pseudo, école, Id place</p>
     </div>
     <input type="text" id="searchText" placeholder="Recherchez par pays, ville, droit...">
     <span id="searchButton">Rechercher</span>

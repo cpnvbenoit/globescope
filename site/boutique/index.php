@@ -258,7 +258,8 @@ function ecrire($data){
           <img class="image_card_poster" src="../images/page_poster_pictures/image_card_perso.png" alt="poster meridien">
         </div>
         <div class="poster_inside"><p class="titre_card_poster">Souvenir personnalisé</p></div>
-        <div class="poster_inside"><span>Utilisez l'ID Place de la photo désirée.</span></div>
+        <div class="poster_inside" style="margin-top: -25px"><span>Utilisez l’ID Place de la photo désirée  </span></div>
+        <div class="poster_inside"><span>pour télécharger un poster.</span></div>
         <div class="poster_inside"><span id="card_poster_caractere_invisible">
           <form action="canvas_base.html" method="get">
           <span id="id_souvenir_perso">ID &nbsp</span><input type="number" name="id" value="<?= $_SESSION["BoutiqueIDPlace"] ?>" min="0" width="100px" id="input_id_souvenir" disabled>
