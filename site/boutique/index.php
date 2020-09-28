@@ -134,13 +134,13 @@ function ecrire($data){
                 <div class="inner clearfix">
                     <div class="divtable">
                         <ul class="menuhomepage">
-                            <li style="background-color: white"><a href="https://www.edm.ch/fr//"><img
-                                            src="https://edm.mycpnv.ch/images/Logo_bleu_RGB.png" class="imgup"
+                            <li style="background-color: white">><a href="https://www.edm.ch/fr//"><img
+                                            src="../images/Logo_bleu_RGB.png" class="imgup"
                                             id="logoedm"> </a></li>
                             <li><a href="https://www.edm.ch/fr/">Home</a></li>
-                            <li><a href="https://edm.mycpnv.ch/?action=home">Globe - EDM</a></li>
+                            <li><a href="?action=home">Globe - EDM</a></li>
                             <li><a href="/boutique">Boutique</a></li>
-                            <li><a href="https://edm.mycpnv.ch/forum/">Forum</a></li>
+                            <li><a href="/forum">Forum</a></li>
                             <li><a href="https://www.edm.ch/fr/sensibilisation/projet-enfants-reporters">Les droits de
                                     l'enfant</a></li>
 
