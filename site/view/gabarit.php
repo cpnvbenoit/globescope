@@ -104,8 +104,8 @@
 </div>
 
 <div class="zoom GUI">
-    <span style="color: white;font-size: 19px;"><i id="iconPlus" onclick="alert('Nous travaillons toujours dessus...')" style="cursor: pointer;" class="fas fa-plus-circle fa-2x"></i></span><br>
-    <span style="color: white;font-size: 19px"><i id="iconMinus" onclick="alert('Nous travaillons toujours dessus...')" style="cursor: pointer;" class="fas fa-minus-circle fa-2x"></i></span>
+    <span style="color: white;font-size: 19px;"><i id="iconPlus" onclick="fctPlus()" style="cursor: pointer;" class="fas fa-plus-circle fa-2x"></i></span><br>
+    <span style="color: white;font-size: 19px"><i id="iconMinus" onclick="fctMinus()" style="cursor: pointer;" class="fas fa-minus-circle fa-2x"></i></span>
 </div>
 
 <div id="sideBar" class=" GUI" style="height: 560px">
@@ -234,6 +234,14 @@ void main() {
 
 </script>
 
+<script>
+    function fctPlus(){
+        controls.zoomIn();
+    }
+    function fctMinus(){
+        controls.zoomOut();
+    }
+</script>
 
 <script src="js/globescope.js"></script>
 <script src="js/Login.js"></script>

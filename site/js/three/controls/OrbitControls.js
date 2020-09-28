@@ -613,6 +613,22 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 	}
 
+	this.zoomOut = function () {
+
+		dollyIn( getZoomScale() );
+
+		this.update();
+
+	};
+
+	this.zoomIn = function () {
+
+		dollyOut( getZoomScale() );
+
+		this.update();
+
+	};
+
 	function onKeyPress( event ) {
         //WASD AND +/- FOR ZOOMING
 		switch(event.charCode){
@@ -625,17 +641,6 @@ THREE.OrbitControls = function ( object, domElement ) {
 			case scope.charcodes.PLUS:{
 				dollyOut( getZoomScale() );
 			break;
-			}
-
-			case "MINUS":{
-				dollyIn( getZoomScale() );
-				break;
-			}
-
-			case "PLUS":{
-				dollyOut( getZoomScale() );
-				alert("PLUS");
-				break;
 			}
 
 			case "default":{
