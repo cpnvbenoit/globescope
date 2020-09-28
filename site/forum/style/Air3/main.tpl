@@ -24,7 +24,10 @@
 					<pun_title>
 					<pun_desc>
 				</nav>
+
+
 			</header>
+			<img src="img/header.png" alt="Header" width="100%">
 			<!-- END: Board Title / Banner -->
 
 			<pun_navlinks>
