@@ -1,6 +1,6 @@
 function searchChild(camera,scene)
 {
-    var objJSON,dbParam,xmlhttp,myObj,objJSON2,objJSON3,objJSON4,objJSON5,objJSON6;
+    var objJSON,dbParam,xmlhttp,myObj,objJSON2,objJSON3,objJSON4,objJSON5,objJSON6,objJSON7;
 
     //les paramètres a passer dans la requête SQL
     //SearchTextBox => input de la barre de recherche
@@ -10,6 +10,7 @@ function searchChild(camera,scene)
     objJSON4 = {"Team":SearchTextBox.value };
     objJSON5 = {"IDPlace":SearchTextBox.value };
     objJSON6 = {"ecole":SearchTextBox.value };
+    objJSON7 = {"Droit":SearchTextBox.value };
     dbParam = JSON.stringify(objJSON);
 
     xmlhttp = new XMLHttpRequest();
