@@ -104,8 +104,8 @@
 </div>
 
 <div class="zoom GUI">
-    <span style="color: white;font-size: 19px;"><i id="iconPlus" onclick="fctPlus()" style="cursor: pointer;" class="fas fa-plus-circle fa-2x"></i></span><br>
-    <span style="color: white;font-size: 19px"><i id="iconMinus" onclick="fctMinus()" style="cursor: pointer;" class="fas fa-minus-circle fa-2x"></i></span>
+    <br><span style="color: white;font-size: 19px;"><i id="iconPlus" onclick="fctPlus()" style="cursor: pointer;" class="fas fa-plus-circle fa-2x"></i></span><br>
+    <br><span style="color: white;font-size: 19px"><i id="iconMinus" onclick="fctMinus()" style="cursor: pointer;" class="fas fa-minus-circle fa-2x"></i></span>
 </div>
 
 <div id="sideBar" class=" GUI" style="height: 560px">
@@ -190,12 +190,9 @@
 </div>
 <div id="loading">
     <p>Chargement...</p>
-    <a href="index.php?action=easteregg" target="_blank">
         <div class="w3-light-grey w3-round-xlarge">
             <div id="progress_bar" class="w3-blue w3-round-xlarge" style="width:0%;height: 5px;margin-top: -20px; cursor: default;"></div>
         </div>
-    </a>
-
 </div>
 
 <script src="js/three.min.js"></script>

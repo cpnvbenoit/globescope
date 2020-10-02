@@ -29,8 +29,8 @@ if (!isset($_SESSION["BoutiqueIDPlace"])){
  <link rel="stylesheet" media="(max-width: 992px)" href="<?=$us?>style/mobile/poster_mobile.css">
  <link rel="stylesheet" media="(max-width: 992px)" href="<?=$us?>style/mobile/poster_formulaire_mobile.css">
 
- <link rel="stylesheet" href="<?=$us?>style/style.css">
- <link rel="stylesheet" href="<?=$us?>style/homepage.css">
+ <link rel="stylesheet" href="<?=$us?>../css/style.css">
+ <link rel="stylesheet" href="<?=$us?>../css/homepage.css">
 
  <script type="text/javascript" src="script/script.js"></script>
 </head>
@@ -134,7 +134,7 @@ function ecrire($data){
                 <div class="inner clearfix">
                     <div class="divtable">
                         <ul class="menuhomepage">
-                            <li style="background-color: white">><a href="https://www.edm.ch/fr//"><img
+                            <li style="background-color: white"><a href="https://www.edm.ch/fr//"><img
                                             src="../images/Logo_bleu_RGB.png" class="imgup"
                                             id="logoedm"> </a></li>
                             <li><a href="https://www.edm.ch/fr/">Home</a></li>
@@ -258,7 +258,7 @@ function ecrire($data){
           <img class="image_card_poster" src="../images/page_poster_pictures/image_card_perso.png" alt="poster meridien">
         </div>
         <div class="poster_inside"><p class="titre_card_poster">Souvenir personnalisé</p></div>
-        <div class="poster_inside" style="margin-top: -25px"><span>Utilisez l’ID Place de la photo désirée  </span></div>
+        <div class="poster_inside" style="margin-top: -25px"><span style="margin-top: 22px">Utilisez l’ID Place de la photo désirée  </span></div>
         <div class="poster_inside"><span>pour télécharger un poster.</span></div>
         <div class="poster_inside"><span id="card_poster_caractere_invisible">
           <form action="canvas_base.html" method="get">

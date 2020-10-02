@@ -146,9 +146,6 @@ if (isset($action)) {
         case 'testhashed';
             testhashed();
             break;
-        case 'easteregg';
-            easteregg();
-            break;
         case 'uploadfile';
             uploadfile($IDimage);
             break;

@@ -181,10 +181,7 @@ function GetData()
 
 }
 
-function easteregg()
-{
-    require 'view/easteregg.php';
-}
+
 
 function showchildsSearch()
 {
