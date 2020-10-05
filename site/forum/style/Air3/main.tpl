@@ -21,8 +21,6 @@
 			<!-- BEGIN: Board Title / Banner -->
 			<header>
 				<nav class="primary" id="navPrimary">
-					<pun_title>
-					<pun_desc>
 				</nav>
 
 
