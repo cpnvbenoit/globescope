@@ -8,9 +8,9 @@ window.onload = function () {
 function actualiser(){
  var identifiant = document.getElementById("identifiant").value;
  if (identifiant == "") {
-  document.getElementById("bouton_poster_meridiens").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p">Télécharger</a></div>';
-  document.getElementById("bouton_poster_ellipse").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p">Télécharger</a></div>';
-  document.getElementById("bouton_poster_perso").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p_souvenir">Télécharger</a></div>';
+  document.getElementById("bouton_poster_meridiens").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p"><img src="../images/telecharger_bouton.PNG" alt="Telecharger"></a></div>';
+  document.getElementById("bouton_poster_ellipse").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p"><img src="../images/telecharger_bouton.PNG" alt="Telecharger"></a></div>';
+  document.getElementById("bouton_poster_perso").innerHTML = '<div class="bouton_download_poster" onclick="posterFormulaire()"><a href="#" class="bouton_download_poster_p_souvenir"><img src="../images/telecharger_bouton.PNG" alt="Telecharger"></a></div>';
  } else {
   var lien_meri="poster_download_pictures/meridien/"+document.getElementById("choix_poster_meridien_date").value+"/"+document.getElementById("choix_poster_meridien_taille").value+".pdf";
   var lien_elip="poster_download_pictures/ellipse/"+document.getElementById("choix_poster_ellipse_date").value+"/"+document.getElementById("choix_poster_ellipse_taille").value+".pdf";
